@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CA2A90A993002A7648 /* RingsCardsApp.swift */; };
+		592264CD2A90A993002A7648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CC2A90A993002A7648 /* ContentView.swift */; };
+		592264CF2A90A995002A7648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592264CE2A90A995002A7648 /* Assets.xcassets */; };
+		592264D22A90A995002A7648 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592264D12A90A995002A7648 /* Preview Assets.xcassets */; };
+		592264DC2A90A995002A7648 /* RingsCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264DB2A90A995002A7648 /* RingsCardsTests.swift */; };
+		592264E62A90A995002A7648 /* RingsCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E52A90A995002A7648 /* RingsCardsUITests.swift */; };
+		592264E82A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		592264D82A90A995002A7648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592264BF2A90A993002A7648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592264C62A90A993002A7648;
+			remoteInfo = RingsCards;
+		};
+		592264E22A90A995002A7648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592264BF2A90A993002A7648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592264C62A90A993002A7648;
+			remoteInfo = RingsCards;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		592264C72A90A993002A7648 /* RingsCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingsCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		592264CA2A90A993002A7648 /* RingsCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsApp.swift; sourceTree = "<group>"; };
+		592264CC2A90A993002A7648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		592264CE2A90A995002A7648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		592264D12A90A995002A7648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		592264D72A90A995002A7648 /* RingsCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RingsCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		592264DB2A90A995002A7648 /* RingsCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsTests.swift; sourceTree = "<group>"; };
+		592264E12A90A995002A7648 /* RingsCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RingsCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		592264E52A90A995002A7648 /* RingsCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITests.swift; sourceTree = "<group>"; };
+		592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592264C42A90A993002A7648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592264D42A90A995002A7648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592264DE2A90A995002A7648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		592264BE2A90A993002A7648 = {
+			isa = PBXGroup;
+			children = (
+				592264C92A90A993002A7648 /* RingsCards */,
+				592264DA2A90A995002A7648 /* RingsCardsTests */,
+				592264E42A90A995002A7648 /* RingsCardsUITests */,
+				592264C82A90A993002A7648 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		592264C82A90A993002A7648 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592264C72A90A993002A7648 /* RingsCards.app */,
+				592264D72A90A995002A7648 /* RingsCardsTests.xctest */,
+				592264E12A90A995002A7648 /* RingsCardsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		592264C92A90A993002A7648 /* RingsCards */ = {
+			isa = PBXGroup;
+			children = (
+				592264CA2A90A993002A7648 /* RingsCardsApp.swift */,
+				592264CC2A90A993002A7648 /* ContentView.swift */,
+				592264CE2A90A995002A7648 /* Assets.xcassets */,
+				592264D02A90A995002A7648 /* Preview Content */,
+			);
+			path = RingsCards;
+			sourceTree = "<group>";
+		};
+		592264D02A90A995002A7648 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				592264D12A90A995002A7648 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		592264DA2A90A995002A7648 /* RingsCardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				592264DB2A90A995002A7648 /* RingsCardsTests.swift */,
+			);
+			path = RingsCardsTests;
+			sourceTree = "<group>";
+		};
+		592264E42A90A995002A7648 /* RingsCardsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				592264E52A90A995002A7648 /* RingsCardsUITests.swift */,
+				592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */,
+			);
+			path = RingsCardsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592264C62A90A993002A7648 /* RingsCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592264EB2A90A995002A7648 /* Build configuration list for PBXNativeTarget "RingsCards" */;
+			buildPhases = (
+				592264C32A90A993002A7648 /* Sources */,
+				592264C42A90A993002A7648 /* Frameworks */,
+				592264C52A90A993002A7648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RingsCards;
+			productName = RingsCards;
+			productReference = 592264C72A90A993002A7648 /* RingsCards.app */;
+			productType = "com.apple.product-type.application";
+		};
+		592264D62A90A995002A7648 /* RingsCardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592264EE2A90A995002A7648 /* Build configuration list for PBXNativeTarget "RingsCardsTests" */;
+			buildPhases = (
+				592264D32A90A995002A7648 /* Sources */,
+				592264D42A90A995002A7648 /* Frameworks */,
+				592264D52A90A995002A7648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				592264D92A90A995002A7648 /* PBXTargetDependency */,
+			);
+			name = RingsCardsTests;
+			productName = RingsCardsTests;
+			productReference = 592264D72A90A995002A7648 /* RingsCardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		592264E02A90A995002A7648 /* RingsCardsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592264F12A90A995002A7648 /* Build configuration list for PBXNativeTarget "RingsCardsUITests" */;
+			buildPhases = (
+				592264DD2A90A995002A7648 /* Sources */,
+				592264DE2A90A995002A7648 /* Frameworks */,
+				592264DF2A90A995002A7648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				592264E32A90A995002A7648 /* PBXTargetDependency */,
+			);
+			name = RingsCardsUITests;
+			productName = RingsCardsUITests;
+			productReference = 592264E12A90A995002A7648 /* RingsCardsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		592264BF2A90A993002A7648 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					592264C62A90A993002A7648 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					592264D62A90A995002A7648 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 592264C62A90A993002A7648;
+					};
+					592264E02A90A995002A7648 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 592264C62A90A993002A7648;
+					};
+				};
+			};
+			buildConfigurationList = 592264C22A90A993002A7648 /* Build configuration list for PBXProject "RingsCards" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 592264BE2A90A993002A7648;
+			productRefGroup = 592264C82A90A993002A7648 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				592264C62A90A993002A7648 /* RingsCards */,
+				592264D62A90A995002A7648 /* RingsCardsTests */,
+				592264E02A90A995002A7648 /* RingsCardsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592264C52A90A993002A7648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592264D22A90A995002A7648 /* Preview Assets.xcassets in Resources */,
+				592264CF2A90A995002A7648 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592264D52A90A995002A7648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592264DF2A90A995002A7648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592264C32A90A993002A7648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592264CD2A90A993002A7648 /* ContentView.swift in Sources */,
+				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592264D32A90A995002A7648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592264DC2A90A995002A7648 /* RingsCardsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592264DD2A90A995002A7648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592264E82A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift in Sources */,
+				592264E62A90A995002A7648 /* RingsCardsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		592264D92A90A995002A7648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592264C62A90A993002A7648 /* RingsCards */;
+			targetProxy = 592264D82A90A995002A7648 /* PBXContainerItemProxy */;
+		};
+		592264E32A90A995002A7648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592264C62A90A993002A7648 /* RingsCards */;
+			targetProxy = 592264E22A90A995002A7648 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		592264E92A90A995002A7648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		592264EA2A90A995002A7648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		592264EC2A90A995002A7648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RingsCards/Preview Content\"";
+				DEVELOPMENT_TEAM = MQ5V24PMU2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		592264ED2A90A995002A7648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RingsCards/Preview Content\"";
+				DEVELOPMENT_TEAM = MQ5V24PMU2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		592264EF2A90A995002A7648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MQ5V24PMU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RingsCards.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RingsCards";
+			};
+			name = Debug;
+		};
+		592264F02A90A995002A7648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MQ5V24PMU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RingsCards.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RingsCards";
+			};
+			name = Release;
+		};
+		592264F22A90A995002A7648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MQ5V24PMU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCardsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RingsCards;
+			};
+			name = Debug;
+		};
+		592264F32A90A995002A7648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MQ5V24PMU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCardsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RingsCards;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		592264C22A90A993002A7648 /* Build configuration list for PBXProject "RingsCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592264E92A90A995002A7648 /* Debug */,
+				592264EA2A90A995002A7648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592264EB2A90A995002A7648 /* Build configuration list for PBXNativeTarget "RingsCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592264EC2A90A995002A7648 /* Debug */,
+				592264ED2A90A995002A7648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592264EE2A90A995002A7648 /* Build configuration list for PBXNativeTarget "RingsCardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592264EF2A90A995002A7648 /* Debug */,
+				592264F02A90A995002A7648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592264F12A90A995002A7648 /* Build configuration list for PBXNativeTarget "RingsCardsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592264F22A90A995002A7648 /* Debug */,
+				592264F32A90A995002A7648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 592264BF2A90A993002A7648 /* Project object */;
+}
