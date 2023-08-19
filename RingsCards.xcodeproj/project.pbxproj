@@ -14,6 +14,7 @@
 		592264DC2A90A995002A7648 /* RingsCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264DB2A90A995002A7648 /* RingsCardsTests.swift */; };
 		592264E62A90A995002A7648 /* RingsCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E52A90A995002A7648 /* RingsCardsUITests.swift */; };
 		592264E82A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */; };
+		592264F52A90AB09002A7648 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264F42A90AB09002A7648 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		592264E12A90A995002A7648 /* RingsCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RingsCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		592264E52A90A995002A7648 /* RingsCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITests.swift; sourceTree = "<group>"; };
 		592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		592264F42A90AB09002A7648 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +96,11 @@
 		592264C92A90A993002A7648 /* RingsCards */ = {
 			isa = PBXGroup;
 			children = (
-				592264CA2A90A993002A7648 /* RingsCardsApp.swift */,
-				592264CC2A90A993002A7648 /* ContentView.swift */,
 				592264CE2A90A995002A7648 /* Assets.xcassets */,
+				592264F42A90AB09002A7648 /* CardView.swift */,
+				592264CC2A90A993002A7648 /* ContentView.swift */,
 				592264D02A90A995002A7648 /* Preview Content */,
+				592264CA2A90A993002A7648 /* RingsCardsApp.swift */,
 			);
 			path = RingsCards;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592264F52A90AB09002A7648 /* CardView.swift in Sources */,
 				592264CD2A90A993002A7648 /* ContentView.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
 			);
