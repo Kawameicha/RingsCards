@@ -15,6 +15,10 @@
 		592264E62A90A995002A7648 /* RingsCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E52A90A995002A7648 /* RingsCardsUITests.swift */; };
 		592264E82A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */; };
 		592264F52A90AB09002A7648 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264F42A90AB09002A7648 /* CardView.swift */; };
+		59862D702A91F13100628449 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D6F2A91F13100628449 /* Card.swift */; };
+		59862D732A91F46000628449 /* RingsDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 59862D722A91F46000628449 /* RingsDB.json */; };
+		59862D752A91F62100628449 /* RingsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D742A91F62100628449 /* RingsDB.swift */; };
+		59862D772A91FC4300628449 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D762A91FC4300628449 /* CardList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		592264E52A90A995002A7648 /* RingsCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITests.swift; sourceTree = "<group>"; };
 		592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		592264F42A90AB09002A7648 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		59862D6F2A91F13100628449 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		59862D722A91F46000628449 /* RingsDB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RingsDB.json; sourceTree = "<group>"; };
+		59862D742A91F62100628449 /* RingsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsDB.swift; sourceTree = "<group>"; };
+		59862D762A91FC4300628449 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +84,10 @@
 		592264BE2A90A993002A7648 = {
 			isa = PBXGroup;
 			children = (
+				592264C82A90A993002A7648 /* Products */,
 				592264C92A90A993002A7648 /* RingsCards */,
 				592264DA2A90A995002A7648 /* RingsCardsTests */,
 				592264E42A90A995002A7648 /* RingsCardsUITests */,
-				592264C82A90A993002A7648 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				592264CE2A90A995002A7648 /* Assets.xcassets */,
-				592264F42A90AB09002A7648 /* CardView.swift */,
-				592264CC2A90A993002A7648 /* ContentView.swift */,
+				59862D6D2A91F0A900628449 /* Model */,
 				592264D02A90A995002A7648 /* Preview Content */,
+				59862D712A91F30800628449 /* Resources */,
 				592264CA2A90A993002A7648 /* RingsCardsApp.swift */,
+				59862D6E2A91F0BC00628449 /* Views */,
 			);
 			path = RingsCards;
 			sourceTree = "<group>";
@@ -128,6 +137,33 @@
 				592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */,
 			);
 			path = RingsCardsUITests;
+			sourceTree = "<group>";
+		};
+		59862D6D2A91F0A900628449 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59862D6F2A91F13100628449 /* Card.swift */,
+				59862D742A91F62100628449 /* RingsDB.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59862D6E2A91F0BC00628449 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59862D762A91FC4300628449 /* CardList.swift */,
+				592264F42A90AB09002A7648 /* CardView.swift */,
+				592264CC2A90A993002A7648 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59862D712A91F30800628449 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59862D722A91F46000628449 /* RingsDB.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59862D732A91F46000628449 /* RingsDB.json in Resources */,
 				592264D22A90A995002A7648 /* Preview Assets.xcassets in Resources */,
 				592264CF2A90A995002A7648 /* Assets.xcassets in Resources */,
 			);
@@ -260,9 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59862D752A91F62100628449 /* RingsDB.swift in Sources */,
+				59862D772A91FC4300628449 /* CardList.swift in Sources */,
 				592264F52A90AB09002A7648 /* CardView.swift in Sources */,
 				592264CD2A90A993002A7648 /* ContentView.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
+				59862D702A91F13100628449 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
