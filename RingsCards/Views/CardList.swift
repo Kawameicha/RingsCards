@@ -25,22 +25,18 @@ struct Cards: View {
 }
 
 struct CardList: View {
-//    @State private var searchText: String = ""
-//    @State private var cardId: Card.ID?
+    @State private var searchText: String = ""
     
-//    func filteredcards(
-//        cards: [Card],
-//        searchText: String
-//    ) -> [Card] {
-//        guard !searchText.isEmpty else { return cards }
-//        return cards.filter { card in
-//            card.name.lowercased().contains(searchText.lowercased())
-//        }
-//    }
+    var filteredCards: [Card] {
+        guard !searchText.isEmpty else { return cards }
+        return cards.filter { card in
+            card.name.lowercased().contains(searchText.lowercased())
+        }
+    }
     
     var body: some View {
         NavigationView {
-            List(cards) { card in
+            List(filteredCards) { card in
                 NavigationLink {
                     CardView(card: card)
                 } label: {
@@ -49,6 +45,6 @@ struct CardList: View {
             }
             .navigationTitle("Player Cards")
         }
-//        .searchable(text: $searchText)
+        .searchable(text: $searchText)
     }
 }
