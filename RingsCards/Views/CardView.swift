@@ -11,15 +11,27 @@ struct CardView: View {
     var card: Card
 
     var body: some View {
-        VStack {
-            Text(card.name)
-                .foregroundColor(.primary)
-                .font(.title)
-                .padding()
-            HStack {
-                Label(card.sphere_name, systemImage: "person")
+        ScrollView {
+            CircleImage(image: Image("Person"))
+
+            VStack(alignment: .leading) {
+                Text(card.name)
+                    .font(.title)
+
+                HStack {
+                    Text(card.traits)
+                    Spacer()
+                    Text(card.type_name)
+                }
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+
+                Divider()
+
+                Text(card.text)
+                
             }
-            .foregroundColor(.secondary)
+            .padding()
         }
     }
 }

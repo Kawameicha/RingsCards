@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Card: Hashable, Codable, Identifiable {
     let id = UUID()
