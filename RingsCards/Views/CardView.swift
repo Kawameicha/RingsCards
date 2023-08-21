@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+//extension Color {
+//    static let Leadership = Color("Leadership")
+//    static let Lore = Color("Lore")
+//    static let Spirit = Color("Spirit")
+//    static let Tactics = Color("Tactics")
+//}
+
 struct CardView: View {
     var card: Card
 
@@ -33,5 +40,8 @@ struct CardView: View {
             }
             .padding()
         }
+        .background(LinearGradient(
+            colors: [Color(card.sphere_name), Color.white],
+            startPoint: .top, endPoint: .center))
     }
 }
