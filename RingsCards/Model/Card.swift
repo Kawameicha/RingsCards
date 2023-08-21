@@ -18,15 +18,16 @@ struct Card: Hashable, Codable, Identifiable {
     var position: Int
     var code: String
     var name: String
-    var traits: String
-    var text: String
-    var flavor: String
+    var traits: String? = nil
+    var text: String? = nil
+    var flavor: String? = nil
     var is_unique: Bool
-    var threat: Int
-    var willpower: Int
-    var attack: Int
-    var defense: Int
-    var health: Int
+    var threat: Int? = nil
+    var cost: String? = nil
+    var willpower: Int? = nil
+    var attack: Int? = nil
+    var defense: Int? = nil
+    var health: Int? = nil
     var quantity: Int
     var deck_limit: Int
     var illustrator: String

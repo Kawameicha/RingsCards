@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912EE232A93668700B2F8B5 /* CardRow.swift */; };
 		592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CA2A90A993002A7648 /* RingsCardsApp.swift */; };
 		592264CD2A90A993002A7648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CC2A90A993002A7648 /* ContentView.swift */; };
 		592264CF2A90A995002A7648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592264CE2A90A995002A7648 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5912EE232A93668700B2F8B5 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
 		592264C72A90A993002A7648 /* RingsCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingsCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		592264CA2A90A993002A7648 /* RingsCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsApp.swift; sourceTree = "<group>"; };
 		592264CC2A90A993002A7648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5912EE212A93662800B2F8B5 /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				59862D762A91FC4300628449 /* CardList.swift */,
+				5912EE232A93668700B2F8B5 /* CardRow.swift */,
+				592264F42A90AB09002A7648 /* CardView.swift */,
+			);
+			path = CardViews;
+			sourceTree = "<group>";
+		};
+		5912EE222A93664B00B2F8B5 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				59862D7A2A9217F600628449 /* CircleImage.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
 		592264BE2A90A993002A7648 = {
 			isa = PBXGroup;
 			children = (
@@ -153,10 +173,9 @@
 		59862D6E2A91F0BC00628449 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				59862D762A91FC4300628449 /* CardList.swift */,
-				592264F42A90AB09002A7648 /* CardView.swift */,
-				59862D7A2A9217F600628449 /* CircleImage.swift */,
 				592264CC2A90A993002A7648 /* ContentView.swift */,
+				5912EE212A93662800B2F8B5 /* CardViews */,
+				5912EE222A93664B00B2F8B5 /* HelperViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +321,7 @@
 			files = (
 				59862D752A91F62100628449 /* RingsDB.swift in Sources */,
 				59862D772A91FC4300628449 /* CardList.swift in Sources */,
+				5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */,
 				592264F52A90AB09002A7648 /* CardView.swift in Sources */,
 				59862D7B2A9217F600628449 /* CircleImage.swift in Sources */,
 				592264CD2A90A993002A7648 /* ContentView.swift in Sources */,

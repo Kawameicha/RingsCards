@@ -19,7 +19,7 @@ struct CardView: View {
                     .font(.title)
 
                 HStack {
-                    Text(card.traits)
+                    Text(card.traits ?? "")
                     Spacer()
                     Text(card.type_name)
                 }
@@ -28,7 +28,7 @@ struct CardView: View {
 
                 Divider()
 
-                Text(card.text)
+                Text(card.text ?? "")
                 
             }
             .padding()
