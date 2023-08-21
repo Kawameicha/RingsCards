@@ -23,3 +23,13 @@ struct CardRow: View {
         }
     }
 }
+
+struct CardRow_Previews: PreviewProvider {
+    static var cards = RingsData().cards
+
+    static var previews: some View {
+        Group {
+            CardRow(card: cards[0])
+        }
+    }
+}

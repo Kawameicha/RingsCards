@@ -29,12 +29,22 @@ struct CardView: View {
                 Divider()
 
                 Text(card.text ?? "")
-                
+
             }
             .padding()
         }
         .background(LinearGradient(
             colors: [Color(card.sphere_name), Color.white],
             startPoint: .top, endPoint: .center))
+    }
+}
+
+struct CardView_Previews: PreviewProvider {
+    static var cards = RingsData().cards
+
+    static var previews: some View {
+        Group {
+            CardView(card: cards[0])
+        }
     }
 }
