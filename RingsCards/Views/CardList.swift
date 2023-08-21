@@ -25,11 +25,12 @@ struct Cards: View {
 }
 
 struct CardList: View {
+    @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
     
     var filteredCards: [Card] {
-        guard !searchText.isEmpty else { return cards }
-        return cards.filter { card in
+        guard !searchText.isEmpty else { return ringsData.cards }
+        return ringsData.cards.filter { card in
             card.name.lowercased().contains(searchText.lowercased())
         }
     }

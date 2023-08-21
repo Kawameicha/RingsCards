@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RingsCardsApp: App {
+    @StateObject private var ringsData = RingsData()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ringsData)
         }
     }
 }

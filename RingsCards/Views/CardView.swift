@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-//extension Color {
-//    static let Leadership = Color("Leadership")
-//    static let Lore = Color("Lore")
-//    static let Spirit = Color("Spirit")
-//    static let Tactics = Color("Tactics")
-//}
-
 struct CardView: View {
     var card: Card
 

@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import Combine
 
-var cards: [Card] = load("RingsDB.json")
+final class RingsData: ObservableObject {
+    @Published var cards: [Card] = load("RingsDB.json")
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
