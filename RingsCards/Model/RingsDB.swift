@@ -9,7 +9,8 @@ import Foundation
 import Combine
 
 final class RingsData: ObservableObject {
-    @Published var cards: [Card] = load("RingsDB.json")
+    @Published var cards: [Card] = load("PlayerCards.json")
+//    @Published var packs: [Pack] = load("AdventurePacks.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

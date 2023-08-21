@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Core Set",
+    "code": "Core",
+    "position": 1,
+    "cycle_position": 1,
+    "available": "2011-04-20",
+    "known": 73,
+    "total": 73,
+    "url": "https://www.ringsdb.com/set/Core",
+    "id": 1
+  },
+  {
+    "name": "Revised Core Set (Campaign Only)",
+    "code": "RevCore",
+    "position": 1,
+    "cycle_position": 2,
+    "available": "2011-04-21",
+    "known": 7,
+    "total": 7,
+    "url": "https://www.ringsdb.com/set/RevCore",
+    "id": 85
+  }
+]

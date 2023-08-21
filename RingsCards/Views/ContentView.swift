@@ -14,6 +14,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Cards", systemImage: "magnifyingglass")
             }
+            Collection()
+                .tabItem {
+                    Label("Collection", systemImage: "greetingcard")
+            }
         }
     }
 }
