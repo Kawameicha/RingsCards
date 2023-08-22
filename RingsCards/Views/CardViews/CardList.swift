@@ -7,13 +7,21 @@
 
 import SwiftUI
 
+extension String {
+    func within(_ strings: [String]) -> Bool {
+        strings.contains { contains($0) }
+    }
+}
+
 struct CardList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
 
+    var collection = ["Core", "RevCore"]
+
     var collectionOnly: [Card] {
         ringsData.cards.filter{ card in
-            card.pack_code.contains("Core")
+            card.pack_code.within(collection)
         }
     }
 

@@ -174,14 +174,14 @@
 			path = RingsCardsUITests;
 			sourceTree = "<group>";
 		};
-		595C7BE52A938C950094E64F /* Collection */ = {
+		595C7BE52A938C950094E64F /* PackViews */ = {
 			isa = PBXGroup;
 			children = (
 				5960CA442A94AC83009A68D4 /* PackList.swift */,
 				5960CA3F2A94907D009A68D4 /* PackRow.swift */,
 				5960CA462A94BFA5009A68D4 /* PackView.swift */,
 			);
-			path = Collection;
+			path = PackViews;
 			sourceTree = "<group>";
 		};
 		59862D6D2A91F0A900628449 /* Model */ = {
@@ -200,7 +200,7 @@
 				592264CC2A90A993002A7648 /* ContentView.swift */,
 				5912EE212A93662800B2F8B5 /* CardViews */,
 				5912EE222A93664B00B2F8B5 /* HelperViews */,
-				595C7BE52A938C950094E64F /* Collection */,
+				595C7BE52A938C950094E64F /* PackViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
