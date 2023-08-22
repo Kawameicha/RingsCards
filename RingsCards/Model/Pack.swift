@@ -8,6 +8,7 @@
 import Foundation
 
 struct Pack: Hashable, Codable, Identifiable {
+    var inCollection: Bool
     var name: String
     var code: String
     var position: Int

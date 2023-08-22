@@ -1,5 +1,6 @@
 [
   {
+    "inCollection": true,
     "name": "Core Set",
     "code": "Core",
     "position": 1,
@@ -11,6 +12,7 @@
     "id": 1
   },
   {
+    "inCollection": false,
     "name": "Revised Core Set (Campaign Only)",
     "code": "RevCore",
     "position": 1,

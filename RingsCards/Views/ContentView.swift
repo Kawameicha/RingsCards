@@ -14,7 +14,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Cards", systemImage: "magnifyingglass")
             }
-            Collection()
+            PackList()
                 .tabItem {
                     Label("Collection", systemImage: "greetingcard")
             }
