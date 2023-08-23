@@ -17,10 +17,14 @@ struct CardList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
 
-    var collection = ["Core", "RevCore"]
+    var collection: [String] {
+        ringsData.packs.map { pack in
+            pack.inCollection ? pack.code : ""
+        }
+    }
 
     var collectionOnly: [Card] {
-        ringsData.cards.filter{ card in
+        ringsData.cards.filter { card in
             card.pack_code.within(collection)
         }
     }
