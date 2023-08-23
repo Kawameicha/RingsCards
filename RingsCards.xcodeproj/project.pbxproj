@@ -27,6 +27,11 @@
 		59862D752A91F62100628449 /* RingsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D742A91F62100628449 /* RingsDB.swift */; };
 		59862D772A91FC4300628449 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D762A91FC4300628449 /* CardList.swift */; };
 		59862D7B2A9217F600628449 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D7A2A9217F600628449 /* CircleImage.swift */; };
+		729BF29D2A95824800E67871 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF29C2A95824700E67871 /* LoginView.swift */; };
+		729BF29F2A9585F300E67871 /* FellowshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF29E2A9585F300E67871 /* FellowshipView.swift */; };
+		729BF2A12A95860100E67871 /* BuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A02A95860100E67871 /* BuilderView.swift */; };
+		729BF2A32A95860B00E67871 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A22A95860B00E67871 /* DeckView.swift */; };
+		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,12 @@
 		59862D742A91F62100628449 /* RingsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsDB.swift; sourceTree = "<group>"; };
 		59862D762A91FC4300628449 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		59862D7A2A9217F600628449 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		729BF29C2A95824700E67871 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		729BF29E2A9585F300E67871 /* FellowshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowshipView.swift; sourceTree = "<group>"; };
+		729BF2A02A95860100E67871 /* BuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderView.swift; sourceTree = "<group>"; };
+		729BF2A22A95860B00E67871 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
+		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
+		729BF2A82A9586B900E67871 /* DarkofMirkwood.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = DarkofMirkwood.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +208,11 @@
 		59862D6E2A91F0BC00628449 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				729BF29B2A95821900E67871 /* FellowshipViews */,
+				729BF29A2A95820E00E67871 /* BuilderViews */,
+				729BF2982A95812900E67871 /* DeckViews */,
+				729BF2972A95810800E67871 /* CampaignViews */,
+				729BF2952A9580D000E67871 /* LoginViews */,
 				592264CC2A90A993002A7648 /* ContentView.swift */,
 				5912EE212A93662800B2F8B5 /* CardViews */,
 				5912EE222A93664B00B2F8B5 /* HelperViews */,
@@ -210,8 +226,49 @@
 			children = (
 				595C7BEA2A93A16E0094E64F /* AdventurePacks.json */,
 				59862D722A91F46000628449 /* PlayerCards.json */,
+				729BF2A82A9586B900E67871 /* DarkofMirkwood.geojson */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		729BF2952A9580D000E67871 /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				729BF29C2A95824700E67871 /* LoginView.swift */,
+			);
+			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		729BF2972A95810800E67871 /* CampaignViews */ = {
+			isa = PBXGroup;
+			children = (
+				729BF2A42A95861800E67871 /* CampaignView.swift */,
+			);
+			path = CampaignViews;
+			sourceTree = "<group>";
+		};
+		729BF2982A95812900E67871 /* DeckViews */ = {
+			isa = PBXGroup;
+			children = (
+				729BF2A22A95860B00E67871 /* DeckView.swift */,
+			);
+			path = DeckViews;
+			sourceTree = "<group>";
+		};
+		729BF29A2A95820E00E67871 /* BuilderViews */ = {
+			isa = PBXGroup;
+			children = (
+				729BF2A02A95860100E67871 /* BuilderView.swift */,
+			);
+			path = BuilderViews;
+			sourceTree = "<group>";
+		};
+		729BF29B2A95821900E67871 /* FellowshipViews */ = {
+			isa = PBXGroup;
+			children = (
+				729BF29E2A9585F300E67871 /* FellowshipView.swift */,
+			);
+			path = FellowshipViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,10 +411,15 @@
 				5960CA452A94AC83009A68D4 /* PackList.swift in Sources */,
 				59862D7B2A9217F600628449 /* CircleImage.swift in Sources */,
 				592264CD2A90A993002A7648 /* ContentView.swift in Sources */,
+				729BF29F2A9585F300E67871 /* FellowshipView.swift in Sources */,
+				729BF29D2A95824800E67871 /* LoginView.swift in Sources */,
 				595C7BED2A93A1EB0094E64F /* Pack.swift in Sources */,
 				595C7BE92A93985D0094E64F /* CollectionButton.swift in Sources */,
+				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
 				59862D702A91F13100628449 /* Card.swift in Sources */,
+				729BF2A12A95860100E67871 /* BuilderView.swift in Sources */,
+				729BF2A32A95860B00E67871 /* DeckView.swift in Sources */,
 				5960CA402A94907D009A68D4 /* PackRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
