@@ -11,6 +11,7 @@ import Combine
 final class RingsData: ObservableObject {
     @Published var cards: [Card] = load("PlayerCards.json")
     @Published var packs: [Pack] = load("AdventurePacks.json")
+    @Published var user = User.default
 //    @Published var packs: [Encounters] = load("EncounterCards.json")
 }
 

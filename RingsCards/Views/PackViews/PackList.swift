@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PackList: View {
     @EnvironmentObject var ringsData: RingsData
+    @State private var showingProfile = false
 
     var body: some View {
         NavigationView {
@@ -19,7 +20,19 @@ struct PackList: View {
                     PackRow(pack: pack)
                 }
             }
+            .listStyle(.inset)
             .navigationTitle("My Collection")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+            }
+            .sheet(isPresented: $showingProfile) {
+                UserHost()
+                    .environmentObject(ringsData)
+            }
         }
     }
 }
