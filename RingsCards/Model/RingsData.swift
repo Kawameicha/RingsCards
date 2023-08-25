@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 final class RingsData: ObservableObject {
-    @Published var cards: [Card] = load("PlayerCards.json")
-    @Published var packs: [Pack] = load("AdventurePacks.json")
+    @Published var cards: [Card] = load("Cards.json")
+    @Published var packs: [Pack] = load("Packs.json")
     @Published var user = User.default
 }
 
