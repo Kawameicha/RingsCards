@@ -48,16 +48,27 @@ struct CardList: View {
         }
     }
 
+    var allTypes: [String] = ["Hero", "Ally", "Attachment", "Event"]
+
     var body: some View {
         NavigationView {
-            List(filteredCards) { card in
-                NavigationLink {
-                    CardView(card: card)
-                } label: {
-                    CardRow(card: card)
+            List {
+                ForEach(allTypes, id:\.self) { type in
+                    Section(header: Text("\(type)")) {
+                        ForEach(filteredCards.filter { card in
+                            card.type_name.contains("\(type)")
+                            
+                        }) {card in
+                            NavigationLink {
+                                CardView(card: card)
+                            } label: {
+                                CardRow(card: card)
+                            }
+                        }
+                    }
                 }
             }
-            .listStyle(.inset)
+            .listStyle(.sidebar)
             .navigationTitle("Player Cards")
             .searchable(text: $searchText)
         }
