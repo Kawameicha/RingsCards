@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-
 struct UserEdit: View {
     @Binding var user: User
-    
+
     var body: some View {
         List {
             HStack {
@@ -18,10 +17,10 @@ struct UserEdit: View {
                 Divider()
                 TextField("Username", text: $user.username)
             }
-            
+
             VStack(alignment: .leading, spacing: 20) {
                 Text("Sphere").bold()
-                
+
                 Picker("Sphere", selection: $user.sphere) {
                     ForEach(User.Sphere.allCases) { sphere in
                         Text(sphere.rawValue).tag(sphere)
@@ -32,7 +31,6 @@ struct UserEdit: View {
         }
     }
 }
-
 
 struct UserEdit_Previews: PreviewProvider {
     static var previews: some View {

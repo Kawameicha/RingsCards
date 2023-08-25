@@ -43,7 +43,7 @@ struct PackView: View {
 
 struct PackView_Previews: PreviewProvider {
     static var packs = RingsData().packs
-    
+
     static var previews: some View {
         PackView(pack: packs[0])
             .environmentObject(RingsData())

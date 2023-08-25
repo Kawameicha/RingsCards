@@ -34,7 +34,7 @@ struct UserHost: View {
                     }
                     .onDisappear {
                         ringsData.user = draftUser
-                    }
+                }
             }
         }
         .padding()

@@ -1,5 +1,5 @@
 //
-//  RingsDB.swift
+//  RingsData.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 20.08.23.
@@ -12,7 +12,6 @@ final class RingsData: ObservableObject {
     @Published var cards: [Card] = load("PlayerCards.json")
     @Published var packs: [Pack] = load("AdventurePacks.json")
     @Published var user = User.default
-//    @Published var packs: [Encounters] = load("EncounterCards.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
