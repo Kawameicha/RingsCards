@@ -28,10 +28,22 @@ struct CardList: View {
             card.pack_code.within(collection)
         }
     }
+    
+    var sortedCards: [Card] {
+        collectionOnly.sorted(by: {
+            if $0.type_code != $1.type_code {
+                return $0.type_code < $1.type_code
+            } else if $0.sphere_code != $1.sphere_code {
+                return $0.sphere_code < $1.sphere_code
+            } else {
+                return $0.name < $1.name
+            }
+        })
+    }
 
     var filteredCards: [Card] {
-        guard !searchText.isEmpty else { return collectionOnly }
-        return collectionOnly.filter { card in
+        guard !searchText.isEmpty else { return sortedCards }
+        return sortedCards.filter { card in
             card.name.lowercased().contains(searchText.lowercased())
         }
     }
@@ -45,9 +57,10 @@ struct CardList: View {
                     CardRow(card: card)
                 }
             }
+            .listStyle(.inset)
             .navigationTitle("Player Cards")
+            .searchable(text: $searchText)
         }
-        .searchable(text: $searchText)
     }
 }
 

@@ -13,10 +13,10 @@ struct CardRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
             Text(card.name)
-                .foregroundColor(.primary)
+                .foregroundColor(Color(card.sphere_name))
                 .font(.headline)
             HStack(spacing: 3) {
-                Label(card.sphere_name, systemImage: "person")
+                Label(card.type_name, systemImage: "person")
             }
             .foregroundColor(.secondary)
             .font(.subheadline)
