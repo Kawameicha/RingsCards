@@ -16,6 +16,7 @@ extension String {
 struct CardList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
+    @State private var sortBySphere = false
 
     var collection: [String] {
         ringsData.packs.map { pack in
@@ -28,12 +29,10 @@ struct CardList: View {
             card.pack_code.within(collection)
         }
     }
-    
+
     var sortedCards: [Card] {
         collectionOnly.sorted(by: {
-            if $0.type_code != $1.type_code {
-                return $0.type_code < $1.type_code
-            } else if $0.sphere_code != $1.sphere_code {
+            if sortBySphere == true && $0.sphere_code != $1.sphere_code {
                 return $0.sphere_code < $1.sphere_code
             } else {
                 return $0.name < $1.name
@@ -57,7 +56,6 @@ struct CardList: View {
                     Section(header: Text("\(type)")) {
                         ForEach(filteredCards.filter { card in
                             card.type_name.contains("\(type)")
-                            
                         }) {card in
                             NavigationLink {
                                 CardView(card: card)
@@ -71,6 +69,18 @@ struct CardList: View {
             .listStyle(.sidebar)
             .navigationTitle("Player Cards")
             .searchable(text: $searchText)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu(content: {
+                        Button(action: {sortBySphere.toggle()}) {
+                            Label("Sort by Sphere",
+                                  systemImage: sortBySphere ? "arrow.up.arrow.down.circle.fill" : "arrow.up.arrow.down.circle")
+                        }
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                }
+            }
         }
     }
 }

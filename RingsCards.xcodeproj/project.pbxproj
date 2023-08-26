@@ -16,6 +16,7 @@
 		592264E62A90A995002A7648 /* RingsCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E52A90A995002A7648 /* RingsCardsUITests.swift */; };
 		592264E82A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */; };
 		592264F52A90AB09002A7648 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264F42A90AB09002A7648 /* CardView.swift */; };
+		592744852A9A7F7000BFC704 /* FilterEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592744842A9A7F7000BFC704 /* FilterEdit.swift */; };
 		595C7BE92A93985D0094E64F /* CollectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BE82A93985D0094E64F /* CollectionButton.swift */; };
 		595C7BEB2A93A16E0094E64F /* Packs.json in Resources */ = {isa = PBXBuildFile; fileRef = 595C7BEA2A93A16E0094E64F /* Packs.json */; };
 		595C7BED2A93A1EB0094E64F /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BEC2A93A1EB0094E64F /* Pack.swift */; };
@@ -68,6 +69,7 @@
 		592264E52A90A995002A7648 /* RingsCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITests.swift; sourceTree = "<group>"; };
 		592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		592264F42A90AB09002A7648 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		592744842A9A7F7000BFC704 /* FilterEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEdit.swift; sourceTree = "<group>"; };
 		595C7BE82A93985D0094E64F /* CollectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionButton.swift; sourceTree = "<group>"; };
 		595C7BEA2A93A16E0094E64F /* Packs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Packs.json; sourceTree = "<group>"; };
 		595C7BEC2A93A1EB0094E64F /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				592264CC2A90A993002A7648 /* ContentView.swift */,
 				729BF29A2A95820E00E67871 /* BuilderViews */,
 				729BF2972A95810800E67871 /* CampaignViews */,
+				59B6E9B32A9A0C2D0056EE8D /* CardToolbar */,
 				5912EE212A93662800B2F8B5 /* CardViews */,
 				729BF2982A95812900E67871 /* DeckViews */,
 				729BF29B2A95821900E67871 /* FellowshipViews */,
@@ -237,6 +240,14 @@
 				59862D722A91F46000628449 /* Cards.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		59B6E9B32A9A0C2D0056EE8D /* CardToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				592744842A9A7F7000BFC704 /* FilterEdit.swift */,
+			);
+			path = CardToolbar;
 			sourceTree = "<group>";
 		};
 		59C9B8B52A97434100520310 /* UserViews */ = {
@@ -435,6 +446,7 @@
 				729BF29D2A95824800E67871 /* LoginView.swift in Sources */,
 				595C7BED2A93A1EB0094E64F /* Pack.swift in Sources */,
 				595C7BE92A93985D0094E64F /* CollectionButton.swift in Sources */,
+				592744852A9A7F7000BFC704 /* FilterEdit.swift in Sources */,
 				59C9B8B92A9743B500520310 /* UserView.swift in Sources */,
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
