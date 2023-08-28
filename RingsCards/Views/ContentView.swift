@@ -16,7 +16,7 @@ struct ContentView: View {
             }
             PackList()
                 .tabItem {
-                    Label("Collection", systemImage: "greetingcard")
+                    Label("Packs", systemImage: "greetingcard")
             }
         }
     }

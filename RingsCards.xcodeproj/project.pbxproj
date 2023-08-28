@@ -17,6 +17,10 @@
 		592264E82A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */; };
 		592264F52A90AB09002A7648 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264F42A90AB09002A7648 /* CardView.swift */; };
 		592744852A9A7F7000BFC704 /* FilterEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592744842A9A7F7000BFC704 /* FilterEdit.swift */; };
+		5939A0412A9B8973008DC370 /* Scenarios.json in Resources */ = {isa = PBXBuildFile; fileRef = 5939A0402A9B8973008DC370 /* Scenarios.json */; };
+		5939A0452A9B960A008DC370 /* Decks.json in Resources */ = {isa = PBXBuildFile; fileRef = 5939A0442A9B960A008DC370 /* Decks.json */; };
+		5939A0472A9B96C2008DC370 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939A0462A9B96C2008DC370 /* Deck.swift */; };
+		5944A3DD2A9B3D5F00E6F562 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */; };
 		595C7BE92A93985D0094E64F /* CollectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BE82A93985D0094E64F /* CollectionButton.swift */; };
 		595C7BEB2A93A16E0094E64F /* Packs.json in Resources */ = {isa = PBXBuildFile; fileRef = 595C7BEA2A93A16E0094E64F /* Packs.json */; };
 		595C7BED2A93A1EB0094E64F /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BEC2A93A1EB0094E64F /* Pack.swift */; };
@@ -70,6 +74,10 @@
 		592264E72A90A995002A7648 /* RingsCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		592264F42A90AB09002A7648 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		592744842A9A7F7000BFC704 /* FilterEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEdit.swift; sourceTree = "<group>"; };
+		5939A0402A9B8973008DC370 /* Scenarios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Scenarios.json; sourceTree = "<group>"; };
+		5939A0442A9B960A008DC370 /* Decks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Decks.json; sourceTree = "<group>"; };
+		5939A0462A9B96C2008DC370 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 		595C7BE82A93985D0094E64F /* CollectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionButton.swift; sourceTree = "<group>"; };
 		595C7BEA2A93A16E0094E64F /* Packs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Packs.json; sourceTree = "<group>"; };
 		595C7BEC2A93A1EB0094E64F /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
@@ -208,8 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				59862D6F2A91F13100628449 /* Card.swift */,
+				5939A0462A9B96C2008DC370 /* Deck.swift */,
 				595C7BEC2A93A1EB0094E64F /* Pack.swift */,
 				59862D742A91F62100628449 /* RingsData.swift */,
+				5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */,
 				59C9B8B32A97430400520310 /* User.swift */,
 			);
 			path = Model;
@@ -236,8 +246,10 @@
 		59862D712A91F30800628449 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				595C7BEA2A93A16E0094E64F /* Packs.json */,
 				59862D722A91F46000628449 /* Cards.json */,
+				5939A0442A9B960A008DC370 /* Decks.json */,
+				595C7BEA2A93A16E0094E64F /* Packs.json */,
+				5939A0402A9B8973008DC370 /* Scenarios.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -405,6 +417,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59862D732A91F46000628449 /* Cards.json in Resources */,
+				5939A0412A9B8973008DC370 /* Scenarios.json in Resources */,
+				5939A0452A9B960A008DC370 /* Decks.json in Resources */,
 				592264D22A90A995002A7648 /* Preview Assets.xcassets in Resources */,
 				592264CF2A90A995002A7648 /* Assets.xcassets in Resources */,
 				595C7BEB2A93A16E0094E64F /* Packs.json in Resources */,
@@ -439,6 +453,7 @@
 				5960CA472A94BFA5009A68D4 /* PackView.swift in Sources */,
 				5960CA452A94AC83009A68D4 /* PackList.swift in Sources */,
 				59C9B8B72A97438000520310 /* UserHost.swift in Sources */,
+				5939A0472A9B96C2008DC370 /* Deck.swift in Sources */,
 				59862D7B2A9217F600628449 /* CircleImage.swift in Sources */,
 				592264CD2A90A993002A7648 /* ContentView.swift in Sources */,
 				729BF29F2A9585F300E67871 /* FellowshipView.swift in Sources */,
@@ -453,6 +468,7 @@
 				59862D702A91F13100628449 /* Card.swift in Sources */,
 				729BF2A12A95860100E67871 /* BuilderView.swift in Sources */,
 				729BF2A32A95860B00E67871 /* DeckView.swift in Sources */,
+				5944A3DD2A9B3D5F00E6F562 /* Scenario.swift in Sources */,
 				5960CA402A94907D009A68D4 /* PackRow.swift in Sources */,
 				59C9B8B42A97430400520310 /* User.swift in Sources */,
 			);

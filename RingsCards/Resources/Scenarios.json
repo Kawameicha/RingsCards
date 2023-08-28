@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "code": "Passage Through Mirkwood",
+    "name": "Passage Through Mirkwood",
+    "nameCanonical": "passage-through-mirkwood",
+    "pack": "Core Set",
+    "date_creation": "2016-03-28T01:35:10-03:00",
+    "date_update": "2019-03-13T18:44:33-03:00",
+    "encounters": [
+      
+      {
+        "id": 3,
+        "code": "Spiders of Mirkwood",
+        "name": "Spiders of Mirkwood"
+      },
+      {
+        "id": 1,
+        "code": "Passage Through Mirkwood",
+        "name": "Passage Through Mirkwood"
+      },
+      {
+        "id": 2,
+        "code": "Dol Guldur Orcs",
+        "name": "Dol Guldur Orcs"
+      }
+  ],
+    "has_easy": true,
+    "has_nightmare": true,
+    "easy_cards": 27,
+    "easy_enemies": 13,
+    "easy_locations": 12,
+    "easy_treacheries": 2,
+    "easy_shadows": 12,
+    "easy_objectives": 0,
+    "easy_objective_allies": 0,
+    "easy_objective_locations": 0,
+    "easy_surges": 1,
+    "easy_encounter_side_quests": 0,
+    "normal_cards": 36,
+    "normal_enemies": 16,
+    "normal_locations": 13,
+    "normal_treacheries": 7,
+    "normal_shadows": 13,
+    "normal_objectives": 0,
+    "normal_objective_allies": 0,
+    "normal_objective_locations": 0,
+    "normal_surges": 1,
+    "normal_encounter_side_quests": 0,
+    "nightmare_cards": 56,
+    "nightmare_enemies": 25,
+    "nightmare_locations": 18,
+    "nightmare_treacheries": 12,
+    "nightmare_shadows": 27,
+    "nightmare_objectives": 0,
+    "nightmare_objective_allies": 0,
+    "nightmare_objective_locations": 0,
+    "nightmare_surges": 3,
+    "nightmare_encounter_side_quests": 0
+  },
+  {
+    "id": 2,
+    "code": "Journey Along the Anduin",
+    "name": "Journey Along the Anduin",
+    "nameCanonical": "journey-along-the-anduin",
+    "pack": "Core Set",
+    "date_creation": "2016-03-28T01:36:38-03:00",
+    "date_update": "2019-03-13T18:44:33-03:00",
+    "encounters": [
+      {
+        "id": 2,
+        "code": "Dol Guldur Orcs",
+        "name": "Dol Guldur Orcs"
+      },
+      {
+        "id": 4,
+        "code": "Journey Along the Anduin",
+        "name": "Journey Along the Anduin"
+      },
+      {
+        "id": 5,
+        "code": "Sauron's Reach",
+        "name": "Sauron's Reach"
+      },
+      {
+        "id": 6,
+        "code": "Wilderlands",
+        "name": "Wilderlands"
+      }
+  ],
+    "has_easy": true,
+    "has_nightmare": true,
+    "easy_cards": 32,
+    "easy_enemies": 14,
+    "easy_locations": 10,
+    "easy_treacheries": 8,
+    "easy_shadows": 13,
+    "easy_objectives": 0,
+    "easy_objective_allies": 0,
+    "easy_objective_locations": 0,
+    "easy_surges": 3,
+    "easy_encounter_side_quests": 0,
+    "normal_cards": 47,
+    "normal_enemies": 20,
+    "normal_locations": 13,
+    "normal_treacheries": 14,
+    "normal_shadows": 18,
+    "normal_objectives": 0,
+    "normal_objective_allies": 0,
+    "normal_objective_locations": 0,
+    "normal_surges": 5,
+    "normal_encounter_side_quests": 0,
+    "nightmare_cards": 66,
+    "nightmare_enemies": 28,
+    "nightmare_locations": 17,
+    "nightmare_treacheries": 20,
+    "nightmare_shadows": 31,
+    "nightmare_objectives": 0,
+    "nightmare_objective_allies": 0,
+    "nightmare_objective_locations": 0,
+    "nightmare_surges": 14,
+    "nightmare_encounter_side_quests": 0
+  },
+  {
+    "id": 3,
+    "code": "Escape from Dol Guldur",
+    "name": "Escape from Dol Guldur",
+    "nameCanonical": "escape-from-dol-guldur",
+    "pack": "Core Set",
+    "date_creation": "2016-03-28T01:36:38-03:00",
+    "date_update": "2022-01-26T16:40:12-02:00",
+    "encounters": [
+      {
+        "id": 7,
+        "code": "Escape from Dol Guldur",
+        "name": "Escape from Dol Guldur"
+      },
+      {
+        "id": 2,
+        "code": "Dol Guldur Orcs",
+        "name": "Dol Guldur Orcs"
+      },
+      {
+        "id": 3,
+        "code": "Spiders of Mirkwood",
+        "name": "Spiders of Mirkwood"
+      }
+  ],
+    "has_easy": true,
+    "has_nightmare": true,
+    "easy_cards": 30,
+    "easy_enemies": 10,
+    "easy_locations": 12,
+    "easy_treacheries": 5,
+    "easy_shadows": 12,
+    "easy_objectives": 3,
+    "easy_objective_allies": 0,
+    "easy_objective_locations": 0,
+    "easy_surges": 3,
+    "easy_encounter_side_quests": 0,
+    "normal_cards": 41,
+    "normal_enemies": 15,
+    "normal_locations": 13,
+    "normal_treacheries": 10,
+    "normal_shadows": 13,
+    "normal_objectives": 3,
+    "normal_objective_allies": 0,
+    "normal_objective_locations": 0,
+    "normal_surges": 3,
+    "normal_encounter_side_quests": 0,
+    "nightmare_cards": 61,
+    "nightmare_enemies": 23,
+    "nightmare_locations": 18,
+    "nightmare_treacheries": 16,
+    "nightmare_shadows": 25,
+    "nightmare_objectives": 3,
+    "nightmare_objective_allies": 0,
+    "nightmare_objective_locations": 0,
+    "nightmare_surges": 8,
+    "nightmare_encounter_side_quests": 0
+  }
+]
