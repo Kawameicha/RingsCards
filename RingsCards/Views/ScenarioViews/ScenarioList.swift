@@ -22,7 +22,7 @@ struct ScenarioList: View {
         NavigationView {
             List(ringsData.scenarios) { scenario in
                 NavigationLink {
-//                    PackView(pack: scenario)
+                    ScenarioView(scenario: scenario)
                 } label: {
                     ScenarioRow(scenario: scenario)
                 }

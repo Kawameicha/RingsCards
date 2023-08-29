@@ -23,7 +23,7 @@
         "code": "Dol Guldur Orcs",
         "name": "Dol Guldur Orcs"
       }
-  ],
+      ],
     "has_easy": true,
     "has_nightmare": true,
     "easy_cards": 27,
@@ -86,7 +86,7 @@
         "code": "Wilderlands",
         "name": "Wilderlands"
       }
-  ],
+      ],
     "has_easy": true,
     "has_nightmare": true,
     "easy_cards": 32,
@@ -144,7 +144,7 @@
         "code": "Spiders of Mirkwood",
         "name": "Spiders of Mirkwood"
       }
-  ],
+      ],
     "has_easy": true,
     "has_nightmare": true,
     "easy_cards": 30,
