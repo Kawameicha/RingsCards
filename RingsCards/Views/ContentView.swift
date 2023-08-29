@@ -12,7 +12,7 @@ struct ContentView: View {
         TabView {
             CardList()
                 .tabItem {
-                    Label("Cards", systemImage: "magnifyingglass")
+                    Label("Cards", systemImage: "lanyardcard")
             }
             DeckList()
                 .tabItem {
@@ -22,9 +22,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Scenarios", systemImage: "book")
             }
-            PackList()
+            SettingView()
                 .tabItem {
-                    Label("Packs", systemImage: "greetingcard")
+                    Label("Settings", systemImage: "slider.horizontal.3")
             }
         }
     }

@@ -23,6 +23,8 @@ struct CardList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
     @State private var sortBySphere = false
+    @State private var showFilters = false
+    @State private var showCollection = false
 
     var collection: [String] {
         ringsData.packs.map { pack in
@@ -82,10 +84,30 @@ struct CardList: View {
                             Label("Sort by Sphere",
                                   systemImage: sortBySphere ? "arrow.up.arrow.down.circle.fill" : "arrow.up.arrow.down.circle")
                         }
+                        Button {
+                            showFilters.toggle()
+                        } label: {
+                            Label("Show Filters", systemImage: "line.3.horizontal.decrease.circle")
+                        }
+                        Button {
+                            showCollection.toggle()
+                        } label: {
+                            Label("Edit Collection", systemImage: "plusminus.circle")
+                        }
                     }) {
                         Image(systemName: "ellipsis.circle")
                     }
                 }
+            }
+            .sheet(isPresented: $showCollection) {
+                PackList()
+                    .environmentObject(ringsData)
+                    .presentationDetents([.medium, .large])
+            }
+            .sheet(isPresented: $showFilters) {
+                FilterEdit()
+                    .environmentObject(ringsData)
+                    .presentationDetents([.medium, .large])
             }
         }
     }
