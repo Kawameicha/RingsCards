@@ -9,6 +9,14 @@ import SwiftUI
 
 struct ScenarioList: View {
     @EnvironmentObject var ringsData: RingsData
+    @State private var searchText: String = ""
+    
+    var filteredScenarios: [Scenario] {
+        guard !searchText.isEmpty else { return ringsData.scenarios }
+        return ringsData.scenarios.filter { scenario in
+            scenario.name.lowercased().cleaned().contains(searchText.lowercased())
+        }
+    }
 
     var body: some View {
         NavigationView {
@@ -19,7 +27,9 @@ struct ScenarioList: View {
                     ScenarioRow(scenario: scenario)
                 }
             }
+            .listStyle(.sidebar)
             .navigationTitle("My Scenarios")
+            .searchable(text: $searchText)
         }
     }
 }

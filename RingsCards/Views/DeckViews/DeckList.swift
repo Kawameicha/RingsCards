@@ -22,7 +22,7 @@ struct DeckList: View {
     var filteredDecks: [Deck] {
         guard !searchText.isEmpty else { return publicOnly }
         return publicOnly.filter { deck in
-            deck.name.lowercased().contains(searchText.lowercased())
+            deck.name.lowercased().cleaned().contains(searchText.lowercased())
         }
     }
 

@@ -13,6 +13,12 @@ extension String {
     }
 }
 
+extension String {
+  func cleaned() -> Self {
+    return self.folding(options: .diacriticInsensitive, locale: .current)
+  }
+}
+
 struct CardList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
@@ -43,7 +49,7 @@ struct CardList: View {
     var filteredCards: [Card] {
         guard !searchText.isEmpty else { return sortedCards }
         return sortedCards.filter { card in
-            card.name.lowercased().contains(searchText.lowercased())
+            card.name.lowercased().cleaned().contains(searchText.lowercased())
         }
     }
 
