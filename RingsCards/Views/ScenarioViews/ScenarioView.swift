@@ -12,7 +12,7 @@ struct ScenarioView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(image: Image("Person"))
+            CircleImage(image: Image(scenario.nameCanonical))
 
             VStack(alignment: .leading) {
                 Text(scenario.name)

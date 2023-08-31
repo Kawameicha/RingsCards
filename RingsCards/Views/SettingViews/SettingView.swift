@@ -10,8 +10,7 @@ import SwiftUI
 struct SettingView: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var showingProfile = false
-    
-    
+
     var body: some View {
         NavigationView {
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -27,7 +26,7 @@ struct SettingView: View {
                     UserHost()
                         .environmentObject(ringsData)
                         .presentationDetents([.medium, .large])
-                }
+            }
         }
     }
 }

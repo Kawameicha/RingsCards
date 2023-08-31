@@ -10,7 +10,7 @@ import SwiftUI
 struct ScenarioList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
-    
+
     var filteredScenarios: [Scenario] {
         guard !searchText.isEmpty else { return ringsData.scenarios }
         return ringsData.scenarios.filter { scenario in
