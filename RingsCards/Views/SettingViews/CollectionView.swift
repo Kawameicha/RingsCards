@@ -15,6 +15,10 @@ struct CollectionView: View {
     var body: some View {
         NavigationView {
             List {
+                Section(header: Text("All Cycles")) {
+                    Toggle("Add to Collection", sources: $ringsData.collection, isOn: \.isInCollection)
+                }
+                
                 ForEach(allCycles, id:\.self) { cycle in
                     Section(header: Text("\(cycle)")) {
                         ForEach($ringsData.collection.filter { $pack in

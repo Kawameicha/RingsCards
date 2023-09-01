@@ -12,15 +12,15 @@ struct ContentView: View {
         TabView {
             CardList()
                 .tabItem {
-                    Label("Cards", systemImage: "lanyardcard")
+                    Label("Cards", systemImage: "rectangle.portrait.fill")
             }
             DeckList()
                 .tabItem {
-                    Label("Decks", systemImage: "person.3")
+                    Label("Decks", systemImage: "person.3.fill")
             }
             ScenarioList()
                 .tabItem {
-                    Label("Scenarios", systemImage: "book")
+                    Label("Scenarios", systemImage: "book.fill")
             }
             SettingView()
                 .tabItem {
