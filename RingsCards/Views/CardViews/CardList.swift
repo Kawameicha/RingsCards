@@ -27,8 +27,8 @@ struct CardList: View {
     @State private var showCollection = false
 
     var collection: [String] {
-        ringsData.packs.map { pack in
-            pack.inCollection ? pack.code : ""
+        ringsData.collection.map { pack in
+            pack.isInCollection ? pack.PackCode : ""
         }
     }
 
@@ -100,7 +100,7 @@ struct CardList: View {
                 }
             }
             .sheet(isPresented: $showCollection) {
-                PackList()
+                CollectionView()
                     .environmentObject(ringsData)
                     .presentationDetents([.medium, .large])
             }
