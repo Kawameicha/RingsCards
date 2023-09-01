@@ -13,19 +13,27 @@ struct SettingView: View {
 
     var body: some View {
         NavigationView {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .navigationTitle("Settings")
-                .toolbar {
-                    Button {
-                        showingProfile.toggle()
+            List {
+                Section(header: Text("Cards")) {
+                    NavigationLink {
+                        CollectionView()
                     } label: {
-                        Label("User Profile", systemImage: "person.crop.circle")
+                        Text("Edit Collection")
                     }
                 }
-                .sheet(isPresented: $showingProfile) {
-                    UserHost()
-                        .environmentObject(ringsData)
-                        .presentationDetents([.medium, .large])
+            }
+            .navigationTitle("Settings")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+            }
+            .sheet(isPresented: $showingProfile) {
+                UserHost()
+                    .environmentObject(ringsData)
+                    .presentationDetents([.medium, .large])
             }
         }
     }

@@ -38,8 +38,20 @@ struct CardList: View {
         }
     }
 
+    var filtered: [String] {
+        ringsData.spheres.map { sphere in
+            sphere.filterIn ? sphere.name : ""
+        }
+    }
+
+    var filteredCards: [Card] {
+        collectionOnly.filter { card in
+            card.sphere_name.within(filtered)
+        }
+    }
+
     var sortedCards: [Card] {
-        collectionOnly.sorted(by: {
+        filteredCards.sorted(by: {
             if sortBySphere == true && $0.sphere_code != $1.sphere_code {
                 return $0.sphere_code < $1.sphere_code
             } else {
@@ -48,7 +60,7 @@ struct CardList: View {
         })
     }
 
-    var filteredCards: [Card] {
+    var searchedCards: [Card] {
         guard !searchText.isEmpty else { return sortedCards }
         return sortedCards.filter { card in
             card.name.lowercased().cleaned().contains(searchText.lowercased())
@@ -62,7 +74,7 @@ struct CardList: View {
             List {
                 ForEach(allTypes, id:\.self) { type in
                     Section(header: Text("\(type)")) {
-                        ForEach(filteredCards.filter { card in
+                        ForEach(searchedCards.filter { card in
                             card.type_name.contains("\(type)")
                         }) {card in
                             NavigationLink {

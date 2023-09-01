@@ -30,6 +30,15 @@ final class RingsData: ObservableObject {
         Collection(cycleName: "Dwarrowdelf", cycleCode: "Dwarrowdelf", cyclePosition: 2, packName: "Foundations of Stone", PackCode: "FoS", PackPosition: 6),
         Collection(cycleName: "Dwarrowdelf", cycleCode: "Dwarrowdelf", cyclePosition: 2, packName: "Shadow and Flame", PackCode: "SaF", PackPosition: 7)
     ]
+    @Published var spheres = [
+        Sphere(name: "Leadership"),
+        Sphere(name: "Tactics"),
+        Sphere(name: "Spirit"),
+        Sphere(name: "Lore"),
+        Sphere(name: "Neutral"),
+        Sphere(name: "Baggins"),
+        Sphere(name: "Fellowship")
+    ]
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

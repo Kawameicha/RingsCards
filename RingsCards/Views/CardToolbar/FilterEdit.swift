@@ -7,22 +7,20 @@
 
 import SwiftUI
 
-enum Sphere: String, CaseIterable, Identifiable {
-    case leadership, tatics, spirit, lore, neutral
-    var id: Self { self }
-}
-
 struct FilterEdit: View {
-    @State private var selectedSphere: Sphere = .leadership
+    @EnvironmentObject var ringsData: RingsData
 
     var body: some View {
         NavigationView {
-            Picker("Sphere", selection: $selectedSphere) {
-                ForEach(Sphere.allCases) { sphere in
-                    Text(sphere.rawValue.capitalized)
+            List {
+                Section(header: Text("Sphere")) {
+                    ForEach($ringsData.spheres) { $sphere in
+                        Toggle(sphere.name, isOn: $sphere.filterIn)
+                    }
                 }
             }
-            .pickerStyle(.menu)
+            .listStyle(.sidebar)
+            .navigationTitle("Edit Filters")
         }
     }
 }
@@ -30,5 +28,6 @@ struct FilterEdit: View {
 struct FilterEdit_Previews: PreviewProvider {
     static var previews: some View {
         FilterEdit()
+            .environmentObject(RingsData())
     }
 }

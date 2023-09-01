@@ -16,7 +16,7 @@ struct CardRow: View {
                 .foregroundColor(Color(card.sphere_name))
                 .font(.headline)
             HStack(spacing: 3) {
-                Label(card.pack_name, systemImage: "person")
+                Label(card.pack_name, systemImage: "rectangle.portrait")
             }
             .foregroundColor(.secondary)
             .font(.subheadline)
