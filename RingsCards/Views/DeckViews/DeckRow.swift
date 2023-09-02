@@ -15,7 +15,7 @@ struct DeckRow: View {
             Text(deck.name)
                 .font(.headline)
             HStack(spacing: 3) {
-                Label(deck.name, systemImage: "person.3")
+                Label("\(deck.heroes.count) Heroes, Cards up to \(deck.last_pack)", systemImage: "person.3")
             }
             .foregroundColor(.secondary)
             .font(.subheadline)

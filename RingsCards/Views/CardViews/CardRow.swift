@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardRow: View {
     var card: Card
+    var value = 0
 
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
@@ -16,7 +17,12 @@ struct CardRow: View {
                 .foregroundColor(Color(card.sphere_name))
                 .font(.headline)
             HStack(spacing: 3) {
-                Label(card.pack_name, systemImage: "rectangle.portrait")
+                if value != 0 {
+                    Label("x \(value)", systemImage: "rectangle.portrait")
+                } else {
+                    Label(card.pack_name, systemImage: "rectangle.portrait")
+                }
+//                Label(card.pack_name, systemImage: "rectangle.portrait")
             }
             .foregroundColor(.secondary)
             .font(.subheadline)

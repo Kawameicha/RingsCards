@@ -67,7 +67,7 @@ struct CardList: View {
         }
     }
 
-    var allTypes: [String] = ["Hero", "Ally", "Attachment", "Event"]
+    let allTypes: [String] = ["Hero", "Ally", "Attachment", "Event"]
 
     var body: some View {
         NavigationView {

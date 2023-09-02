@@ -30,7 +30,7 @@ struct DeckList: View {
         NavigationView {
             List(filteredDecks) { deck in
                 NavigationLink {
-//                    PackView(pack: scenario)
+                    DeckView(deck: deck)
                 } label: {
                     DeckRow(deck: deck)
                 }

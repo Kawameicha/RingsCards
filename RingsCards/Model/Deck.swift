@@ -16,7 +16,7 @@ struct Deck: Hashable, Codable, Identifiable {
     var user_id: Int
     var heroes: [String: Int]
     var slots: [String: Int]
-    var sideslots: [String: Int]?
+    var sideslots: [String: Int]
     var version: String
     var last_pack: String
     var freeze_comments: String?
