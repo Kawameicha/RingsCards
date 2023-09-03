@@ -9,7 +9,7 @@ import SwiftUI
 
 extension String {
     func within(_ strings: [String]) -> Bool {
-        strings.contains { contains($0) }
+        strings.contains { elementsEqual($0) }
     }
 }
 
@@ -67,7 +67,7 @@ struct CardList: View {
         }
     }
 
-    let allTypes: [String] = ["Hero", "Ally", "Attachment", "Event"]
+    let allTypes: [String] = ["Hero", "Ally", "Attachment", "Event", "Campaign"]
 
     var body: some View {
         NavigationView {

@@ -16,6 +16,7 @@ final class RingsData: ObservableObject {
     @Published var user = User.default
     @Published var collection: [Collection] = [
         Collection(cycleName: "Shadows of Mirkwood", cycleCode: "Mirkwood", cyclePosition: 1, packName: "Core Set", PackCode: "Core", PackPosition: 1, isInCollection: true),
+        Collection(cycleName: "Shadows of Mirkwood", cycleCode: "Mirkwood", cyclePosition: 1, packName: "Campaign Cards", PackCode: "RevCore", PackPosition: 8),
         Collection(cycleName: "Shadows of Mirkwood", cycleCode: "Mirkwood", cyclePosition: 1, packName: "The Hunt for Gollum", PackCode: "HfG", PackPosition: 2),
         Collection(cycleName: "Shadows of Mirkwood", cycleCode: "Mirkwood", cyclePosition: 1, packName: "Conflict at the Carrock", PackCode: "CatC", PackPosition: 3),
         Collection(cycleName: "Shadows of Mirkwood", cycleCode: "Mirkwood", cyclePosition: 1, packName: "A Journey to Rhosgobel", PackCode: "JtR", PackPosition: 4),
