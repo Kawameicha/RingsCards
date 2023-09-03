@@ -67,12 +67,10 @@ struct CardList: View {
         }
     }
 
-    let allTypes: [String] = ["Hero", "Ally", "Attachment", "Event", "Campaign"]
-
     var body: some View {
         NavigationView {
             List {
-                ForEach(allTypes, id:\.self) { type in
+                ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
                         ForEach(searchedCards.filter { card in
                             card.type_name.contains("\(type)")

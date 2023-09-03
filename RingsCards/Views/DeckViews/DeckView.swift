@@ -12,14 +12,17 @@ struct DeckView: View {
 
     var deck: Deck
 
-    var body: some View {
-        let allTypes: [String] = ["Hero", "Ally", "Attachment", "Event"]
+    // Merge new cards into slots
+    var campaignSlots: [String:Int] {
+        deck.slots.merging(["01132": 1]) { (_, new) in new }
+    }
 
+    var body: some View {
         NavigationView {
             List {
-                ForEach(allTypes, id:\.self) { type in
+                ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
-                        ForEach(deck.slots.sorted(by: >), id: \.key) { key, value in
+                        ForEach(campaignSlots.sorted(by: >), id: \.key) { key, value in
                             ForEach(ringsData.cards.filter { card in
                                 card.code.contains("\(key)") && card.type_name.contains("\(type)")
                             }) {card in

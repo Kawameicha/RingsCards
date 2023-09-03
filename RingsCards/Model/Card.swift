@@ -36,3 +36,28 @@ struct Card: Hashable, Codable, Identifiable {
     var url: String
     var imagesrc: String
 }
+
+struct CardAnatomy {
+    let title: String
+    let cost: Int
+    let threatCost: Int
+    let sphere: Sphere
+    let willpower: Int
+    let attack: Int
+    let defense: Int
+    let hitPoint: Int
+    let resource: Sphere
+    let traits: [String]
+    let gameText: String
+    let cardType: CardType
+    let set: [String:Int]
+    
+    enum CardSphere: String, CaseIterable {
+        case leadership, tactics, spirit, lore, neutral, baggins, fellowship
+    }
+    
+    enum CardType: String, CaseIterable {
+        case hero, ally, attachment, event, campaign
+    }
+    
+}
