@@ -12,20 +12,36 @@ struct CardRow: View {
     var value = 0
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(card.name)
-                .foregroundColor(Color(card.sphere_name))
-                .font(.headline)
             HStack(spacing: 3) {
-                if value != 0 {
-                    Label("x \(value)", systemImage: "rectangle.portrait")
+                if card.threat != nil {
+                    Image(systemName: "\(card.threat ?? 0).square")
+                        .foregroundColor(Color(card.sphere_name))
+                        .font(.system(size: 42.0))
+                } else if card.cost != nil && card.cost != "x" {
+                    Image(systemName: "\(Int(card.cost!) ?? 0).circle")
+                        .foregroundColor(Color(card.sphere_name))
+                        .font(.system(size: 42.0))
                 } else {
-                    Label(card.pack_name, systemImage: "rectangle.portrait")
+                    Image(systemName: "x.circle")
+                        .foregroundColor(Color(card.sphere_name))
+                        .font(.system(size: 42.0))
                 }
-//                Label(card.pack_name, systemImage: "rectangle.portrait")
+
+            VStack(alignment: .leading, spacing: 3) {
+                if value != 0 {
+                    Text(card.name + " x \(value)")
+                        .foregroundColor(Color(card.sphere_name))
+                        .font(.headline)
+                } else {
+                    Text(card.name)
+                        .foregroundColor(Color(card.sphere_name))
+                        .font(.headline)
+                }
+
+                Text(card.traits ?? "")
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
             }
-            .foregroundColor(.secondary)
-            .font(.subheadline)
         }
     }
 }

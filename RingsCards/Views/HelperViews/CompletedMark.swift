@@ -14,7 +14,7 @@ struct CompletedMark: View {
         Button {
             isSet.toggle()
         } label: {
-            Label("Toggle Completed", systemImage: isSet ? "checkmark.circle" : "circle")
+            Label("Toggle Completed", systemImage: isSet ? "checkmark.square" : "square")
                 .labelStyle(.iconOnly)
                 .foregroundColor(isSet ? .green : .gray)
         }

@@ -17,17 +17,19 @@ struct ScenarioRow: View {
     }
 
     var body: some View {
+        HStack(spacing: 3) {
+            CompletedMark(isSet: $ringsData.campaigns.scenarioCompleted[scenarioIndex])
+                .buttonStyle(PlainButtonStyle())
+                .font(.system(size: 42.0))
+
         VStack(alignment: .leading, spacing: 3) {
             Text(scenario.name)
                 .font(.headline)
-            HStack(spacing: 3) {
-                Label(scenario.pack, systemImage: "book")
-                Spacer()
-                CompletedMark(isSet: $ringsData.campaigns.scenarioCompleted[scenarioIndex])
-                    .buttonStyle(PlainButtonStyle())
+
+            Text(scenario.pack)
+                .foregroundColor(.secondary)
+                .font(.subheadline)
             }
-            .foregroundColor(.secondary)
-            .font(.subheadline)
         }
     }
 }
