@@ -40,6 +40,7 @@ final class RingsData: ObservableObject {
         Sphere(name: "Baggins"),
         Sphere(name: "Fellowship")
     ]
+    @Published var campaigns = Campaign.default
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -1,5 +1,5 @@
 //
-//  CollectionButton.swift
+//  CompletedMark.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 21.08.23.
@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct CollectionButton: View {
+struct CompletedMark: View {
     @Binding var isSet: Bool
 
     var body: some View {
         Button {
             isSet.toggle()
         } label: {
-            Label("Toggle Favorite", systemImage: isSet ? "circle.fill" : "circle")
+            Label("Toggle Completed", systemImage: isSet ? "checkmark.circle" : "circle")
                 .labelStyle(.iconOnly)
-                .foregroundColor(isSet ? .yellow : .gray)
+                .foregroundColor(isSet ? .green : .gray)
         }
     }
 }
 
-struct CollectionButton_Previews: PreviewProvider {
+struct CompletedMark_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionButton(isSet: .constant(true))
+        CompletedMark(isSet: .constant(true))
     }
 }

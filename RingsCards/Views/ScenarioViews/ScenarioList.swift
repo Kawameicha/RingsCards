@@ -10,6 +10,7 @@ import SwiftUI
 struct ScenarioList: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
+    @State private var showingNotes = false
 
     var filteredScenarios: [Scenario] {
         guard !searchText.isEmpty else { return ringsData.scenarios }
@@ -28,8 +29,20 @@ struct ScenarioList: View {
                 }
             }
             .listStyle(.sidebar)
-            .navigationTitle("My Scenarios")
+            .navigationTitle("My Core Campaign")
             .searchable(text: $searchText)
+            .toolbar {
+                Button {
+                    showingNotes.toggle()
+                } label: {
+                    Label("Campaign Notes", systemImage: "ellipsis.circle")
+                }
+            }
+            .sheet(isPresented: $showingNotes) {
+                CampaignHost()
+                    .environmentObject(ringsData)
+                    .presentationDetents([.medium, .large])
+            }
         }
     }
 }

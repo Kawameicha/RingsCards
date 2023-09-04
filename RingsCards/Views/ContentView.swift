@@ -20,7 +20,7 @@ struct ContentView: View {
             }
             ScenarioList()
                 .tabItem {
-                    Label("Scenarios", systemImage: "book.fill")
+                    Label("Campaign", systemImage: "book.fill")
             }
             SettingView()
                 .tabItem {
