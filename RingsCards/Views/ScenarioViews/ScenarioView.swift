@@ -41,8 +41,6 @@ struct ScenarioView_Previews: PreviewProvider {
     static var scenarios = RingsData().scenarios
 
     static var previews: some View {
-        Group {
             ScenarioView(scenario: scenarios[0])
-        }
     }
 }

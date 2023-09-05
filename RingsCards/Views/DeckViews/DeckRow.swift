@@ -36,8 +36,6 @@ struct DeckRow_Previews: PreviewProvider {
     static var decks = RingsData().decks
 
     static var previews: some View {
-        Group {
             DeckRow(deck: decks[0])
-        }
     }
 }

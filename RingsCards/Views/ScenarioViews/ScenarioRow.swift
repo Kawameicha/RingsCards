@@ -38,9 +38,7 @@ struct ScenarioRow_Previews: PreviewProvider {
     static var scenarios = RingsData().scenarios
 
     static var previews: some View {
-        Group {
             ScenarioRow(scenario: scenarios[0])
                 .environmentObject(RingsData())
-        }
     }
 }
