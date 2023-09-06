@@ -12,8 +12,8 @@ struct Campaign: Hashable, Identifiable {
     var created = Date.now.formatted(date: .abbreviated, time: .shortened)
     var name: String
     let code: CampaignCode
-    let scenarioId: [Int]
-    var scenarioCompleted: [Bool]
+    let scenarios: [Int]
+    var completed: [Bool]
     var decks: Int?
     var fallenHeros: String
     var threatPenalty: Int
@@ -22,14 +22,14 @@ struct Campaign: Hashable, Identifiable {
     var burdens: String
 
     enum CampaignCode: String, CaseIterable {
-        case core, other
+        case core, mirkwood
     }
 
     static let `default` = Campaign(id: UUID(),
-                                    name: "My Demo Campaign",
+                                    name: "My Core Set Campaign",
                                     code: CampaignCode.core,
-                                    scenarioId: [1,2,3],
-                                    scenarioCompleted: [true,false,false],
+                                    scenarios: [1,2,3],
+                                    completed: [false,false,false],
                                     fallenHeros: "",
                                     threatPenalty: 0,
                                     notes: "",

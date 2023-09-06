@@ -16,7 +16,7 @@ struct ScenarioList: View {
 
     var campaignOnly: [Scenario] {
         ringsData.scenarios.filter{ scenario in
-            campaign.scenarioId.contains(scenario.id)
+            campaign.scenarios.contains(scenario.id)
         }
     }
 

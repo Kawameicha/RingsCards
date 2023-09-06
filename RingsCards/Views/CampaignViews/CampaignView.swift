@@ -35,9 +35,9 @@ struct CampaignView: View {
                 Divider()
 
                 HStack {
-                    Text("Boon: \(campaign.boons)")
+                    Text("Boons: \(campaign.boons)")
                     Spacer()
-                    Text("Burden: \(campaign.burdens)")
+                    Text("Burdens: \(campaign.burdens)")
                 }
             }
         }

@@ -19,12 +19,12 @@ struct ScenarioRow: View {
     var scenario: Scenario
 
     var scenarioIndex: Int {
-        ringsData.scenarios.firstIndex(where: { $0.id == scenario.id })!
+        ringsData.scenarios.firstIndex(where: { $0.nameCanonical == scenario.nameCanonical })!
     }
 
     var body: some View {
         HStack(spacing: 3) {
-            CompletedMark(isSet: $ringsData.campaigns[campaignIndex].scenarioCompleted[scenarioIndex])
+            CompletedMark(isSet: $ringsData.campaigns[campaignIndex].completed[scenarioIndex])
                 .buttonStyle(PlainButtonStyle())
                 .font(.system(size: 42.0))
 

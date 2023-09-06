@@ -27,13 +27,13 @@ struct CampaignEdit: View {
             HStack {
                 Text("Boons").bold()
                 Divider()
-                TextField("Boon", text: $campaign.boons)
+                TextField("Boons", text: $campaign.boons)
             }
 
             HStack {
                 Text("Burden").bold()
                 Divider()
-                TextField("Burden", text: $campaign.burdens)
+                TextField("Burdens", text: $campaign.burdens)
             }
         }
     }
