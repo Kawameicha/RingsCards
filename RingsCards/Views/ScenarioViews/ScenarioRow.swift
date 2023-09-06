@@ -10,6 +10,12 @@ import SwiftUI
 struct ScenarioRow: View {
     @EnvironmentObject var ringsData: RingsData
 
+    var campaign: Campaign
+
+    var campaignIndex: Int {
+        ringsData.campaigns.firstIndex(where: { $0.id == campaign.id })!
+    }
+
     var scenario: Scenario
 
     var scenarioIndex: Int {
@@ -18,7 +24,7 @@ struct ScenarioRow: View {
 
     var body: some View {
         HStack(spacing: 3) {
-            CompletedMark(isSet: $ringsData.campaigns.scenarioCompleted[scenarioIndex])
+            CompletedMark(isSet: $ringsData.campaigns[campaignIndex].scenarioCompleted[scenarioIndex])
                 .buttonStyle(PlainButtonStyle())
                 .font(.system(size: 42.0))
 
@@ -35,10 +41,11 @@ struct ScenarioRow: View {
 }
 
 struct ScenarioRow_Previews: PreviewProvider {
+    static var campaigns = RingsData().campaigns
     static var scenarios = RingsData().scenarios
 
     static var previews: some View {
-            ScenarioRow(scenario: scenarios[0])
+            ScenarioRow(campaign: campaigns[0], scenario: scenarios[0])
                 .environmentObject(RingsData())
     }
 }

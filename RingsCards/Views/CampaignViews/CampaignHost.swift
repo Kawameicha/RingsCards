@@ -12,12 +12,18 @@ struct CampaignHost: View {
     @EnvironmentObject var ringsData: RingsData
     @State private var draftCampaign = Campaign.default
 
+    var campaign: Campaign
+
+    var campaignIndex: Int {
+        ringsData.campaigns.firstIndex(where: { $0.id == campaign.id })!
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
                 if editMode?.wrappedValue == .active {
                     Button("Cancel", role: .cancel) {
-                        draftCampaign = ringsData.campaigns
+                        draftCampaign = ringsData.campaigns[campaignIndex]
                         editMode?.animation().wrappedValue = .inactive
                     }
                 }
@@ -26,14 +32,14 @@ struct CampaignHost: View {
             }
 
             if editMode?.wrappedValue == .inactive {
-                CampaignView(campaign:ringsData.campaigns)
+                CampaignView(campaign: ringsData.campaigns[campaignIndex])
             } else {
                 CampaignEdit(campaign: $draftCampaign)
                     .onAppear {
-                        draftCampaign = ringsData.campaigns
+                        draftCampaign = ringsData.campaigns[campaignIndex]
                     }
                     .onDisappear {
-                        ringsData.campaigns = draftCampaign
+                        ringsData.campaigns[campaignIndex] = draftCampaign
                 }
             }
         }
@@ -43,7 +49,7 @@ struct CampaignHost: View {
 
 struct CampaignHost_Previews: PreviewProvider {
     static var previews: some View {
-        CampaignHost()
+        CampaignHost(campaign: Campaign.default)
             .environmentObject(RingsData())
     }
 }

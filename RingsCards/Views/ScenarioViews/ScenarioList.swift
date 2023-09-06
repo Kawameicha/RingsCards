@@ -12,24 +12,32 @@ struct ScenarioList: View {
     @State private var searchText: String = ""
     @State private var showingNotes = false
 
+    var campaign: Campaign
+
+    var campaignOnly: [Scenario] {
+        ringsData.scenarios.filter{ scenario in
+            campaign.scenarioId.contains(scenario.id)
+        }
+    }
+
     var filteredScenarios: [Scenario] {
-        guard !searchText.isEmpty else { return ringsData.scenarios }
-        return ringsData.scenarios.filter { scenario in
+        guard !searchText.isEmpty else { return campaignOnly }
+        return campaignOnly.filter { scenario in
             scenario.name.lowercased().cleaned().contains(searchText.lowercased())
         }
     }
 
     var body: some View {
         NavigationView {
-            List(ringsData.scenarios) { scenario in
+            List(filteredScenarios) { scenario in
                 NavigationLink {
                     ScenarioView(scenario: scenario)
                 } label: {
-                    ScenarioRow(scenario: scenario)
+                    ScenarioRow(campaign: campaign, scenario: scenario)
                 }
             }
             .listStyle(.sidebar)
-            .navigationTitle("My Core Campaign")
+            .navigationTitle("\(campaign.name)")
             .searchable(text: $searchText)
             .toolbar {
                 Button {
@@ -39,7 +47,7 @@ struct ScenarioList: View {
                 }
             }
             .sheet(isPresented: $showingNotes) {
-                CampaignHost()
+                CampaignHost(campaign: campaign)
                     .environmentObject(ringsData)
                     .presentationDetents([.medium, .large])
             }
@@ -49,7 +57,7 @@ struct ScenarioList: View {
 
 struct ScenarioList_Previews: PreviewProvider {
     static var previews: some View {
-        ScenarioList()
+        ScenarioList(campaign: Campaign.default)
             .environmentObject(RingsData())
     }
 }

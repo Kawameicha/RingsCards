@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Campaign {
+struct Campaign: Hashable, Identifiable {
+    var id: UUID
+    var created = Date.now.formatted(date: .abbreviated, time: .shortened)
     var name: String
     let code: CampaignCode
     let scenarioId: [Int]
@@ -18,14 +20,19 @@ struct Campaign {
     var notes: String
     var boons: String
     var burdens: String
-    let created = Date()
-    
+
     enum CampaignCode: String, CaseIterable {
         case core, other
     }
 
-    static let `default` = Campaign(name: "My Core Campaign", code: CampaignCode.core,
-                                    scenarioId: [1,2,3], scenarioCompleted: [true,false,false],
-                                    fallenHeros: "None yet", threatPenalty: 0,
-                                    notes: "", boons: "", burdens: "")
+    static let `default` = Campaign(id: UUID(),
+                                    name: "My Demo Campaign",
+                                    code: CampaignCode.core,
+                                    scenarioId: [1,2,3],
+                                    scenarioCompleted: [true,false,false],
+                                    fallenHeros: "",
+                                    threatPenalty: 0,
+                                    notes: "",
+                                    boons: "",
+                                    burdens: "")
 }

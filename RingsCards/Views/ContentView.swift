@@ -18,7 +18,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Decks", systemImage: "person.3.fill")
             }
-            ScenarioList()
+            CampaignList()
                 .tabItem {
                     Label("Campaign", systemImage: "book.fill")
             }

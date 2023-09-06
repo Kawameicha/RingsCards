@@ -18,7 +18,7 @@ struct CampaignView: View {
                 Text(campaign.name)
                     .bold()
                     .font(.title)
-                Text("Created: ") + Text(campaign.created, style: .date)
+                Text("Created: ") + Text(campaign.created)
 
                 Divider()
 
