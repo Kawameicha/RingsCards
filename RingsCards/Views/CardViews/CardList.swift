@@ -90,19 +90,20 @@ struct CardList: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu(content: {
-                        Button(action: {sortBySphere.toggle()}) {
-                            Label("Sort by Sphere",
-                                  systemImage: sortBySphere ? "arrow.up.arrow.down.circle.fill" : "arrow.up.arrow.down.circle")
+                        Button {
+                            sortBySphere.toggle()
+                        } label: {
+                            Label("Sort by Sphere", systemImage: "arrow.up.arrow.down")
                         }
                         Button {
                             showFilters.toggle()
                         } label: {
-                            Label("Show Filters", systemImage: "line.3.horizontal.decrease.circle")
+                            Label("Show Filters", systemImage: "line.3.horizontal.decrease")
                         }
                         Button {
                             showCollection.toggle()
                         } label: {
-                            Label("Edit Collection", systemImage: "plusminus.circle")
+                            Label("Edit Collection", systemImage: "checklist")
                         }
                     }) {
                         Image(systemName: "ellipsis.circle")

@@ -13,28 +13,32 @@ struct ScenarioRow: View {
     var campaign: Campaign
 
     var campaignIndex: Int {
-        ringsData.campaigns.firstIndex(where: { $0.id == campaign.id })!
+        ringsData.campaigns.firstIndex(where: { $0.id == campaign.id }) ?? 0
     }
 
     var scenario: Scenario
 
     var scenarioIndex: Int {
-        ringsData.scenarios.firstIndex(where: { $0.nameCanonical == scenario.nameCanonical })!
+        ringsData.scenarios.firstIndex(where: { $0.nameCanonical == scenario.nameCanonical }) ?? 0
     }
 
     var body: some View {
-        HStack(spacing: 3) {
-            CompletedMark(isSet: $ringsData.campaigns[campaignIndex].completed[scenarioIndex])
-                .buttonStyle(PlainButtonStyle())
-                .font(.system(size: 42.0))
+        if ringsData.campaigns.isEmpty {
+            // Do nothing if no campaign
+        } else {
+            HStack(spacing: 3) {
+                CompletedMark(isSet: $ringsData.campaigns[campaignIndex].completed[scenarioIndex])
+                    .buttonStyle(PlainButtonStyle())
+                    .font(.system(size: 42.0))
 
-        VStack(alignment: .leading, spacing: 3) {
-            Text(scenario.name)
-                .font(.headline)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(scenario.name)
+                    .font(.headline)
 
-            Text(scenario.pack)
-                .foregroundColor(.secondary)
-                .font(.subheadline)
+                Text(scenario.pack)
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
+                }
             }
         }
     }
@@ -45,7 +49,7 @@ struct ScenarioRow_Previews: PreviewProvider {
     static var scenarios = RingsData().scenarios
 
     static var previews: some View {
-            ScenarioRow(campaign: campaigns[0], scenario: scenarios[0])
+            ScenarioRow(campaign: Campaign.default, scenario: scenarios[0])
                 .environmentObject(RingsData())
     }
 }

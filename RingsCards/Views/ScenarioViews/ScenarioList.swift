@@ -40,10 +40,16 @@ struct ScenarioList: View {
             .navigationTitle("\(campaign.name)")
             .searchable(text: $searchText)
             .toolbar {
-                Button {
-                    showingNotes.toggle()
-                } label: {
-                    Label("Campaign Notes", systemImage: "ellipsis.circle")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu(content: {
+                        Button {
+                            showingNotes.toggle()
+                        } label: {
+                            Label("Campaign Notes", systemImage: "list.clipboard")
+                        }
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                    }
                 }
             }
             .sheet(isPresented: $showingNotes) {

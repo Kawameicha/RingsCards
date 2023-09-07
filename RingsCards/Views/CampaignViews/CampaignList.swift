@@ -20,18 +20,29 @@ struct CampaignList: View {
 
     var body: some View {
         NavigationView {
-            List(filteredCampaigns) { campaign in
-                NavigationLink {
-                    ScenarioList(campaign: campaign)
-                } label: {
-                    CampaignRow(campaign: campaign)
+            List {
+                if ringsData.campaigns.isEmpty {
+                    NavigationLink(destination: CampaignNew(), label: { Text("Create a Campaign") })
+                } else {
+                    ForEach(filteredCampaigns) { campaign in
+                        NavigationLink {
+                            ScenarioList(campaign: campaign)
+                        } label: {
+                            CampaignRow(campaign: campaign)
+                        }
+                    }
+                    .onDelete(perform: removeRows)
                 }
             }
             .listStyle(.sidebar)
             .navigationTitle("My Campaigns")
             .searchable(text: $searchText)
-            .toolbar { NavigationLink(destination: CampaignNew(), label: { Image(systemName: "plus.circle") }) }
+            .toolbar { NavigationLink(destination: CampaignNew(), label: { Image(systemName: "plus") }) }
         }
+    }
+
+    func removeRows(at offsets: IndexSet) {
+        ringsData.campaigns.remove(atOffsets: offsets)
     }
 }
 

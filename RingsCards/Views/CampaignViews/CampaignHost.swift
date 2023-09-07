@@ -15,35 +15,39 @@ struct CampaignHost: View {
     var campaign: Campaign
 
     var campaignIndex: Int {
-        ringsData.campaigns.firstIndex(where: { $0.id == campaign.id })!
+        ringsData.campaigns.firstIndex(where: { $0.id == campaign.id }) ?? 0
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            HStack {
-                if editMode?.wrappedValue == .active {
-                    Button("Cancel", role: .cancel) {
-                        draftCampaign = ringsData.campaigns[campaignIndex]
-                        editMode?.animation().wrappedValue = .inactive
+        if ringsData.campaigns.isEmpty {
+            // Do nothing if no campaign
+        } else {
+            VStack(alignment: .leading, spacing: 20) {
+                HStack {
+                    if editMode?.wrappedValue == .active {
+                        Button("Cancel", role: .cancel) {
+                            draftCampaign = ringsData.campaigns[campaignIndex]
+                            editMode?.animation().wrappedValue = .inactive
+                        }
                     }
+                    Spacer()
+                    EditButton()
                 }
-                Spacer()
-                EditButton()
-            }
 
-            if editMode?.wrappedValue == .inactive {
-                CampaignView(campaign: ringsData.campaigns[campaignIndex])
-            } else {
-                CampaignEdit(campaign: $draftCampaign)
-                    .onAppear {
-                        draftCampaign = ringsData.campaigns[campaignIndex]
+                if editMode?.wrappedValue == .inactive {
+                    CampaignView(campaign: ringsData.campaigns[campaignIndex])
+                } else {
+                    CampaignEdit(campaign: $draftCampaign)
+                        .onAppear {
+                            draftCampaign = ringsData.campaigns[campaignIndex]
+                        }
+                        .onDisappear {
+                            ringsData.campaigns[campaignIndex] = draftCampaign
                     }
-                    .onDisappear {
-                        ringsData.campaigns[campaignIndex] = draftCampaign
                 }
             }
+            .padding()
         }
-        .padding()
     }
 }
 
