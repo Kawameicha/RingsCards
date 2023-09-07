@@ -25,14 +25,23 @@ struct Campaign: Hashable, Identifiable {
         case core, mirkwood
     }
 
-    static let `default` = Campaign(id: UUID(),
-                                    name: "My Core Set Campaign",
-                                    code: CampaignCode.core,
-                                    scenarios: [1,2,3],
-                                    completed: [false,false,false],
-                                    fallenHeros: "",
-                                    threatPenalty: 0,
-                                    notes: "",
-                                    boons: "",
-                                    burdens: "")
+    static let `default` = Campaign(name: "Default Core Set Campaign",
+                                    code: .core,
+                                    scenarios: Array(1...3),
+                                    completed: Array(repeating: false, count:3))
+}
+
+extension Campaign {
+    init(name: String, code: CampaignCode, scenarios: [Int], completed: [Bool]) {
+        self.id = UUID()
+        self.name = name
+        self.code = code
+        self.scenarios = scenarios
+        self.completed = completed
+        self.fallenHeros = ""
+        self.threatPenalty = 0
+        self.notes = ""
+        self.boons = ""
+        self.burdens = ""
+    }
 }

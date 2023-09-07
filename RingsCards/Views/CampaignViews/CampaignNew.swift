@@ -30,27 +30,15 @@ struct CampaignNew: View {
                     Spacer()
                     Button("Create Campaign", action: {
                         if selectedCode == .core {
-                            ringsData.campaigns.append(Campaign(id: UUID(),
-                                                                name: campaignName,
-                                                                code: Campaign.CampaignCode.core,
-                                                                scenarios: [1,2,3],
-                                                                completed: [false,false,false],
-                                                                fallenHeros: "",
-                                                                threatPenalty: 0,
-                                                                notes: "",
-                                                                boons: "",
-                                                                burdens: ""))
+                            ringsData.campaigns.append(Campaign(name: campaignName,
+                                                                code: .core,
+                                                                scenarios: Array(1...3),
+                                                                completed: Array(repeating: false, count:3)))
                         } else if selectedCode == .mirkwood {
-                            ringsData.campaigns.append(Campaign(id: UUID(),
-                                                                name: campaignName,
-                                                                code: Campaign.CampaignCode.mirkwood,
-                                                                scenarios: [1,2,3,4,5,6,7,8,9],
-                                                                completed: [false,false,false,false,false,false,false,false,false],
-                                                                fallenHeros: "",
-                                                                threatPenalty: 0,
-                                                                notes: "",
-                                                                boons: "",
-                                                                burdens: ""))
+                            ringsData.campaigns.append(Campaign(name: campaignName,
+                                                                code: .mirkwood,
+                                                                scenarios: Array(1...9),
+                                                                completed: Array(repeating: false, count:9)))
                         }
 
                         self.presentationMode.wrappedValue.dismiss()
