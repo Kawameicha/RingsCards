@@ -28,29 +28,48 @@ struct DeckList: View {
 
     var body: some View {
         NavigationView {
-            List(filteredDecks) { deck in
-                NavigationLink {
-                    DeckView(deck: deck)
-                } label: {
-                    DeckRow(deck: deck)
+            List {
+                if ringsData.decks.isEmpty {
+                    NavigationLink(destination: DeckNew(), label: { Text("Create a Deck") })
+                } else {
+                    ForEach(filteredDecks) { deck in
+                        NavigationLink {
+                            DeckView(deck: deck)
+                        } label: {
+                            DeckRow(deck: deck)
+                        }
+                    }
+                    .onDelete(perform: removeRows)
                 }
+//            List(filteredDecks) { deck in
+//                NavigationLink {
+//                    DeckView(deck: deck)
+//                } label: {
+//                    DeckRow(deck: deck)
+//                }
             }
             .listStyle(.sidebar)
             .navigationTitle("My Decks")
             .searchable(text: $searchText)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Menu(content: {
-                        Button(action: {publicDeckOnly.toggle()}) {
-                            Label("Published Only",
-                                  systemImage: publicDeckOnly ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
-                        }
-                    }) {
-                        Image(systemName: "ellipsis.circle")
-                    }
-                }
-            }
+            .toolbar { NavigationLink(destination: DeckNew(), label: { Image(systemName: "plus") }) }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Menu(content: {
+//                        Button(action: {publicDeckOnly.toggle()}) {
+//                            Label("Published Only",
+//                                  systemImage: publicDeckOnly ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+//                        }
+//                    }) {
+//                        Image(systemName: "ellipsis.circle")
+//                    }
+//                }
+//            }
         }
+    }
+    
+    
+    func removeRows(at offsets: IndexSet) {
+        ringsData.decks.remove(atOffsets: offsets)
     }
 }
 
