@@ -51,13 +51,12 @@ struct CardAnatomy {
     let gameText: String
     let cardType: CardType
     let set: [String:Int]
-    
+
     enum CardSphere: String, CaseIterable {
         case leadership, tactics, spirit, lore, neutral, baggins, fellowship
     }
-    
+
     enum CardType: String, CaseIterable {
         case hero, ally, attachment, event, campaign
     }
-    
 }

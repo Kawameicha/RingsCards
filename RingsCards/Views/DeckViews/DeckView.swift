@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DeckView: View {
     @EnvironmentObject var ringsData: RingsData
+    @State private var editDeck = false
 
     var deck: Deck
 
@@ -29,7 +30,11 @@ struct DeckView: View {
                                 NavigationLink {
                                     CardView(card: card)
                                 } label: {
-                                    CardRow(card: card, value: value)
+                                    if editDeck == false {
+                                        CardRow(card: card, value: value)
+                                    } else {
+                                        BuilderRow(deck: deck, card: card, value: value)
+                                    }
                                 }
                             }
                         }
@@ -44,7 +49,11 @@ struct DeckView: View {
                             NavigationLink {
                                 CardView(card: card)
                             } label: {
-                                CardRow(card: card, value: value)
+                                if editDeck == false {
+                                    CardRow(card: card, value: value)
+                                } else {
+                                    BuilderRow(deck: deck, card: card, value: value)
+                                }
                             }
                         }
                     }
@@ -52,6 +61,19 @@ struct DeckView: View {
             }
             .listStyle(.sidebar)
             .navigationTitle("\(deck.name)")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu(content: {
+                        Button {
+                            editDeck.toggle()
+                        } label: {
+                            Label("Edit Deck", systemImage: "pencil.line")
+                        }
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                }
+            }
         }
     }
 }

@@ -14,9 +14,9 @@ extension String {
 }
 
 extension String {
-  func cleaned() -> Self {
-    return self.folding(options: .diacriticInsensitive, locale: .current)
-  }
+    func cleaned() -> Self {
+        return self.folding(options: .diacriticInsensitive, locale: .current)
+    }
 }
 
 struct CardList: View {
