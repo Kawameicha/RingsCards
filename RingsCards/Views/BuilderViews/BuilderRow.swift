@@ -23,14 +23,20 @@ struct BuilderRow: View {
         HStack(spacing: 9) {
             VStack(spacing: 9) {
                 Button {
-                    ringsData.decks[deckIndex].slots["\(card.code)", default: value] += 1
+                    if value < card.deck_limit {
+                        ringsData.decks[deckIndex].slots["\(card.code)", default: value] += 1
+                    }
                 } label: {
                     Image(systemName: "plus.square")
                 }
                 .buttonStyle(PlainButtonStyle())
 
                 Button {
-                    ringsData.decks[deckIndex].slots["\(card.code)", default: value] -= 1
+                    if value > 1 {
+                        ringsData.decks[deckIndex].slots["\(card.code)", default: value] -= 1
+                    } else if value == 1 {
+                        ringsData.decks[deckIndex].slots["\(card.code)"] = nil
+                    }
                 } label: {
                     Image(systemName: "minus.square")
                 }

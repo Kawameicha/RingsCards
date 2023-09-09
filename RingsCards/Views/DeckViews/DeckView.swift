@@ -67,7 +67,7 @@ struct DeckView: View {
                         Button {
                             editDeck.toggle()
                         } label: {
-                            Label("Edit Deck", systemImage: "pencil.line")
+                            Label("Edit Deck", systemImage: "plus.forwardslash.minus")
                         }
                     }) {
                         Image(systemName: "ellipsis.circle")
