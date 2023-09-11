@@ -12,7 +12,9 @@ struct CardView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(image: Image("Person"))
+            CardImage(card: card)
+                .offset(y: -50)
+                .padding(.bottom, -250)
 
             VStack(alignment: .leading) {
                 Text(card.name)
