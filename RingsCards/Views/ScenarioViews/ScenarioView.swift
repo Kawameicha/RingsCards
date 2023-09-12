@@ -28,8 +28,10 @@ struct ScenarioView: View {
 
                 Divider()
 
-                ForEach(scenario.encounters) { sphere in
-                    Text(sphere.name)
+                ScenarioChart(scenario: scenario)
+
+                ForEach(scenario.encounters) { name in
+                    Text(name.name)
                 }
             }
             .padding()
@@ -41,6 +43,6 @@ struct ScenarioView_Previews: PreviewProvider {
     static var scenarios = RingsData().scenarios
 
     static var previews: some View {
-            ScenarioView(scenario: scenarios[0])
+            ScenarioView(scenario: scenarios[6])
     }
 }

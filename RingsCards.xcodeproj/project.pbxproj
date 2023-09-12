@@ -27,6 +27,7 @@
 		5944A3DD2A9B3D5F00E6F562 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */; };
 		594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B766A2AA7026200ED71AF /* CampaignList.swift */; };
 		594B766D2AA7050800ED71AF /* CampaignRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B766C2AA7050800ED71AF /* CampaignRow.swift */; };
+		5951BA712AB061380047DE1F /* ScenarioChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951BA702AB061380047DE1F /* ScenarioChart.swift */; };
 		595A66B32A9DE8930040C952 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A66B22A9DE8930040C952 /* SettingView.swift */; };
 		595C7BE92A93985D0094E64F /* CompletedMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BE82A93985D0094E64F /* CompletedMark.swift */; };
 		595C7BEB2A93A16E0094E64F /* Packs.json in Resources */ = {isa = PBXBuildFile; fileRef = 595C7BEA2A93A16E0094E64F /* Packs.json */; };
@@ -103,6 +104,7 @@
 		5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 		594B766A2AA7026200ED71AF /* CampaignList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignList.swift; sourceTree = "<group>"; };
 		594B766C2AA7050800ED71AF /* CampaignRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignRow.swift; sourceTree = "<group>"; };
+		5951BA702AB061380047DE1F /* ScenarioChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioChart.swift; sourceTree = "<group>"; };
 		595A66B22A9DE8930040C952 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		595C7BE82A93985D0094E64F /* CompletedMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedMark.swift; sourceTree = "<group>"; };
 		595C7BEA2A93A16E0094E64F /* Packs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Packs.json; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				59C357432AAF5374009CA291 /* CardImage.swift */,
 				59862D7A2A9217F600628449 /* CircleImage.swift */,
 				595C7BE82A93985D0094E64F /* CompletedMark.swift */,
+				5951BA702AB061380047DE1F /* ScenarioChart.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				598F51E52AA8747E00A1C06B /* CampaignNew.swift in Sources */,
 				5960CA452A94AC83009A68D4 /* PackList.swift in Sources */,
 				59C9B8B72A97438000520310 /* UserHost.swift in Sources */,
+				5951BA712AB061380047DE1F /* ScenarioChart.swift in Sources */,
 				5939A0472A9B96C2008DC370 /* Deck.swift in Sources */,
 				59D04FA42AA1DD76005066F3 /* CollectionView.swift in Sources */,
 				59862D7B2A9217F600628449 /* CircleImage.swift in Sources */,
