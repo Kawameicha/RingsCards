@@ -43,6 +43,6 @@ struct ScenarioView_Previews: PreviewProvider {
     static var scenarios = RingsData().scenarios
 
     static var previews: some View {
-            ScenarioView(scenario: scenarios[6])
+            ScenarioView(scenario: scenarios[0])
     }
 }
