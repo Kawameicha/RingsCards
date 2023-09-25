@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     var body: some View {
@@ -20,7 +21,7 @@ struct ContentView: View {
             }
             CampaignList()
                 .tabItem {
-                    Label("Campaign", systemImage: "book.fill")
+                    Label("Campaigns", systemImage: "book.fill")
             }
             SettingView()
                 .tabItem {
@@ -30,9 +31,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {    
     static var previews: some View {
         ContentView()
             .environmentObject(RingsData())
+            .modelContainer(for: Deck.self, inMemory: true)
     }
 }

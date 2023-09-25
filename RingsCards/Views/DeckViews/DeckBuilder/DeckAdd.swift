@@ -1,13 +1,16 @@
 //
-//  BuilderAdd.swift
+//  DeckAdd.swift
 //  RingsCards
 //
-//  Created by Christoph Freier on 11.09.23.
+//  Created by Christoph Freier on 25.09.23.
 //
 
 import SwiftUI
+import SwiftData
 
-struct BuilderAdd: View {
+struct DeckAdd: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var decks: [Deck]
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
     @State private var sortBySphere = false
@@ -71,7 +74,7 @@ struct BuilderAdd: View {
                             NavigationLink {
                                 CardView(card: card)
                             } label: {
-                                BuilderRow(deck: deck, card: card)
+                                DeckEdit(deck: deck, card: card)
                             }
                         }
                     }
@@ -117,11 +120,8 @@ struct BuilderAdd: View {
     }
 }
 
-struct BuilderAdd_Previews: PreviewProvider {
-    static var decks = RingsData().decks
-
-    static var previews: some View {
-        BuilderAdd(deck: decks[0])
-            .environmentObject(RingsData())
-    }
+#Preview {
+    DeckAdd(deck: Deck.default)
+        .modelContainer(for: Deck.self, inMemory: true)
+        .environmentObject(RingsData())
 }

@@ -1,21 +1,19 @@
 //
-//  BuilderRow.swift
+//  DeckEdit.swift
 //  RingsCards
 //
-//  Created by Christoph Freier on 08.09.23.
+//  Created by Christoph Freier on 25.09.23.
 //
 
 import SwiftUI
+import SwiftData
 
-struct BuilderRow: View {
+struct DeckEdit: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var decks: [Deck]
     @EnvironmentObject var ringsData: RingsData
 
     var deck: Deck
-
-    var deckIndex: Int {
-        ringsData.decks.firstIndex(where: { $0.id == deck.id }) ?? 0
-    }
-
     var card: Card
     var value = 0
 
@@ -24,7 +22,7 @@ struct BuilderRow: View {
             VStack(spacing: 9) {
                 Button {
                     if value < card.deck_limit {
-                        ringsData.decks[deckIndex].slots["\(card.code)", default: value] += 1
+                        deck.self.slots["\(card.code)", default: value] += 1
                     }
                 } label: {
                     Image(systemName: "plus.square")
@@ -33,9 +31,9 @@ struct BuilderRow: View {
 
                 Button {
                     if value > 1 {
-                        ringsData.decks[deckIndex].slots["\(card.code)", default: value] -= 1
+                        deck.self.slots["\(card.code)", default: value] -= 1
                     } else if value == 1 {
-                        ringsData.decks[deckIndex].slots["\(card.code)"] = nil
+                        deck.self.slots["\(card.code)"] = nil
                     }
                 } label: {
                     Image(systemName: "minus.square")
@@ -48,12 +46,7 @@ struct BuilderRow: View {
     }
 }
 
-struct BuilderRow_Previews: PreviewProvider {
-    static var decks = RingsData().decks
-    static var cards = RingsData().cards
-
-    static var previews: some View {
-        BuilderRow(deck: decks[0], card: cards[0])
-            .environmentObject(RingsData())
-    }
+#Preview {
+    DeckEdit(deck: Deck.default, card: RingsData().cards[0])
+        .modelContainer(for: Deck.self, inMemory: true)
 }

@@ -2,22 +2,19 @@
 //  DeckView.swift
 //  RingsCards
 //
-//  Created by Shane Eastwood on 2023-08-22.
+//  Created by Christoph Freier on 25.09.23.
 //
 
 import SwiftUI
+import SwiftData
 
 struct DeckView: View {
+    @Environment(\.modelContext) private var modelContext
     @EnvironmentObject var ringsData: RingsData
     @State private var editDeck = false
     @State private var addCards = false
 
     var deck: Deck
-
-    // Merge new cards into slots
-//    var campaignSlots: [String:Int] {
-//        deck.slots.merging(["01132": 1]) { (_, new) in new }
-//    }
 
     var allKeys: [String] { deck.slots.map{String($0.key) } }
 
@@ -36,26 +33,8 @@ struct DeckView: View {
                                     if editDeck == false {
                                         CardRow(card: card, value: value)
                                     } else {
-                                        BuilderRow(deck: deck, card: card, value: value)
+                                        DeckEdit(deck: deck, card: card, value: value)
                                     }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Section(header: Text("Side Slots")) {
-                    ForEach(deck.sideslots.sorted(by: <), id: \.key) { key, value in
-                        ForEach(ringsData.cards.filter { card in
-                            card.code.contains("\(key)")
-                        }) {card in
-                            NavigationLink {
-                                CardView(card: card)
-                            } label: {
-                                if editDeck == false {
-                                    CardRow(card: card, value: value)
-                                } else {
-                                    BuilderRow(deck: deck, card: card, value: value)
                                 }
                             }
                         }
@@ -83,7 +62,8 @@ struct DeckView: View {
                 }
             }
             .sheet(isPresented: $addCards) {
-                BuilderAdd(deck: deck)
+                DeckAdd(deck: deck)
+                    .modelContainer(for: Deck.self, inMemory: true)
                     .environmentObject(ringsData)
                     .presentationDetents([.medium, .large])
             }
@@ -91,11 +71,7 @@ struct DeckView: View {
     }
 }
 
-struct DeckView_Previews: PreviewProvider {
-    static var decks = RingsData().decks
-
-    static var previews: some View {
-        DeckView(deck: decks[0])
-            .environmentObject(RingsData())
-    }
+#Preview {
+    DeckView(deck: Deck.default)
+        .modelContainer(for: Deck.self, inMemory: true)
 }

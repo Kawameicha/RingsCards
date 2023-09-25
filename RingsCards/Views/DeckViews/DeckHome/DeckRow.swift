@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DeckRow: View {
+    @Environment(\.modelContext) private var modelContext
+
     var deck: Deck
 
     var body: some View {
@@ -32,10 +35,7 @@ struct DeckRow: View {
     }
 }
 
-struct DeckRow_Previews: PreviewProvider {
-    static var decks = RingsData().decks
-
-    static var previews: some View {
-            DeckRow(deck: decks[0])
-    }
+#Preview {
+    DeckRow(deck: Deck.default)
+        .modelContainer(for: Deck.self, inMemory: true)
 }

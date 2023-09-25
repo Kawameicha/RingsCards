@@ -2,15 +2,17 @@
 //  Deck.swift
 //  RingsCards
 //
-//  Created by Christoph Freier on 27.08.23.
+//  Created by Christoph Freier on 25.09.23.
 //
 
 import Foundation
+import SwiftData
 
-struct Deck: Hashable, Codable, Identifiable {
+@Model
+final class Deck: Identifiable {
     var id: UUID
     var name: String
-    var date_creation: String
+    var date_creation: Date
     var date_update: String
     var description_md: String
     var user_id: Int
@@ -25,13 +27,11 @@ struct Deck: Hashable, Codable, Identifiable {
     var nb_favorites: Int
     var nb_comments: Int
     var starting_threat: Int
-}
 
-extension Deck {
-    init(name: String) {
+    init(name: String, date_creation: Date) {
         self.id = UUID()
         self.name = name
-        self.date_creation = Date.now.formatted(date: .abbreviated, time: .shortened)
+        self.date_creation = date_creation
         self.date_update = Date.now.formatted(date: .abbreviated, time: .shortened)
         self.description_md = ""
         self.user_id = 0
@@ -47,4 +47,6 @@ extension Deck {
         self.nb_comments = 0
         self.starting_threat = 0
     }
+    
+    static let `default` = Deck(name: "Test Deck", date_creation: Date())
 }

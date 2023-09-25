@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DeckNew: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @EnvironmentObject var ringsData: RingsData
-
+    @Environment(\.modelContext) private var modelContext
     @State private var deckName: String = ""
 
     var body: some View {
@@ -23,7 +23,8 @@ struct DeckNew: View {
                 HStack {
                     Spacer()
                     Button("Create Deck", action: {
-                        ringsData.decks.append(Deck(name: deckName))
+                        modelContext.insert(Deck(name: deckName,
+                                                 date_creation: Date()))
 
                         self.presentationMode.wrappedValue.dismiss()
                     })
@@ -31,12 +32,10 @@ struct DeckNew: View {
                 }
             }
         }
-        .navigationTitle("New Campaign")
+        .navigationTitle("New Deck")
     }
 }
 
-struct DeckNew_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
         DeckNew()
-    }
 }
