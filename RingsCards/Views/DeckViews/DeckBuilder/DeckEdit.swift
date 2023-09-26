@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct DeckEdit: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var decks: [Deck]
     @EnvironmentObject var ringsData: RingsData
 
     var deck: Deck
@@ -48,5 +46,4 @@ struct DeckEdit: View {
 
 #Preview {
     DeckEdit(deck: Deck.default, card: RingsData().cards[0])
-        .modelContainer(for: Deck.self, inMemory: true)
 }

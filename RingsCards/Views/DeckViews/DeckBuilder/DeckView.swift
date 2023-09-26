@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct DeckView: View {
-    @Environment(\.modelContext) private var modelContext
     @EnvironmentObject var ringsData: RingsData
     @State private var editDeck = false
     @State private var addCards = false
@@ -73,5 +72,4 @@ struct DeckView: View {
 
 #Preview {
     DeckView(deck: Deck.default)
-        .modelContainer(for: Deck.self, inMemory: true)
 }

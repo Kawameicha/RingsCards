@@ -74,7 +74,6 @@
 		5939A0402A9B8973008DC370 /* Scenarios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Scenarios.json; sourceTree = "<group>"; };
 		5939A0442A9B960A008DC370 /* Decks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Decks.json; sourceTree = "<group>"; };
 		5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
-		594A74B02AC2B8B800293206 /* RingsCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RingsCards.app; path = "/Users/christoph/Documents/Xcode/RingsCards/build/Debug-iphoneos/RingsCards.app"; sourceTree = "<absolute>"; };
 		594B766A2AA7026200ED71AF /* CampaignList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignList.swift; sourceTree = "<group>"; };
 		594B766C2AA7050800ED71AF /* CampaignRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignRow.swift; sourceTree = "<group>"; };
 		5951BA702AB061380047DE1F /* ScenarioChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioChart.swift; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		59C9B8BA2A9751B700520310 /* UserEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEdit.swift; sourceTree = "<group>"; };
 		59D04FA32AA1DD76005066F3 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		59D04FA52AA21240005066F3 /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		59D987702AC2B901008F6706 /* RingsCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingsCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729BF29C2A95824700E67871 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		729BF29E2A9585F300E67871 /* FellowshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowshipView.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				592264C92A90A993002A7648 /* RingsCards */,
+				59D987702AC2B901008F6706 /* RingsCards.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,7 +342,7 @@
 			);
 			name = RingsCards;
 			productName = RingsCards;
-			productReference = 594A74B02AC2B8B800293206 /* RingsCards.app */;
+			productReference = 59D987702AC2B901008F6706 /* RingsCards.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

@@ -58,5 +58,4 @@ struct DeckList: View {
 
 #Preview {
         DeckList()
-            .modelContainer(for: Deck.self, inMemory: true)
 }

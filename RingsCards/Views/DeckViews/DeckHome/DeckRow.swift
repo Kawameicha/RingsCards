@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct DeckRow: View {
-    @Environment(\.modelContext) private var modelContext
-
     var deck: Deck
 
     var body: some View {
@@ -37,5 +35,4 @@ struct DeckRow: View {
 
 #Preview {
     DeckRow(deck: Deck.default)
-        .modelContainer(for: Deck.self, inMemory: true)
 }

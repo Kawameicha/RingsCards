@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct DeckAdd: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var decks: [Deck]
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
     @State private var sortBySphere = false
@@ -122,6 +120,5 @@ struct DeckAdd: View {
 
 #Preview {
     DeckAdd(deck: Deck.default)
-        .modelContainer(for: Deck.self, inMemory: true)
         .environmentObject(RingsData())
 }

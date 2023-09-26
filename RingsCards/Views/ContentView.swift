@@ -34,5 +34,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(RingsData())
-        .modelContainer(for: Deck.self, inMemory: true)
 }
