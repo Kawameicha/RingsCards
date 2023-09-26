@@ -37,5 +37,5 @@ struct DeckNew: View {
 }
 
 #Preview {
-        DeckNew()
+    DeckNew()
 }

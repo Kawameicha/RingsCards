@@ -119,6 +119,6 @@ struct DeckAdd: View {
 }
 
 #Preview {
-    DeckAdd(deck: Deck.default)
+    DeckAdd(deck: SampleDeck.contents[0])
         .environmentObject(RingsData())
 }

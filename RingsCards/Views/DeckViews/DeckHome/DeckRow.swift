@@ -34,5 +34,5 @@ struct DeckRow: View {
 }
 
 #Preview {
-    DeckRow(deck: Deck.default)
+    DeckRow(deck: SampleDeck.contents[0])
 }

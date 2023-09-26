@@ -57,5 +57,6 @@ struct DeckList: View {
 }
 
 #Preview {
-        DeckList()
+    DeckList()
+        .modelContainer(previewModelContainer)
 }

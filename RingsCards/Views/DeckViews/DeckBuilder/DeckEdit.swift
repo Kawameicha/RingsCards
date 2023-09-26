@@ -45,5 +45,5 @@ struct DeckEdit: View {
 }
 
 #Preview {
-    DeckEdit(deck: Deck.default, card: RingsData().cards[0])
+    DeckEdit(deck: SampleDeck.contents[0], card: RingsData().cards[0])
 }

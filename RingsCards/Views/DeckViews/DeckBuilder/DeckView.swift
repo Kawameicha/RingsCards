@@ -71,5 +71,5 @@ struct DeckView: View {
 }
 
 #Preview {
-    DeckView(deck: Deck.default)
+    DeckView(deck: SampleDeck.contents[0])
 }
