@@ -31,10 +31,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {    
-    static var previews: some View {
-        ContentView()
-            .environmentObject(RingsData())
-            .modelContainer(for: Deck.self, inMemory: true)
-    }
+#Preview {
+    ContentView()
+        .environmentObject(RingsData())
+        .modelContainer(for: Deck.self, inMemory: true)
 }
