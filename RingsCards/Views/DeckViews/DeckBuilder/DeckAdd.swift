@@ -119,6 +119,9 @@ struct DeckAdd: View {
 }
 
 #Preview {
-    DeckAdd(deck: SampleDeck.contents[0])
-        .environmentObject(RingsData())
+    ModelPreview { deck in
+        DeckAdd(deck: deck)
+    }
+    .modelContainer(previewModelContainer)
+    .environmentObject(RingsData())
 }

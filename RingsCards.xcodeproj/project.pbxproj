@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
+		590874772AC3379A00E768F2 /* RingsModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsModelContainer.swift */; };
 		5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912EE232A93668700B2F8B5 /* CardRow.swift */; };
 		592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CA2A90A993002A7648 /* RingsCardsApp.swift */; };
 		592264CD2A90A993002A7648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CC2A90A993002A7648 /* ContentView.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
+		590874762AC3379A00E768F2 /* RingsModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsModelContainer.swift; sourceTree = "<group>"; };
 		5912EE232A93668700B2F8B5 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
 		592264CA2A90A993002A7648 /* RingsCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsApp.swift; sourceTree = "<group>"; };
 		592264CC2A90A993002A7648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -214,9 +218,11 @@
 				59862D6F2A91F13100628449 /* Card.swift */,
 				5979A1BE2A9E4D6A00E1CAE1 /* Collection.swift */,
 				59C140452AC1789A00A9F20C /* Deck.swift */,
+				590874742AC3346C00E768F2 /* ModelPreview.swift */,
 				595C7BEC2A93A1EB0094E64F /* Pack.swift */,
 				599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */,
 				59862D742A91F62100628449 /* RingsData.swift */,
+				590874762AC3379A00E768F2 /* RingsModelContainer.swift */,
 				5997196A2AC3011D0095AAE7 /* SampleDeck.swift */,
 				5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */,
 				59D04FA52AA21240005066F3 /* Sphere.swift */,
@@ -432,10 +438,12 @@
 				595C7BE92A93985D0094E64F /* CompletedMark.swift in Sources */,
 				592744852A9A7F7000BFC704 /* FilterEdit.swift in Sources */,
 				59C9B8B92A9743B500520310 /* UserView.swift in Sources */,
+				590874772AC3379A00E768F2 /* RingsModelContainer.swift in Sources */,
 				59C1404D2AC1C26500A9F20C /* DeckEdit.swift in Sources */,
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,
 				595A66B32A9DE8930040C952 /* SettingView.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
+				590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */,
 				5979A1BF2A9E4D6A00E1CAE1 /* Collection.swift in Sources */,
 				59C1404F2AC1C65400A9F20C /* DeckAdd.swift in Sources */,
 				59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */,

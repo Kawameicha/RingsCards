@@ -10,7 +10,7 @@ import SwiftData
 
 struct DeckList: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var decks: [Deck]
+    @Query(sort: \Deck.date_creation, order: .reverse) private var decks: [Deck]
     @State private var searchText: String = ""
 
     var filteredDecks: [Deck] {
@@ -44,6 +44,9 @@ struct DeckList: View {
                 ToolbarItem {
                     NavigationLink(destination: DeckNew(),
                                    label: { Image(systemName: "plus") })
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    Text("\(filteredDecks.count) decks")
                 }
             }
         }

@@ -12,7 +12,7 @@ import SwiftData
 final class Deck: Identifiable {
 //    var id: UUID
     var name: String
-    var date_creation: Date
+    let date_creation: Date
 //    var date_update: String
 //    var description_md: String
 //    var user_id: Int
@@ -47,6 +47,4 @@ final class Deck: Identifiable {
 //        self.nb_comments = 0
         self.starting_threat = 0
     }
-    
-    static let `default` = Deck(name: "Default Sample Deck")
 }

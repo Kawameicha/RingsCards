@@ -34,5 +34,8 @@ struct DeckRow: View {
 }
 
 #Preview {
-    DeckRow(deck: SampleDeck.contents[0])
+    ModelPreview { deck in
+        DeckRow(deck: deck)
+    }
+    .modelContainer(previewModelContainer)
 }

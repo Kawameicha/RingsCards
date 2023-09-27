@@ -15,8 +15,6 @@ struct DeckView: View {
 
     var deck: Deck
 
-    var allKeys: [String] { deck.slots.map{String($0.key) } }
-
     var body: some View {
         NavigationView {
             List {
@@ -62,7 +60,6 @@ struct DeckView: View {
             }
             .sheet(isPresented: $addCards) {
                 DeckAdd(deck: deck)
-                    .modelContainer(for: Deck.self, inMemory: true)
                     .environmentObject(ringsData)
                     .presentationDetents([.medium, .large])
             }
@@ -71,5 +68,8 @@ struct DeckView: View {
 }
 
 #Preview {
-    DeckView(deck: SampleDeck.contents[0])
+    ModelPreview { deck in
+        DeckView(deck: deck)
+    }
+    .modelContainer(previewModelContainer)
 }
