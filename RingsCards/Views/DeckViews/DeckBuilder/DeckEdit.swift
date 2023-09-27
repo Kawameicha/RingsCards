@@ -21,6 +21,12 @@ struct DeckEdit: View {
                 Button {
                     if value < card.deck_limit {
                         deck.self.slots["\(card.code)", default: value] += 1
+                        deck.self.date_update = .now
+                        
+                        if card.threat != nil {
+                            deck.self.starting_threat += card.threat ?? 0
+                            deck.self.heroes["\(card.code)", default: value] += 1
+                        }
                     }
                 } label: {
                     Image(systemName: "plus.square")
@@ -30,8 +36,15 @@ struct DeckEdit: View {
                 Button {
                     if value > 1 {
                         deck.self.slots["\(card.code)", default: value] -= 1
+                        deck.self.date_update = .now
                     } else if value == 1 {
                         deck.self.slots["\(card.code)"] = nil
+                        deck.self.date_update = .now
+                        
+                        if card.threat != nil {
+                            deck.self.starting_threat -= card.threat ?? 0
+                            deck.self.heroes["\(card.code)", default: value] -= 1
+                        }
                     }
                 } label: {
                     Image(systemName: "minus.square")

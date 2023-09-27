@@ -13,7 +13,7 @@ final class Deck: Identifiable {
 //    var id: UUID
     var name: String
     let date_creation: Date
-//    var date_update: String
+    var date_update: Date
 //    var description_md: String
 //    var user_id: Int
     var heroes: [String:Int]
@@ -28,11 +28,11 @@ final class Deck: Identifiable {
 //    var nb_comments: Int
     var starting_threat: Int
 
-    init(name: String, date_creation: Date = .now) {
+    init(name: String, date_creation: Date = .now, date_update: Date = .now) {
 //        self.id = UUID()
         self.name = name
         self.date_creation = date_creation
-//        self.date_update = Date.now.formatted(date: .abbreviated, time: .shortened)
+        self.date_update = date_update
 //        self.description_md = ""
 //        self.user_id = 0
         self.heroes = [:]

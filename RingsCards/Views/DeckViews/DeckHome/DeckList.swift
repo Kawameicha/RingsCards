@@ -10,7 +10,7 @@ import SwiftData
 
 struct DeckList: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Deck.date_creation, order: .reverse) private var decks: [Deck]
+    @Query(sort: \Deck.date_update, order: .reverse) private var decks: [Deck]
     @State private var searchText: String = ""
 
     var filteredDecks: [Deck] {
