@@ -46,10 +46,9 @@ struct CardRow: View {
     }
 }
 
-struct CardRow_Previews: PreviewProvider {
-    static var cards = RingsData().cards
-
-    static var previews: some View {
-            CardRow(card: cards[0])
+#Preview {
+    ModelPreview { card in
+        CardRow(card: card)
     }
+    .modelContainer(previewModelContainer)
 }

@@ -9,6 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct DeckAdd: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \Card.name, order: .reverse) private var cards: [Card]
+
     @EnvironmentObject var ringsData: RingsData
     @State private var searchText: String = ""
     @State private var sortBySphere = false
@@ -25,7 +28,7 @@ struct DeckAdd: View {
     }
 
     var collectionOnly: [Card] {
-        ringsData.cards.filter { card in
+        cards.filter { card in
             card.pack_code.within(collection)
         }
     }

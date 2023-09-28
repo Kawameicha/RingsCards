@@ -1,14 +1,13 @@
 //
-//  Card.swift
+//  CardsDecoder.swift
 //  RingsCards
 //
-//  Created by Christoph Freier on 20.08.23.
+//  Created by Christoph Freier on 28.09.23.
 //
 
 import Foundation
 
-struct Card: Hashable, Codable, Identifiable {
-    let id = UUID()
+struct CardResponse: Decodable {
     var pack_code: String
     var pack_name: String
     var type_code: String
@@ -37,26 +36,15 @@ struct Card: Hashable, Codable, Identifiable {
     var imagesrc: String
 }
 
-struct CardAnatomy {
-    let title: String
-    let cost: Int
-    let threatCost: Int
-    let sphere: Sphere
-    let willpower: Int
-    let attack: Int
-    let defense: Int
-    let hitPoint: Int
-    let resource: Sphere
-    let traits: [String]
-    let gameText: String
-    let cardType: CardType
-    let set: [String:Int]
+struct CardJSONDecoder {
+    static func decode(from fileName: String) -> [CardResponse] {
 
-    enum CardSphere: String, CaseIterable {
-        case leadership, tactics, spirit, lore, neutral, baggins, fellowship
-    }
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let cards = try? JSONDecoder().decode([CardResponse].self, from: data) else {
+            return []
+        }
 
-    enum CardType: String, CaseIterable {
-        case hero, ally, attachment, event, campaign
+        return cards
     }
 }

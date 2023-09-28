@@ -9,6 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct DeckView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \Card.name, order: .reverse) private var cards: [Card]
+
     @EnvironmentObject var ringsData: RingsData
     @State private var editDeck = false
     @State private var addCards = false
@@ -21,7 +24,7 @@ struct DeckView: View {
                 ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
                         ForEach(deck.slots.sorted(by: >), id: \.key) { key, value in
-                            ForEach(ringsData.cards.filter { card in
+                            ForEach(cards.filter { card in
                                 card.code.contains("\(key)") && card.type_name.contains("\(type)")
                             }) {card in
                                 NavigationLink {

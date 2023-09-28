@@ -59,7 +59,9 @@ struct DeckEdit: View {
 
 #Preview {
     ModelPreview { deck in
-        DeckEdit(deck: deck, card: RingsData().cards[0])
+        ModelPreview { card in
+            DeckEdit(deck: deck, card: card)
+        }
     }
     .modelContainer(previewModelContainer)
 }
