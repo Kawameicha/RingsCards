@@ -48,6 +48,9 @@ struct CardList: View {
                     }
                 }
             }
+            .refreshable {
+                await CardResponse.refresh(modelContext: modelContext)
+            }
             .navigationTitle("Player Cards")
             .searchable(text: $viewModel.searchText)
             .toolbar {

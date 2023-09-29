@@ -17,7 +17,7 @@ final class Card: Identifiable {
     var sphere_code: String
     var sphere_name: String
     var position: Int
-    var code: String
+    @Attribute(.unique) var code: String
     var name: String
     var traits: String? = nil
     var text: String? = nil
