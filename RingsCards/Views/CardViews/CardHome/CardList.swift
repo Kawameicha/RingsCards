@@ -14,11 +14,13 @@ struct CardList: View {
     @Query private var cards: [Card]
 
     init(
+        filterParameter: FilterParameter = .all,
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = ""
     ) {
-        let predicate = Card.predicate(searchText: searchText)
+        let predicate = Card.predicate(searchText: searchText,
+                                       filterParameter: filterParameter.rawValue)
         switch sortParameter {
         case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
         case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
@@ -47,6 +49,10 @@ struct CardList: View {
             .navigationTitle("Player Cards")
             .searchable(text: $viewModel.searchText)
             .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    FilterButton()
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     SortButton()
                 }

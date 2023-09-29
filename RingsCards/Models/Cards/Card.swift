@@ -69,11 +69,14 @@ final class Card: Identifiable {
 
 extension Card {
     static func predicate(
-        searchText: String
+        searchText: String,
+        filterParameter: FilterParameter.RawValue
     ) -> Predicate<Card> {
 
         return #Predicate<Card> { card in
             (searchText.isEmpty || card.name.contains(searchText))
+            &&
+            (filterParameter.contains("all") || card.sphere_code.contains(filterParameter))
         }
     }
 }

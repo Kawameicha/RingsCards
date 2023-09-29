@@ -11,6 +11,7 @@ import SwiftData
 @Observable
 class ViewModel {
     var sortParameter: SortParameter = .name
+    var filterParameter: FilterParameter = .all
     var sortOrder: SortOrder = .forward
     var searchText: String = ""
 }
