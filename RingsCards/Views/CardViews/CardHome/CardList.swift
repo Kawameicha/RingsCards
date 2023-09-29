@@ -14,13 +14,15 @@ struct CardList: View {
     @Query private var cards: [Card]
 
     init(
-        filterParameter: FilterParameter = .all,
+        filterSphere: FilterSphere = .all,
+        filterType: FilterType = .any,
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = ""
     ) {
         let predicate = Card.predicate(searchText: searchText,
-                                       filterParameter: filterParameter.rawValue)
+                                       filterSphere: filterSphere.rawValue,
+                                       filterType: filterType.rawValue)
         switch sortParameter {
         case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
         case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)

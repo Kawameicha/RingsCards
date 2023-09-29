@@ -13,7 +13,8 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            CardList(filterParameter: viewModel.filterParameter,
+            CardList(filterSphere: viewModel.filterSphere,
+                     filterType: viewModel.filterType,
                      sortParameter: viewModel.sortParameter,
                      sortOrder: viewModel.sortOrder,
                      searchText: viewModel.searchText)

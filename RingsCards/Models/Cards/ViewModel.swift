@@ -10,8 +10,9 @@ import SwiftData
 
 @Observable
 class ViewModel {
+    var filterSphere: FilterSphere = .all
+    var filterType: FilterType = .any
     var sortParameter: SortParameter = .name
-    var filterParameter: FilterParameter = .all
     var sortOrder: SortOrder = .forward
     var searchText: String = ""
 }
