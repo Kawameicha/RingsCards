@@ -67,6 +67,17 @@ final class Card: Identifiable {
     }
 }
 
+extension Card {
+    static func predicate(
+        searchText: String
+    ) -> Predicate<Card> {
+
+        return #Predicate<Card> { card in
+            (searchText.isEmpty || card.name.contains(searchText))
+        }
+    }
+}
+
 struct CardAnatomy {
     let title: String
     let cost: Int

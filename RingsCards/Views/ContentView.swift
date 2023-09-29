@@ -9,9 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Environment(ViewModel.self) private var viewModel
+
     var body: some View {
         TabView {
-            CardList()
+            CardList(sortParameter: viewModel.sortParameter,
+                     sortOrder: viewModel.sortOrder,
+                     searchText: viewModel.searchText)
                 .tabItem {
                     Label("Cards", systemImage: "rectangle.portrait.fill")
             }
@@ -34,5 +38,6 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(RingsData())
+        .environment(ViewModel())
         .modelContainer(previewModelContainer)
 }

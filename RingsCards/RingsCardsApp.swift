@@ -11,12 +11,14 @@ import SwiftData
 @main
 struct RingsCardsApp: App {
     @StateObject private var ringsData = RingsData()
+    @State private var viewModel = ViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(ringsData)
-                .modelContainer(ringsModelContainer)
+                .environment(viewModel)
         }
+        .modelContainer(ringsModelContainer)
     }
 }
