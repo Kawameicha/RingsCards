@@ -9,8 +9,6 @@ import Foundation
 import Combine
 
 final class RingsData: ObservableObject {
-//    @Published var cards: [Card] = load("Cards.json")
-//    @Published var packs: [Pack] = load("Packs.json")
     @Published var scenarios: [Scenario] = load("Scenarios.json")
     @Published var user = User.default
     @Published var collection: [Collection] = [
@@ -39,7 +37,6 @@ final class RingsData: ObservableObject {
         Sphere(name: "Baggins"),
         Sphere(name: "Fellowship")
     ]
-//    @Published var campaigns = [Campaign]()
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -33,8 +33,7 @@ struct ScenarioList: View {
                 NavigationLink {
                     ScenarioView(scenario: scenario)
                 } label: {
-                    Text("\(scenario.name)")
-//                    ScenarioRow(campaign: campaign, scenario: scenario)
+                    ScenarioRow(campaign: campaign, scenario: scenario)
                 }
             }
             .listStyle(.sidebar)
@@ -53,11 +52,11 @@ struct ScenarioList: View {
                     }
                 }
             }
-//            .sheet(isPresented: $showingNotes) {
-//                CampaignHost(campaign: campaign)
-//                    .environmentObject(ringsData)
-//                    .presentationDetents([.medium, .large])
-//            }
+            .sheet(isPresented: $showingNotes) {
+                CampaignHost(campaign: campaign)
+                    .environmentObject(ringsData)
+                    .presentationDetents([.medium, .large])
+            }
         }
     }
 }

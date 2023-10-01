@@ -21,8 +21,6 @@ struct CompletedMark: View {
     }
 }
 
-struct CompletedMark_Previews: PreviewProvider {
-    static var previews: some View {
-        CompletedMark(isSet: .constant(true))
-    }
+#Preview {
+    CompletedMark(isSet: .constant(true))
 }
