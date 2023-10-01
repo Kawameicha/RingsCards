@@ -6,11 +6,8 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct DeckEdit: View {
-    @EnvironmentObject var ringsData: RingsData
-
     var deck: Deck
     var card: Card
     var value = 0

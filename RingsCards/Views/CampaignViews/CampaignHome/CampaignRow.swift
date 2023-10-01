@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct CampaignRow: View {
-    @EnvironmentObject var ringsData: RingsData
-
     var campaign: Campaign
 
     var body: some View {
@@ -21,7 +19,7 @@ struct CampaignRow: View {
             Text(campaign.name)
                 .font(.headline)
 
-            Text("\(campaign.created)")
+            Text("\(campaign.creation.formatted(date: .abbreviated, time: .shortened))")
                 .foregroundColor(.secondary)
                 .font(.subheadline)
             }
@@ -29,11 +27,9 @@ struct CampaignRow: View {
     }
 }
 
-struct CampaignRow_Previews: PreviewProvider {
-    static var campaigns = RingsData().campaigns
-
-    static var previews: some View {
-            CampaignRow(campaign: campaigns[0])
-                .environmentObject(RingsData())
+#Preview {
+    ModelPreview { campaign in
+        CampaignRow(campaign: campaign)
     }
+    .modelContainer(previewModelContainer)
 }

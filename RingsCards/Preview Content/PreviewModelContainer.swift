@@ -11,15 +11,11 @@ import SwiftData
 let previewModelContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self,
+            for: Card.self, Deck.self, Campaign.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
 
         let modelContext = container.mainContext
-
-        if try modelContext.fetch(FetchDescriptor<Deck>()).isEmpty {
-            SampleDeck.contents.forEach { container.mainContext.insert($0) }
-        }
 
         if try modelContext.fetch(FetchDescriptor<Card>()).isEmpty {
             let cards = CardJSONDecoder.decode(from: "Cards")
@@ -52,6 +48,14 @@ let previewModelContainer: ModelContainer = {
                                 url: item.url,
                                 imagesrc: item.imagesrc)
                     container.mainContext.insert(card)
+            }
+
+            if try modelContext.fetch(FetchDescriptor<Deck>()).isEmpty {
+                SampleDeck.contents.forEach { container.mainContext.insert($0) }
+            }
+
+            if try modelContext.fetch(FetchDescriptor<Campaign>()).isEmpty {
+                SampleCampaign.contents.forEach { container.mainContext.insert($0) }
             }
         }
 

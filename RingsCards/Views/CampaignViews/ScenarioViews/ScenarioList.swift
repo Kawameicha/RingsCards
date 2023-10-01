@@ -33,7 +33,8 @@ struct ScenarioList: View {
                 NavigationLink {
                     ScenarioView(scenario: scenario)
                 } label: {
-                    ScenarioRow(campaign: campaign, scenario: scenario)
+                    Text("\(scenario.name)")
+//                    ScenarioRow(campaign: campaign, scenario: scenario)
                 }
             }
             .listStyle(.sidebar)
@@ -52,18 +53,19 @@ struct ScenarioList: View {
                     }
                 }
             }
-            .sheet(isPresented: $showingNotes) {
-                CampaignHost(campaign: campaign)
-                    .environmentObject(ringsData)
-                    .presentationDetents([.medium, .large])
-            }
+//            .sheet(isPresented: $showingNotes) {
+//                CampaignHost(campaign: campaign)
+//                    .environmentObject(ringsData)
+//                    .presentationDetents([.medium, .large])
+//            }
         }
     }
 }
 
-struct ScenarioList_Previews: PreviewProvider {
-    static var previews: some View {
-        ScenarioList(campaign: Campaign.default)
-            .environmentObject(RingsData())
+#Preview {
+    ModelPreview { campaign in
+        ScenarioList(campaign: campaign)
     }
+    .environmentObject(RingsData())
+    .modelContainer(previewModelContainer)
 }

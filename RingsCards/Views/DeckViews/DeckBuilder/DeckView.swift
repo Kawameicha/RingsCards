@@ -11,8 +11,6 @@ import SwiftData
 struct DeckView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Card.name, order: .reverse) private var cards: [Card]
-
-    @EnvironmentObject var ringsData: RingsData
     @State private var editDeck = false
     @State private var addCards = false
 
@@ -63,7 +61,6 @@ struct DeckView: View {
             }
             .sheet(isPresented: $addCards) {
                 DeckAdd(deck: deck)
-                    .environmentObject(ringsData)
                     .presentationDetents([.medium, .large])
             }
         }

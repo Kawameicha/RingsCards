@@ -11,7 +11,7 @@ import SwiftData
 let ringsModelContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self,
+            for: Card.self, Deck.self, Campaign.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: false)
         )
 

@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CampaignList: View {
-    @EnvironmentObject var ringsData: RingsData
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \Campaign.update, order: .reverse) private var campaigns: [Campaign]
     @State private var searchText: String = ""
 
     var filteredCampaigns: [Campaign] {
-        guard !searchText.isEmpty else { return ringsData.campaigns }
-        return ringsData.campaigns.filter { campaign in
+        guard !searchText.isEmpty else { return campaigns }
+        return campaigns.filter { campaign in
             campaign.name.lowercased().cleaned().contains(searchText.lowercased())
         }
     }
@@ -21,7 +23,7 @@ struct CampaignList: View {
     var body: some View {
         NavigationView {
             List {
-                if ringsData.campaigns.isEmpty {
+                if campaigns.isEmpty {
                     NavigationLink(destination: CampaignNew(), label: { Text("Create a Campaign") })
                 } else {
                     ForEach(filteredCampaigns) { campaign in
@@ -31,24 +33,32 @@ struct CampaignList: View {
                             CampaignRow(campaign: campaign)
                         }
                     }
-                    .onDelete(perform: removeRows)
+                    .onDelete(perform: deleteItems)
                 }
             }
             .listStyle(.sidebar)
             .navigationTitle("My Campaigns")
             .searchable(text: $searchText)
-            .toolbar { NavigationLink(destination: CampaignNew(), label: { Image(systemName: "plus") }) }
+            .toolbar {
+                ToolbarItem {
+                    NavigationLink(destination: CampaignNew(),
+                                   label: { Image(systemName: "plus") })
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    Text("\(filteredCampaigns.count) campaigns")
+                }
+            }
         }
     }
 
-    func removeRows(at offsets: IndexSet) {
-        ringsData.campaigns.remove(atOffsets: offsets)
+    func deleteItems(offsets: IndexSet) {
+            for index in offsets {
+                modelContext.delete(campaigns[index])
+        }
     }
 }
 
-struct CampaignList_Previews: PreviewProvider {    
-    static var previews: some View {
-        CampaignList()
-            .environmentObject(RingsData())
-    }
+#Preview {
+    CampaignList()
+        .modelContainer(previewModelContainer)    
 }
