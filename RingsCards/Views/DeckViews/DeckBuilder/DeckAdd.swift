@@ -21,17 +21,17 @@ struct DeckAdd: View {
     var deck: Deck
     var value = 0
 
-    var collection: [String] {
-        ringsData.collection.map { pack in
-            pack.isInCollection ? pack.PackCode : ""
-        }
-    }
-
-    var collectionOnly: [Card] {
-        cards.filter { card in
-            card.pack_code.within(collection)
-        }
-    }
+//    var collection: [String] {
+//        ringsData.collection.map { pack in
+//            pack.isInCollection ? pack.PackCode : ""
+//        }
+//    }
+//
+//    var collectionOnly: [Card] {
+//        cards.filter { card in
+//            card.pack_code.within(collection)
+//        }
+//    }
 
     var filtered: [String] {
         ringsData.spheres.map { sphere in
@@ -40,7 +40,7 @@ struct DeckAdd: View {
     }
 
     var filteredCards: [Card] {
-        collectionOnly.filter { card in
+        cards.filter { card in
             card.sphere_name.within(filtered)
         }
     }
@@ -107,11 +107,11 @@ struct DeckAdd: View {
                     }
                 }
             }
-            .sheet(isPresented: $showCollection) {
-                CollectionView()
-                    .environmentObject(ringsData)
-                    .presentationDetents([.medium, .large])
-            }
+//            .sheet(isPresented: $showCollection) {
+//                CollectionView()
+//                    .environmentObject(ringsData)
+//                    .presentationDetents([.medium, .large])
+//            }
             .sheet(isPresented: $showFilters) {
                 FilterEdit()
                     .environmentObject(ringsData)

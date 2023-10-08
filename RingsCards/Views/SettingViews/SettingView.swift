@@ -16,7 +16,7 @@ struct SettingView: View {
             List {
                 Section(header: Text("Cards")) {
                     NavigationLink {
-                        CollectionView()
+                        CollectionList()
                     } label: {
                         Text("Edit Collection")
                     }
@@ -39,9 +39,8 @@ struct SettingView: View {
     }
 }
 
-struct SettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingView()
-            .environmentObject(RingsData())
-    }
+#Preview {
+    SettingView()
+        .environmentObject(RingsData())
+        .modelContainer(previewModelContainer)
 }
