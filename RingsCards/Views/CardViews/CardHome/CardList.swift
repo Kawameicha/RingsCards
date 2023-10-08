@@ -11,7 +11,14 @@ import SwiftData
 struct CardList: View {
     @Environment(ViewModel.self) private var viewModel
     @Environment(\.modelContext) private var modelContext
+    @Query private var packs: [Collection]
     @Query private var cards: [Card]
+
+    var collection: [String] {
+        packs.map { pack in
+            pack.isInCollection ? pack.packCode : ""
+        }
+    }
 
     init(
         filterSphere: FilterSphere = .all,
@@ -38,6 +45,8 @@ struct CardList: View {
                     Section(header: Text("\(type)")) {
                         ForEach(cards.filter { card in
                             card.type_name.contains("\(type)")
+                            &&
+                            card.pack_code.within(collection)
                         }) {card in
                             NavigationLink {
                                 CardView(card: card)
@@ -63,7 +72,7 @@ struct CardList: View {
                 }
 
                 ToolbarItem(placement: .bottomBar) {
-                    CardInfo(count: cards.count)
+                    CardInfo(count: cards.filter({ card in card.pack_code.within(collection) }).count)
                 }
             }
         }

@@ -277,9 +277,9 @@
 		595078702AC5BC1B007BFAA0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				594E38E02AD29EA900577EE0 /* Collection */,
 				595C7BEC2A93A1EB0094E64F /* Pack.swift */,
 				59C9B8B32A97430400520310 /* User.swift */,
+				594E38E02AD29EA900577EE0 /* Collection */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
