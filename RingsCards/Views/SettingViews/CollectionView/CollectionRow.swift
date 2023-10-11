@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CollectionRow: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var cards: [Card]
     @Bindable var collection: Collection
 
     var body: some View {
-        Toggle("\(collection.self.packName)", systemImage: "\(collection.self.packPosition).square", isOn: $collection.self.isInCollection)
+        Toggle("\(collection.packName)", systemImage: "\(collection.packPosition).square", isOn: $collection.isInCollection)
+            .onChange(of: collection.isInCollection) {
+                for card in cards.filter({ card in
+                    card.pack_code == collection.packCode
+                }) { card.isInCollection.toggle() }
+            }
     }
 }
 

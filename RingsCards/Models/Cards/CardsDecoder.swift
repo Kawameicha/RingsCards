@@ -24,14 +24,16 @@ struct CardResponse: Decodable {
     var is_unique: Bool
     var threat: Int? = nil
     var cost: String? = nil
+    var victory: Int? = nil
+    var quest: Int? = nil
     var willpower: Int? = nil
     var attack: Int? = nil
     var defense: Int? = nil
     var health: Int? = nil
     var quantity: Int
     var deck_limit: Int
-    var illustrator: String
-    var octgnid: String
+    var illustrator: String? = nil
+    var octgnid: String? = nil
     var has_errata: Bool
     var url: String
     var imagesrc: String
@@ -52,7 +54,7 @@ struct CardJSONDecoder {
 
 extension CardResponse {
     static func fetchCards() async throws -> [CardResponse] {
-        let url = URL(string: "https://www.ringsdb.com/api/public/cards/core")!
+        let url = URL(string: "https://www.ringsdb.com/api/public/cards/")!
 
         let session = URLSession.shared
         guard let (data, response) = try? await session.data(from: url),
@@ -97,6 +99,8 @@ extension CardResponse {
                                 is_unique: item.is_unique,
                                 threat: item.threat,
                                 cost: item.cost,
+                                victory: item.victory,
+                                quest: item.quest,
                                 willpower: item.willpower,
                                 attack: item.attack,
                                 defense: item.defense,

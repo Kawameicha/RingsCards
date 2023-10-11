@@ -12,7 +12,8 @@ struct CollectionList: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Collection.packPosition) private var collection: [Collection]
 
-    let allCycles: [String] = ["Shadows of Mirkwood", "Dwarrowdelf"]
+    let allCycles: [String] = ["Shadows of Mirkwood", "Dwarrowdelf", "Against the Shadow", "The Ring-maker", "Angmar Awakened",
+    "Dream-chaser", "Haradrim", "Ered Mithrin", "Vengeance of Mordor"]
 
     var body: some View {
         NavigationView {
