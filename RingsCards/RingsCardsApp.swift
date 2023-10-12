@@ -19,6 +19,6 @@ struct RingsCardsApp: App {
                 .environmentObject(ringsData)
                 .environment(viewModel)
         }
-        .modelContainer(ringsModelContainer)
+        .modelContainer(ringsUserData)
     }
 }

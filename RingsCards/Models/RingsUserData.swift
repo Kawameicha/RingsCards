@@ -1,5 +1,5 @@
 //
-//  RingsModelContainer.swift
+//  RingsUserData.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 26.09.23.
@@ -8,7 +8,7 @@
 import SwiftData
 
 @MainActor
-let ringsModelContainer: ModelContainer = {
+let ringsUserData: ModelContainer = {
     do {
         let container = try ModelContainer(
             for: Card.self, Deck.self, Campaign.self, Collection.self,

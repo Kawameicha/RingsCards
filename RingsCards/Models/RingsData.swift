@@ -11,15 +11,6 @@ import Combine
 final class RingsData: ObservableObject {
     @Published var scenarios: [Scenario] = load("Scenarios.json")
     @Published var user = User.default
-    @Published var spheres = [
-        Sphere(name: "Leadership"),
-        Sphere(name: "Tactics"),
-        Sphere(name: "Spirit"),
-        Sphere(name: "Lore"),
-        Sphere(name: "Neutral"),
-        Sphere(name: "Baggins"),
-        Sphere(name: "Fellowship")
-    ]
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

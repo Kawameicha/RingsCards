@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
-		590874772AC3379A00E768F2 /* RingsModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsModelContainer.swift */; };
+		590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsUserData.swift */; };
 		5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912EE232A93668700B2F8B5 /* CardRow.swift */; };
 		592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CA2A90A993002A7648 /* RingsCardsApp.swift */; };
 		592264CD2A90A993002A7648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CC2A90A993002A7648 /* ContentView.swift */; };
@@ -66,7 +66,7 @@
 
 /* Begin PBXFileReference section */
 		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
-		590874762AC3379A00E768F2 /* RingsModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsModelContainer.swift; sourceTree = "<group>"; };
+		590874762AC3379A00E768F2 /* RingsUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsUserData.swift; sourceTree = "<group>"; };
 		5912EE232A93668700B2F8B5 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
 		592264CA2A90A993002A7648 /* RingsCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsApp.swift; sourceTree = "<group>"; };
 		592264CC2A90A993002A7648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 			children = (
 				59B943F42AC6A61B0059C52A /* Extensions.swift */,
 				59862D742A91F62100628449 /* RingsData.swift */,
-				590874762AC3379A00E768F2 /* RingsModelContainer.swift */,
+				590874762AC3379A00E768F2 /* RingsUserData.swift */,
 				5950786C2AC5BAD8007BFAA0 /* Campaigns */,
 				5950786A2AC5A6CF007BFAA0 /* Cards */,
 				5950786D2AC5BB30007BFAA0 /* Decks */,
@@ -511,7 +511,7 @@
 				595078672AC59A9F007BFAA0 /* CardDecoder.swift in Sources */,
 				59C9B8B92A9743B500520310 /* UserView.swift in Sources */,
 				595078722AC5D7D1007BFAA0 /* ViewModel.swift in Sources */,
-				590874772AC3379A00E768F2 /* RingsModelContainer.swift in Sources */,
+				590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */,
 				59B943F72AC6AB470059C52A /* CardInfo.swift in Sources */,
 				59B943F52AC6A61B0059C52A /* Extensions.swift in Sources */,
 				59355A062AD2902000C894B3 /* CollectionRow.swift in Sources */,
