@@ -76,8 +76,7 @@ extension Card {
     static func predicate(
         searchText: String,
         filterSphere: FilterSphere.RawValue,
-        filterType: FilterType.RawValue,
-        filterCollection: String = "Core"
+        filterType: FilterType.RawValue
     ) -> Predicate<Card> {
 
         return #Predicate<Card> { card in

@@ -1,5 +1,5 @@
 //
-//  CardsDecoder.swift
+//  CardDecoder.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 28.09.23.

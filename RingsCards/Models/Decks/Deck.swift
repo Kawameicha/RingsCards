@@ -10,7 +10,6 @@ import SwiftData
 
 @Model
 final class Deck: Identifiable {
-//    var id: UUID
     var name: String
     let date_creation: Date
     var date_update: Date
@@ -29,7 +28,6 @@ final class Deck: Identifiable {
     var starting_threat: Int
 
     init(name: String, date_creation: Date = .now, date_update: Date = .now) {
-//        self.id = UUID()
         self.name = name
         self.date_creation = date_creation
         self.date_update = date_update
