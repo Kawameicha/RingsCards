@@ -14,7 +14,7 @@ struct ScenarioRow: View {
     var scenario: Scenario
 
     var scenarioIndex: Int {
-        ringsData.scenarios.firstIndex(where: { $0.nameCanonical == scenario.nameCanonical }) ?? 0
+        campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0
     }
 
     var body: some View {

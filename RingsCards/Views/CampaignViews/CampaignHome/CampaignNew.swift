@@ -21,7 +21,16 @@ struct CampaignNew: View {
 
                 Picker("Select Cycle", selection: $selectedCode) {
                     Text("Core Set").tag(CampaignCode.core)
-                    Text("Core & Mirkwood").tag(CampaignCode.mirkwood)
+                    Text("Shadows of Mirkwood").tag(CampaignCode.mirkwood)
+                    Text("Dwarrowdelf").tag(CampaignCode.dwarrowdelf)
+                    Text("Against the Shadow").tag(CampaignCode.shadow)
+                    Text("The Ring-maker").tag(CampaignCode.ring)
+                    Text("Angmar Awakened").tag(CampaignCode.angmar)
+                    Text("Dream-chaser").tag(CampaignCode.dream)
+                    Text("Haradrim").tag(CampaignCode.haradrim)
+                    Text("Ered Mithrin").tag(CampaignCode.mithrin)
+                    Text("Vengeance of Mordor").tag(CampaignCode.mordor)
+                    Text("Oaths of the Rohirrim").tag(CampaignCode.rohirrim)
                 }
             }
 
@@ -31,14 +40,59 @@ struct CampaignNew: View {
                     Button("Create Campaign", action: {
                         if selectedCode == .core {
                             modelContext.insert(Campaign(name: campaignName,
-                                                          code: selectedCode.rawValue,
-                                                          scenarios: Array(1...3),
-                                                          completed: Array(repeating: false, count:3)))
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(1...3),
+                                                         completed: Array(repeating: false, count:3)))
                         } else if selectedCode == .mirkwood {
                             modelContext.insert(Campaign(name: campaignName,
-                                                          code: selectedCode.rawValue,
-                                                          scenarios: Array(1...9),
-                                                          completed: Array(repeating: false, count:9)))
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(4...9),
+                                                         completed: Array(repeating: false, count:6)))
+                        } else if selectedCode == .dwarrowdelf {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(11...19),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .shadow {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(21...29),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .ring {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(31...39),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .angmar {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(41...49),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .dream {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(51...59),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .haradrim {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(61...69),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .mithrin {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(71...79),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .mordor {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(81...89),
+                                                         completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .rohirrim {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(91...99),
+                                                         completed: Array(repeating: false, count:9)))
                         }
 
                         self.presentationMode.wrappedValue.dismiss()

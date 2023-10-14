@@ -24,7 +24,7 @@ struct DeckView: View {
                     Section(header: Text("\(type)")) {
                         ForEach(deck.slots.sorted(by: >), id: \.key) { key, value in
                             ForEach(cards.filter { card in
-                                (card.code.contains("\(key)"))
+                                (card.code == ("\(key)"))
                                 &&
                                 (card.type_name.contains("\(type)"))
                             }) {card in

@@ -38,5 +38,5 @@ class Campaign {
 }
 
 enum CampaignCode: String, CaseIterable {
-    case core, mirkwood
+    case core, mirkwood, dwarrowdelf, shadow, ring, angmar, dream, haradrim, mithrin, mordor, rohirrim
 }
