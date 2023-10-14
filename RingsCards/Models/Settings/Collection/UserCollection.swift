@@ -79,6 +79,23 @@ struct UserCollection {
         Collection(cycleName: "Vengeance of Mordor", cycleCode: "Mordor", cyclePosition: 9, packName: "Challenge of the Wainriders", packCode: "CotW", packPosition: 4),
         Collection(cycleName: "Vengeance of Mordor", cycleCode: "Mordor", cyclePosition: 9, packName: "Under the Ash Mountains", packCode: "UtAM", packPosition: 5),
         Collection(cycleName: "Vengeance of Mordor", cycleCode: "Mordor", cyclePosition: 9, packName: "The Land of Sorrow", packCode: "TLoS", packPosition: 6),
-        Collection(cycleName: "Vengeance of Mordor", cycleCode: "Mordor", cyclePosition: 9, packName: "The Fortress of Nurn", packCode: "TFoN", packPosition: 7)
+        Collection(cycleName: "Vengeance of Mordor", cycleCode: "Mordor", cyclePosition: 9, packName: "The Fortress of Nurn", packCode: "TFoN", packPosition: 7),
+
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "Children of Eorl", packCode: "CoE", packPosition: 1),
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "The Aldburg Plot", packCode: "TAP", packPosition: 2),
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "Fire on the Eastemnet", packCode: "FotE", packPosition: 3),
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "The Gap of Rohan", packCode: "TGoR", packPosition: 4),
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "The Glittering Caves", packCode: "TGC", packPosition: 5),
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "Mustering of the Rohirrim", packCode: "MotR", packPosition: 6),
+        Collection(cycleName: "Oaths of the Rohirrim", cycleCode: "Rohirrim", cyclePosition: 10, packName: "Blood in the Isen", packCode: "BitI", packPosition: 7),
+        
+        Collection(cycleName: "The Hobbit", cycleCode: "Hobbit", cyclePosition: 101, packName: "Over Hill and Under Hill", packCode: "OHaUH", packPosition: 1),
+        Collection(cycleName: "The Hobbit", cycleCode: "Hobbit", cyclePosition: 101, packName: "On the Doorstep", packCode: "OtD", packPosition: 2),
+        Collection(cycleName: "The Lord of the Rings", cycleCode: "Rings", cyclePosition: 102, packName: "The Black Riders", packCode: "TBR", packPosition: 1),
+        Collection(cycleName: "The Lord of the Rings", cycleCode: "Rings", cyclePosition: 102, packName: "The Road Darkens", packCode: "TRD", packPosition: 2),
+        Collection(cycleName: "The Lord of the Rings", cycleCode: "Rings", cyclePosition: 102, packName: "The Treason of Saruman", packCode: "ToS", packPosition: 3),
+        Collection(cycleName: "The Lord of the Rings", cycleCode: "Rings", cyclePosition: 102, packName: "The Land of Shadow", packCode: "LoS", packPosition: 4),
+        Collection(cycleName: "The Lord of the Rings", cycleCode: "Rings", cyclePosition: 102, packName: "The Flame of the West", packCode: "FotW", packPosition: 5),
+        Collection(cycleName: "The Lord of the Rings", cycleCode: "Rings", cyclePosition: 102, packName: "The Mountain of Fire", packCode: "MoF", packPosition: 6),
     ]
 }

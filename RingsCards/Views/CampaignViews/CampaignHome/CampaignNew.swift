@@ -31,6 +31,8 @@ struct CampaignNew: View {
                     Text("Ered Mithrin").tag(CampaignCode.mithrin)
                     Text("Vengeance of Mordor").tag(CampaignCode.mordor)
                     Text("Oaths of the Rohirrim").tag(CampaignCode.rohirrim)
+                    Text("The Hobbit").tag(CampaignCode.hobbit)
+                    Text("The Lord of the Rings").tag(CampaignCode.lotr)
                 }
             }
 
@@ -93,6 +95,16 @@ struct CampaignNew: View {
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(91...99),
                                                          completed: Array(repeating: false, count:9)))
+                        } else if selectedCode == .hobbit {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(1001...1006),
+                                                         completed: Array(repeating: false, count:6)))
+                        } else if selectedCode == .lotr {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: selectedCode.rawValue,
+                                                         scenarios: Array(1011...1028),
+                                                         completed: Array(repeating: false, count:18)))
                         }
 
                         self.presentationMode.wrappedValue.dismiss()
