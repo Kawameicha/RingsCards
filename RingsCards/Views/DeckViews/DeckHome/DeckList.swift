@@ -16,7 +16,7 @@ struct DeckList: View {
     var filteredDecks: [Deck] {
         guard !searchText.isEmpty else { return decks }
         return decks.filter { deck in
-            deck.name.lowercased().cleaned().contains(searchText.lowercased())
+            deck.name.localizedStandardContains(searchText)
         }
     }
 

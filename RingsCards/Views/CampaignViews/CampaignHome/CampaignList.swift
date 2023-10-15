@@ -16,7 +16,7 @@ struct CampaignList: View {
     var filteredCampaigns: [Campaign] {
         guard !searchText.isEmpty else { return campaigns }
         return campaigns.filter { campaign in
-            campaign.name.lowercased().cleaned().contains(searchText.lowercased())
+            campaign.name.localizedStandardContains(searchText)
         }
     }
 

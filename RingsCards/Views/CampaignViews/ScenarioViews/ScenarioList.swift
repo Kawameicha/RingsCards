@@ -23,7 +23,7 @@ struct ScenarioList: View {
     var filteredScenarios: [Scenario] {
         guard !searchText.isEmpty else { return campaignOnly }
         return campaignOnly.filter { scenario in
-            scenario.name.lowercased().cleaned().contains(searchText.lowercased())
+            scenario.name.localizedStandardContains(searchText)
         }
     }
 

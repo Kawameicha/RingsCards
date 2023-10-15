@@ -13,8 +13,8 @@ extension String {
     }
 }
 
-extension String {
-    func cleaned() -> Self {
-        return self.folding(options: .diacriticInsensitive, locale: .current)
-    }
-}
+//extension String {
+//    func cleaned() -> Self {
+//        return self.folding(options: .diacriticInsensitive, locale: .current)
+//    }
+//}

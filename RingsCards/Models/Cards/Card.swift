@@ -82,7 +82,7 @@ extension Card {
         return #Predicate<Card> { card in
             (card.isInCollection)
             &&
-            (searchText.isEmpty || card.name.contains(searchText))
+            (searchText.isEmpty || card.name.localizedStandardContains(searchText))
             &&
             (filterSphere.contains("all") || card.sphere_code.contains(filterSphere))
             &&
