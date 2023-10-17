@@ -43,8 +43,8 @@ struct DeckAdd: View {
                 ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("Add \(type)")) {
                         ForEach(cards.filter { card in
-                            (!card.code.within(deck.slots.map{ String($0.key) }))
-                            &&
+//                            (!deck.slots.map{ String($0.key) }.contains(card.code))
+//                            &&
                             (card.type_name.contains("\(type)"))
                         }) { card in
                             NavigationLink {

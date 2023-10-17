@@ -43,7 +43,6 @@
 		599719692AC300EC0095AAE7 /* PreviewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */; };
 		5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997196A2AC3011D0095AAE7 /* SampleDeck.swift */; };
 		59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59992F562AAB0CE300C6307E /* DeckNew.swift */; };
-		59B943F52AC6A61B0059C52A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B943F42AC6A61B0059C52A /* Extensions.swift */; };
 		59B943F72AC6AB470059C52A /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B943F62AC6AB470059C52A /* CardInfo.swift */; };
 		59B943FA2AC6BE8D0059C52A /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B943F92AC6BE8D0059C52A /* FilterButton.swift */; };
 		59C140462AC1789A00A9F20C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C140452AC1789A00A9F20C /* Deck.swift */; };
@@ -101,7 +100,6 @@
 		599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModelContainer.swift; sourceTree = "<group>"; };
 		5997196A2AC3011D0095AAE7 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		59992F562AAB0CE300C6307E /* DeckNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckNew.swift; sourceTree = "<group>"; };
-		59B943F42AC6A61B0059C52A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		59B943F62AC6AB470059C52A /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		59B943F92AC6BE8D0059C52A /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		59C140452AC1789A00A9F20C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 		59862D6D2A91F0A900628449 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				59B943F42AC6A61B0059C52A /* Extensions.swift */,
 				59862D742A91F62100628449 /* RingsData.swift */,
 				590874762AC3379A00E768F2 /* RingsUserData.swift */,
 				5950786C2AC5BAD8007BFAA0 /* Campaigns */,
@@ -513,7 +510,6 @@
 				595078722AC5D7D1007BFAA0 /* ViewModel.swift in Sources */,
 				590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */,
 				59B943F72AC6AB470059C52A /* CardInfo.swift in Sources */,
-				59B943F52AC6A61B0059C52A /* Extensions.swift in Sources */,
 				59355A062AD2902000C894B3 /* CollectionRow.swift in Sources */,
 				59C1404D2AC1C26500A9F20C /* DeckEdit.swift in Sources */,
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,

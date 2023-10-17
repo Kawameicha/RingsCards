@@ -11,7 +11,7 @@ import SwiftData
 struct DeckView: View {
     @Environment(ViewModel.self) private var viewModel
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Card.name, order: .reverse) private var cards: [Card]
+    @Query private var cards: [Card]
     @State private var editDeck = false
     @State private var addCards = false
 
@@ -44,24 +44,6 @@ struct DeckView: View {
             }
             .listStyle(.sidebar)
             .navigationTitle("\(deck.name)")
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    Menu(content: {
-//                        Button {
-//                            editDeck.toggle()
-//                        } label: {
-//                            Label("Edit Deck", systemImage: "plus.forwardslash.minus")
-//                        }
-//                        Button {
-//                            addCards.toggle()
-//                        } label: {
-//                            Label("Add Card", systemImage: "plus.rectangle.portrait")
-//                        }
-//                    }) {
-//                        Image(systemName: "ellipsis.circle")
-//                    }
-//                }
-//            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
