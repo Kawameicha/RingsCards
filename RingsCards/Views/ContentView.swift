@@ -10,11 +10,20 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(ViewModel.self) private var viewModel
+    @Environment(\.modelContext) private var modelContext
+    @Query private var packs: [Pack]
+
+    var collection: [String] {
+        packs.map { pack in
+            pack.isInCollection ? pack.packCode : ""
+        }
+    }
 
     var body: some View {
         TabView {
             CardList(filterSphere: viewModel.filterSphere,
                      filterType: viewModel.filterType,
+                     filterPack: collection,
                      sortParameter: viewModel.sortParameter,
                      sortOrder: viewModel.sortOrder,
                      searchText: viewModel.searchText)

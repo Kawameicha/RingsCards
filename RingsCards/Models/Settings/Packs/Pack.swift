@@ -1,5 +1,5 @@
 //
-//  Collection.swift
+//  Pack.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 29.08.23.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Collection {
+class Pack {
     let cycleName: String
     let cycleCode: String
     let cyclePosition: Int

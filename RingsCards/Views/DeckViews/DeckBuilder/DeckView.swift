@@ -12,8 +12,15 @@ struct DeckView: View {
     @Environment(ViewModel.self) private var viewModel
     @Environment(\.modelContext) private var modelContext
     @Query private var cards: [Card]
+    @Query private var packs: [Pack]
     @State private var editDeck = false
     @State private var addCards = false
+
+    var collection: [String] {
+        packs.map { pack in
+            pack.isInCollection ? pack.packCode : ""
+        }
+    }
 
     var deck: Deck
 
@@ -42,7 +49,6 @@ struct DeckView: View {
                     }
                 }
             }
-            .listStyle(.sidebar)
             .navigationTitle("\(deck.name)")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -65,6 +71,7 @@ struct DeckView: View {
                 DeckAdd(deck: deck,
                         filterSphere: viewModel.filterSphere,
                         filterType: viewModel.filterType,
+                        filterPack: collection,
                         sortParameter: viewModel.sortParameter,
                         sortOrder: viewModel.sortOrder,
                         searchText: viewModel.searchText)

@@ -16,7 +16,7 @@ struct SettingView: View {
             List {
                 Section(header: Text("Cards")) {
                     NavigationLink {
-                        CollectionList()
+                        PackList()
                     } label: {
                         Text("Edit Collection")
                     }

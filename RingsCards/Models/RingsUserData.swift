@@ -11,14 +11,14 @@ import SwiftData
 let ringsUserData: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Collection.self,
+            for: Card.self, Deck.self, Campaign.self, Pack.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: false)
         )
 
         let modelContext = container.mainContext
 
-        if try modelContext.fetch(FetchDescriptor<Collection>()).isEmpty {
-            UserCollection.contents.forEach { container.mainContext.insert($0) }
+        if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {
+            Packs.contents.forEach { container.mainContext.insert($0) }
         }
 
         return container

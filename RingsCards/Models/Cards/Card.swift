@@ -76,17 +76,18 @@ extension Card {
     static func predicate(
         searchText: String,
         filterSphere: FilterSphere.RawValue,
-        filterType: FilterType.RawValue
+        filterType: FilterType.RawValue,
+        filterPack: [String]
     ) -> Predicate<Card> {
 
         return #Predicate<Card> { card in
-            (card.isInCollection)
-            &&
-            (searchText.isEmpty || card.name.localizedStandardContains(searchText))
+            (filterType.contains("any") || card.type_code.contains(filterType))
             &&
             (filterSphere.contains("all") || card.sphere_code.contains(filterSphere))
             &&
-            (filterType.contains("any") || card.type_code.contains(filterType))
+            (filterPack.contains(card.pack_code))
+            &&
+            (searchText.isEmpty || card.name.localizedStandardContains(searchText))
         }
     }
 }
