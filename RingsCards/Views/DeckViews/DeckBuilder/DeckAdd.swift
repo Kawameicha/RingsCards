@@ -52,7 +52,7 @@ struct DeckAdd: View {
                             NavigationLink {
                                 CardView(card: card)
                             } label: {
-                                DeckEdit(deck: deck, card: card)
+                                DeckEdit(deck: deck, card: card, value: deck.self.slots["\(card.code)", default: 0])
                             }
                         }
                     }

@@ -35,9 +35,9 @@ struct CardView: View {
             }
             .padding()
         }
-        .background(LinearGradient(
-            colors: [Color(card.sphere_name), Color.white],
-            startPoint: .top, endPoint: .center))
+//        .background(LinearGradient(
+//            colors: [Color(card.sphere_name), Color.white],
+//            startPoint: .top, endPoint: .center))
     }
 }
 
