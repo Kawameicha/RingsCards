@@ -77,17 +77,22 @@ extension Card {
         searchText: String,
         filterSphere: FilterSphere.RawValue,
         filterType: FilterType.RawValue,
-        filterPack: [String]
+        filterPack: [String],
+        filterDeck: [String]
     ) -> Predicate<Card> {
 
         return #Predicate<Card> { card in
-            (filterType.contains("any") || card.type_code.contains(filterType))
-            &&
-            (filterSphere.contains("all") || card.sphere_code.contains(filterSphere))
-            &&
-            (filterPack.contains(card.pack_code))
-            &&
-            (searchText.isEmpty || card.name.localizedStandardContains(searchText))
+            if filterDeck.isEmpty {
+                (filterPack.contains(card.pack_code))
+                &&
+                (filterType == "any" || card.type_code == filterType)
+                &&
+                (filterSphere == "all" || card.sphere_code == filterSphere)
+                &&
+                (searchText.isEmpty || card.name.localizedStandardContains(searchText))
+            } else {
+                (filterDeck.contains(card.code))
+            }
         }
     }
 }

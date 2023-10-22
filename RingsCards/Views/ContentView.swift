@@ -24,6 +24,7 @@ struct ContentView: View {
             CardList(filterSphere: viewModel.filterSphere,
                      filterType: viewModel.filterType,
                      filterPack: collection,
+//                     filterDeck: viewModel.filterDeck,
                      sortParameter: viewModel.sortParameter,
                      sortOrder: viewModel.sortOrder,
                      searchText: viewModel.searchText)

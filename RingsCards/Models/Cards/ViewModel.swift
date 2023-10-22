@@ -12,6 +12,8 @@ import SwiftData
 class ViewModel {
     var filterSphere: FilterSphere = .all
     var filterType: FilterType = .any
+    var filterPack: [String] = []
+    var filterDeck: [String] = []
     var sortParameter: SortParameter = .name
     var sortOrder: SortOrder = .forward
     var searchText: String = ""

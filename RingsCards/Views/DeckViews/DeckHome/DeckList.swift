@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DeckList: View {
+    @Environment(ViewModel.self) private var viewModel
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Deck.date_update, order: .reverse) private var decks: [Deck]
     @State private var searchText: String = ""
@@ -29,7 +30,14 @@ struct DeckList: View {
                 } else {
                     ForEach(filteredDecks) { deck in
                         NavigationLink {
-                            DeckView(deck: deck)
+                            DeckView(deck: deck,
+                                     filterSphere: viewModel.filterSphere,
+                                     filterType: viewModel.filterType,
+//                                     filterPack: viewModel.filterPack,
+                                     filterDeck: deck.slots.map{ String($0.key) },
+                                     sortParameter: viewModel.sortParameter,
+                                     sortOrder: viewModel.sortOrder,
+                                     searchText: viewModel.searchText)
                         } label: {
                             DeckRow(deck: deck)
                         }
@@ -61,5 +69,6 @@ struct DeckList: View {
 
 #Preview {
     DeckList()
+        .environment(ViewModel())
         .modelContainer(previewModelContainer)
 }

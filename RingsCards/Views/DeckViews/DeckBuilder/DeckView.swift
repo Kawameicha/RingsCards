@@ -24,25 +24,45 @@ struct DeckView: View {
 
     var deck: Deck
 
+    init(
+        deck: Deck,
+
+        filterSphere: FilterSphere = .all,
+        filterType: FilterType = .any,
+        filterPack: [String] = [],
+        filterDeck: [String] = [],
+        sortParameter: SortParameter = .name,
+        sortOrder: SortOrder = .forward,
+        searchText: String = ""
+    ) {
+        self.deck = deck
+
+        let predicate = Card.predicate(searchText: searchText,
+                                       filterSphere: filterSphere.rawValue,
+                                       filterType: filterType.rawValue,
+                                       filterPack: filterPack,
+                                       filterDeck: self.deck.slots.map{ String($0.key) })
+        switch sortParameter {
+        case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
+        case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
+        }
+    }
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
-                        ForEach(deck.slots.sorted(by: >), id: \.key) { key, value in
-                            ForEach(cards.filter { card in
-                                (card.code == ("\(key)"))
-                                &&
-                                (card.type_name.contains("\(type)"))
-                            }) {card in
-                                NavigationLink {
-                                    CardView(card: card)
-                                } label: {
-                                    if editDeck == false {
-                                        CardRow(card: card, value: value)
-                                    } else {
-                                        DeckEdit(deck: deck, card: card, value: value)
-                                    }
+                        ForEach(cards.filter { card in
+                            (card.type_name.contains("\(type)"))
+                        }) {card in
+                            NavigationLink {
+                                CardView(card: card)
+                            } label: {
+                                if editDeck == false {
+                                    CardRow(card: card, value: deck.self.slots["\(card.code)", default: 0])
+                                } else {
+                                    DeckEdit(deck: deck, card: card, value: deck.self.slots["\(card.code)", default: 0])
                                 }
                             }
                         }
@@ -72,6 +92,7 @@ struct DeckView: View {
                         filterSphere: viewModel.filterSphere,
                         filterType: viewModel.filterType,
                         filterPack: collection,
+//                        filterDeck: viewModel.filterDeck,
                         sortParameter: viewModel.sortParameter,
                         sortOrder: viewModel.sortOrder,
                         searchText: viewModel.searchText)

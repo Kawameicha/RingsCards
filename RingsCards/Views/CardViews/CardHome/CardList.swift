@@ -17,6 +17,7 @@ struct CardList: View {
         filterSphere: FilterSphere = .all,
         filterType: FilterType = .any,
         filterPack: [String] = [],
+        filterDeck: [String] = [],
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = ""
@@ -24,7 +25,8 @@ struct CardList: View {
         let predicate = Card.predicate(searchText: searchText,
                                        filterSphere: filterSphere.rawValue,
                                        filterType: filterType.rawValue,
-                                       filterPack: filterPack)
+                                       filterPack: filterPack,
+                                       filterDeck: filterDeck)
         switch sortParameter {
         case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
         case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
@@ -59,7 +61,7 @@ struct CardList: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     FilterButton()
                 }
-                
+
                 ToolbarItem(placement: .topBarTrailing) {
                     SortButton()
                 }

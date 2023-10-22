@@ -21,6 +21,7 @@ struct DeckAdd: View {
         filterSphere: FilterSphere = .all,
         filterType: FilterType = .any,
         filterPack: [String] = [],
+        filterDeck: [String] = [],
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = ""
@@ -30,7 +31,8 @@ struct DeckAdd: View {
         let predicate = Card.predicate(searchText: searchText,
                                        filterSphere: filterSphere.rawValue,
                                        filterType: filterType.rawValue,
-                                       filterPack: filterPack)
+                                       filterPack: filterPack,
+                                       filterDeck: filterDeck)
         switch sortParameter {
         case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
         case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
@@ -45,8 +47,6 @@ struct DeckAdd: View {
                 ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("Add \(type)")) {
                         ForEach(cards.filter { card in
-//                            (!deck.slots.map{ String($0.key) }.contains(card.code))
-//                            &&
                             (card.type_name.contains("\(type)"))
                         }) { card in
                             NavigationLink {
@@ -64,7 +64,7 @@ struct DeckAdd: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     FilterButton()
                 }
-                
+
                 ToolbarItem(placement: .topBarTrailing) {
                     SortButton()
                 }
