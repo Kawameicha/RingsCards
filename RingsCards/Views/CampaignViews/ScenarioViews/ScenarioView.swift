@@ -12,27 +12,35 @@ struct ScenarioView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(image: Image(scenario.nameCanonical))
-
             VStack(alignment: .leading) {
-                Text(scenario.name)
-                    .font(.title)
+                    VStack {
+                        Text(scenario.name)
+                            .font(.title)
 
-                HStack {
-                    Text(scenario.pack)
-                    Spacer()
-                    Text(scenario.id.description)
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                        CircleIcon(image: Image(scenario.nameCanonical))
+
+                        Text(scenario.pack)
+                    }
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
 
                 Divider()
 
-                ScenarioChart(scenario: scenario)
+                Text(scenario.flavorIntro ?? "")
+                    .font(.system(size: 18, weight: .light, design: .serif))
+                    .italic()
 
-                ForEach(scenario.encounters) { name in
-                    Text(name.name)
+                Divider()
+
+                Text("The \(scenario.name) encounter deck is built with all the cards from the following encounter sets:")
+
+                ForEach(scenario.encounters) { scenario in
+                    HStack {
+                        CircleIcon(image: Image(scenario.code))
+                        Text(scenario.name)
+                    }
                 }
+
+                ScenarioChart(scenario: scenario)
             }
             .padding()
         }

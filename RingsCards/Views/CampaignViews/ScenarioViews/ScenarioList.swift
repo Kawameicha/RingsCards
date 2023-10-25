@@ -41,14 +41,10 @@ struct ScenarioList: View {
             .searchable(text: $searchText)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Menu(content: {
-                        Button {
-                            showingNotes.toggle()
-                        } label: {
-                            Label("Campaign Notes", systemImage: "list.clipboard")
-                        }
-                    }) {
-                        Image(systemName: "ellipsis.circle")
+                    Button {
+                        showingNotes.toggle()
+                    } label: {
+                        Label("Campaign Notes", systemImage: "list.clipboard")
                     }
                 }
             }

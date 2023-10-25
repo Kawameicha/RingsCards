@@ -10,20 +10,21 @@
         "encounters": [
             {
                 "id": 3,
-                "code": "Spiders of Mirkwood",
+                "code": "spiders-of-mirkwood",
                 "name": "Spiders of Mirkwood"
             },
             {
                 "id": 1,
-                "code": "Passage Through Mirkwood",
+                "code": "passage-through-mirkwood",
                 "name": "Passage Through Mirkwood"
             },
             {
                 "id": 2,
-                "code": "Dol Guldur Orcs",
+                "code": "dol-guldur-orcs",
                 "name": "Dol Guldur Orcs"
             }
         ],
+        "flavorIntro": "Mirkwood has long been a dangerous place, and recently one of King Thranduil’s patrols has uncovered disconcerting signs of a gathering menace in the vicinity of Dol Guldur. A party of heroes has been assembled to carry a message through Mirkwood, down the Anduin, and eventually to Lórien, to warn Lady Galadriel of the imminent danger.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 27,
@@ -68,25 +69,26 @@
         "encounters": [
             {
                 "id": 2,
-                "code": "Dol Guldur Orcs",
+                "code": "dol-guldur-orcs",
                 "name": "Dol Guldur Orcs"
             },
             {
                 "id": 4,
-                "code": "Journey Along the Anduin",
+                "code": "journey-along-the-anduin",
                 "name": "Journey Along the Anduin"
             },
             {
                 "id": 5,
-                "code": "Sauron's Reach",
+                "code": "sauron-s-reach",
                 "name": "Sauron's Reach"
             },
             {
                 "id": 6,
-                "code": "Wilderlands",
+                "code": "wilderlands",
                 "name": "Wilderlands"
             }
         ],
+        "flavorIntro": "Having survived the dangers of Mirkwood Forest, the heroes continue their journey along the banks of the Anduin river, toward Lórien, with dire news of a gathering threat in Southern Mirkwood.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 32,
@@ -131,20 +133,21 @@
         "encounters": [
             {
                 "id": 7,
-                "code": "Escape from Dol Guldur",
+                "code": "escape-from-dol-guldur",
                 "name": "Escape from Dol Guldur"
             },
             {
                 "id": 2,
-                "code": "Dol Guldur Orcs",
+                "code": "dol-guldur-orcs",
                 "name": "Dol Guldur Orcs"
             },
             {
                 "id": 3,
-                "code": "Spiders of Mirkwood",
+                "code": "spiders-of-mirkwood",
                 "name": "Spiders of Mirkwood"
             }
         ],
+        "flavorIntro": "While exploring in the vicinity of Dol Guldur at Lady Galadriel’s request, one of the heroes’ companions is captured by the Necromancer’s forces, and is now awaiting interrogation in a dungeon beneath the hill. Knowing their friend’s time is short, the heroes decide to attempt a desperate rescue.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 30,
@@ -189,20 +192,21 @@
         "encounters": [
             {
                 "id": 4,
-                "code": "Journey Along the Anduin",
+                "code": "journey-along-the-anduin",
                 "name": "Journey Along the Anduin"
             },
             {
                 "id": 5,
-                "code": "Sauron's Reach",
+                "code": "sauron-s-reach",
                 "name": "Sauron's Reach"
             },
             {
                 "id": 8,
-                "code": "The Hunt for Gollum",
+                "code": "the-hunt-for-gollum",
                 "name": "The Hunt for Gollum"
             }
         ],
+        "flavorIntro": "At the request of Gandalf, the heroes are searching for Gollum in the Anduin Valey between the Misty Mountains and Mirkwood forest. Rumours have suggested that Golum si ni this area, and hte heroes are looking for clues that might put them on the elusive creature's trail.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 34,
@@ -247,20 +251,21 @@
         "encounters": [
             {
                 "id": 4,
-                "code": "Journey Along the Anduin",
+                "code": "journey-along-the-anduin",
                 "name": "Journey Along the Anduin"
             },
             {
                 "id": 6,
-                "code": "Wilderlands",
+                "code": "wilderlands",
                 "name": "Wilderlands"
             },
             {
                 "id": 9,
-                "code": "Conflict at the Carrock",
+                "code": "conflict-at-the-carrock",
                 "name": "Conflict at the Carrock"
             }
         ],
+        "flavorIntro": "While searching for Gollum along the banks of the Anduin, the heroes hear rumours of a group of Trolls that have come to the Carrock, bringing chaos and strife to the valley. The Beornings, led by Grimbeorn the Old, are known as the peacekeepers in the area, so the heroes set out to find Grimbeorn and assist him in driving the intrusive Trols back to the mountains from which they came.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 37,
@@ -305,20 +310,21 @@
         "encounters": [
             {
                 "id": 2,
-                "code": "Dol Guldur Orcs",
+                "code": "dol-guldur-orcs",
                 "name": "Dol Guldur Orcs"
             },
             {
                 "id": 3,
-                "code": "Spiders of Mirkwood",
+                "code": "spiders-of-mirkwood",
                 "name": "Spiders of Mirkwood"
             },
             {
                 "id": 10,
-                "code": "A Journey to Rhosgobel",
+                "code": "a-journey-to-rhosgobel",
                 "name": "A Journey to Rhosgobel"
             }
         ],
+        "flavorIntro": "While travelling in the Anduin Valley, the heroes come across a fallen Eagle, dreadfully wounded from a recent battle with Goblins, and on the verge of death. Given their location, the heroes attempt to transport the Eagle to Rhosgobel, on the edge of Mirkwood, in the hope that the wizard Radagast can save the Eagle’s life.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 17,
@@ -363,20 +369,21 @@
         "encounters": [
             {
                 "id": 2,
-                "code": "Dol Guldur Orcs",
+                "code": "dol-guldur-orcs",
                 "name": "Dol Guldur Orcs"
             },
             {
                 "id": 5,
-                "code": "Sauron's Reach",
+                "code": "sauron-s-reach",
                 "name": "Sauron's Reach"
             },
             {
                 "id": 11,
-                "code": "The Hills of Emyn Muil",
+                "code": "the-hills-of-emyn-muil",
                 "name": "The Hills of Emyn Muil"
             }
         ],
+        "flavorIntro": "Pursuing Gollum to the south, the heroes were led to the hills of Emyn Muil, but there the leads grew cold. Somewhere in this region, Gollum is hiding, and the heroes must explore carefully to regain the trail and resume pursuit.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 40,
@@ -421,20 +428,21 @@
         "encounters": [
             {
                 "id": 5,
-                "code": "Sauron's Reach",
+                "code": "sauron-s-reach",
                 "name": "Sauron's Reach"
             },
             {
                 "id": 6,
-                "code": "Wilderlands",
+                "code": "wilderlands",
                 "name": "Wilderlands"
             },
             {
                 "id": 12,
-                "code": "The Dead Marshes",
+                "code": "the-dead-marshes",
                 "name": "The Dead Marshes"
             }
         ],
+        "flavorIntro": "After regaining his trail in the hills of Emyn Muil, the heroes have tracked Gollum to The Dead Marshes, into which he has fled in a last ditch effort to avoid pursuit. Feeling that the hunt is coming to a close, the heroes enter the treacherous marshlands, ready to capture the creature alive.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 37,
@@ -479,20 +487,21 @@
         "encounters": [
             {
                 "id": 3,
-                "code": "Spiders of Mirkwood",
+                "code": "spiders-of-mirkwood",
                 "name": "Spiders of Mirkwood"
             },
             {
                 "id": 6,
-                "code": "Wilderlands",
+                "code": "wilderlands",
                 "name": "Wilderlands"
             },
             {
                 "id": 13,
-                "code": "Return to Mirkwood",
+                "code": "return-to-mirkwood",
                 "name": "Return to Mirkwood"
             }
         ],
+        "flavorIntro": "After cornering and capturing Gollum in The Dead Marshes, the heroes must now escort the creature north, through Mirkwood forest, so that he can be held and interrogated at King Thranduil’s palace. The journey will not be easy, however: Mirkwood is always a dangerous place, the Dark Lord’s forces are eager to take Gollum for their own purposes...and Gollum himself is eager to escape.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 36,
@@ -537,25 +546,26 @@
         "encounters": [
             {
                 "id": 14,
-                "code": "Into the Pit",
+                "code": "into-the-pit",
                 "name": "Into the Pit"
             },
             {
                 "id": 15,
-                "code": "Twists and Turns",
+                "code": "twists-and-turns",
                 "name": "Twists and Turns"
             },
             {
                 "id": 16,
-                "code": "Hazards of the Pit",
+                "code": "hazards-of-the-pit",
                 "name": "Hazards of the Pit"
             },
             {
                 "id": 17,
-                "code": "Goblins of the Deep",
+                "code": "goblins-of-the-deep",
                 "name": "Goblins of the Deep"
             }
         ],
+        "flavorIntro": "The heroes enter the mines of Moria at the behest of the White Council, carrying an important message to Balin. Balin recently led a group of Dwarves back into Moria to establish a colony in the ancient halls of his ancestors. He has not been heard from in some time.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 37,
@@ -600,20 +610,21 @@
         "encounters": [
             {
                 "id": 17,
-                "code": "Goblins of the Deep",
+                "code": "goblins-of-the-deep",
                 "name": "Goblins of the Deep"
             },
             {
                 "id": 18,
-                "code": "The Seventh Level",
+                "code": "the-seventh-level",
                 "name": "The Seventh Level"
             },
             {
                 "id": 19,
-                "code": "Plundering Goblins",
+                "code": "plundering-goblins",
                 "name": "Plundering Goblins"
             }
         ],
+        "flavorIntro": "Based on information from a dying Goblin, the heroes have made their way to the Seventh Level of Moria, still searching for any signs of Balin’s colony. The Seventh Level holds the Chamber of Records, and it is there that the Goblin said they would find Balin. An ancient tome also seems to hold clues as to the where-abouts of the colony.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 27,
@@ -658,25 +669,26 @@
         "encounters": [
             {
                 "id": 16,
-                "code": "Hazards of the Pit",
+                "code": "hazards-of-the-pit",
                 "name": "Hazards of the Pit"
             },
             {
                 "id": 19,
-                "code": "Plundering Goblins",
+                "code": "plundering-goblins",
                 "name": "Plundering Goblins"
             },
             {
                 "id": 20,
-                "code": "Flight from Moria",
+                "code": "flight-from-moria",
                 "name": "Flight from Moria"
             },
             {
                 "id": 21,
-                "code": "Deeps of Moria",
+                "code": "deeps-of-moria",
                 "name": "Deeps of Moria"
             }
         ],
+        "flavorIntro": "Balin’s colony ended in death and darkness. After paying their respects at his tomb, the heroes fought their way out of the Goblin infested Seventh Level and made their way down toward the gate. But exiting Moria will not be easy, for a shadowy form masses at the end of the hall, and fear and terror go before it. The heroes must escape Moria before it is too late.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 33,
@@ -721,15 +733,16 @@
         "encounters": [
             {
                 "id": 22,
-                "code": "Misty Mountains",
+                "code": "misty-mountains",
                 "name": "Misty Mountains"
             },
             {
                 "id": 23,
-                "code": "The Redhorn Gate",
+                "code": "the-redhorn-gate",
                 "name": "The Redhorn Gate"
             }
         ],
+        "flavorIntro": "Arwen wishes to visit her father Elrond, and Celeborn has bid the heroes to escort her over the Misty Mountains and safely to Rivendell. But the season grows late, and a sudden chill has descended on the three peaks that guard the Redhorn pass.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 35,
@@ -774,20 +787,21 @@
         "encounters": [
             {
                 "id": 19,
-                "code": "Plundering Goblins",
+                "code": "plundering-goblins",
                 "name": "Plundering Goblins"
             },
             {
                 "id": 22,
-                "code": "Misty Mountains",
+                "code": "misty-mountains",
                 "name": "Misty Mountains"
             },
             {
                 "id": 24,
-                "code": "Road to Rivendell",
+                "code": "road-to-rivendell",
                 "name": "Road to Rivendell"
             }
         ],
+        "flavorIntro": "The heroes continue their journey northward to Rivendell, escorting Arwen to visit her father Elrond. But the road is long, and Orcs ambush the party along the way. With enemies hounding the heroes’ steps, the weather drives the party ever closer to the looming mountains, and the dangers they hold.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 46,
@@ -832,15 +846,16 @@
         "encounters": [
             {
                 "id": 22,
-                "code": "Misty Mountains",
+                "code": "misty-mountains",
                 "name": "Misty Mountains"
             },
             {
                 "id": 25,
-                "code": "The Watcher in the Water",
+                "code": "the-watcher-in-the-water",
                 "name": "The Watcher in the Water"
             }
         ],
+        "flavorIntro": "Elrond is disturbed by the report of Arwen’s journey to Rivendell. He has requsted that the heroes discover the source of the increased Orc activity along the Misty Mountains. This mission has led the party South to Moria, but the Doors of Durin are blocked by a deep, dark lake. As the heroes make their way around its waters, an ancient evil stirs from within its depths. A desperate battle begins, and the heroes must drive the creature away or find safety in the mines.",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 35,
@@ -885,20 +900,21 @@
         "encounters": [
             {
                 "id": 15,
-                "code": "Twists and Turns",
+                "code": "twists-and-turns",
                 "name": "Twists and Turns"
             },
             {
                 "id": 21,
-                "code": "Deeps of Moria",
+                "code": "deeps-of-moria",
                 "name": "Deeps of Moria"
             },
             {
                 "id": 26,
-                "code": "The Long Dark",
+                "code": "the-long-dark",
                 "name": "The Long Dark"
             }
         ],
+        "flavorIntro": "The Mines of Moria are a dark labyrinth of narrow tunnels and wide passages, natural caves and impressive caverns of Dwarven workmanship. The heroes must make their way eastward, discovering what they can about the Orcs, and perhaps even meeting up with Balin for more information. But it is easy to get lost in the darkness...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 45,
@@ -943,25 +959,26 @@
         "encounters": [
             {
                 "id": 15,
-                "code": "Twists and Turns",
+                "code": "twists-and-turns",
                 "name": "Twists and Turns"
             },
             {
                 "id": 16,
-                "code": "Hazards of the Pit",
+                "code": "hazards-of-the-pit",
                 "name": "Hazards of the Pit"
             },
             {
                 "id": 17,
-                "code": "Goblins of the Deep",
+                "code": "goblins-of-the-deep",
                 "name": "Goblins of the Deep"
             },
             {
                 "id": 27,
-                "code": "Foundations of Stone",
+                "code": "foundations-of-stone",
                 "name": "Foundations of Stone"
             }
         ],
+        "flavorIntro": "The walls are weeping water, and the air grows damp. A low rumble sounds from above, accompanied by the sound of rushing water. There are underground waterways in Moria that lead to deep darkness, and who knows what else...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 47,
@@ -1006,20 +1023,21 @@
         "encounters": [
             {
                 "id": 17,
-                "code": "Goblins of the Deep",
+                "code": "goblins-of-the-deep",
                 "name": "Goblins of the Deep"
             },
             {
                 "id": 21,
-                "code": "Deeps of Moria",
+                "code": "deeps-of-moria",
                 "name": "Deeps of Moria"
             },
             {
                 "id": 28,
-                "code": "Shadow and Flame",
+                "code": "shadow-and-flame",
                 "name": "Shadow and Flame"
             }
         ],
+        "flavorIntro": "The heroes have escaped from the darkness below the mines, and find themselves in the Third Deep, near the East-gate. But as Orcs begin to swarm, a foe more terrible towers before them. Durin's Bane has risen from the depths, to stalk the halls of the Dwarves once more...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 42,
@@ -1064,20 +1082,21 @@
         "encounters": [
             {
                 "id": 29,
-                "code": "Peril in Pelargir",
+                "code": "peril-in-pelargir",
                 "name": "Peril in Pelargir"
             },
             {
                 "id": 30,
-                "code": "Streets of Gondor",
+                "code": "streets-of-gondor",
                 "name": "Streets of Gondor"
             },
             {
                 "id": 31,
-                "code": "Brigands",
+                "code": "brigands",
                 "name": "Brigands"
             }
         ],
+        "flavorIntro": "The shadow of Sauron has risen with increasing violence against the kingdom of Gondor. Our heroes have travelled southeast by ship from the Grey Havens at the request of the White Council, ready to aid the descendants of Númenor in their defense against the forces of Mordor. Upon reaching the port of Pelargir, they are greeted by Lord Alcaron, a nobleman from the city of Minas Tirith. Lord Alcaron has urgent information for Faramir, but he is frightened that the Enemy is after him. He asks the heroes to deliver a scroll to Faramir. The heroes agree when a band of ruffians appear, intent on intercepting the message...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 29,
@@ -1122,25 +1141,26 @@
         "encounters": [
             {
                 "id": 32,
-                "code": "Into Ithilien",
+                "code": "into-ithilien",
                 "name": "Into Ithilien"
             },
             {
                 "id": 33,
-                "code": "Brooding Forest",
+                "code": "brooding-forest",
                 "name": "Brooding Forest"
             },
             {
                 "id": 34,
-                "code": "Creatures of the Forest",
+                "code": "creatures-of-the-forest",
                 "name": "Creatures of the Forest"
             },
             {
                 "id": 35,
-                "code": "Southrons",
+                "code": "southrons",
                 "name": "Southrons"
             }
         ],
+        "flavorIntro": "Having reached the eaves of Ithilien, our heroes enter the green woodlands in search of Faramir, seeking to deliver to him the scroll of Lord Alcaron. There they are met by Celador, a ranger of Gondor, who informs the heroes that Faramir has taken his men to Cair Andros in anticipation of an assault against the island fortress. Celador offers to bring the heroes to Cair Andros by secret paths–after the rangers ambush a company of Southrons marching north on the Ithilien road. Grateful for Celador’s offer and unable to stand by while his men do battle, our heroes volunteer to fight alongside his rangers...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 24,
@@ -1185,25 +1205,26 @@
         "encounters": [
             {
                 "id": 35,
-                "code": "Southrons",
+                "code": "southrons",
                 "name": "Southrons"
             },
             {
                 "id": 36,
-                "code": "The Siege of Cair Andros",
+                "code": "the-siege-of-cair-andros",
                 "name": "The Siege of Cair Andros"
             },
             {
                 "id": 37,
-                "code": "Ravaging Orcs",
+                "code": "ravaging-orcs",
                 "name": "Ravaging Orcs"
             },
             {
                 "id": 38,
-                "code": "Mordor Elite",
+                "code": "mordor-elite",
                 "name": "Mordor Elite"
             }
         ],
+        "flavorIntro": "The island fortress of Cair Andros guards Gondor’s northernmost causeways over the Anduin. Our heroes reach the causeway and enter the fortress as skirmishers appear on the eastern shore. They find Faramir in the Citadel, and deliver to him the scroll of Lord Alcaron. Drums are heard, and horns, and the tramping of many feet. An army of Orcs and Southrons prepare a three- pronged assault, and the heroes gird themselves for battle. For if Cair Andros falls, the doom of Gondor is nigh...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 25,
@@ -1248,20 +1269,21 @@
         "encounters": [
             {
                 "id": 30,
-                "code": "Streets of Gondor",
+                "code": "streets-of-gondor",
                 "name": "Streets of Gondor"
             },
             {
                 "id": 31,
-                "code": "Brigands",
+                "code": "brigands",
                 "name": "Brigands"
             },
             {
                 "id": 39,
-                "code": "The Steward's Fear",
+                "code": "the-steward-s-fear",
                 "name": "The Steward's Fear"
             }
         ],
+        "flavorIntro": "The heroes arrive in Minas Tirith with news of victory at Cair Andros and a message for Lord Alcaron from Faramir. Upon arriving at the city, they learn that Lord Alcaron is traveling on important business north in Anórien. Even so, the heroes are soon furtively summoned to the White Tower by none other than Denethor, the Steward of Gondor himself. Word has come to Denethor of the heroes’ bravery in the defense of Cair Andros, and he’s learned the heroes have the confidence of Lord Alcaron. In Denethor’s mind, such trusted new arrivals are perfectly suited for a special task of a clandestine nature.\nIn the privacy of the Steward’s inner chambers, Denethor asks the heroes a delicate favor. He fears that a conspiracy has taken root within the walls of Minas Tirith: a cabal under Mordor’s bidding that seeks to usurp the stewardship and deliver Gondor to Sauron. He asks that the heroes discover the truth of this matter...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 42,
@@ -1306,15 +1328,16 @@
         "encounters": [
             {
                 "id": 33,
-                "code": "Brooding Forest",
+                "code": "brooding-forest",
                 "name": "Brooding Forest"
             },
             {
                 "id": 40,
-                "code": "The Drúadan Forest",
+                "code": "the-druadan-forest",
                 "name": "The Drúadan Forest"
             }
         ],
+        "flavorIntro": "The heroes have unmasked a dangerous conspiracy within the walls of Minas Tirith, but the nameless mastermind of the cabal managed to escape the city before his true identity was revealed. At the request of Denethor, the heroes have pursued the clever villain and his henchmen northward. The conspirators’ trail has lead them north beyond the Rammas Echor, and then west to the doorstep of the Drúadan Forest, an ancient land with a hostile reputation. Now our heroes move to track their quarry among its ancient trees and strange stones...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 26,
@@ -1359,15 +1382,16 @@
         "encounters": [
             {
                 "id": 37,
-                "code": "Ravaging Orcs",
+                "code": "ravaging-orcs",
                 "name": "Ravaging Orcs"
             },
             {
                 "id": 41,
-                "code": "Encounter at Amon Dîn",
+                "code": "encounter-at-amon-din",
                 "name": "Encounter at Amon Dîn"
             }
         ],
+        "flavorIntro": "Having escaped from the Drúadan Forest and witnessed the demise of the conspirators by the arrows of the Woses, the heroes have begun their journey back to Minas Tirith. In the morning of the second day, they awoke to a grim sight. Dozens of columns of smoke were rising across the hilly farmlands of Anórien.\nIt seems death had crossed the Anduin after all.\nAs our heroes warily approached the nearest of the fires, they came upon two farmers hiding in the hedges. The frightened bondsmen told of roving bands of orcs scouring the countryside, bringing destruction to the defenseless herdsman and farmers of the surrounding lands. They told of a particularly cruel group that assaulted the nearby village during the night. They feared the villagers were dead.\nApproaching the village, the heroes saw signs that the citizens may not have been completely helpless. Several orc bodies lay crumpled in the streets, and a crude barricade of horse carts and earth-covered hay bales protected the town’s inner square. Only the buildings on the outskirts of the town seemed to be sacked and burning.\nAs the heroes approached the barricade, the villagers eyed them suspiciously, their expressions wavering between mistrust and hope of assistance. Smoke lay in a thick haze in the streets, reddening eyes and shortening tempers.\nWhat appeared to be a nobleman and his escort of guardsmen were helping the villagers with the defenses and in caring for the wounded and burned. They seemed haggard and tired from the night’s fighting. As the heroes approached, the sooty and weary nobleman squinted through the acrid haze at the newcomers, his hand moving to his sword. Then, as a faint gust of wind cleared the air for a moment, the nobleman broke into a wide grin of recognition. It was non other than Lord Alcaron.\n“Out of the west comes hope unasked for,” he called. “May I be the first to say that you are well met indeed!”\nAfter a brief greeting, Lord Alcaron grimly told the heroes of the plight into which they had fallen, and how he had been sent northward about a month ago on the realm’s business. Denethor had deemed it wise, in case\nCair Andros should fall, to raise the levy of Anórien and prepare for the evacuation of the northlands to the safer side of the Rammas Echor. Upon receiving news of the victory at Cair Andros, Alcaron disbanded the levy, and for the past week or so has been seeing to the Stewards’ business in the region.\n“Alas” he grimaced, “even as the the victory of Cair Andros held back the tide of Mordor, the defeat must have left a substantial number of the enemy trapped on the western side of the river.” Alcaron sighed, “One would think those vile creatures would seek to return to their master by any means possible.”\n“No such luck. Instead they’ve come west to punish the local countryside, burning and murdering where they go”. Alcaron went on to tell of how the roads of Anórien had quickly become far too dangerous for traveling. Even with an armed escort, Alcaron was forced to seek the tenuous security of the present village.\n“A large group of the enemy has descended on the lands surrounding the Amon Dîn,” he continued, gesturing at the great hill that dominated the northern skyline. “They’re led by a particularly nasty captain who calls himself Ghulat.” He spat out the ugly name and pointed at the barricades. “We barely held them here last night. I don’t think they were expecting any resistance.”\n“The enemy will not make that mistake again.” Alcaron wearily glanced at a group of tired villagers leaning against a nearby wagon, armed with harvesting scythes and hayforks. “I didn’t like our chances of surviving another night.”\nHe turned to the heroes, a wide smile breaking across his sooty face. “Now that you’re here, I find cause for hope. Maybe we’ll save this village yet. What do you say?”",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 31,
@@ -1412,20 +1436,21 @@
         "encounters": [
             {
                 "id": 35,
-                "code": "Southrons",
+                "code": "southrons",
                 "name": "Southrons"
             },
             {
                 "id": 38,
-                "code": "Mordor Elite",
+                "code": "mordor-elite",
                 "name": "Mordor Elite"
             },
             {
                 "id": 42,
-                "code": "Assault on Osgiliath",
+                "code": "assault-on-osgiliath",
                 "name": "Assault on Osgiliath"
             }
         ],
+        "flavorIntro": "After saving the villagers near Amon Dîn, the heroes have joined with Lord Alcaron to assist Lord Boromir’s forces in retaking Osgiliath. At the army encampment, you are thrilled to again meet Lord Faramir, and you are introduced to his brother Boromir, eldest son of Denethor and renowned hero of Gondor.\nNestled on both sides of the Anduin lies old Osgiliath, a crossroads city bridging the great river. In the long war against Mordor, control of Osgiliath has been a critical piece. One that Boromir means to reclaim.\nAs the sun breaks over the Mountains of Shadow, beating at the still river fog, the great horn of Gondor sounds from Boromir’s lips. As its sound fades into the morning, the men of Gondor cry out as one. They cry for battle and the ruin of foes, their swords lifted to the sky. Come death and come honor, the newest battle for Osgiliath begins...",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 34,
@@ -1470,15 +1495,16 @@
         "encounters": [
             {
                 "id": 37,
-                "code": "Ravaging Orcs",
+                "code": "ravaging-orcs",
                 "name": "Ravaging Orcs"
             },
             {
                 "id": 43,
-                "code": "The Blood of Gondor",
+                "code": "the-blood-of-gondor",
                 "name": "The Blood of Gondor"
             }
         ],
+        "flavorIntro": "In a great victory for Gondor, the city of Osgiliath has been retaken and the river Anduin is once more under the Steward’s control. Alongside the Lords Boromir, Faramir, and Alcaron, the heroes fought bravely to recapture the ancient city.\nWith the defeated forces of orcs and evil men retreating eastward, Lord Alcaron had urged Boromir to pursue the scattered enemy. “Don’t let a single one of them return to foul the Pelennor again!” Alcaron pleaded. “We should hunt them. Pursue them until their black bones break on the mountains.” Flush with the confidence of victory and swayed by the nobleman’s passion, Boromir agreed and asked his brother to take on this endeavor with his rangers. Faramir reluctantly consented.\nBy the request of Faramir, our heroes joined the incursion. The morning after the fall of Osgiliath, the company of rangers began their foray into the autumnal forests of Ithilien.\nIn the days that followed, the rangers managed to track and destroy a number of enemy mobs. Their carcasses were left to the elements: skeletal warnings to those of Mordor who would cross Ithilien again. It was late afternoon on the third day before the company came to the old crossroads near the foothills of the mountains.\nFaramir walked at the head of the column, our heroes and Lord Alcaron close at heel. As they came to the crossroads, Faramir crossed to the old statue that stood sentinel over the silent junction facing west. Alcaron moved to follow, but Faramir waived him back.\nThe stone figure, which must have been an impressive sight to those traveling the roads long ago, depicted a king of old seated on a throne. The years had softened its features, moss and lichen growing in its crevices and cracks. Rude scrawls and rough carvings had been made by hostile hands, defiling its stonework. The head of the statue had been knocked off, replaced with a crudely hewn stone. A coarse drawing of a grinning face with a single eye had been painted in red on the stone. The crowned head of the old king that lay to the side was curiously unmarked. It seemed the grass was greener where the head had fallen.\nAs Faramir reached the statue, he gently touched the stone as if greeting an old friend. He then knelt by the fallen face and sat for a moment. He rose slowly, carefully eying the road and surrounding terrain. No enemy had been seen since the evening before, a fact that troubled him. Above, grey clouds pressed close, and a light rain had begun to fall. In the late afternoon light, the forest seemed to have lost its color; ashen and sullen it seemed to watch their every movement in the exposed space.\nThen a look of decision crossed Faramir’s face, and he thoughtfully returned to the company. “We’ve taken this folly far enough,” he said. “There is an unkind change in the forest.” He paused a moment, glancing into the trees. “The lands so near to the Morgul Valley have been under His sway for too long. It’s unsafe to proceed.” Alcaron moved to protest, but Faramir would not abide. “My brother will have to be satisfied with the work done so far. We return to Osgiliath.”\nAs the company turned westward for their return journey, the silence of the forest broke in the blast of a distant horn. The sound rose and fell like some wounded brass bird. A chilling drone that promised nothing good.\nSuddenly, the woods all around the rangers came alive with the rushing black shapes and cruel blades of the enemy. An imposing robed figure led them, and the charging orcs gave him a wide berth. Though his face was mostly hidden by the cowl of his dark-grey robes, the man emanated terrible intent. This was no ordinary ambush.\nLord Alcaron screamed a brave challenge as he drew his sword. Faramir and his hard-eyed rangers simply pulled their blades in a steely whisper and waited for the onslaught to come.\nThe fight joined like a thunderclap..",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 29,
@@ -1523,20 +1549,21 @@
         "encounters": [
             {
                 "id": 34,
-                "code": "Creatures of the Forest",
+                "code": "creatures-of-the-forest",
                 "name": "Creatures of the Forest"
             },
             {
                 "id": 38,
-                "code": "Mordor Elite",
+                "code": "mordor-elite",
                 "name": "Mordor Elite"
             },
             {
                 "id": 44,
-                "code": "The Morgul Vale",
+                "code": "the-morgul-vale",
                 "name": "The Morgul Vale"
             }
         ],
+        "flavorIntro": "While pursuing the scattered enemy forces into Ithilien, Faramir’s company of rangers are ambushed by orcs near the old crossroads. During the ensuing fight, both Lord Faramir and Lord Alcaron are captured.\nAt the thought of Denethor’s son in Sauron’s torture chambers, the heroes begin a desperate pursuit. Following frantic hours of tracking, they find themselves at the mouth of the dread Morgul Valley.\nAs the Dead City comes into distant view, they have come upon their quarry at last.\nSeeing their pursuers close behind, the breathless Uruk are visibly frustrated. They growl angrily as they halt to confer. A hooded figure in their midst, undoubtedly their leader, calmly directs the vexed orcs. He reminds our heroes of the Morgul sorcerer who led the ambush back at the crossroads. Even while that malefactor lies dead on the forest floor, they don’t relish the thought of facing another of his kind.\nThe truth is worse. Much worse.\nThe robed figures decisively gestures at the distant tower, his demeanor brooking no debate. The tallest of the Uruk submissively throws a man-sized bundle over his shoulders. Grunting for two of its kind to follow, the Uruk starts a brisk pace eastward. The robed figure is clearly not about to risk his trophy on the doorstep of Mordor.\nAs the breakout group moves down the ancient cobblestone road, the remaining Uruk turn to face the approaching heroes. As they enter earshot, the robed figure casually claps his hands and starts to laugh. The sound is hauntingly familiar.\n“You’re incurable!” he exclaims. “Why won’t you just die!” He raises his arms in mock frustration as the Uruk pull free their weapons in a rusty cacophony. Their eyes glow with bloodlust.\n“Fortunately, you are entirely too late” the robed figure continues. He casually gestures back at the tall Uruk pacing eastward toward the ghastly city. The bundled shape of a prisoner bobs on its ironclad back. “Sauron shall have His prize.” A cloud washes away from the moon as the robed man pulls back his hood “Nothing can stop that now.”\nA sickening heartache roils the heroes. Time seems to",
         "has_easy": true,
         "has_nightmare": true,
         "easy_cards": 35,
@@ -1581,17 +1608,17 @@
         "encounters": [
             {
                 "id": 45,
-                "code": "The Fords of Isen",
+                "code": "the-fords-of-isen",
                 "name": "The Fords of Isen"
             },
             {
                 "id": 46,
-                "code": "Dunland Warriors",
+                "code": "dunland-warriors",
                 "name": "Dunland Warriors"
             },
             {
                 "id": 47,
-                "code": "Dunland Raiders",
+                "code": "dunland-raiders",
                 "name": "Dunland Raiders"
             }
         ],
@@ -1639,17 +1666,17 @@
         "encounters": [
             {
                 "id": 48,
-                "code": "To Catch an Orc",
+                "code": "to-catch-an-orc",
                 "name": "To Catch an Orc"
             },
             {
                 "id": 49,
-                "code": "Misty Mountain Orcs",
+                "code": "misty-mountain-orcs",
                 "name": "Misty Mountain Orcs"
             },
             {
                 "id": 50,
-                "code": "Broken Lands",
+                "code": "broken-lands",
                 "name": "Broken Lands"
             }
         ],
@@ -1697,17 +1724,17 @@
         "encounters": [
             {
                 "id": 51,
-                "code": "Into Fangorn",
+                "code": "into-fangorn",
                 "name": "Into Fangorn"
             },
             {
                 "id": 52,
-                "code": "Ancient Forest",
+                "code": "ancient-forest",
                 "name": "Ancient Forest"
             },
             {
                 "id": 53,
-                "code": "Weary Travelers",
+                "code": "weary-travelers",
                 "name": "Weary Travelers"
             }
         ],
@@ -1755,17 +1782,17 @@
         "encounters": [
             {
                 "id": 46,
-                "code": "Dunland Warriors",
+                "code": "dunland-warriors",
                 "name": "Dunland Warriors"
             },
             {
                 "id": 53,
-                "code": "Weary Travelers",
+                "code": "weary-travelers",
                 "name": "Weary Travelers"
             },
             {
                 "id": 54,
-                "code": "The Dunland Trap",
+                "code": "the-dunland-trap",
                 "name": "The Dunland Trap"
             }
         ],
@@ -1813,12 +1840,12 @@
         "encounters": [
             {
                 "id": 52,
-                "code": "Ancient Forest",
+                "code": "ancient-forest",
                 "name": "Ancient Forest"
             },
             {
                 "id": 55,
-                "code": "The Three Trials",
+                "code": "the-three-trials",
                 "name": "The Three Trials"
             }
         ],
@@ -1866,12 +1893,12 @@
         "encounters": [
             {
                 "id": 49,
-                "code": "Misty Mountain Orcs",
+                "code": "misty-mountain-orcs",
                 "name": "Misty Mountain Orcs"
             },
             {
                 "id": 56,
-                "code": "Trouble in Tharbad",
+                "code": "trouble-in-tharbad",
                 "name": "Trouble in Tharbad"
             }
         ],
@@ -1919,12 +1946,12 @@
         "encounters": [
             {
                 "id": 53,
-                "code": "Weary Travelers",
+                "code": "weary-travelers",
                 "name": "Weary Travelers"
             },
             {
                 "id": 57,
-                "code": "The Nîn-in-Eilph",
+                "code": "the-nin-in-eilph",
                 "name": "The Nîn-in-Eilph"
             }
         ],
@@ -1972,17 +1999,17 @@
         "encounters": [
             {
                 "id": 49,
-                "code": "Misty Mountain Orcs",
+                "code": "misty-mountain-orcs",
                 "name": "Misty Mountain Orcs"
             },
             {
                 "id": 50,
-                "code": "Broken Lands",
+                "code": "broken-lands",
                 "name": "Broken Lands"
             },
             {
                 "id": 58,
-                "code": "Celebrimbor's Secret",
+                "code": "celebrimbor-s-secret",
                 "name": "Celebrimbor's Secret"
             }
         ],
@@ -2030,17 +2057,17 @@
         "encounters": [
             {
                 "id": 46,
-                "code": "Dunland Warriors",
+                "code": "dunland-warriors",
                 "name": "Dunland Warriors"
             },
             {
                 "id": 47,
-                "code": "Dunland Raiders",
+                "code": "dunland-raiders",
                 "name": "Dunland Raiders"
             },
             {
                 "id": 59,
-                "code": "The Antlered Crown",
+                "code": "the-antlered-crown",
                 "name": "The Antlered Crown"
             }
         ],
@@ -2088,22 +2115,22 @@
         "encounters": [
             {
                 "id": 60,
-                "code": "Intruders in Chetwood",
+                "code": "intruders-in-chetwood",
                 "name": "Intruders in Chetwood"
             },
             {
                 "id": 61,
-                "code": "Iârion",
+                "code": "iarion",
                 "name": "Iârion"
             },
             {
                 "id": 62,
-                "code": "Eriador Wilds",
+                "code": "eriador-wilds",
                 "name": "Eriador Wilds"
             },
             {
                 "id": 63,
-                "code": "Angmar Orcs",
+                "code": "angmar-orcs",
                 "name": "Angmar Orcs"
             }
         ],
@@ -2151,22 +2178,22 @@
         "encounters": [
             {
                 "id": 63,
-                "code": "Angmar Orcs",
+                "code": "angmar-orcs",
                 "name": "Angmar Orcs"
             },
             {
                 "id": 64,
-                "code": "Ruins of Arnor",
+                "code": "ruins-of-arnor",
                 "name": "Ruins of Arnor"
             },
             {
                 "id": 65,
-                "code": "The Weather Hills",
+                "code": "the-weather-hills",
                 "name": "The Weather Hills"
             },
             {
                 "id": 66,
-                "code": "Foul Weather",
+                "code": "foul-weather",
                 "name": "Foul Weather"
             }
         ],
@@ -2214,22 +2241,22 @@
         "encounters": [
             {
                 "id": 61,
-                "code": "Iârion",
+                "code": "iarion",
                 "name": "Iârion"
             },
             {
                 "id": 67,
-                "code": "Dark Sorcery",
+                "code": "dark-sorcery",
                 "name": "Dark Sorcery"
             },
             {
                 "id": 68,
-                "code": "Deadmen's Dike",
+                "code": "deadmen-s-dike",
                 "name": "Deadmen's Dike"
             },
             {
                 "id": 69,
-                "code": "Cursed Dead",
+                "code": "cursed-dead",
                 "name": "Cursed Dead"
             }
         ],
@@ -2277,17 +2304,17 @@
         "encounters": [
             {
                 "id": 62,
-                "code": "Eriador Wilds",
+                "code": "eriador-wilds",
                 "name": "Eriador Wilds"
             },
             {
                 "id": 66,
-                "code": "Foul Weather",
+                "code": "foul-weather",
                 "name": "Foul Weather"
             },
             {
                 "id": 70,
-                "code": "The Wastes of Eriador",
+                "code": "the-wastes-of-eriador",
                 "name": "The Wastes of Eriador"
             }
         ],
@@ -2335,12 +2362,12 @@
         "encounters": [
             {
                 "id": 63,
-                "code": "Angmar Orcs",
+                "code": "angmar-orcs",
                 "name": "Angmar Orcs"
             },
             {
                 "id": 71,
-                "code": "Escape from Mount Gram",
+                "code": "escape-from-mount-gram",
                 "name": "Escape from Mount Gram"
             }
         ],
@@ -2388,17 +2415,17 @@
         "encounters": [
             {
                 "id": 62,
-                "code": "Eriador Wilds",
+                "code": "eriador-wilds",
                 "name": "Eriador Wilds"
             },
             {
                 "id": 66,
-                "code": "Foul Weather",
+                "code": "foul-weather",
                 "name": "Foul Weather"
             },
             {
                 "id": 72,
-                "code": "Across the Ettenmoors",
+                "code": "across-the-ettenmoors",
                 "name": "Across the Ettenmoors"
             }
         ],
@@ -2446,17 +2473,17 @@
         "encounters": [
             {
                 "id": 64,
-                "code": "Ruins of Arnor",
+                "code": "ruins-of-arnor",
                 "name": "Ruins of Arnor"
             },
             {
                 "id": 69,
-                "code": "Cursed Dead",
+                "code": "cursed-dead",
                 "name": "Cursed Dead"
             },
             {
                 "id": 73,
-                "code": "The Treachery of Rhudaur",
+                "code": "the-treachery-of-rhudaur",
                 "name": "The Treachery of Rhudaur"
             }
         ],
@@ -2504,17 +2531,17 @@
         "encounters": [
             {
                 "id": 63,
-                "code": "Angmar Orcs",
+                "code": "angmar-orcs",
                 "name": "Angmar Orcs"
             },
             {
                 "id": 67,
-                "code": "Dark Sorcery",
+                "code": "dark-sorcery",
                 "name": "Dark Sorcery"
             },
             {
                 "id": 74,
-                "code": "The Battle of Carn Dûm",
+                "code": "the-battle-of-carn-dum",
                 "name": "The Battle of Carn Dûm"
             }
         ],
@@ -2562,17 +2589,17 @@
         "encounters": [
             {
                 "id": 67,
-                "code": "Dark Sorcery",
+                "code": "dark-sorcery",
                 "name": "Dark Sorcery"
             },
             {
                 "id": 69,
-                "code": "Cursed Dead",
+                "code": "cursed-dead",
                 "name": "Cursed Dead"
             },
             {
                 "id": 75,
-                "code": "The Dread Realm",
+                "code": "the-dread-realm",
                 "name": "The Dread Realm"
             }
         ],
@@ -2620,32 +2647,32 @@
         "encounters": [
             {
                 "id": 86,
-                "code": "Vast Oceans",
+                "code": "vast-oceans",
                 "name": "Vast Oceans"
             },
             {
                 "id": 87,
-                "code": "Voyage Across Belegaer",
+                "code": "voyage-across-belegaer",
                 "name": "Voyage Across Belegaer"
             },
             {
                 "id": 76,
-                "code": "Corsair Pirates",
+                "code": "corsair-pirates",
                 "name": "Corsair Pirates"
             },
             {
                 "id": 80,
-                "code": "Stormy Weather",
+                "code": "stormy-weather",
                 "name": "Stormy Weather"
             },
             {
                 "id": 81,
-                "code": "The Dream-chaser's Fleet",
+                "code": "the-dream-chaser-s-fleet",
                 "name": "The Dream-chaser's Fleet"
             },
             {
                 "id": 85,
-                "code": "Umbar Fleet",
+                "code": "umbar-fleet",
                 "name": "Umbar Fleet"
             }
         ],
@@ -2684,64 +2711,6 @@
     },
     {
         "id": 52,
-        "code": "The Fate of Númenor",
-        "name": "The Fate of Númenor",
-        "nameCanonical": "the-fate-of-numenor",
-        "pack": "The Grey Havens",
-        "date_creation": "2016-03-28T01:36:38-03:00",
-        "date_update": "2019-01-03T18:00:59-02:00",
-        "encounters": [
-            {
-                "id": 78,
-                "code": "Drowned Dead",
-                "name": "Drowned Dead"
-            },
-            {
-                "id": 82,
-                "code": "The Fate of Númenor",
-                "name": "The Fate of Númenor"
-            },
-            {
-                "id": 83,
-                "code": "Ruins of Númenor",
-                "name": "Ruins of Númenor"
-            }
-        ],
-        "has_easy": true,
-        "has_nightmare": true,
-        "easy_cards": 29,
-        "easy_enemies": 7,
-        "easy_locations": 14,
-        "easy_treacheries": 7,
-        "easy_shadows": 9,
-        "easy_objectives": 0,
-        "easy_objective_allies": 1,
-        "easy_objective_locations": 0,
-        "easy_surges": 1,
-        "easy_encounter_side_quests": 0,
-        "normal_cards": 36,
-        "normal_enemies": 10,
-        "normal_locations": 14,
-        "normal_treacheries": 11,
-        "normal_shadows": 12,
-        "normal_objectives": 0,
-        "normal_objective_allies": 1,
-        "normal_objective_locations": 0,
-        "normal_surges": 2,
-        "normal_encounter_side_quests": 0,
-        "nightmare_cards": 58,
-        "nightmare_enemies": 12,
-        "nightmare_locations": 28,
-        "nightmare_treacheries": 16,
-        "nightmare_shadows": 14,
-        "nightmare_objectives": 0,
-        "nightmare_objective_allies": 1,
-        "nightmare_objective_locations": 0,
-        "nightmare_surges": 2,
-        "nightmare_encounter_side_quests": 0
-    },
-    {
-        "id": 53,
         "code": "Raid on the Grey Havens",
         "name": "Raid on the Grey Havens",
         "nameCanonical": "raid-on-the-grey-havens",
@@ -2751,17 +2720,17 @@
         "encounters": [
             {
                 "id": 77,
-                "code": "Corsair Raiders",
+                "code": "corsair-raiders",
                 "name": "Corsair Raiders"
             },
             {
                 "id": 79,
-                "code": "Raid on the Grey Havens",
+                "code": "raid-on-the-grey-havens",
                 "name": "Raid on the Grey Havens"
             },
             {
                 "id": 84,
-                "code": "The Stormcaller Elite",
+                "code": "the-stormcaller-elite",
                 "name": "The Stormcaller Elite"
             }
         ],
@@ -2799,37 +2768,95 @@
         "nightmare_encounter_side_quests": 0
     },
     {
+        "id": 53,
+        "code": "The Fate of Númenor",
+        "name": "The Fate of Númenor",
+        "nameCanonical": "the-fate-of-numenor",
+        "pack": "The Grey Havens",
+        "date_creation": "2016-03-28T01:36:38-03:00",
+        "date_update": "2019-01-03T18:00:59-02:00",
+        "encounters": [
+            {
+                "id": 78,
+                "code": "drowned-dead",
+                "name": "Drowned Dead"
+            },
+            {
+                "id": 82,
+                "code": "the-fate-of-numenor",
+                "name": "The Fate of Númenor"
+            },
+            {
+                "id": 83,
+                "code": "ruins-of-numenor",
+                "name": "Ruins of Númenor"
+            }
+        ],
+        "has_easy": true,
+        "has_nightmare": true,
+        "easy_cards": 29,
+        "easy_enemies": 7,
+        "easy_locations": 14,
+        "easy_treacheries": 7,
+        "easy_shadows": 9,
+        "easy_objectives": 0,
+        "easy_objective_allies": 1,
+        "easy_objective_locations": 0,
+        "easy_surges": 1,
+        "easy_encounter_side_quests": 0,
+        "normal_cards": 36,
+        "normal_enemies": 10,
+        "normal_locations": 14,
+        "normal_treacheries": 11,
+        "normal_shadows": 12,
+        "normal_objectives": 0,
+        "normal_objective_allies": 1,
+        "normal_objective_locations": 0,
+        "normal_surges": 2,
+        "normal_encounter_side_quests": 0,
+        "nightmare_cards": 58,
+        "nightmare_enemies": 12,
+        "nightmare_locations": 28,
+        "nightmare_treacheries": 16,
+        "nightmare_shadows": 14,
+        "nightmare_objectives": 0,
+        "nightmare_objective_allies": 1,
+        "nightmare_objective_locations": 0,
+        "nightmare_surges": 2,
+        "nightmare_encounter_side_quests": 0
+    },
+    {
         "id": 54,
         "code": "Flight of the Stormcaller",
         "name": "Flight of the Stormcaller",
-        "nameCanonical": "",
+        "nameCanonical": "flight-of-the-stormcaller",
         "pack": "Flight of the Stormcaller",
         "date_creation": "2019-01-04T12:18:56-02:00",
         "date_update": "2022-01-26T16:40:16-02:00",
         "encounters": [
             {
                 "id": 76,
-                "code": "Corsair Pirates",
+                "code": "corsair-pirates",
                 "name": "Corsair Pirates"
             },
             {
                 "id": 80,
-                "code": "Stormy Weather",
+                "code": "stormy-weather",
                 "name": "Stormy Weather"
             },
             {
                 "id": 81,
-                "code": "The Dream-chaser's Fleet",
+                "code": "the-dream-chaser-s-fleet",
                 "name": "The Dream-chaser's Fleet"
             },
             {
                 "id": 86,
-                "code": "Vast Oceans",
+                "code": "vast-oceans",
                 "name": "Vast Oceans"
             },
             {
                 "id": 137,
-                "code": "Flight of the Stormcaller",
+                "code": "flight-of-the-stormcaller",
                 "name": "Flight of the Stormcaller"
             }
         ],
@@ -2870,29 +2897,29 @@
         "id": 55,
         "code": "The Thing in the Depths",
         "name": "The Thing in the Depths",
-        "nameCanonical": "",
+        "nameCanonical": "the-thing-in-the-depths",
         "pack": "The Thing in the Depths",
         "date_creation": "2019-01-04T12:21:57-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 77,
-                "code": "Corsair Raiders",
+                "code": "corsair-raiders",
                 "name": "Corsair Raiders"
             },
             {
                 "id": 84,
-                "code": "The Stormcaller Elite",
+                "code": "the-stormcaller-elite",
                 "name": "The Stormcaller Elite"
             },
             {
                 "id": 138,
-                "code": "The Thing in the Depths",
+                "code": "the-thing-in-the-depths",
                 "name": "The Thing in the Depths"
             },
             {
                 "id": 143,
-                "code": "The Stormcaller",
+                "code": "the-stormcaller",
                 "name": "The Stormcaller"
             }
         ],
@@ -2933,29 +2960,29 @@
         "id": 56,
         "code": "Temple of the Deceived",
         "name": "Temple of the Deceived",
-        "nameCanonical": "",
+        "nameCanonical": "temple-of-the-deceived",
         "pack": "Temple of the Deceived",
         "date_creation": "2019-01-04T12:23:06-02:00",
         "date_update": "2022-01-26T16:40:16-02:00",
         "encounters": [
             {
                 "id": 139,
-                "code": "Temple of the Deceived",
+                "code": "temple-of-the-deceived",
                 "name": "Temple of the Deceived"
             },
             {
                 "id": 78,
-                "code": "Drowned Dead",
+                "code": "drowned-dead",
                 "name": "Drowned Dead"
             },
             {
                 "id": 83,
-                "code": "Ruins of Númenor",
+                "code": "ruins-of-numenor",
                 "name": "Ruins of Númenor"
             },
             {
                 "id": 84,
-                "code": "The Stormcaller Elite",
+                "code": "the-stormcaller-elite",
                 "name": "The Stormcaller Elite"
             }
         ],
@@ -2996,24 +3023,24 @@
         "id": 57,
         "code": "The Drowned Ruins",
         "name": "The Drowned Ruins",
-        "nameCanonical": "",
+        "nameCanonical": "the-drowned-ruins",
         "pack": "The Drowned Ruins",
         "date_creation": "2019-01-04T12:24:00-02:00",
         "date_update": "2022-01-26T16:40:16-02:00",
         "encounters": [
             {
                 "id": 78,
-                "code": "Drowned Dead",
+                "code": "drowned-dead",
                 "name": "Drowned Dead"
             },
             {
                 "id": 84,
-                "code": "The Stormcaller Elite",
+                "code": "the-stormcaller-elite",
                 "name": "The Stormcaller Elite"
             },
             {
                 "id": 140,
-                "code": "The Drowned Ruins",
+                "code": "the-drowned-ruins",
                 "name": "The Drowned Ruins"
             }
         ],
@@ -3054,39 +3081,39 @@
         "id": 58,
         "code": "A Storm on Cobas Haven",
         "name": "A Storm on Cobas Haven",
-        "nameCanonical": "",
+        "nameCanonical": "a-storm-on-cobas-haven",
         "pack": "A Storm on Cobas Haven",
         "date_creation": "2019-01-04T12:25:17-02:00",
         "date_update": "2022-01-26T16:40:16-02:00",
         "encounters": [
             {
                 "id": 76,
-                "code": "Corsair Pirates",
+                "code": "corsair-pirates",
                 "name": "Corsair Pirates"
             },
             {
                 "id": 77,
-                "code": "Corsair Raiders",
+                "code": "corsair-raiders",
                 "name": "Corsair Raiders"
             },
             {
                 "id": 81,
-                "code": "The Dream-chaser's Fleet",
+                "code": "the-dream-chaser-s-fleet",
                 "name": "The Dream-chaser's Fleet"
             },
             {
                 "id": 85,
-                "code": "Umbar Fleet",
+                "code": "umbar-fleet",
                 "name": "Umbar Fleet"
             },
             {
                 "id": 87,
-                "code": "Voyage Across Belegaer",
+                "code": "voyage-across-belegaer",
                 "name": "Voyage Across Belegaer"
             },
             {
                 "id": 141,
-                "code": "A Storm on Cobas Haven",
+                "code": "a-storm-on-cobas-haven",
                 "name": "A Storm on Cobas Haven"
             }
         ],
@@ -3127,44 +3154,44 @@
         "id": 59,
         "code": "The City of Corsairs",
         "name": "The City of Corsairs",
-        "nameCanonical": "",
+        "nameCanonical": "the-city-of-corsairs",
         "pack": "The City of Corsairs",
         "date_creation": "2019-01-04T12:27:12-02:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 87,
-                "code": "Voyage Across Belegaer",
+                "code": "voyage-across-belegaer",
                 "name": "Voyage Across Belegaer"
             },
             {
                 "id": 77,
-                "code": "Corsair Raiders",
+                "code": "corsair-raiders",
                 "name": "Corsair Raiders"
             },
             {
                 "id": 80,
-                "code": "Stormy Weather",
+                "code": "stormy-weather",
                 "name": "Stormy Weather"
             },
             {
                 "id": 81,
-                "code": "The Dream-chaser's Fleet",
+                "code": "the-dream-chaser-s-fleet",
                 "name": "The Dream-chaser's Fleet"
             },
             {
                 "id": 85,
-                "code": "Umbar Fleet",
+                "code": "umbar-fleet",
                 "name": "Umbar Fleet"
             },
             {
                 "id": 142,
-                "code": "The City of Corsairs",
+                "code": "the-city-of-corsairs",
                 "name": "The City of Corsairs"
             },
             {
                 "id": 144,
-                "code": "Coast of Umbar",
+                "code": "coast-of-umbar",
                 "name": "Coast of Umbar"
             }
         ],
@@ -3205,24 +3232,24 @@
         "id": 61,
         "code": "Escape from Umbar",
         "name": "Escape from Umbar",
-        "nameCanonical": "",
+        "nameCanonical": "escape-from-umbar",
         "pack": "The Sands of Harad",
         "date_creation": "2019-01-04T12:52:00-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 145,
-                "code": "Harad Territory",
+                "code": "harad-territory",
                 "name": "Harad Territory"
             },
             {
                 "id": 146,
-                "code": "Harad Soldiers",
+                "code": "harad-soldiers",
                 "name": "Harad Soldiers"
             },
             {
                 "id": 151,
-                "code": "Escape from Umbar",
+                "code": "escape-from-umbar",
                 "name": "Escape from Umbar"
             }
         ],
@@ -3263,24 +3290,24 @@
         "id": 62,
         "code": "Desert Crossing",
         "name": "Desert Crossing",
-        "nameCanonical": "",
+        "nameCanonical": "desert-crossing",
         "pack": "The Sands of Harad",
         "date_creation": "2019-01-04T12:52:26-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 147,
-                "code": "Desert Creatures",
+                "code": "desert-creatures",
                 "name": "Desert Creatures"
             },
             {
                 "id": 148,
-                "code": "Desert Sands",
+                "code": "desert-sands",
                 "name": "Desert Sands"
             },
             {
                 "id": 152,
-                "code": "Desert Crossing",
+                "code": "desert-crossing",
                 "name": "Desert Crossing"
             }
         ],
@@ -3321,24 +3348,24 @@
         "id": 63,
         "code": "The Long Arm of Mordor",
         "name": "The Long Arm of Mordor",
-        "nameCanonical": "",
+        "nameCanonical": "the-long-arm-of-mordor",
         "pack": "The Sands of Harad",
         "date_creation": "2019-01-04T12:53:00-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 149,
-                "code": "Mordor Orcs",
+                "code": "mordor-orcs",
                 "name": "Mordor Orcs"
             },
             {
                 "id": 150,
-                "code": "Jungle Forest",
+                "code": "jungle-forest",
                 "name": "Jungle Forest"
             },
             {
                 "id": 153,
-                "code": "The Long Arm of Mordor",
+                "code": "the-long-arm-of-mordor",
                 "name": "The Long Arm of Mordor"
             }
         ],
@@ -3379,19 +3406,19 @@
         "id": 64,
         "code": "The Mûmakil",
         "name": "The Mûmakil",
-        "nameCanonical": "",
+        "nameCanonical": "the-mumakil",
         "pack": "The Mûmakil",
         "date_creation": "2019-01-04T12:55:02-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 154,
-                "code": "The Mûmakil",
+                "code": "the-mumakil",
                 "name": "The Mûmakil"
             },
             {
                 "id": 150,
-                "code": "Jungle Forest",
+                "code": "jungle-forest",
                 "name": "Jungle Forest"
             }
         ],
@@ -3432,24 +3459,24 @@
         "id": 65,
         "code": "Race Across Harad",
         "name": "Race Across Harad",
-        "nameCanonical": "",
+        "nameCanonical": "race-across-harad",
         "pack": "Race Across Harad",
         "date_creation": "2019-01-04T12:55:59-02:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 155,
-                "code": "Race Across Harad",
+                "code": "race-across-harad",
                 "name": "Race Across Harad"
             },
             {
                 "id": 148,
-                "code": "Desert Sands",
+                "code": "desert-sands",
                 "name": "Desert Sands"
             },
             {
                 "id": 149,
-                "code": "Mordor Orcs",
+                "code": "mordor-orcs",
                 "name": "Mordor Orcs"
             }
         ],
@@ -3490,24 +3517,24 @@
         "id": 66,
         "code": "Beneath the Sands",
         "name": "Beneath the Sands",
-        "nameCanonical": "",
+        "nameCanonical": "beneath-the-sands",
         "pack": "Beneath the Sands",
         "date_creation": "2019-01-04T12:56:58-02:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 156,
-                "code": "Beneath the Sands",
+                "code": "beneath-the-sands",
                 "name": "Beneath the Sands"
             },
             {
                 "id": 145,
-                "code": "Harad Territory",
+                "code": "harad-territory",
                 "name": "Harad Territory"
             },
             {
                 "id": 147,
-                "code": "Desert Creatures",
+                "code": "desert-creatures",
                 "name": "Desert Creatures"
             }
         ],
@@ -3548,19 +3575,19 @@
         "id": 67,
         "code": "The Black Serpent",
         "name": "The Black Serpent",
-        "nameCanonical": "",
+        "nameCanonical": "the-black-serpent",
         "pack": "The Black Serpent",
         "date_creation": "2019-01-04T12:58:12-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 146,
-                "code": "Harad Soldiers",
+                "code": "harad-soldiers",
                 "name": "Harad Soldiers"
             },
             {
                 "id": 157,
-                "code": "The Black Serpent",
+                "code": "the-black-serpent",
                 "name": "The Black Serpent"
             }
         ],
@@ -3601,24 +3628,24 @@
         "id": 68,
         "code": "The Dungeons of Cirith Gurat",
         "name": "The Dungeons of Cirith Gurat",
-        "nameCanonical": "",
+        "nameCanonical": "the-dungeons-of-cirith-gurat",
         "pack": "The Dungeons of Cirith Gurat",
         "date_creation": "2019-01-04T12:59:00-02:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 145,
-                "code": "Harad Territory",
+                "code": "harad-territory",
                 "name": "Harad Territory"
             },
             {
                 "id": 149,
-                "code": "Mordor Orcs",
+                "code": "mordor-orcs",
                 "name": "Mordor Orcs"
             },
             {
                 "id": 158,
-                "code": "The Dungeons of Cirith Gurat",
+                "code": "the-dungeons-of-cirith-gurat",
                 "name": "The Dungeons of Cirith Gurat"
             }
         ],
@@ -3659,39 +3686,39 @@
         "id": 69,
         "code": "The Crossings of Poros",
         "name": "The Crossings of Poros",
-        "nameCanonical": "",
+        "nameCanonical": "the-crossings-of-poros",
         "pack": "The Crossings of Poros",
         "date_creation": "2019-01-04T13:01:37-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 146,
-                "code": "Harad Soldiers",
+                "code": "harad-soldiers",
                 "name": "Harad Soldiers"
             },
             {
                 "id": 147,
-                "code": "Desert Creatures",
+                "code": "desert-creatures",
                 "name": "Desert Creatures"
             },
             {
                 "id": 148,
-                "code": "Desert Sands",
+                "code": "desert-sands",
                 "name": "Desert Sands"
             },
             {
                 "id": 149,
-                "code": "Mordor Orcs",
+                "code": "mordor-orcs",
                 "name": "Mordor Orcs"
             },
             {
                 "id": 160,
-                "code": "Mountains of Shadow",
+                "code": "mountains-of-shadow",
                 "name": "Mountains of Shadow"
             },
             {
                 "id": 159,
-                "code": "The Crossings of Poros",
+                "code": "the-crossings-of-poros",
                 "name": "The Crossings of Poros"
             }
         ],
@@ -3732,39 +3759,39 @@
         "id": 71,
         "code": "Journey Up the Anduin",
         "name": "Journey Up the Anduin",
-        "nameCanonical": "",
+        "nameCanonical": "journey-up-the-anduin",
         "pack": "The Wilds of Rhovanion",
         "date_creation": "2019-01-14T23:37:02-02:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 4,
-                "code": "Journey Along the Anduin",
+                "code": "journey-along-the-anduin",
                 "name": "Journey Along the Anduin"
             },
             {
                 "id": 6,
-                "code": "Wilderlands",
+                "code": "wilderlands",
                 "name": "Wilderlands"
             },
             {
                 "id": 163,
-                "code": "Lost in the Wilderness",
+                "code": "lost-in-the-wilderness",
                 "name": "Lost in the Wilderness"
             },
             {
                 "id": 172,
-                "code": "Journey up the Anduin",
+                "code": "journey-up-the-anduin",
                 "name": "Journey up the Anduin"
             },
             {
                 "id": 161,
-                "code": "Grey Mountain Goblins",
+                "code": "grey-mountain-goblins",
                 "name": "Grey Mountain Goblins"
             },
             {
                 "id": 162,
-                "code": "Hills of Wilderland",
+                "code": "hills-of-wilderland",
                 "name": "Hills of Wilderland"
             }
         ],
@@ -3805,39 +3832,39 @@
         "id": 72,
         "code": "Lost in Mirkwood",
         "name": "Lost in Mirkwood",
-        "nameCanonical": "",
+        "nameCanonical": "lost-in-mirkwood",
         "pack": "The Wilds of Rhovanion",
         "date_creation": "2019-01-14T23:38:17-02:00",
         "date_update": "2019-03-13T18:44:38-03:00",
         "encounters": [
             {
                 "id": 1,
-                "code": "Passage Through Mirkwood",
+                "code": "passage-through-mirkwood",
                 "name": "Passage Through Mirkwood"
             },
             {
                 "id": 2,
-                "code": "Dol Guldur Orcs",
+                "code": "dol-guldur-orcs",
                 "name": "Dol Guldur Orcs"
             },
             {
                 "id": 3,
-                "code": "Spiders of Mirkwood",
+                "code": "spiders-of-mirkwood",
                 "name": "Spiders of Mirkwood"
             },
             {
                 "id": 164,
-                "code": "Dark Woods",
+                "code": "dark-woods",
                 "name": "Dark Woods"
             },
             {
                 "id": 165,
-                "code": "Gathering Gloom",
+                "code": "gathering-gloom",
                 "name": "Gathering Gloom"
             },
             {
                 "id": 173,
-                "code": "Lost in Mirkwood",
+                "code": "lost-in-mirkwood",
                 "name": "Lost in Mirkwood"
             }
         ],
@@ -3878,44 +3905,44 @@
         "id": 73,
         "code": "The King's Quest",
         "name": "The King's Quest",
-        "nameCanonical": "",
+        "nameCanonical": "the-king-s-quest",
         "pack": "The Wilds of Rhovanion",
         "date_creation": "2019-01-14T23:40:12-02:00",
         "date_update": "2019-01-15T00:19:11-02:00",
         "encounters": [
             {
                 "id": 171,
-                "code": "Lost Caves",
+                "code": "lost-caves",
                 "name": "Lost Caves"
             },
             {
                 "id": 174,
-                "code": "The King's Quest",
+                "code": "the-king-s-quest",
                 "name": "The King's Quest"
             },
             {
                 "id": 166,
-                "code": "Fell Beasts",
+                "code": "fell-beasts",
                 "name": "Fell Beasts"
             },
             {
                 "id": 167,
-                "code": "Wild Creatures",
+                "code": "wild-creatures",
                 "name": "Wild Creatures"
             },
             {
                 "id": 168,
-                "code": "Deep Underground",
+                "code": "deep-underground",
                 "name": "Deep Underground"
             },
             {
                 "id": 169,
-                "code": "Afraid of the Dark",
+                "code": "afraid-of-the-dark",
                 "name": "Afraid of the Dark"
             },
             {
                 "id": 170,
-                "code": "Dragon Might",
+                "code": "dragon-might",
                 "name": "Dragon Might"
             }
         ],
@@ -3956,29 +3983,29 @@
         "id": 74,
         "code": "The Withered Heath",
         "name": "The Withered Heath",
-        "nameCanonical": "",
+        "nameCanonical": "the-withered-heath",
         "pack": "The Withered Heath",
         "date_creation": "2019-01-14T23:42:53-02:00",
         "date_update": "2019-01-15T00:19:39-02:00",
         "encounters": [
             {
                 "id": 163,
-                "code": "Lost in the Wilderness",
+                "code": "lost-in-the-wilderness",
                 "name": "Lost in the Wilderness"
             },
             {
                 "id": 167,
-                "code": "Wild Creatures",
+                "code": "wild-creatures",
                 "name": "Wild Creatures"
             },
             {
                 "id": 171,
-                "code": "Lost Caves",
+                "code": "lost-caves",
                 "name": "Lost Caves"
             },
             {
                 "id": 178,
-                "code": "The Withered Heath",
+                "code": "the-withered-heath",
                 "name": "The Withered Heath"
             }
         ],
@@ -4019,29 +4046,29 @@
         "id": 75,
         "code": "Roam Across Rhovanion",
         "name": "Roam Across Rhovanion",
-        "nameCanonical": "",
+        "nameCanonical": "roam-across-rhovanion",
         "pack": "Roam Across Rhovanion",
         "date_creation": "2019-01-14T23:43:51-02:00",
         "date_update": "2019-01-15T00:16:24-02:00",
         "encounters": [
             {
                 "id": 162,
-                "code": "Hills of Wilderland",
+                "code": "hills-of-wilderland",
                 "name": "Hills of Wilderland"
             },
             {
                 "id": 163,
-                "code": "Lost in the Wilderness",
+                "code": "lost-in-the-wilderness",
                 "name": "Lost in the Wilderness"
             },
             {
                 "id": 166,
-                "code": "Fell Beasts",
+                "code": "fell-beasts",
                 "name": "Fell Beasts"
             },
             {
                 "id": 179,
-                "code": "Roam Across Rhovanion",
+                "code": "roam-across-rhovanion",
                 "name": "Roam Across Rhovanion"
             }
         ],
@@ -4082,29 +4109,29 @@
         "id": 76,
         "code": "Fire in the Night",
         "name": "Fire in the Night",
-        "nameCanonical": "",
+        "nameCanonical": "fire-in-the-night",
         "pack": "Fire in the Night",
         "date_creation": "2019-01-14T23:44:43-02:00",
         "date_update": "2019-01-15T00:19:51-02:00",
         "encounters": [
             {
                 "id": 161,
-                "code": "Grey Mountain Goblins",
+                "code": "grey-mountain-goblins",
                 "name": "Grey Mountain Goblins"
             },
             {
                 "id": 164,
-                "code": "Dark Woods",
+                "code": "dark-woods",
                 "name": "Dark Woods"
             },
             {
                 "id": 165,
-                "code": "Gathering Gloom",
+                "code": "gathering-gloom",
                 "name": "Gathering Gloom"
             },
             {
                 "id": 180,
-                "code": "Fire in the Night",
+                "code": "fire-in-the-night",
                 "name": "Fire in the Night"
             }
         ],
@@ -4145,24 +4172,24 @@
         "id": 77,
         "code": "The Ghost of Framsburg",
         "name": "The Ghost of Framsburg",
-        "nameCanonical": "",
+        "nameCanonical": "the-ghost-of-framsburg",
         "pack": "The Ghost of Framsburg",
         "date_creation": "2019-02-09T02:59:20-02:00",
         "date_update": "2019-08-04T17:08:59-03:00",
         "encounters": [
             {
                 "id": 167,
-                "code": "Wild Creatures",
+                "code": "wild-creatures",
                 "name": "Wild Creatures"
             },
             {
                 "id": 169,
-                "code": "Afraid of the Dark",
+                "code": "afraid-of-the-dark",
                 "name": "Afraid of the Dark"
             },
             {
                 "id": 181,
-                "code": "The Ghost of Framsburg",
+                "code": "the-ghost-of-framsburg",
                 "name": "The Ghost of Framsburg"
             }
         ],
@@ -4203,39 +4230,39 @@
         "id": 78,
         "code": "Mount Gundabad",
         "name": "Mount Gundabad",
-        "nameCanonical": "",
+        "nameCanonical": "mount-gundabad",
         "pack": "Mount Gundabad",
         "date_creation": "2019-04-05T00:07:18-03:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 166,
-                "code": "Fell Beasts",
+                "code": "fell-beasts",
                 "name": "Fell Beasts"
             },
             {
                 "id": 168,
-                "code": "Deep Underground",
+                "code": "deep-underground",
                 "name": "Deep Underground"
             },
             {
                 "id": 169,
-                "code": "Afraid of the Dark",
+                "code": "afraid-of-the-dark",
                 "name": "Afraid of the Dark"
             },
             {
                 "id": 170,
-                "code": "Dragon Might",
+                "code": "dragon-might",
                 "name": "Dragon Might"
             },
             {
                 "id": 171,
-                "code": "Lost Caves",
+                "code": "lost-caves",
                 "name": "Lost Caves"
             },
             {
                 "id": 183,
-                "code": "Mount Gundabad",
+                "code": "mount-gundabad",
                 "name": "Mount Gundabad"
             }
         ],
@@ -4276,29 +4303,29 @@
         "id": 79,
         "code": "The Fate of Wilderland",
         "name": "The Fate of Wilderland",
-        "nameCanonical": "",
+        "nameCanonical": "the-fate-of-wilderland",
         "pack": "The Fate of Wilderland",
         "date_creation": "2019-06-09T13:01:08-03:00",
         "date_update": "2022-01-26T16:40:17-02:00",
         "encounters": [
             {
                 "id": 161,
-                "code": "Grey Mountain Goblins",
+                "code": "grey-mountain-goblins",
                 "name": "Grey Mountain Goblins"
             },
             {
                 "id": 162,
-                "code": "Hills of Wilderland",
+                "code": "hills-of-wilderland",
                 "name": "Hills of Wilderland"
             },
             {
                 "id": 165,
-                "code": "Gathering Gloom",
+                "code": "gathering-gloom",
                 "name": "Gathering Gloom"
             },
             {
                 "id": 184,
-                "code": "The Fate of Wilderland",
+                "code": "the-fate-of-wilderland",
                 "name": "The Fate of Wilderland"
             }
         ],
@@ -4339,29 +4366,29 @@
         "id": 81,
         "code": "The River Running",
         "name": "The River Running",
-        "nameCanonical": "",
+        "nameCanonical": "the-river-running",
         "pack": "A Shadow in the East",
         "date_creation": "2019-08-04T17:29:28-03:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 189,
-                "code": "Riders of Rhûn",
+                "code": "riders-of-rhun",
                 "name": "Riders of Rhûn"
             },
             {
                 "id": 190,
-                "code": "Easterling Raiders",
+                "code": "easterling-raiders",
                 "name": "Easterling Raiders"
             },
             {
                 "id": 191,
-                "code": "Rolling Plains",
+                "code": "rolling-plains",
                 "name": "Rolling Plains"
             },
             {
                 "id": 198,
-                "code": "The River Running",
+                "code": "the-river-running",
                 "name": "The River Running"
             }
         ],
@@ -4402,29 +4429,29 @@
         "id": 82,
         "code": "Danger in Dorwinion",
         "name": "Danger in Dorwinion",
-        "nameCanonical": "",
+        "nameCanonical": "danger-in-dorwinion",
         "pack": "A Shadow in the East",
         "date_creation": "2019-08-04T17:30:34-03:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 192,
-                "code": "Servants of Sauron",
+                "code": "servants-of-sauron",
                 "name": "Servants of Sauron"
             },
             {
                 "id": 193,
-                "code": "City of Rhûn",
+                "code": "city-of-rhun",
                 "name": "City of Rhûn"
             },
             {
                 "id": 194,
-                "code": "Under Guard",
+                "code": "under-guard",
                 "name": "Under Guard"
             },
             {
                 "id": 199,
-                "code": "Danger in Dorwinion",
+                "code": "danger-in-dorwinion",
                 "name": "Danger in Dorwinion"
             }
         ],
@@ -4465,34 +4492,34 @@
         "id": 83,
         "code": "The Temple of Doom",
         "name": "The Temple of Doom",
-        "nameCanonical": "",
+        "nameCanonical": "the-temple-of-doom",
         "pack": "A Shadow in the East",
         "date_creation": "2019-08-04T17:31:48-03:00",
         "date_update": "2022-01-31T17:58:39-02:00",
         "encounters": [
             {
                 "id": 190,
-                "code": "Easterling Raiders",
+                "code": "easterling-raiders",
                 "name": "Easterling Raiders"
             },
             {
                 "id": 195,
-                "code": "Ulchor's Guard",
+                "code": "ulchor-s-guard",
                 "name": "Ulchor's Guard"
             },
             {
                 "id": 196,
-                "code": "Twisted Tunnels",
+                "code": "twisted-tunnels",
                 "name": "Twisted Tunnels"
             },
             {
                 "id": 197,
-                "code": "The Power of Mordor",
+                "code": "the-power-of-mordor",
                 "name": "The Power of Mordor"
             },
             {
                 "id": 200,
-                "code": "The Temple of Doom",
+                "code": "the-temple-of-doom",
                 "name": "The Temple of Doom"
             }
         ],
@@ -4540,17 +4567,17 @@
         "encounters": [
             {
                 "id": 190,
-                "code": "Easterling Raiders",
+                "code": "easterling-raiders",
                 "name": "Easterling Raiders"
             },
             {
                 "id": 193,
-                "code": "City of Rhûn",
+                "code": "city-of-rhun",
                 "name": "City of Rhûn"
             },
             {
                 "id": 201,
-                "code": "Wrath and Ruin",
+                "code": "wrath-and-ruin",
                 "name": "Wrath and Ruin"
             }
         ],
@@ -4591,24 +4618,24 @@
         "id": 85,
         "code": "The City of Ulfast",
         "name": "The City of Ulfast",
-        "nameCanonical": "",
+        "nameCanonical": "the-city-of-ulfast",
         "pack": "The City of Ulfast",
         "date_creation": "2020-01-18T05:59:44-02:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 192,
-                "code": "Servants of Sauron",
+                "code": "servants-of-sauron",
                 "name": "Servants of Sauron"
             },
             {
                 "id": 194,
-                "code": "Under Guard",
+                "code": "under-guard",
                 "name": "Under Guard"
             },
             {
                 "id": 202,
-                "code": "The City of Ulfast",
+                "code": "the-city-of-ulfast",
                 "name": "The City of Ulfast"
             }
         ],
@@ -4649,24 +4676,24 @@
         "id": 86,
         "code": "Challenge of the Wainriders",
         "name": "Challenge of the Wainriders",
-        "nameCanonical": "",
+        "nameCanonical": "challenge-of-the-wainriders",
         "pack": "Challenge of the Wainriders",
         "date_creation": "2020-02-09T05:15:46-02:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 189,
-                "code": "Riders of Rhûn",
+                "code": "riders-of-rhun",
                 "name": "Riders of Rhûn"
             },
             {
                 "id": 191,
-                "code": "Rolling Plains",
+                "code": "rolling-plains",
                 "name": "Rolling Plains"
             },
             {
                 "id": 203,
-                "code": "Challenge of the Wainriders",
+                "code": "challenge-of-the-wainriders",
                 "name": "Challenge of the Wainriders"
             }
         ],
@@ -4707,19 +4734,19 @@
         "id": 87,
         "code": "Under the Ash Mountains",
         "name": "Under the Ash Mountains",
-        "nameCanonical": "",
+        "nameCanonical": "under-the-ash-mountains",
         "pack": "Under the Ash Mountains",
         "date_creation": "2020-06-14T02:05:32-03:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 196,
-                "code": "Twisted Tunnels",
+                "code": "twisted-tunnels",
                 "name": "Twisted Tunnels"
             },
             {
                 "id": 204,
-                "code": "Under the Ash Mountains",
+                "code": "under-the-ash-mountains",
                 "name": "Under the Ash Mountains"
             }
         ],
@@ -4760,29 +4787,29 @@
         "id": 88,
         "code": "The Fortress of Nurn",
         "name": "The Fortress of Nurn",
-        "nameCanonical": "",
+        "nameCanonical": "the-fortress-of-nurn",
         "pack": "The Fortress of Nurn",
         "date_creation": "2020-10-24T17:08:02-02:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 194,
-                "code": "Under Guard",
+                "code": "under-guard",
                 "name": "Under Guard"
             },
             {
                 "id": 195,
-                "code": "Ulchor's Guard",
+                "code": "ulchor-s-guard",
                 "name": "Ulchor's Guard"
             },
             {
                 "id": 197,
-                "code": "The Power of Mordor",
+                "code": "the-power-of-mordor",
                 "name": "The Power of Mordor"
             },
             {
                 "id": 205,
-                "code": "The Fortress of Nurn",
+                "code": "the-fortress-of-nurn",
                 "name": "The Fortress of Nurn"
             }
         ],
@@ -4823,24 +4850,24 @@
         "id": 89,
         "code": "The Land of Sorrow",
         "name": "The Land of Sorrow",
-        "nameCanonical": "",
+        "nameCanonical": "the-land-of-sorrow",
         "pack": "The Land of Sorrow",
         "date_creation": "2020-10-29T18:35:49-02:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 190,
-                "code": "Easterling Raiders",
+                "code": "easterling-raiders",
                 "name": "Easterling Raiders"
             },
             {
                 "id": 191,
-                "code": "Rolling Plains",
+                "code": "rolling-plains",
                 "name": "Rolling Plains"
             },
             {
                 "id": 206,
-                "code": "The Land of Sorrow",
+                "code": "the-land-of-sorrow",
                 "name": "The Land of Sorrow"
             }
         ],
@@ -4881,24 +4908,24 @@
         "id": 91,
         "code": "ALeP - Ambush at Erelas",
         "name": "ALeP - Ambush at Erelas",
-        "nameCanonical": "",
+        "nameCanonical": "ambush-at-erelas",
         "pack": "ALeP - Children of Eorl",
         "date_creation": "2021-03-22T14:53:44-03:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 207,
-                "code": "Ambush at Erelas",
+                "code": "ambush-at-erelas",
                 "name": "Ambush at Erelas"
             },
             {
                 "id": 213,
-                "code": "Rohan Encampment",
+                "code": "rohan-encampment",
                 "name": "Rohan Encampment"
             },
             {
                 "id": 214,
-                "code": "Rohan Weather",
+                "code": "rohan-weather",
                 "name": "Rohan Weather"
             }
         ],
@@ -4939,24 +4966,24 @@
         "id": 92,
         "code": "ALeP - The Battle for the Beacon",
         "name": "ALeP - The Battle for the Beacon",
-        "nameCanonical": "",
+        "nameCanonical": "the-battle-for-the-beacon",
         "pack": "ALeP - Children of Eorl",
         "date_creation": "2021-03-22T14:54:42-03:00",
         "date_update": "2022-01-31T17:56:59-02:00",
         "encounters": [
             {
                 "id": 208,
-                "code": "The Battle for the Beacon",
+                "code": "the-battle-for-the-beacon",
                 "name": "The Battle for the Beacon"
             },
             {
                 "id": 216,
-                "code": "Dunlending Warriors",
+                "code": "dunlending-warriors",
                 "name": "Dunlending Warriors"
             },
             {
                 "id": 217,
-                "code": "Faithless Rohirrim",
+                "code": "faithless-rohirrim",
                 "name": "Faithless Rohirrim"
             }
         ],
@@ -4997,24 +5024,24 @@
         "id": 93,
         "code": "ALeP - The Horse Lord's Ire",
         "name": "ALeP - The Horse Lord's Ire",
-        "nameCanonical": "",
+        "nameCanonical": "the-horse-lord-s-ire",
         "pack": "ALeP - Children of Eorl",
         "date_creation": "2021-03-22T14:55:36-03:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 209,
-                "code": "The Horse Lord's Ire",
+                "code": "the-horse-lord-s-ire",
                 "name": "The Horse Lord's Ire"
             },
             {
                 "id": 215,
-                "code": "Rohan Lands",
+                "code": "rohan-lands",
                 "name": "Rohan Lands"
             },
             {
                 "id": 218,
-                "code": "Orc-host",
+                "code": "orc-host",
                 "name": "Orc-host"
             }
         ],
@@ -5055,24 +5082,24 @@
         "id": 94,
         "code": "ALeP - The Aldburg Plot",
         "name": "ALeP - The Aldburg Plot",
-        "nameCanonical": "",
+        "nameCanonical": "the-aldburg-plot",
         "pack": "ALeP - The Aldburg Plot",
         "date_creation": "2021-07-21T09:01:06-03:00",
         "date_update": "2022-01-26T16:40:18-02:00",
         "encounters": [
             {
                 "id": 213,
-                "code": "Rohan Encampment",
+                "code": "rohan-encampment",
                 "name": "Rohan Encampment"
             },
             {
                 "id": 217,
-                "code": "Faithless Rohirrim",
+                "code": "faithless-rohirrim",
                 "name": "Faithless Rohirrim"
             },
             {
                 "id": 219,
-                "code": "The Aldburg Plot",
+                "code": "the-aldburg-plot",
                 "name": "The Aldburg Plot"
             }
         ],
@@ -5113,19 +5140,19 @@
         "id": 95,
         "code": "ALeP - Fire on the Eastemnet",
         "name": "ALeP - Fire on the Eastemnet",
-        "nameCanonical": "",
+        "nameCanonical": "fire-on-the-eastemnet",
         "pack": "ALeP - Fire on the Eastemnet",
         "date_creation": "2021-09-08T16:47:03-03:00",
         "date_update": "2022-01-26T16:40:19-02:00",
         "encounters": [
             {
                 "id": 218,
-                "code": "Orc-host",
+                "code": "orc-host",
                 "name": "Orc-host"
             },
             {
                 "id": 221,
-                "code": "Fire on the Eastemnet",
+                "code": "fire-on-the-eastemnet",
                 "name": "Fire on the Eastemnet"
             }
         ],
@@ -5166,24 +5193,24 @@
         "id": 96,
         "code": "ALeP - The Gap of Rohan",
         "name": "ALeP - The Gap of Rohan",
-        "nameCanonical": "",
+        "nameCanonical": "the-gap-of-rohan",
         "pack": "ALeP - The Gap of Rohan",
         "date_creation": "2021-12-07T16:21:36-02:00",
         "date_update": "2022-01-26T16:40:19-02:00",
         "encounters": [
             {
                 "id": 214,
-                "code": "Rohan Weather",
+                "code": "rohan-weather",
                 "name": "Rohan Weather"
             },
             {
                 "id": 217,
-                "code": "Faithless Rohirrim",
+                "code": "faithless-rohirrim",
                 "name": "Faithless Rohirrim"
             },
             {
                 "id": 222,
-                "code": "The Gap of Rohan",
+                "code": "the-gap-of-rohan",
                 "name": "The Gap of Rohan"
             }
         ],
@@ -5224,24 +5251,24 @@
         "id": 97,
         "code": "ALeP - The Glittering Caves",
         "name": "ALeP - The Glittering Caves",
-        "nameCanonical": "",
+        "nameCanonical": "the-glittering-caves",
         "pack": "ALeP - The Glittering Caves",
         "date_creation": "2022-02-23T10:43:40-03:00",
         "date_update": "2022-02-25T16:42:24-03:00",
         "encounters": [
             {
                 "id": 226,
-                "code": "The Glittering Caves",
+                "code": "the-glittering-caves",
                 "name": "The Glittering Caves"
             },
             {
                 "id": 227,
-                "code": "Search for the Horn",
+                "code": "search-for-the-horn",
                 "name": "Search for the Horn"
             },
             {
                 "id": 228,
-                "code": "Exploring the Caves",
+                "code": "exploring-the-caves",
                 "name": "Exploring the Caves"
             }
         ],
@@ -5282,24 +5309,24 @@
         "id": 98,
         "code": "ALeP - Mustering of the Rohirrim",
         "name": "ALeP - Mustering of the Rohirrim",
-        "nameCanonical": "",
+        "nameCanonical": "mustering-of-the-rohirrim",
         "pack": "ALeP - Mustering of the Rohirrim",
         "date_creation": "2022-06-13T09:26:28-03:00",
         "date_update": "2022-06-14T10:28:48-03:00",
         "encounters": [
             {
                 "id": 214,
-                "code": "Rohan Weather",
+                "code": "rohan-weather",
                 "name": "Rohan Weather"
             },
             {
                 "id": 215,
-                "code": "Rohan Lands",
+                "code": "rohan-lands",
                 "name": "Rohan Lands"
             },
             {
                 "id": 229,
-                "code": "Mustering of the Rohirrim",
+                "code": "mustering-of-the-rohirrim",
                 "name": "Mustering of the Rohirrim"
             }
         ],
@@ -5340,19 +5367,19 @@
         "id": 99,
         "code": "ALeP - Blood in the Isen",
         "name": "ALeP - Blood in the Isen",
-        "nameCanonical": "",
+        "nameCanonical": "blood-in-the-isen",
         "pack": "ALeP - Blood in the Isen",
         "date_creation": "2022-09-09T12:55:35-03:00",
         "date_update": "2022-09-10T09:26:42-03:00",
         "encounters": [
             {
                 "id": 216,
-                "code": "Dunlending Warriors",
+                "code": "dunlending-warriors",
                 "name": "Dunlending Warriors"
             },
             {
                 "id": 230,
-                "code": "Blood in the Isen",
+                "code": "blood-in-the-isen",
                 "name": "Blood in the Isen"
             }
         ],
@@ -5400,12 +5427,12 @@
         "encounters": [
             {
                 "id": 88,
-                "code": "We Must Away, Ere Break of Day",
+                "code": "we-must-away-ere-break-of-day",
                 "name": "We Must Away, Ere Break of Day"
             },
             {
                 "id": 89,
-                "code": "Western Lands",
+                "code": "western-lands",
                 "name": "Western Lands"
             }
         ],
@@ -5453,22 +5480,22 @@
         "encounters": [
             {
                 "id": 89,
-                "code": "Western Lands",
+                "code": "western-lands",
                 "name": "Western Lands"
             },
             {
                 "id": 90,
-                "code": "Over the Misty Mountains Grim",
+                "code": "over-the-misty-mountains-grim",
                 "name": "Over the Misty Mountains Grim"
             },
             {
                 "id": 91,
-                "code": "The Great Goblin",
+                "code": "the-great-goblin",
                 "name": "The Great Goblin"
             },
             {
                 "id": 92,
-                "code": "Misty Mountain Goblins",
+                "code": "misty-mountain-goblins",
                 "name": "Misty Mountain Goblins"
             }
         ],
@@ -5516,12 +5543,12 @@
         "encounters": [
             {
                 "id": 92,
-                "code": "Misty Mountain Goblins",
+                "code": "misty-mountain-goblins",
                 "name": "Misty Mountain Goblins"
             },
             {
                 "id": 93,
-                "code": "Dungeons Deep and Caverns Dim",
+                "code": "dungeons-deep-and-caverns-dim",
                 "name": "Dungeons Deep and Caverns Dim"
             }
         ],
@@ -5569,12 +5596,12 @@
         "encounters": [
             {
                 "id": 94,
-                "code": "Flies and Spiders",
+                "code": "flies-and-spiders",
                 "name": "Flies and Spiders"
             },
             {
                 "id": 95,
-                "code": "Wilderland",
+                "code": "wilderland",
                 "name": "Wilderland"
             }
         ],
@@ -5622,12 +5649,12 @@
         "encounters": [
             {
                 "id": 95,
-                "code": "Wilderland",
+                "code": "wilderland",
                 "name": "Wilderland"
             },
             {
                 "id": 96,
-                "code": "The Lonely Mountain",
+                "code": "the-lonely-mountain",
                 "name": "The Lonely Mountain"
             }
         ],
@@ -5675,12 +5702,12 @@
         "encounters": [
             {
                 "id": 95,
-                "code": "Wilderland",
+                "code": "wilderland",
                 "name": "Wilderland"
             },
             {
                 "id": 97,
-                "code": "The Battle of Five Armies",
+                "code": "the-battle-of-five-armies",
                 "name": "The Battle of Five Armies"
             }
         ],
@@ -5728,22 +5755,22 @@
         "encounters": [
             {
                 "id": 98,
-                "code": "A Shadow of the Past",
+                "code": "a-shadow-of-the-past",
                 "name": "A Shadow of the Past"
             },
             {
                 "id": 99,
-                "code": "Hunted",
+                "code": "hunted",
                 "name": "Hunted"
             },
             {
                 "id": 100,
-                "code": "The Ring",
+                "code": "the-ring",
                 "name": "The Ring"
             },
             {
                 "id": 101,
-                "code": "The Black Riders",
+                "code": "the-black-riders",
                 "name": "The Black Riders"
             }
         ],
@@ -5791,22 +5818,22 @@
         "encounters": [
             {
                 "id": 99,
-                "code": "Hunted",
+                "code": "hunted",
                 "name": "Hunted"
             },
             {
                 "id": 100,
-                "code": "The Ring",
+                "code": "the-ring",
                 "name": "The Ring"
             },
             {
                 "id": 102,
-                "code": "A Knife in the Dark",
+                "code": "a-knife-in-the-dark",
                 "name": "A Knife in the Dark"
             },
             {
                 "id": 103,
-                "code": "The Nazgûl",
+                "code": "the-nazgul",
                 "name": "The Nazgûl"
             }
         ],
@@ -5854,22 +5881,22 @@
         "encounters": [
             {
                 "id": 99,
-                "code": "Hunted",
+                "code": "hunted",
                 "name": "Hunted"
             },
             {
                 "id": 101,
-                "code": "The Black Riders",
+                "code": "the-black-riders",
                 "name": "The Black Riders"
             },
             {
                 "id": 103,
-                "code": "The Nazgûl",
+                "code": "the-nazgul",
                 "name": "The Nazgûl"
             },
             {
                 "id": 104,
-                "code": "Flight to the Ford",
+                "code": "flight-to-the-ford",
                 "name": "Flight to the Ford"
             }
         ],
@@ -5917,7 +5944,7 @@
         "encounters": [
             {
                 "id": 105,
-                "code": "The Ring Goes South",
+                "code": "the-ring-goes-south",
                 "name": "The Ring Goes South"
             }
         ],
@@ -5965,7 +5992,7 @@
         "encounters": [
             {
                 "id": 106,
-                "code": "Journey in the Dark",
+                "code": "journey-in-the-dark",
                 "name": "Journey in the Dark"
             }
         ],
@@ -6013,7 +6040,7 @@
         "encounters": [
             {
                 "id": 107,
-                "code": "Breaking of the Fellowship",
+                "code": "breaking-of-the-fellowship",
                 "name": "Breaking of the Fellowship"
             }
         ],
@@ -6061,17 +6088,17 @@
         "encounters": [
             {
                 "id": 108,
-                "code": "The Uruk-hai",
+                "code": "the-uruk-hai",
                 "name": "The Uruk-hai"
             },
             {
                 "id": 109,
-                "code": "Orcs of the White Hand",
+                "code": "orcs-of-the-white-hand",
                 "name": "Orcs of the White Hand"
             },
             {
                 "id": 110,
-                "code": "Snaga Orcs",
+                "code": "snaga-orcs",
                 "name": "Snaga Orcs"
             }
         ],
@@ -6119,12 +6146,12 @@
         "encounters": [
             {
                 "id": 109,
-                "code": "Orcs of the White Hand",
+                "code": "orcs-of-the-white-hand",
                 "name": "Orcs of the White Hand"
             },
             {
                 "id": 111,
-                "code": "Helm's Deep",
+                "code": "helm-s-deep",
                 "name": "Helm's Deep"
             }
         ],
@@ -6172,12 +6199,12 @@
         "encounters": [
             {
                 "id": 110,
-                "code": "Snaga Orcs",
+                "code": "snaga-orcs",
                 "name": "Snaga Orcs"
             },
             {
                 "id": 112,
-                "code": "The Road to Isengard",
+                "code": "the-road-to-isengard",
                 "name": "The Road to Isengard"
             }
         ],
@@ -6225,17 +6252,17 @@
         "encounters": [
             {
                 "id": 113,
-                "code": "The Passage of the Marshes",
+                "code": "the-passage-of-the-marshes",
                 "name": "The Passage of the Marshes"
             },
             {
                 "id": 114,
-                "code": "Gollum",
+                "code": "gollum",
                 "name": "Gollum"
             },
             {
                 "id": 115,
-                "code": "Morgul Nazgûl",
+                "code": "morgul-nazgul",
                 "name": "Morgul Nazgûl"
             }
         ],
@@ -6283,12 +6310,12 @@
         "encounters": [
             {
                 "id": 116,
-                "code": "Journey to the Cross-roads",
+                "code": "journey-to-the-cross-roads",
                 "name": "Journey to the Cross-roads"
             },
             {
                 "id": 117,
-                "code": "Men of Harad",
+                "code": "men-of-harad",
                 "name": "Men of Harad"
             }
         ],
@@ -6336,22 +6363,22 @@
         "encounters": [
             {
                 "id": 114,
-                "code": "Gollum",
+                "code": "gollum",
                 "name": "Gollum"
             },
             {
                 "id": 115,
-                "code": "Morgul Nazgûl",
+                "code": "morgul-nazgul",
                 "name": "Morgul Nazgûl"
             },
             {
                 "id": 118,
-                "code": "Shelob's Lair",
+                "code": "shelob-s-lair",
                 "name": "Shelob's Lair"
             },
             {
                 "id": 119,
-                "code": "The Great Spider",
+                "code": "the-great-spider",
                 "name": "The Great Spider"
             }
         ],
@@ -6392,14 +6419,14 @@
         "id": 1023,
         "code": "The Passing of the Grey Company",
         "name": "The Passing of the Grey Company",
-        "nameCanonical": "",
+        "nameCanonical": "the-passing-of-the-grey-company",
         "pack": "The Flame of the West",
         "date_creation": "2019-01-04T11:48:02-02:00",
         "date_update": "2019-01-04T11:51:26-02:00",
         "encounters": [
             {
                 "id": 128,
-                "code": "The Passing of the Grey Company",
+                "code": "the-passing-of-the-grey-company",
                 "name": "The Passing of the Grey Company"
             }
         ],
@@ -6440,14 +6467,14 @@
         "id": 1024,
         "code": "The Siege of Gondor",
         "name": "The Siege of Gondor",
-        "nameCanonical": "",
+        "nameCanonical": "the-siege-of-gondor",
         "pack": "The Flame of the West",
         "date_creation": "2019-01-04T11:55:31-02:00",
         "date_update": "2019-01-04T13:41:34-02:00",
         "encounters": [
             {
                 "id": 129,
-                "code": "The Siege of Gondor",
+                "code": "the-siege-of-gondor",
                 "name": "The Siege of Gondor"
             }
         ],
@@ -6488,14 +6515,14 @@
         "id": 1025,
         "code": "The Battle of the Pelennor Fields",
         "name": "The Battle of the Pelennor Fields",
-        "nameCanonical": "",
+        "nameCanonical": "the-battle-of-the-pelennor-fields",
         "pack": "The Flame of the West",
         "date_creation": "2019-01-04T11:56:04-02:00",
         "date_update": "2019-01-04T13:41:34-02:00",
         "encounters": [
             {
                 "id": 130,
-                "code": "The Battle of the Pelennor Fields",
+                "code": "the-battle-of-the-pelennor-fields",
                 "name": "The Battle of the Pelennor Fields"
             }
         ],
@@ -6536,24 +6563,24 @@
         "id": 1026,
         "code": "The Tower of Cirith Ungol",
         "name": "The Tower of Cirith Ungol",
-        "nameCanonical": "",
+        "nameCanonical": "the-tower-of-cirith-ungol",
         "pack": "The Mountain of Fire",
         "date_creation": "2019-01-04T11:56:51-02:00",
         "date_update": "2019-01-04T13:41:35-02:00",
         "encounters": [
             {
                 "id": 131,
-                "code": "The Tower of Cirith Ungol",
+                "code": "the-tower-of-cirith-ungol",
                 "name": "The Tower of Cirith Ungol"
             },
             {
                 "id": 132,
-                "code": "Orcs of Mordor",
+                "code": "orcs-of-mordor",
                 "name": "Orcs of Mordor"
             },
             {
                 "id": 133,
-                "code": "Deep Shadows",
+                "code": "deep-shadows",
                 "name": "Deep Shadows"
             }
         ],
@@ -6594,19 +6621,19 @@
       "id": 1027,
       "code": "The Black Gate Opens",
       "name": "The Black Gate Opens",
-      "nameCanonical": "",
+      "nameCanonical": "the-black-gate-opens",
       "pack": "The Mountain of Fire",
       "date_creation": "2019-01-04T11:57:38-02:00",
       "date_update": "2019-01-04T13:41:35-02:00",
       "encounters": [
         {
           "id": 132,
-          "code": "Orcs of Mordor",
+          "code": "orcs-of-mordor",
           "name": "Orcs of Mordor"
         },
         {
           "id": 134,
-          "code": "The Black Gate Opens",
+          "code": "the-black-gate-opens",
           "name": "The Black Gate Opens"
         }
       ],
@@ -6647,19 +6674,19 @@
       "id": 1028,
       "code": "Mount Doom",
       "name": "Mount Doom",
-      "nameCanonical": "",
+      "nameCanonical": "mount-doom",
       "pack": "The Mountain of Fire",
       "date_creation": "2019-01-04T11:58:22-02:00",
       "date_update": "2019-01-04T13:41:35-02:00",
       "encounters": [
         {
           "id": 133,
-          "code": "Deep Shadows",
+          "code": "deep-shadows",
           "name": "Deep Shadows"
         },
         {
           "id": 135,
-          "code": "Mount Doom",
+          "code": "mount-doom",
           "name": "Mount Doom"
         }
       ],
