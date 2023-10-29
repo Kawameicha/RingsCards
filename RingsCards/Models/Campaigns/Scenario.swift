@@ -16,7 +16,9 @@ struct Scenario: Hashable, Codable, Identifiable {
     let date_creation: String
     let date_update: String
     let encounters: [Encounter]
-    var flavorIntro: String? = nil
+    var keywords: [Keyword]? = []
+    let flavorIntro: String
+    let doNotRead: String
     let has_easy: Bool
     let has_nightmare: Bool
     let easy_cards: Int
@@ -52,6 +54,12 @@ struct Scenario: Hashable, Codable, Identifiable {
 }
 
 struct Encounter: Hashable, Codable, Identifiable {
+    let id: Int
+    let code: String
+    let name: String
+}
+
+struct Keyword: Hashable, Codable, Identifiable {
     let id: Int
     let code: String
     let name: String

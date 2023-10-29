@@ -25,7 +25,7 @@ struct ScenarioView: View {
 
                 Divider()
 
-                Text(scenario.flavorIntro ?? "")
+                Text(scenario.flavorIntro)
                     .font(.system(size: 18, weight: .light, design: .serif))
                     .italic()
 
