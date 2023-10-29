@@ -40,6 +40,10 @@ struct ScenarioView: View {
                     }
                 }
 
+                Text("The rules for each of the keywords present in the \(scenario.name) encounter deck are as follows:")
+
+                KeywordList(scenario: scenario)
+
                 ScenarioChart(scenario: scenario)
             }
             .padding()

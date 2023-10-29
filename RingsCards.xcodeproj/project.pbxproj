@@ -58,6 +58,10 @@
 		59C9B8B92A9743B500520310 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C9B8B82A9743B500520310 /* UserView.swift */; };
 		59C9B8BB2A9751B700520310 /* UserEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C9B8BA2A9751B700520310 /* UserEdit.swift */; };
 		59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EDE7122AC8632F001288AE /* SampleCampaign.swift */; };
+		59FD32572AEE4A8300D9597B /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32562AEE4A8300D9597B /* Keyword.swift */; };
+		59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32582AEE4B1800D9597B /* Keywords.swift */; };
+		59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325C2AEE4D2700D9597B /* KeywordView.swift */; };
+		59FD325F2AEE62EF00D9597B /* KeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* KeywordList.swift */; };
 		729BF29D2A95824800E67871 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF29C2A95824700E67871 /* LoginView.swift */; };
 		729BF29F2A9585F300E67871 /* FellowshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF29E2A9585F300E67871 /* FellowshipView.swift */; };
 		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
@@ -116,6 +120,10 @@
 		59C9B8BA2A9751B700520310 /* UserEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEdit.swift; sourceTree = "<group>"; };
 		59D987702AC2B901008F6706 /* RingsCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingsCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EDE7122AC8632F001288AE /* SampleCampaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCampaign.swift; sourceTree = "<group>"; };
+		59FD32562AEE4A8300D9597B /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		59FD32582AEE4B1800D9597B /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
+		59FD325C2AEE4D2700D9597B /* KeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordView.swift; sourceTree = "<group>"; };
+		59FD325E2AEE62EF00D9597B /* KeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordList.swift; sourceTree = "<group>"; };
 		729BF29C2A95824700E67871 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		729BF29E2A9585F300E67871 /* FellowshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowshipView.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
@@ -262,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				59C9B8B32A97430400520310 /* User.swift */,
+				59FD325A2AEE4B9200D9597B /* Keywords */,
 				594E38E02AD29EA900577EE0 /* Packs */,
 			);
 			path = Settings;
@@ -373,6 +382,24 @@
 			path = DeckHome;
 			sourceTree = "<group>";
 		};
+		59FD325A2AEE4B9200D9597B /* Keywords */ = {
+			isa = PBXGroup;
+			children = (
+				59FD32562AEE4A8300D9597B /* Keyword.swift */,
+				59FD32582AEE4B1800D9597B /* Keywords.swift */,
+			);
+			path = Keywords;
+			sourceTree = "<group>";
+		};
+		59FD325B2AEE4D0900D9597B /* KeywordViews */ = {
+			isa = PBXGroup;
+			children = (
+				59FD325C2AEE4D2700D9597B /* KeywordView.swift */,
+				59FD325E2AEE62EF00D9597B /* KeywordList.swift */,
+			);
+			path = KeywordViews;
+			sourceTree = "<group>";
+		};
 		729BF2952A9580D000E67871 /* LoginViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +414,7 @@
 				59EDE7142AC86CD4001288AE /* CampaignHome */,
 				59B127E82AC8830C00094472 /* CampaignNotes */,
 				5912EE222A93664B00B2F8B5 /* HelperViews */,
+				59FD325B2AEE4D0900D9597B /* KeywordViews */,
 				5932235B2A9C9D4100AA7751 /* ScenarioViews */,
 			);
 			path = CampaignViews;
@@ -491,6 +519,7 @@
 				5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */,
 				59C140462AC1789A00A9F20C /* Deck.swift in Sources */,
 				592264F52A90AB09002A7648 /* CardView.swift in Sources */,
+				59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */,
 				598F51E52AA8747E00A1C06B /* CampaignNew.swift in Sources */,
 				59C9B8B72A97438000520310 /* UserHost.swift in Sources */,
 				5951BA712AB061380047DE1F /* ScenarioChart.swift in Sources */,
@@ -499,6 +528,7 @@
 				595078752AC5D8FA007BFAA0 /* SortButton.swift in Sources */,
 				729BF29F2A9585F300E67871 /* FellowshipView.swift in Sources */,
 				59C9B8BB2A9751B700520310 /* UserEdit.swift in Sources */,
+				59FD325F2AEE62EF00D9597B /* KeywordList.swift in Sources */,
 				5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */,
 				59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */,
 				729BF29D2A95824800E67871 /* LoginView.swift in Sources */,
@@ -518,9 +548,11 @@
 				590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */,
 				5979A1BF2A9E4D6A00E1CAE1 /* Pack.swift in Sources */,
 				59C1404F2AC1C65400A9F20C /* DeckAdd.swift in Sources */,
+				59FD32572AEE4A8300D9597B /* Keyword.swift in Sources */,
 				59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */,
 				5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */,
 				59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */,
+				59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */,
 				59862D702A91F13100628449 /* Card.swift in Sources */,
 				593223622A9CA71200AA7751 /* DeckRow.swift in Sources */,
 				59C357442AAF5374009CA291 /* CardImage.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftData
 let previewModelContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Pack.self,
+            for: Card.self, Deck.self, Campaign.self, Pack.self, Keyword.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
 
@@ -58,9 +58,8 @@ let previewModelContainer: ModelContainer = {
                 SampleCampaign.contents.forEach { container.mainContext.insert($0) }
             }
 
-            if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {
-                Packs.contents.forEach { container.mainContext.insert($0) }
-            }
+            Packs.contents.forEach { container.mainContext.insert($0) }
+            Keywords.contents.forEach { container.mainContext.insert($0) }
         }
 
         return container
