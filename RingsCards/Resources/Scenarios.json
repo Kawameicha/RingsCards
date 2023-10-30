@@ -3549,6 +3549,83 @@
     },
     {
         "id": 52,
+        "code": "The Fate of Númenor",
+        "name": "The Fate of Númenor",
+        "nameCanonical": "the-fate-of-numenor",
+        "pack": "The Grey Havens",
+        "date_creation": "2016-03-28T01:36:38-03:00",
+        "date_update": "2019-01-03T18:00:59-02:00",
+        "encounters": [
+            {
+                "id": 78,
+                "code": "drowned-dead",
+                "name": "Drowned Dead"
+            },
+            {
+                "id": 82,
+                "code": "the-fate-of-numenor",
+                "name": "The Fate of Númenor"
+            },
+            {
+                "id": 83,
+                "code": "ruins-of-numenor",
+                "name": "Ruins of Númenor"
+            }
+        ],
+        "keywords": [
+            {
+                "id": 2,
+                "code": "doomed-x",
+                "name": "Doomed X"
+            },
+            {
+                "id": 1,
+                "code": "surge",
+                "name": "Surge"
+            },
+            {
+                "id": 21,
+                "code": "uncharted",
+                "name": "Uncharted"
+            }
+        ],
+        "flavorIntro": "The sky was bathed in a beautiful sunrise, the bright orange sun rising over the peak of the mountain just as Calphon had described. “Land ho!” a sailor shouted, and the fleet buzzed with activity. The island was large, dominated in its center by the peak of what must have once been a tall mountain. Deep in the island’s dense jungle were broken towers and ancient ruins.\n“So, it does exist,” Calphon whispered as he reached the bow of the ship, looking out to the island with great relief. “I’m glad I did not lead us to the middle of the Belegaer for naught.” The heroes shared Calphon’s relief, but had always suspected the island was real, as the wise Círdan would otherwise not have sent them on such a dangerous voyage. The ships were anchored off the western coast of the island, and the crews lowered small canoes onto the surface of the ocean. The company prepared to disembark and make their way to the shore, arming themselves in case the island proved dangerous, and making sure to take enough rations for several days.\n“You should stay here,” one of the heroes told Calphon as they prepared to leave. “You’ve done your part in helping us find the island. Now is the time for us to do ours.” Calphon shook his head and refused, determined.\n“No, I must go with you,” he explained. “I may not be able to lead us once we are on the island, but I’ve spent the better part of a year envisioning this day. I need to set foot upon that shore and see the ruins of Númenor for myself.”\nThe heroes looked amongst themselves with worry, but none could bring themselves to refuse Calphon’s request. “We know not what secrets or dangers the island may hold,” one of them said. “But if this be your will, we shall honor it and protect you.” Calphon nodded without deliberation.\nThe company boarded the smaller vessels and set forth, rowing in the direction of the uncharted shore.",
+        "doNotRead": "Exploring the uncharted island was exhausting, but it was the onslaught of the faithless undead that made the company’s travels truly perilous. Making their way deeper and deeper into the island, they’d finally come to a building of note – an imposing shrine, tucked into the side of the mountain.\nAs soon as they crossed the threshold of the shrine, they felt the presence of something dark and evil. Tapestries and statues, faded and ruined from years of disrepair, depicted the evil Morgoth as a great and powerful being. “We in Gondor know the tale of Númenor’s glory and downfall; that in the dark days before Númenor’s destruction, many faithless Númenoreans worshipped Morgoth,” Lord Calphon explained, examining one of the foreboding statues. “This must have been one of the temples erected in his worship.”\nThey searched the shrine extensively, but ultimately it proved fruitless. With many questions unanswered, the company began to lose hope that the shrine was their true destination. Wishing to continue their exploration of the island, they began to leave, but Calphon insisted they stay. “Wait! We mustn’t go yet... I... I remember this place, I think...” He ran his hand along the far wall, as if attempting to remember the secrets the stones themselves held. “I remember... The sound of a hammer upon the anvil... The heat of the forge...”\nThe company looked amongst one another with concern, approaching Calphon cautiously. The nobleman’s eyes were closed as he placed his ear upon the wall, listening closely. “Lord Calphon?” one of the heroes said after a moment, placing a reassuring hand on Calphon’s shoulder. The nobleman startled as though waking from a dream, and he turned towards the heroes with a shocked expression. “There’s something here!” he exclaimed. He walked several paces to another section of the wall and placed his hand on the stones.\nTo the company’s surprise, the stones gave way, and the wall opened outwards as if upon invisible hinges, a door leading into a hidden passageway. Wide-eyed and wordless, Calphon entered the passage, the heroes close behind. The corridor was narrow and dank. They soon found themselves descending a flight of steep stairs, deeper into the darkness of the temple. Finally, after many steps, they came to a small chamber with a raised altar in its center. Two candelabras stood on either side of the altar, ancient and unlit. On the altar lay a large key of black iron.\n“A key?” Calphon said, taking the key in his hands, a puzzled expression upon his face. “I don’t understand. I sought the answer to this mystery, but all we have found on this island is another riddle.”\n“Perhaps the Elves of the Havens will have the answer,” one of the heroes suggested. With no sign of a matching lock anywhere on the island, the company made their way west, to the coast.",
+        "has_easy": true,
+        "has_nightmare": true,
+        "easy_cards": 29,
+        "easy_enemies": 7,
+        "easy_locations": 14,
+        "easy_treacheries": 7,
+        "easy_shadows": 9,
+        "easy_objectives": 0,
+        "easy_objective_allies": 1,
+        "easy_objective_locations": 0,
+        "easy_surges": 1,
+        "easy_encounter_side_quests": 0,
+        "normal_cards": 36,
+        "normal_enemies": 10,
+        "normal_locations": 14,
+        "normal_treacheries": 11,
+        "normal_shadows": 12,
+        "normal_objectives": 0,
+        "normal_objective_allies": 1,
+        "normal_objective_locations": 0,
+        "normal_surges": 2,
+        "normal_encounter_side_quests": 0,
+        "nightmare_cards": 58,
+        "nightmare_enemies": 12,
+        "nightmare_locations": 28,
+        "nightmare_treacheries": 16,
+        "nightmare_shadows": 14,
+        "nightmare_objectives": 0,
+        "nightmare_objective_allies": 1,
+        "nightmare_objective_locations": 0,
+        "nightmare_surges": 2,
+        "nightmare_encounter_side_quests": 0
+    },
+    {
+        "id": 53,
         "code": "Raid on the Grey Havens",
         "name": "Raid on the Grey Havens",
         "nameCanonical": "raid-on-the-grey-havens",
@@ -3574,7 +3651,7 @@
         ],
         "keywords": [
             {
-                "id": 21,
+                "id": 22,
                 "code": "aflame-x",
                 "name": "Aflame X"
             },
@@ -3622,83 +3699,6 @@
         "nightmare_objective_allies": 2,
         "nightmare_objective_locations": 0,
         "nightmare_surges": 6,
-        "nightmare_encounter_side_quests": 0
-    },
-    {
-        "id": 53,
-        "code": "The Fate of Númenor",
-        "name": "The Fate of Númenor",
-        "nameCanonical": "the-fate-of-numenor",
-        "pack": "The Grey Havens",
-        "date_creation": "2016-03-28T01:36:38-03:00",
-        "date_update": "2019-01-03T18:00:59-02:00",
-        "encounters": [
-            {
-                "id": 78,
-                "code": "drowned-dead",
-                "name": "Drowned Dead"
-            },
-            {
-                "id": 82,
-                "code": "the-fate-of-numenor",
-                "name": "The Fate of Númenor"
-            },
-            {
-                "id": 83,
-                "code": "ruins-of-numenor",
-                "name": "Ruins of Númenor"
-            }
-        ],
-        "keywords": [
-            {
-                "id": 2,
-                "code": "doomed-x",
-                "name": "Doomed X"
-            },
-            {
-                "id": 1,
-                "code": "surge",
-                "name": "Surge"
-            },
-            {
-                "id": 22,
-                "code": "uncharted",
-                "name": "Uncharted"
-            }
-        ],
-        "flavorIntro": "The sky was bathed in a beautiful sunrise, the bright orange sun rising over the peak of the mountain just as Calphon had described. “Land ho!” a sailor shouted, and the fleet buzzed with activity. The island was large, dominated in its center by the peak of what must have once been a tall mountain. Deep in the island’s dense jungle were broken towers and ancient ruins.\n“So, it does exist,” Calphon whispered as he reached the bow of the ship, looking out to the island with great relief. “I’m glad I did not lead us to the middle of the Belegaer for naught.” The heroes shared Calphon’s relief, but had always suspected the island was real, as the wise Círdan would otherwise not have sent them on such a dangerous voyage. The ships were anchored off the western coast of the island, and the crews lowered small canoes onto the surface of the ocean. The company prepared to disembark and make their way to the shore, arming themselves in case the island proved dangerous, and making sure to take enough rations for several days.\n“You should stay here,” one of the heroes told Calphon as they prepared to leave. “You’ve done your part in helping us find the island. Now is the time for us to do ours.” Calphon shook his head and refused, determined.\n“No, I must go with you,” he explained. “I may not be able to lead us once we are on the island, but I’ve spent the better part of a year envisioning this day. I need to set foot upon that shore and see the ruins of Númenor for myself.”\nThe heroes looked amongst themselves with worry, but none could bring themselves to refuse Calphon’s request. “We know not what secrets or dangers the island may hold,” one of them said. “But if this be your will, we shall honor it and protect you.” Calphon nodded without deliberation.\nThe company boarded the smaller vessels and set forth, rowing in the direction of the uncharted shore.",
-        "doNotRead": "Exploring the uncharted island was exhausting, but it was the onslaught of the faithless undead that made the company’s travels truly perilous. Making their way deeper and deeper into the island, they’d finally come to a building of note – an imposing shrine, tucked into the side of the mountain.\nAs soon as they crossed the threshold of the shrine, they felt the presence of something dark and evil. Tapestries and statues, faded and ruined from years of disrepair, depicted the evil Morgoth as a great and powerful being. “We in Gondor know the tale of Númenor’s glory and downfall; that in the dark days before Númenor’s destruction, many faithless Númenoreans worshipped Morgoth,” Lord Calphon explained, examining one of the foreboding statues. “This must have been one of the temples erected in his worship.”\nThey searched the shrine extensively, but ultimately it proved fruitless. With many questions unanswered, the company began to lose hope that the shrine was their true destination. Wishing to continue their exploration of the island, they began to leave, but Calphon insisted they stay. “Wait! We mustn’t go yet... I... I remember this place, I think...” He ran his hand along the far wall, as if attempting to remember the secrets the stones themselves held. “I remember... The sound of a hammer upon the anvil... The heat of the forge...”\nThe company looked amongst one another with concern, approaching Calphon cautiously. The nobleman’s eyes were closed as he placed his ear upon the wall, listening closely. “Lord Calphon?” one of the heroes said after a moment, placing a reassuring hand on Calphon’s shoulder. The nobleman startled as though waking from a dream, and he turned towards the heroes with a shocked expression. “There’s something here!” he exclaimed. He walked several paces to another section of the wall and placed his hand on the stones.\nTo the company’s surprise, the stones gave way, and the wall opened outwards as if upon invisible hinges, a door leading into a hidden passageway. Wide-eyed and wordless, Calphon entered the passage, the heroes close behind. The corridor was narrow and dank. They soon found themselves descending a flight of steep stairs, deeper into the darkness of the temple. Finally, after many steps, they came to a small chamber with a raised altar in its center. Two candelabras stood on either side of the altar, ancient and unlit. On the altar lay a large key of black iron.\n“A key?” Calphon said, taking the key in his hands, a puzzled expression upon his face. “I don’t understand. I sought the answer to this mystery, but all we have found on this island is another riddle.”\n“Perhaps the Elves of the Havens will have the answer,” one of the heroes suggested. With no sign of a matching lock anywhere on the island, the company made their way west, to the coast.",
-        "has_easy": true,
-        "has_nightmare": true,
-        "easy_cards": 29,
-        "easy_enemies": 7,
-        "easy_locations": 14,
-        "easy_treacheries": 7,
-        "easy_shadows": 9,
-        "easy_objectives": 0,
-        "easy_objective_allies": 1,
-        "easy_objective_locations": 0,
-        "easy_surges": 1,
-        "easy_encounter_side_quests": 0,
-        "normal_cards": 36,
-        "normal_enemies": 10,
-        "normal_locations": 14,
-        "normal_treacheries": 11,
-        "normal_shadows": 12,
-        "normal_objectives": 0,
-        "normal_objective_allies": 1,
-        "normal_objective_locations": 0,
-        "normal_surges": 2,
-        "normal_encounter_side_quests": 0,
-        "nightmare_cards": 58,
-        "nightmare_enemies": 12,
-        "nightmare_locations": 28,
-        "nightmare_treacheries": 16,
-        "nightmare_shadows": 14,
-        "nightmare_objectives": 0,
-        "nightmare_objective_allies": 1,
-        "nightmare_objective_locations": 0,
-        "nightmare_surges": 2,
         "nightmare_encounter_side_quests": 0
     },
     {
@@ -3927,7 +3927,7 @@
                 "name": "Surge"
             },
             {
-                "id": 22,
+                "id": 21,
                 "code": "uncharted",
                 "name": "Uncharted"
             }

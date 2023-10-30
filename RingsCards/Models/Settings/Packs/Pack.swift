@@ -14,7 +14,7 @@ class Pack {
     let cycleCode: String
     let cyclePosition: Int
     let packName: String
-    let packCode: String
+    @Attribute(.unique) let packCode: String
     let packPosition: Int
     var isInCollection = false
 

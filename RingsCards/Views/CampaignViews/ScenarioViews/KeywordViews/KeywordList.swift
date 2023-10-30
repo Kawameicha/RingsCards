@@ -21,20 +21,21 @@ struct KeywordList: View {
     ) {
         self.scenario = scenario
 
-        let predicate = Keyword.predicate(filterScenario: self.scenario.keywords?.compactMap { $0.name } ?? [""])
+        let predicate = Keyword.predicate(filterScenario: scenario.keywords.map { $0.name })
 
         _keywords = Query(filter: predicate, sort: \.name)
     }
 
     var body: some View {
         LazyVStack(alignment: .leading) {
-            ForEach(keywords) {keyword in
+            ForEach(keywords) { keyword in
                 NavigationLink {
                     KeywordView(keyword: keyword)
                 } label: {
-                    Text(" ∙ \(keyword.name)")
+                    Text("∙ \(keyword.name)")
                 }
             }
         }
+        .padding()
     }
 }

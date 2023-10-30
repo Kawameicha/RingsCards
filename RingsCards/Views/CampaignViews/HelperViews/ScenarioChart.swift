@@ -32,7 +32,7 @@ struct ScenarioChart: View {
         ]
 
         VStack {
-            GroupBox ("Encounter Cards by Difficulty") {
+//            GroupBox ("Encounter Cards by Difficulty") {
                 Chart(currentScenario) {
                     let cardNr = Int($0.value)
                     BarMark(
@@ -47,8 +47,9 @@ struct ScenarioChart: View {
                             .font(.system(size: 12))
                             .foregroundColor(.white)
                     }
-                }
+//                }
             }
+                .padding()
             .frame(height: 250)
         }
     }

@@ -21,9 +21,10 @@ struct KeywordView: View {
             Divider()
 
             ScrollView {
-                Text(keyword.text)
+                Text(.init(keyword.text))
             }
         }
+        .padding()
     }
 }
 

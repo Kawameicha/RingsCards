@@ -33,12 +33,7 @@ struct ScenarioView: View {
 
                 Text("The \(scenario.name) encounter deck is built with all the cards from the following encounter sets:")
 
-                ForEach(scenario.encounters) { scenario in
-                    HStack {
-                        CircleIcon(image: Image(scenario.code))
-                        Text(scenario.name)
-                    }
-                }
+                EncounterList(scenario: scenario)
 
                 Text("The rules for each of the keywords present in the \(scenario.name) encounter deck are as follows:")
 

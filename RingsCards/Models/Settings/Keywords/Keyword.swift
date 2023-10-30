@@ -11,7 +11,7 @@ import SwiftData
 @Model
 class Keyword {
     let id: Int
-    let code: String
+    @Attribute(.unique) let code: String
     let name: String
     let text: String
     

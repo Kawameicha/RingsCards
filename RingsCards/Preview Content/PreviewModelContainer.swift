@@ -58,8 +58,13 @@ let previewModelContainer: ModelContainer = {
                 SampleCampaign.contents.forEach { container.mainContext.insert($0) }
             }
 
-            Packs.contents.forEach { container.mainContext.insert($0) }
-            Keywords.contents.forEach { container.mainContext.insert($0) }
+            if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {
+                Packs.contents.forEach { container.mainContext.insert($0) }
+            }
+            
+            if try modelContext.fetch(FetchDescriptor<Keyword>()).isEmpty {
+                Keywords.contents.forEach { container.mainContext.insert($0) }
+            }
         }
 
         return container

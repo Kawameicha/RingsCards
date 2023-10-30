@@ -17,7 +17,10 @@ let ringsUserData: ModelContainer = {
 
         let modelContext = container.mainContext
 
-        Packs.contents.forEach { container.mainContext.insert($0) }
+        if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {
+            Packs.contents.forEach { container.mainContext.insert($0) }
+        }
+
         Keywords.contents.forEach { container.mainContext.insert($0) }
 
         return container

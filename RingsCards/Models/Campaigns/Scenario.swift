@@ -16,7 +16,7 @@ struct Scenario: Hashable, Codable, Identifiable {
     let date_creation: String
     let date_update: String
     let encounters: [Encounter]
-    var keywords: [KeywordUsed]? = []
+    let keywords: [KeywordUsed]
     let flavorIntro: String
     let doNotRead: String
     let has_easy: Bool
