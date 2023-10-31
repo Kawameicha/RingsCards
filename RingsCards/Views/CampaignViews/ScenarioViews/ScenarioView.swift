@@ -31,13 +31,17 @@ struct ScenarioView: View {
 
                 Divider()
 
-                Text("The \(scenario.name) encounter deck is built with all the cards from the following encounter sets:")
+                Text("The *\(scenario.name)* encounter deck is built with all the cards from the following encounter sets:")
 
                 EncounterList(scenario: scenario)
 
-                Text("The rules for each of the keywords present in the \(scenario.name) encounter deck are as follows:")
+                Text("The rules for each of the keywords present in the *\(scenario.name)* encounter deck are as follows:")
 
                 KeywordList(scenario: scenario)
+
+                if scenario.ruling != "" {
+                    Text(.init(scenario.ruling ?? ""))
+                }
 
                 ScenarioChart(scenario: scenario)
             }
