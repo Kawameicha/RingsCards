@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct ScenarioView: View {
+    var campaign: Campaign
     var scenario: Scenario
+    
+    var scenarioIndex: Int {
+        campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0
+    }
 
     var body: some View {
         ScrollView {
@@ -43,6 +48,28 @@ struct ScenarioView: View {
                     Text(.init(scenario.ruling ?? ""))
                 }
 
+                VStack {
+                    Text("Scenario Completed!")
+                        .foregroundColor(campaign.self.completed[scenarioIndex] ? .green : .gray)
+                    Toggle("Completed", isOn: Bindable(campaign.self).completed[scenarioIndex])
+                        .labelsHidden()
+                }
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(lineWidth: 2)
+                        .foregroundColor(campaign.self.completed[scenarioIndex] ? .green : .gray)
+                )
+                
+                if campaign.self.completed[scenarioIndex] {
+                    if scenario.doNotRead != "" {
+                        Text(scenario.doNotRead)
+                            .font(.system(size: 18, weight: .light, design: .serif))
+                            .italic()
+                    }
+                }
+
                 ScenarioChart(scenario: scenario)
             }
             .padding()
@@ -50,10 +77,10 @@ struct ScenarioView: View {
     }
 }
 
-struct ScenarioView_Previews: PreviewProvider {
-    static var scenarios = RingsData().scenarios
-
-    static var previews: some View {
-            ScenarioView(scenario: scenarios[0])
-    }
-}
+//struct ScenarioView_Previews: PreviewProvider {
+//    static var scenarios = RingsData().scenarios
+//
+//    static var previews: some View {
+//            ScenarioView(scenario: scenarios[0])
+//    }
+//}

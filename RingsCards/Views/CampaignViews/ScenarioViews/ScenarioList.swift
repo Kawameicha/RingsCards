@@ -31,7 +31,7 @@ struct ScenarioList: View {
         NavigationView {
             List(filteredScenarios) { scenario in
                 NavigationLink {
-                    ScenarioView(scenario: scenario)
+                    ScenarioView(campaign: campaign, scenario: scenario)
                 } label: {
                     ScenarioRow(campaign: campaign, scenario: scenario)
                 }
