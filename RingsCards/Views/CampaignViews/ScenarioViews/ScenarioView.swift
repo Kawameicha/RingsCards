@@ -39,13 +39,15 @@ struct ScenarioView: View {
                 Text("The *\(scenario.name)* encounter deck is built with all the cards from the following encounter sets:")
 
                 EncounterList(scenario: scenario)
+                
+                ScenarioChart(scenario: scenario)
 
                 Text("The rules for each of the keywords present in the *\(scenario.name)* encounter deck are as follows:")
 
                 KeywordList(scenario: scenario)
 
                 if scenario.ruling != "" {
-                    Text(.init(scenario.ruling ?? ""))
+                    Text(.init(scenario.ruling))
                 }
 
                 VStack {
@@ -69,8 +71,6 @@ struct ScenarioView: View {
                             .italic()
                     }
                 }
-
-                ScenarioChart(scenario: scenario)
             }
             .padding()
         }

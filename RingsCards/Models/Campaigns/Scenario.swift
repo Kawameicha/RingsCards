@@ -18,7 +18,7 @@ struct Scenario: Hashable, Codable, Identifiable {
     let encounters: [Encounter]
     let keywords: [KeywordUsed]
     let flavorIntro: String
-    var ruling: String? = ""
+    let ruling: String
     let doNotRead: String
     let has_easy: Bool
     let has_nightmare: Bool
