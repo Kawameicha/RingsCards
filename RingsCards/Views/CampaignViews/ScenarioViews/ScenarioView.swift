@@ -30,7 +30,7 @@ struct ScenarioView: View {
 
                 Divider()
 
-                Text(scenario.flavorIntro)
+                Text(.init(scenario.flavorIntro))
                     .font(.system(size: 18, weight: .light, design: .serif))
                     .italic()
 
@@ -66,7 +66,7 @@ struct ScenarioView: View {
                 
                 if campaign.self.completed[scenarioIndex] {
                     if scenario.doNotRead != "" {
-                        Text(scenario.doNotRead)
+                        Text(.init(scenario.doNotRead))
                             .font(.system(size: 18, weight: .light, design: .serif))
                             .italic()
                     }
