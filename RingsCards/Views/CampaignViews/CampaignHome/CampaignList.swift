@@ -28,7 +28,11 @@ struct CampaignList: View {
                 } else {
                     ForEach(filteredCampaigns) { campaign in
                         NavigationLink {
-                            ScenarioList(campaign: campaign)
+                            if campaign.campaignMode == true {
+                                CampaignHome(campaign: campaign)
+                            } else {
+                                ScenarioList(campaign: campaign)
+                            }
                         } label: {
                             CampaignRow(campaign: campaign)
                         }

@@ -11,8 +11,7 @@ import SwiftData
 struct CampaignHost: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.editMode) var editMode
-    @EnvironmentObject var ringsData: RingsData
-    @State private var draftCampaign = Campaign(name: "String", code: "String", scenarios: [0], completed: [true])
+    @State private var draftCampaign = Campaign(name: "String", code: "String", scenarios: [0], completed: [true], campaignMode: false, slots: ["" : 0])
 
     var campaign: Campaign
 

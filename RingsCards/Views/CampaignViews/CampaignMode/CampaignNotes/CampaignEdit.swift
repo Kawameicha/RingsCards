@@ -23,18 +23,6 @@ struct CampaignEdit: View {
                 Divider()
                 TextField("Notes", text: $campaign.notes)
             }
-
-            HStack {
-                Text("Boons").bold()
-                Divider()
-                TextField("Boons", text: $campaign.boons)
-            }
-
-            HStack {
-                Text("Burden").bold()
-                Divider()
-                TextField("Burdens", text: $campaign.burdens)
-            }
         }
     }
 }

@@ -29,14 +29,6 @@ struct CampaignView: View {
                 Divider()
 
                 Text("Notes: \(campaign.notes)")
-
-                Divider()
-
-                HStack {
-                    Text("Boons: \(campaign.boons)")
-                    Spacer()
-                    Text("Burdens: \(campaign.burdens)")
-                }
             }
         }
     }

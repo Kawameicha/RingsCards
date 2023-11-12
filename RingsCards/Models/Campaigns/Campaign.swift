@@ -19,21 +19,21 @@ class Campaign {
     var fallenHeros: String
     var threatPenalty: Int
     var notes: String
-    var boons: String
-    var burdens: String
+    var campaignMode: Bool
+    var slots: [String:Int]
 
-    init(name: String, code: String, creation: Date = .now, update: Date = .now, scenarios: [Int], completed: [Bool]) {
+    init(name: String, code: String, creation: Date = .now, scenarios: [Int], completed: [Bool], campaignMode: Bool, slots: [String:Int]) {
         self.name = name
         self.code = code
         self.creation = creation
-        self.update = update
+        self.update = creation
         self.scenarios = scenarios
         self.completed = completed
         self.fallenHeros = ""
         self.threatPenalty = 0
         self.notes = ""
-        self.boons = ""
-        self.burdens = ""
+        self.campaignMode = campaignMode
+        self.slots = slots
     }
 }
 
