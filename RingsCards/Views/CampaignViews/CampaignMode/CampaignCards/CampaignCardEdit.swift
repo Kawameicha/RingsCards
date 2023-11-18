@@ -29,6 +29,9 @@ struct CampaignCardEdit: View {
                     if value > 1 {
                         campaign.slots["\(card.code)", default: value] -= 1
                         campaign.update = .now
+                    } else if value == 1 {
+                        campaign.slots["\(card.code)"] = 0
+                        campaign.update = .now
                     }
                 } label: {
                     Image(systemName: "minus.square")
