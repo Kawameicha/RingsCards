@@ -21,8 +21,6 @@ struct CampaignView: View {
                 Divider()
 
                 HStack {
-                    Text("Fallen Heroes: \(campaign.fallenHeros)")
-                    Spacer()
                     Text("Threat Penalty: \(campaign.threatPenalty)")
                 }
 

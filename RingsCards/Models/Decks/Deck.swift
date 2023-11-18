@@ -27,14 +27,14 @@ final class Deck: Identifiable {
 //    var nb_comments: Int
     var starting_threat: Int
 
-    init(name: String, date_creation: Date = .now, date_update: Date = .now) {
+    init(name: String, date_creation: Date = .now, heroes: [String:Int]? = [:], slots: [String:Int]? = [:]) {
         self.name = name
         self.date_creation = date_creation
-        self.date_update = date_update
+        self.date_update = date_creation
 //        self.description_md = ""
 //        self.user_id = 0
-        self.heroes = [:]
-        self.slots = [:]
+        self.heroes = heroes ?? [:]
+        self.slots = slots ?? [:]
 //        self.sideslots = [:]
 //        self.version = ""
         self.last_pack = "Core Set"
@@ -44,5 +44,11 @@ final class Deck: Identifiable {
 //        self.nb_favorites = 0
 //        self.nb_comments = 0
         self.starting_threat = 0
+    }
+}
+
+extension Deck {
+    static var emptyDeck: Deck {
+        Deck(name: "", heroes: [:], slots: [:])
     }
 }
