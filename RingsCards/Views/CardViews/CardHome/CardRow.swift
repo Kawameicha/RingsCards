@@ -38,7 +38,7 @@ struct CardRow: View {
                         .font(.headline)
                 }
 
-                Text(card.traits ?? "")
+                Text(card.traits)
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             }

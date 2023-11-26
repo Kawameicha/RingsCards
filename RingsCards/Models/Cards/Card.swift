@@ -10,37 +10,36 @@ import SwiftData
 
 @Model
 final class Card: Identifiable {
-    var pack_code: String
-    var pack_name: String
-    var type_code: String
-    var type_name: String
-    var sphere_code: String
-    var sphere_name: String
-    var position: Int
-    @Attribute(.unique) var code: String
-    var name: String
-    var traits: String? = nil
-    var text: String? = nil
-    var flavor: String? = nil
-    var is_unique: Bool
-    var threat: Int? = nil
-    var cost: String? = nil
-    var victory: Int? = nil
-    var quest: Int? = nil
-    var willpower: Int? = nil
-    var attack: Int? = nil
-    var defense: Int? = nil
-    var health: Int? = nil
-    var quantity: Int
-    var deck_limit: Int
-    var illustrator: String? = nil
-    var octgnid: String? = nil
-    var has_errata: Bool
-    var url: String
-    var imagesrc: String
-    var isInCollection: Bool = false
+    let pack_code: String
+    let pack_name: String
+    let type_code: String
+    let type_name: String
+    let sphere_code: String
+    let sphere_name: String
+    let position: Int
+    @Attribute(.unique) let code: String
+    let name: String
+    let traits: String
+    let text: String
+    let flavor: String
+    let is_unique: Bool
+    let threat: Int? = nil
+    let cost: String? = nil
+    let victory: Int? = nil
+    let quest: Int? = nil
+    let willpower: Int? = nil
+    let attack: Int? = nil
+    let defense: Int? = nil
+    let health: Int? = nil
+    let quantity: Int
+    let deck_limit: Int
+    let illustrator: String
+    let octgnid: String
+    let has_errata: Bool
+    let url: String
+    let imagesrc: String
 
-    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, traits: String? = nil, text: String? = nil, flavor: String? = nil, is_unique: Bool, threat: Int? = nil, cost: String? = nil, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, deck_limit: Int, illustrator: String? = nil, octgnid: String? = nil, has_errata: Bool, url: String, imagesrc: String) {
+    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, traits: String?, text: String?, flavor: String?, is_unique: Bool, threat: Int? = nil, cost: String? = nil, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, deck_limit: Int, illustrator: String?, octgnid: String?, has_errata: Bool, url: String, imagesrc: String) {
         self.pack_code = pack_code
         self.pack_name = pack_name
         self.type_code = type_code
@@ -50,9 +49,9 @@ final class Card: Identifiable {
         self.position = position
         self.code = code
         self.name = name
-        self.traits = traits
-        self.text = text
-        self.flavor = flavor
+        self.traits = traits ?? ""
+        self.text = text ?? ""
+        self.flavor = flavor ?? ""
         self.is_unique = is_unique
         self.threat = threat
         self.cost = cost
@@ -64,8 +63,8 @@ final class Card: Identifiable {
         self.health = health
         self.quantity = quantity
         self.deck_limit = deck_limit
-        self.illustrator = illustrator
-        self.octgnid = octgnid
+        self.illustrator = illustrator ?? ""
+        self.octgnid = octgnid ?? ""
         self.has_errata = has_errata
         self.url = url
         self.imagesrc = imagesrc
@@ -101,12 +100,12 @@ struct CardAnatomy {
     let title: String
     let cost: Int
     let threatCost: Int
-    let sphere: Sphere
+    let sphere: CardSphere
     let willpower: Int
     let attack: Int
     let defense: Int
     let hitPoint: Int
-    let resource: Sphere
+    let resource: CardSphere
     let traits: [String]
     let gameText: String
     let cardType: CardType
@@ -119,10 +118,4 @@ struct CardAnatomy {
     enum CardType: String, CaseIterable {
         case hero, ally, attachment, event, campaign
     }
-}
-
-struct Sphere: Hashable, Identifiable {
-    let id = UUID()
-    let name: String
-    var filterIn = true
 }
