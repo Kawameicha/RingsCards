@@ -12,14 +12,17 @@ struct CardImage: View {
 
     var body: some View {
         AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.imagesrc)")) { image in
-            image.resizable().frame(width: 350)
+            image
+                .resizable()
+                .scaledToFit()
+                .frame(width: 350)
         } placeholder: {
             ProgressView()
         }
         .clipShape(
-            Circle().offset(y:-100))
+            Circle().offset(y:-50))
         .overlay {
-            Circle().stroke(.white, lineWidth: 4).offset(y:-100)
+            Circle().stroke(.white, lineWidth: 4).offset(y:-50)
         }
         .shadow(radius: 9)
     }
