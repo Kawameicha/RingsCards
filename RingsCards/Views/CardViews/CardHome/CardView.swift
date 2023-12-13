@@ -33,9 +33,9 @@ struct CardView: View {
 
                 Text(.init(card.text
                     .htmlToMarkDown()
-                    .iconsAndSphreres()
+                    .iconsAndSpheres()
                 ))
-
+                .font(Font.custom("SFUIText-Regular", size: 16))
             }
             .padding()
         }
