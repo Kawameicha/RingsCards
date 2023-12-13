@@ -58,6 +58,8 @@ extension String {
         text = text.replacing("</em>", with: "*")
         text = text.replacing("<i>", with: "*")
         text = text.replacing("</i>", with: "*")
+        text = text.replacing("<cite>", with: "*")
+        text = text.replacing("</cite>", with: "*")
 
         // Replace hyperlinks block
 
