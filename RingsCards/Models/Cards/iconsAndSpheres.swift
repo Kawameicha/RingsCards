@@ -20,6 +20,13 @@ extension String {
         text = text.replacing("[health]", with: "\u{E603}")
         text = text.replacing("[threat]", with: "\u{E604}")
 
+        text = text.replacing("[spirit]", with: "\u{E608}")
+        text = text.replacing("[leadership]", with: "\u{E609}")
+        text = text.replacing("[tactics]", with: "\u{E60A}")
+        text = text.replacing("[lore]", with: "\u{E60B}")
+        text = text.replacing("[baggins]", with: "\u{E60C}")
+        text = text.replacing("[fellowship]", with: "\u{E60D}")
+
         return text
     }
 }

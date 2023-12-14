@@ -47,7 +47,8 @@ struct ScenarioView: View {
                 KeywordList(scenario: scenario)
 
                 if scenario.ruling != "" {
-                    Text(.init(scenario.ruling))
+                    Text(.init(scenario.ruling.iconsAndSpheres()))
+                        .font(Font.custom("SFUIText-Regular", size: 16))
                 }
 
                 VStack {

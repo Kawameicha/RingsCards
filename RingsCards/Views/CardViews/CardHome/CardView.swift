@@ -18,8 +18,13 @@ struct CardView: View {
                 .padding(.bottom, -200)
 
             VStack(alignment: .leading) {
-                Text(card.name)
-                    .font(.title)
+                if card.is_unique == true {
+                    Text("\u{E607} " + card.name)
+                        .font(Font.custom("SFUIText-Regular", size: 28))
+                } else {
+                    Text(card.name)
+                        .font(Font.custom("SFUIText-Regular", size: 28))
+                }
 
                 HStack {
                     Text(card.traits)

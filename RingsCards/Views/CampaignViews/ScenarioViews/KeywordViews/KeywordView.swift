@@ -21,7 +21,8 @@ struct KeywordView: View {
             Divider()
 
             ScrollView {
-                Text(.init(keyword.text))
+                Text(.init(keyword.text.iconsAndSpheres()))
+                    .font(Font.custom("SFUIText-Regular", size: 16))
             }
         }
         .padding()
