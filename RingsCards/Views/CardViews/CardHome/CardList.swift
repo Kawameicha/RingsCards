@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct CardList: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
     @Environment(\.modelContext) private var modelContext
     @Query private var cards: [Card]
 
@@ -34,7 +34,7 @@ struct CardList: View {
     }
 
     var body: some View {
-        @Bindable var viewModel = viewModel
+        @Bindable var viewCardModel = viewCardModel
 
         NavigationView {
             List {
@@ -56,7 +56,7 @@ struct CardList: View {
                 await CardResponse.refresh(modelContext: modelContext)
             }
             .navigationTitle("Player Cards")
-            .searchable(text: $viewModel.searchText)
+            .searchable(text: $viewCardModel.searchText)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     FilterButton()
@@ -76,6 +76,6 @@ struct CardList: View {
 
 #Preview {
     CardList()
-        .environment(ViewModel())
         .modelContainer(previewModelContainer)
+        .environment(ViewCardModel())
 }

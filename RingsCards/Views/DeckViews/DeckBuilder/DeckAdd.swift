@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DeckAdd: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
     @Environment(\.modelContext) private var modelContext
     @Query private var cards: [Card]
 
@@ -40,7 +40,7 @@ struct DeckAdd: View {
     }
 
     var body: some View {
-        @Bindable var viewModel = viewModel
+        @Bindable var viewCardModel = viewCardModel
 
         NavigationView {
             List {
@@ -59,7 +59,7 @@ struct DeckAdd: View {
                 }
             }
             .navigationTitle("Add Cards")
-            .searchable(text: $viewModel.searchText)
+            .searchable(text: $viewCardModel.searchText)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     FilterButton()
@@ -81,6 +81,6 @@ struct DeckAdd: View {
     ModelPreview { deck in
         DeckAdd(deck: deck)
     }
-    .environment(ViewModel())
     .modelContainer(previewModelContainer)
+    .environment(ViewCardModel())
 }

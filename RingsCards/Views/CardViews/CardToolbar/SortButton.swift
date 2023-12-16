@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct SortButton: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
 
     var body: some View {
-        @Bindable var viewModel = viewModel
+        @Bindable var viewCardModel = viewCardModel
 
         Menu {
-            Picker("Sort Order", selection: $viewModel.sortOrder) {
+            Picker("Sort Order", selection: $viewCardModel.sortOrder) {
                 ForEach([SortOrder.forward, .reverse], id: \.self) { order in
                     Text(order.name)
                 }
             }
 
-            Picker("Sort By", selection: $viewModel.sortParameter) {
+            Picker("Sort By", selection: $viewCardModel.sortParameter) {
                 ForEach(SortParameter.allCases) { parameter in
                     Text(parameter.name)
                 }
@@ -49,5 +49,5 @@ enum SortParameter: String, CaseIterable, Identifiable {
 
 #Preview {
     SortButton()
-        .environment(ViewModel())
+        .environment(ViewCardModel())
 }

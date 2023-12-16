@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CardInfo: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
 
     var count: Int = 0
 
     var body: some View {
-        @Bindable var viewModel = viewModel
+        @Bindable var viewCardModel = viewCardModel
 
         HStack {
             VStack {
@@ -29,5 +29,5 @@ struct CardInfo: View {
 
 #Preview {
     CardInfo(count: 8)
-        .environment(ViewModel())
+        .environment(ViewCardModel())
 }

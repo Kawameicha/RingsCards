@@ -67,6 +67,6 @@ struct CampaignHeroList: View {
     ModelPreview { campaign in
         CampaignHeroList(campaign: campaign, deck: SampleDeck.contents[0])
     }
-    .environment(ViewModel())
+    .environment(ViewCardModel())
     .modelContainer(previewModelContainer)
 }

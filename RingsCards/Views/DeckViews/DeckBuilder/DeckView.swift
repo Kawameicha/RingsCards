@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DeckView: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
     @Environment(\.modelContext) private var modelContext
     @Query private var cards: [Card]
     @Query private var packs: [Pack]
@@ -89,13 +89,13 @@ struct DeckView: View {
             }
             .sheet(isPresented: $addCards) {
                 DeckAdd(deck: deck,
-                        filterSphere: viewModel.filterSphere,
-                        filterType: viewModel.filterType,
+                        filterSphere: viewCardModel.filterSphere,
+                        filterType: viewCardModel.filterType,
                         filterPack: collection,
-//                        filterDeck: viewModel.filterDeck,
-                        sortParameter: viewModel.sortParameter,
-                        sortOrder: viewModel.sortOrder,
-                        searchText: viewModel.searchText)
+//                        filterDeck: viewCardModel.filterDeck,
+                        sortParameter: viewCardModel.sortParameter,
+                        sortOrder: viewCardModel.sortOrder,
+                        searchText: viewCardModel.searchText)
                     .presentationDetents([.medium, .large])
             }
         }
@@ -106,6 +106,6 @@ struct DeckView: View {
     ModelPreview { deck in
         DeckView(deck: deck)
     }
-    .environment(ViewModel())
     .modelContainer(previewModelContainer)
+    .environment(ViewCardModel())
 }

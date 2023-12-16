@@ -33,6 +33,5 @@ struct KeywordView: View {
     ModelPreview { keyword in
         KeywordView(keyword: keyword)
     }
-    .environment(ViewModel())
     .modelContainer(previewModelContainer)
 }

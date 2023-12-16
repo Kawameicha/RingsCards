@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  ViewCardModel.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 28.09.23.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Observable
-class ViewModel {
+class ViewCardModel {
     var filterSphere: FilterSphere = .all
     var filterType: FilterType = .any
     var filterPack: [String] = []

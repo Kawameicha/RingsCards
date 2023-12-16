@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct FilterButton: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
 
     var body: some View {
-        @Bindable var viewModel = viewModel
+        @Bindable var viewCardModel = viewCardModel
 
         Menu {
-            Picker("By Sphere", selection: $viewModel.filterSphere) {
+            Picker("By Sphere", selection: $viewCardModel.filterSphere) {
                 ForEach(FilterSphere.allCases) { parameter in
                     Text(parameter.name)
                 }
             }
             
-            Picker("By Type", selection: $viewModel.filterType) {
+            Picker("By Type", selection: $viewCardModel.filterType) {
                 ForEach(FilterType.allCases) { parameter in
                     Text(parameter.name)
                 }
@@ -46,5 +46,5 @@ enum FilterType: String, CaseIterable, Identifiable {
 
 #Preview {
     FilterButton()
-        .environment(ViewModel())
+        .environment(ViewCardModel())
 }

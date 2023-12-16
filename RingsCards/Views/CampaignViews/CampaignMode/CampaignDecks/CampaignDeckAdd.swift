@@ -45,6 +45,6 @@ struct CampaignDeckAdd: View {
     ModelPreview { campaign in
         CampaignDeckAdd(campaign: campaign)
     }
-    .environment(ViewModel())
+    .environment(ViewCardModel())
     .modelContainer(previewModelContainer)
 }

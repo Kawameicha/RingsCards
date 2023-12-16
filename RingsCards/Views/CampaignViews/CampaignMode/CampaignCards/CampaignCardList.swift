@@ -79,6 +79,6 @@ struct CampaignCardList: View {
     ModelPreview { campaign in
         CampaignCardList(campaign: campaign, editBoons: .constant(true))
     }
-    .environment(ViewModel())
+    .environment(ViewCardModel())
     .modelContainer(previewModelContainer)
 }

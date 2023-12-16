@@ -50,5 +50,6 @@ struct CampaignHome: View {
         CampaignHome(campaign: campaign)
     }
     .environmentObject(RingsData())
+    .environment(ViewCardModel())
     .modelContainer(previewModelContainer)
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewCardModel.self) private var viewCardModel
     @Environment(ViewDeckModel.self) private var viewDeckModel
     @Environment(\.modelContext) private var modelContext
     @Query private var packs: [Pack]
@@ -23,13 +23,13 @@ struct ContentView: View {
     var body: some View {
         TabView {
             CardList(
-                filterSphere: viewModel.filterSphere,
-                filterType: viewModel.filterType,
+                filterSphere: viewCardModel.filterSphere,
+                filterType: viewCardModel.filterType,
                 filterPack: collection,
-//                   filterDeck: viewModel.filterDeck,
-                sortParameter: viewModel.sortParameter,
-                sortOrder: viewModel.sortOrder,
-                searchText: viewModel.searchText
+//                   filterDeck: viewCardModel.filterDeck,
+                sortParameter: viewCardModel.sortParameter,
+                sortOrder: viewCardModel.sortOrder,
+                searchText: viewCardModel.searchText
             )
                 .tabItem {
                     Label("Cards", systemImage: "rectangle.portrait.fill")
@@ -58,6 +58,6 @@ struct ContentView: View {
     ContentView()
         .environmentObject(RingsData())
         .modelContainer(previewModelContainer)
-        .environment(ViewModel())
+        .environment(ViewCardModel())
         .environment(ViewDeckModel())
 }
