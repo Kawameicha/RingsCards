@@ -48,3 +48,14 @@ extension Campaign {
 enum CampaignCode: String, CaseIterable {
     case core, mirkwood, dwarrowdelf, shadow, ring, angmar, dream, haradrim, mithrin, mordor, rohirrim, hobbit, lotr
 }
+
+extension Campaign {
+    static func predicate(
+        searchText: String
+    ) -> Predicate<Campaign> {
+
+        return #Predicate<Campaign> { campaign in
+            (searchText.isEmpty || campaign.name.localizedStandardContains(searchText))
+        }
+    }
+}

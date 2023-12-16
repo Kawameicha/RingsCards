@@ -53,7 +53,6 @@ struct DeckList: View {
                     .onDelete(perform: deleteItems)
                 }
             }
-            .listStyle(.sidebar)
             .navigationTitle("My Decks")
             .searchable(text: $viewDeckModel.searchText)
             .toolbar {

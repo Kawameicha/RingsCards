@@ -9,24 +9,32 @@ import SwiftUI
 import SwiftData
 
 struct CampaignList: View {
+    @Environment(ViewCampaignModel.self) private var viewCampaignModel
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Campaign.update, order: .reverse) private var campaigns: [Campaign]
-    @State private var searchText: String = ""
 
-    var filteredCampaigns: [Campaign] {
-        guard !searchText.isEmpty else { return campaigns }
-        return campaigns.filter { campaign in
-            campaign.name.localizedStandardContains(searchText)
+    init(
+        sortCampaignParameter: SortCampaignParameter = .name,
+        sortOrder: SortOrder = .forward,
+        searchText: String = ""
+    ) {
+        let predicate = Campaign.predicate(searchText: searchText)
+        switch sortCampaignParameter {
+        case .name: _campaigns = Query(filter: predicate, sort: \.name, order: sortOrder)
+        case .date_creation: _campaigns = Query(filter: predicate, sort: \.creation, order: sortOrder)
+        case .date_update: _campaigns = Query(filter: predicate, sort: \.update, order: sortOrder)
         }
     }
 
     var body: some View {
+        @Bindable var viewCampaignModel = viewCampaignModel
+        
         NavigationView {
             List {
                 if campaigns.isEmpty {
                     NavigationLink(destination: CampaignNew(), label: { Text("Create a Campaign") })
                 } else {
-                    ForEach(filteredCampaigns) { campaign in
+                    ForEach(campaigns) { campaign in
                         NavigationLink {
                             if campaign.campaignMode == true {
                                 CampaignHome(campaign: campaign)
@@ -40,16 +48,20 @@ struct CampaignList: View {
                     .onDelete(perform: deleteItems)
                 }
             }
-            .listStyle(.sidebar)
             .navigationTitle("My Campaigns")
-            .searchable(text: $searchText)
+            .searchable(text: $viewCampaignModel.searchText)
             .toolbar {
-                ToolbarItem {
+                ToolbarItem(placement: .topBarTrailing) {
+                    CampaignSort()
+                }
+
+                ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: CampaignNew(),
                                    label: { Image(systemName: "plus") })
                 }
+
                 ToolbarItem(placement: .bottomBar) {
-                    Text("\(filteredCampaigns.count) campaigns")
+                    CampaignInfo(count: campaigns.count)
                 }
             }
         }
@@ -64,5 +76,6 @@ struct CampaignList: View {
 
 #Preview {
     CampaignList()
-        .modelContainer(previewModelContainer)    
+        .modelContainer(previewModelContainer)
+        .environment(ViewCampaignModel())
 }

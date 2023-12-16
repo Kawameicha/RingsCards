@@ -11,6 +11,7 @@ import SwiftData
 struct ContentView: View {
     @Environment(ViewCardModel.self) private var viewCardModel
     @Environment(ViewDeckModel.self) private var viewDeckModel
+    @Environment(ViewCampaignModel.self) private var viewCampaignModel
     @Environment(\.modelContext) private var modelContext
     @Query private var packs: [Pack]
 
@@ -42,7 +43,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Decks", systemImage: "person.3.fill")
             }
-            CampaignList()
+            CampaignList(
+                sortCampaignParameter: viewCampaignModel.sortCampaignParameter,
+                sortOrder: viewCampaignModel.sortOrder,
+                searchText: viewCampaignModel.searchText
+            )
                 .tabItem {
                     Label("Campaigns", systemImage: "book.fill")
             }
@@ -60,4 +65,5 @@ struct ContentView: View {
         .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
         .environment(ViewDeckModel())
+        .environment(ViewCampaignModel())
 }
