@@ -10,6 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewDeckModel.self) private var viewDeckModel
     @Environment(\.modelContext) private var modelContext
     @Query private var packs: [Pack]
 
@@ -21,17 +22,23 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            CardList(filterSphere: viewModel.filterSphere,
-                     filterType: viewModel.filterType,
-                     filterPack: collection,
-//                     filterDeck: viewModel.filterDeck,
-                     sortParameter: viewModel.sortParameter,
-                     sortOrder: viewModel.sortOrder,
-                     searchText: viewModel.searchText)
+            CardList(
+                filterSphere: viewModel.filterSphere,
+                filterType: viewModel.filterType,
+                filterPack: collection,
+//                   filterDeck: viewModel.filterDeck,
+                sortParameter: viewModel.sortParameter,
+                sortOrder: viewModel.sortOrder,
+                searchText: viewModel.searchText
+            )
                 .tabItem {
                     Label("Cards", systemImage: "rectangle.portrait.fill")
             }
-            DeckList()
+            DeckList(
+                sortDeckParameter: viewDeckModel.sortDeckParameter,
+                sortOrder: viewDeckModel.sortOrder,
+                searchText: viewDeckModel.searchText
+            )
                 .tabItem {
                     Label("Decks", systemImage: "person.3.fill")
             }
@@ -50,6 +57,7 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(RingsData())
-        .environment(ViewModel())
         .modelContainer(previewModelContainer)
+        .environment(ViewModel())
+        .environment(ViewDeckModel())
 }

@@ -16,6 +16,9 @@
 		592264CF2A90A995002A7648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592264CE2A90A995002A7648 /* Assets.xcassets */; };
 		592264D22A90A995002A7648 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592264D12A90A995002A7648 /* Preview Assets.xcassets */; };
 		592264F52A90AB09002A7648 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264F42A90AB09002A7648 /* CardView.swift */; };
+		5922F3D32B2D9FA30037E4D4 /* DeckInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922F3D22B2D9FA30037E4D4 /* DeckInfo.swift */; };
+		5922F3D52B2DA0510037E4D4 /* DeckSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922F3D42B2DA0510037E4D4 /* DeckSort.swift */; };
+		5922F3D82B2DA7970037E4D4 /* ViewDeckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922F3D72B2DA7970037E4D4 /* ViewDeckModel.swift */; };
 		592C485C2AFFDB7700BB67BF /* CampaignCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C485B2AFFDB7700BB67BF /* CampaignCardList.swift */; };
 		5932235D2A9C9D8300AA7751 /* ScenarioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */; };
 		5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932235E2A9C9ED400AA7751 /* ScenarioList.swift */; };
@@ -91,6 +94,9 @@
 		592264CE2A90A995002A7648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		592264D12A90A995002A7648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		592264F42A90AB09002A7648 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5922F3D22B2D9FA30037E4D4 /* DeckInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckInfo.swift; sourceTree = "<group>"; };
+		5922F3D42B2DA0510037E4D4 /* DeckSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSort.swift; sourceTree = "<group>"; };
+		5922F3D72B2DA7970037E4D4 /* ViewDeckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDeckModel.swift; sourceTree = "<group>"; };
 		592C485B2AFFDB7700BB67BF /* CampaignCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardList.swift; sourceTree = "<group>"; };
 		5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioRow.swift; sourceTree = "<group>"; };
 		5932235E2A9C9ED400AA7751 /* ScenarioList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioList.swift; sourceTree = "<group>"; };
@@ -222,6 +228,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5922F3D12B2D9F860037E4D4 /* DeckToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				5922F3D22B2D9FA30037E4D4 /* DeckInfo.swift */,
+				5922F3D42B2DA0510037E4D4 /* DeckSort.swift */,
+			);
+			path = DeckToolbar;
+			sourceTree = "<group>";
+		};
+		5922F3D62B2DA70A0037E4D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5922F3D72B2DA7970037E4D4 /* ViewDeckModel.swift */,
+				595078712AC5D7D1007BFAA0 /* ViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5932235B2A9C9D4100AA7751 /* ScenarioViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +282,6 @@
 				595078662AC59A9F007BFAA0 /* CardDecoder.swift */,
 				59C82C212B13A5840073C4FA /* htmlToMarkdown.swift */,
 				59C82C232B13AECD0073C4FA /* iconsAndSpheres.swift */,
-				595078712AC5D7D1007BFAA0 /* ViewModel.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -329,6 +352,7 @@
 				5950786D2AC5BB30007BFAA0 /* Decks */,
 				59AFE7F42B29E8BA008AF007 /* Fonts */,
 				595078702AC5BC1B007BFAA0 /* Settings */,
+				5922F3D62B2DA70A0037E4D4 /* Views */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -526,6 +550,7 @@
 			children = (
 				59C140492AC1BB4800A9F20C /* DeckBuilder */,
 				59FBD1B22AC1E63400CCE713 /* DeckHome */,
+				5922F3D12B2D9F860037E4D4 /* DeckToolbar */,
 			);
 			path = DeckViews;
 			sourceTree = "<group>";
@@ -613,10 +638,12 @@
 				59C87AF92AA5DDB70058CB2A /* CampaignEdit.swift in Sources */,
 				59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */,
 				59862D772A91FC4300628449 /* CardList.swift in Sources */,
+				5922F3D32B2D9FA30037E4D4 /* DeckInfo.swift in Sources */,
 				594E38E22AD29EBC00577EE0 /* Packs.swift in Sources */,
 				5932235D2A9C9D8300AA7751 /* ScenarioRow.swift in Sources */,
 				5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */,
 				59C140462AC1789A00A9F20C /* Deck.swift in Sources */,
+				5922F3D52B2DA0510037E4D4 /* DeckSort.swift in Sources */,
 				592264F52A90AB09002A7648 /* CardView.swift in Sources */,
 				59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */,
 				598F51E52AA8747E00A1C06B /* CampaignNew.swift in Sources */,
@@ -642,6 +669,7 @@
 				590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */,
 				59B943F72AC6AB470059C52A /* CardInfo.swift in Sources */,
 				59355A062AD2902000C894B3 /* PackRow.swift in Sources */,
+				5922F3D82B2DA7970037E4D4 /* ViewDeckModel.swift in Sources */,
 				59C1404D2AC1C26500A9F20C /* DeckEdit.swift in Sources */,
 				59D8353F2AFF8F3B000C160E /* ScenarioVStack.swift in Sources */,
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,

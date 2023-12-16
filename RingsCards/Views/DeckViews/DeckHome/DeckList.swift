@@ -10,25 +10,33 @@ import SwiftData
 
 struct DeckList: View {
     @Environment(ViewModel.self) private var viewModel
+    @Environment(ViewDeckModel.self) private var viewDeckModel
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Deck.date_update, order: .reverse) private var decks: [Deck]
-    @State private var searchText: String = ""
 
-    var filteredDecks: [Deck] {
-        guard !searchText.isEmpty else { return decks }
-        return decks.filter { deck in
-            deck.name.localizedStandardContains(searchText)
+    init(
+        sortDeckParameter: SortDeckParameter = .name,
+        sortOrder: SortOrder = .forward,
+        searchText: String = ""
+    ) {
+        let predicate = Deck.predicate(searchText: searchText)
+        switch sortDeckParameter {
+        case .name: _decks = Query(filter: predicate, sort: \.name, order: sortOrder)
+        case .date_creation: _decks = Query(filter: predicate, sort: \.date_creation, order: sortOrder)
+        case .date_update: _decks = Query(filter: predicate, sort: \.date_update, order: sortOrder)
         }
     }
 
     var body: some View {
+        @Bindable var viewDeckModel = viewDeckModel
+
         NavigationView {
             List {
                 if decks.isEmpty {
                     NavigationLink(destination: DeckNew(),
                                    label: { Text("Create a Deck") })
                 } else {
-                    ForEach(filteredDecks) { deck in
+                    ForEach(decks) { deck in
                         NavigationLink {
                             DeckView(deck: deck,
                                      filterSphere: viewModel.filterSphere,
@@ -47,14 +55,19 @@ struct DeckList: View {
             }
             .listStyle(.sidebar)
             .navigationTitle("My Decks")
-            .searchable(text: $searchText)
+            .searchable(text: $viewDeckModel.searchText)
             .toolbar {
-                ToolbarItem {
+                ToolbarItem(placement: .topBarTrailing) {
+                    DeckSort()
+                }
+
+                ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: DeckNew(),
                                    label: { Image(systemName: "plus") })
                 }
+
                 ToolbarItem(placement: .bottomBar) {
-                    Text("\(filteredDecks.count) decks")
+                    DeckInfo(count: decks.count)
                 }
             }
         }
@@ -69,6 +82,7 @@ struct DeckList: View {
 
 #Preview {
     DeckList()
-        .environment(ViewModel())
         .modelContainer(previewModelContainer)
+        .environment(ViewModel())
+        .environment(ViewDeckModel())
 }

@@ -52,3 +52,14 @@ extension Deck {
         Deck(name: "", heroes: [:], slots: [:])
     }
 }
+
+extension Deck {
+    static func predicate(
+        searchText: String
+    ) -> Predicate<Deck> {
+
+        return #Predicate<Deck> { deck in
+            (searchText.isEmpty || deck.name.localizedStandardContains(searchText))
+        }
+    }
+}

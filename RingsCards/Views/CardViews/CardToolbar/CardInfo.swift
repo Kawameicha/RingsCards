@@ -17,7 +17,11 @@ struct CardInfo: View {
 
         HStack {
             VStack {
-                Text("\(count) cards")
+                if count <= 1 {
+                    Text("\(count) card")
+                } else {
+                    Text("\(count) cards")
+                }
             }
         }
     }

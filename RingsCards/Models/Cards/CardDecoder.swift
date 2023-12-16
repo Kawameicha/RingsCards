@@ -55,8 +55,8 @@ struct CardJSONDecoder {
 extension CardResponse {
     static func fetchCards() async throws -> [CardResponse] {
         let url = URL(string: "https://www.ringsdb.com/api/public/cards/")!
-
         let session = URLSession.shared
+
         guard let (data, response) = try? await session.data(from: url),
               let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200
