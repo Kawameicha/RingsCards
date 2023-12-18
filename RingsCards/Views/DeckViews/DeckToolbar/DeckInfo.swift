@@ -16,12 +16,10 @@ struct DeckInfo: View {
         @Bindable var viewDeckModel = viewDeckModel
 
         HStack {
-            VStack {
-                if count <= 1 {
-                    Text("\(count) deck")
-                } else {
-                    Text("\(count) decks")
-                }
+            if count <= 1 {
+                Text("\(count) deck")
+            } else {
+                Text("\(count) decks")
             }
         }
     }

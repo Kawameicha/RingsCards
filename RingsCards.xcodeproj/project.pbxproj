@@ -10,6 +10,7 @@
 		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
 		590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsUserData.swift */; };
 		590C5E352B04F23E0070445C /* CampaignDeckAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590C5E342B04F23E0070445C /* CampaignDeckAdd.swift */; };
+		591084152B2F6C5B000AF020 /* DeckCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591084142B2F6C5B000AF020 /* DeckCardInfo.swift */; };
 		5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912EE232A93668700B2F8B5 /* CardRow.swift */; };
 		592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CA2A90A993002A7648 /* RingsCardsApp.swift */; };
 		592264CD2A90A993002A7648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CC2A90A993002A7648 /* ContentView.swift */; };
@@ -91,6 +92,7 @@
 		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		590874762AC3379A00E768F2 /* RingsUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsUserData.swift; sourceTree = "<group>"; };
 		590C5E342B04F23E0070445C /* CampaignDeckAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDeckAdd.swift; sourceTree = "<group>"; };
+		591084142B2F6C5B000AF020 /* DeckCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardInfo.swift; sourceTree = "<group>"; };
 		5912EE232A93668700B2F8B5 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
 		592264CA2A90A993002A7648 /* RingsCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsApp.swift; sourceTree = "<group>"; };
 		592264CC2A90A993002A7648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		5922F3D12B2D9F860037E4D4 /* DeckToolbar */ = {
 			isa = PBXGroup;
 			children = (
+				591084142B2F6C5B000AF020 /* DeckCardInfo.swift */,
 				5922F3D22B2D9FA30037E4D4 /* DeckInfo.swift */,
 				5922F3D42B2DA0510037E4D4 /* DeckSort.swift */,
 			);
@@ -655,6 +658,7 @@
 				59C87AF92AA5DDB70058CB2A /* CampaignEdit.swift in Sources */,
 				59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */,
 				59862D772A91FC4300628449 /* CardList.swift in Sources */,
+				591084152B2F6C5B000AF020 /* DeckCardInfo.swift in Sources */,
 				5922F3D32B2D9FA30037E4D4 /* DeckInfo.swift in Sources */,
 				594E38E22AD29EBC00577EE0 /* Packs.swift in Sources */,
 				5932235D2A9C9D8300AA7751 /* ScenarioRow.swift in Sources */,

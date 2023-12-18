@@ -78,13 +78,17 @@ struct DeckView: View {
                         Label("Edit Deck", systemImage: "plus.forwardslash.minus")
                     }
                 }
-                
+
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         addCards.toggle()
                     } label: {
                         Label("Add Card", systemImage: "plus.rectangle.portrait")
                     }
+                }
+
+                ToolbarItem(placement: .bottomBar) {
+                    DeckCardInfo(deck: deck)
                 }
             }
             .sheet(isPresented: $addCards) {
