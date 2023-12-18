@@ -112,4 +112,5 @@ struct DeckView: View {
     }
     .modelContainer(previewModelContainer)
     .environment(ViewCardModel())
+    .environment(ViewDeckModel())
 }
