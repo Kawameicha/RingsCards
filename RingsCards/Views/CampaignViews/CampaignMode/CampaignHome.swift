@@ -13,7 +13,7 @@ struct CampaignHome: View {
     @State private var editBoons = false
     @State private var editNotes = false
     
-    var campaign: Campaign
+    @Bindable var campaign: Campaign
 
     var body: some View {
         NavigationView {
@@ -28,7 +28,8 @@ struct CampaignHome: View {
 
                 CampaignCardList(campaign: campaign, editBoons: $editBoons)
             }
-            .navigationTitle(campaign.name)
+            .navigationTitle($campaign.name)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
 //                ToolbarItem(placement: .topBarTrailing) {
 //                    Button {

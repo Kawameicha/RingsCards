@@ -22,7 +22,7 @@ struct DeckView: View {
         }
     }
 
-    var deck: Deck
+    @Bindable var deck: Deck
 
     init(
         deck: Deck,
@@ -69,7 +69,8 @@ struct DeckView: View {
                     }
                 }
             }
-            .navigationTitle("\(deck.name)")
+            .navigationTitle($deck.name)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
