@@ -14,7 +14,11 @@ struct PackRow: View {
     @Bindable var packs: Pack
 
     var body: some View {
-        Toggle("\(packs.packName)", systemImage: "\(packs.packPosition).square", isOn: $packs.isInCollection)
+        HStack{
+            PackIcon(image: Image(packs.cycleCode))
+
+            Toggle("\(packs.packName)", isOn: $packs.isInCollection)
+        }
     }
 }
 

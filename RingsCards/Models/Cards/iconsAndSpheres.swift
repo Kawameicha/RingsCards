@@ -19,6 +19,7 @@ extension String {
         text = text.replacing("[defense]", with: "\u{E602}")
         text = text.replacing("[health]", with: "\u{E603}")
         text = text.replacing("[threat]", with: "\u{E604}")
+        text = text.replacing("[player]", with: "\u{E622}")
 
         text = text.replacing("[spirit]", with: "\u{E608}")
         text = text.replacing("[leadership]", with: "\u{E609}")

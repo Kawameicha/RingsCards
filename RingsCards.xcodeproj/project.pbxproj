@@ -24,6 +24,7 @@
 		5922F3DD2B2DB4430037E4D4 /* CampaignInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922F3DC2B2DB4430037E4D4 /* CampaignInfo.swift */; };
 		5922F3DF2B2DB4880037E4D4 /* CampaignSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922F3DE2B2DB4880037E4D4 /* CampaignSort.swift */; };
 		592C485C2AFFDB7700BB67BF /* CampaignCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C485B2AFFDB7700BB67BF /* CampaignCardList.swift */; };
+		593216A02B39F8B800124EC6 /* PackIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932169F2B39F8B800124EC6 /* PackIcon.swift */; };
 		5932235D2A9C9D8300AA7751 /* ScenarioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */; };
 		5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932235E2A9C9ED400AA7751 /* ScenarioList.swift */; };
 		593223622A9CA71200AA7751 /* DeckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593223612A9CA71200AA7751 /* DeckRow.swift */; };
@@ -106,6 +107,7 @@
 		5922F3DC2B2DB4430037E4D4 /* CampaignInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignInfo.swift; sourceTree = "<group>"; };
 		5922F3DE2B2DB4880037E4D4 /* CampaignSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignSort.swift; sourceTree = "<group>"; };
 		592C485B2AFFDB7700BB67BF /* CampaignCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardList.swift; sourceTree = "<group>"; };
+		5932169F2B39F8B800124EC6 /* PackIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackIcon.swift; sourceTree = "<group>"; };
 		5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioRow.swift; sourceTree = "<group>"; };
 		5932235E2A9C9ED400AA7751 /* ScenarioList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioList.swift; sourceTree = "<group>"; };
 		593223612A9CA71200AA7751 /* DeckRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRow.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				59355A072AD2962800C894B3 /* PackList.swift */,
 				59355A052AD2902000C894B3 /* PackRow.swift */,
+				5932169F2B39F8B800124EC6 /* PackIcon.swift */,
 			);
 			path = PackView;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				595A66B32A9DE8930040C952 /* SettingView.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
 				590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */,
+				593216A02B39F8B800124EC6 /* PackIcon.swift in Sources */,
 				5979A1BF2A9E4D6A00E1CAE1 /* Pack.swift in Sources */,
 				59C1404F2AC1C65400A9F20C /* DeckAdd.swift in Sources */,
 				59C82C242B13AECD0073C4FA /* iconsAndSpheres.swift in Sources */,
