@@ -88,7 +88,7 @@ struct Packs {
         Pack(cycleName: "Oaths of the Rohirrim", cycleCode: "OotR", cyclePosition: 10, packName: "The Glittering Caves", packCode: "TGC", packPosition: 5),
         Pack(cycleName: "Oaths of the Rohirrim", cycleCode: "OotR", cyclePosition: 10, packName: "Mustering of the Rohirrim", packCode: "MotR", packPosition: 6),
         Pack(cycleName: "Oaths of the Rohirrim", cycleCode: "OotR", cyclePosition: 10, packName: "Blood in the Isen", packCode: "BitI", packPosition: 7),
-        
+
         Pack(cycleName: "The Hobbit", cycleCode: "oHuH", cyclePosition: 101, packName: "Over Hill and Under Hill", packCode: "OHaUH", packPosition: 1),
         Pack(cycleName: "The Hobbit", cycleCode: "otD", cyclePosition: 101, packName: "On the Doorstep", packCode: "OtD", packPosition: 2),
         Pack(cycleName: "The Lord of the Rings", cycleCode: "tbR", cyclePosition: 102, packName: "The Black Riders", packCode: "TBR", packPosition: 1),
@@ -97,5 +97,11 @@ struct Packs {
         Pack(cycleName: "The Lord of the Rings", cycleCode: "tLoS", cyclePosition: 102, packName: "The Land of Shadow", packCode: "LoS", packPosition: 4),
         Pack(cycleName: "The Lord of the Rings", cycleCode: "tFotW", cyclePosition: 102, packName: "The Flame of the West", packCode: "FotW", packPosition: 5),
         Pack(cycleName: "The Lord of the Rings", cycleCode: "tMoF", cyclePosition: 102, packName: "The Mountain of Fire", packCode: "MoF", packPosition: 6),
+
+        Pack(cycleName: "Starter Decks", cycleCode: "DoD", cyclePosition: 201, packName: "Dwarves of Durin", packCode: "DoD", packPosition: 1),
+        Pack(cycleName: "Starter Decks", cycleCode: "EoL", cyclePosition: 201, packName: "Elves of Lórien", packCode: "EoL", packPosition: 2),
+        Pack(cycleName: "Starter Decks", cycleCode: "DoG", cyclePosition: 201, packName: "Defenders of Gondor", packCode: "DoG", packPosition: 3),
+        Pack(cycleName: "Starter Decks", cycleCode: "RoR", cyclePosition: 201, packName: "Riders of Rohan", packCode: "RoR", packPosition: 4),
+        Pack(cycleName: "Scenario Packs", cycleCode: "tDoM", cyclePosition: 202, packName: "The Dark of Mirkwood", packCode: "tDoM", packPosition: 1),
     ]
 }

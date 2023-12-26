@@ -13,7 +13,7 @@ struct PackList: View {
     @Query(sort: \Pack.packPosition) private var packs: [Pack]
 
     let allCycles: [String] = ["Shadows of Mirkwood", "Dwarrowdelf", "Against the Shadow", "The Ring-maker", "Angmar Awakened",
-    "Dream-chaser", "Haradrim", "Ered Mithrin", "Vengeance of Mordor", "Oaths of the Rohirrim", "The Hobbit", "The Lord of the Rings"]
+    "Dream-chaser", "Haradrim", "Ered Mithrin", "Vengeance of Mordor", "Oaths of the Rohirrim", "The Hobbit", "The Lord of the Rings", "Starter Decks", "Scenario Packs"]
 
     var body: some View {
         NavigationView {
