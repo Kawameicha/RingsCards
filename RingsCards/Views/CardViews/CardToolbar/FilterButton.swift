@@ -39,7 +39,7 @@ enum FilterSphere: String, CaseIterable, Identifiable {
 }
 
 enum FilterType: String, CaseIterable, Identifiable {
-    case any, hero, ally, attachment, event, treasure
+    case any, Hero, Ally, Attachment, Event, quest = "Player Side Quest", Contract, Campaign
     var id: Self { self }
     var name: String { rawValue.capitalized }
 }

@@ -84,7 +84,7 @@ extension Card {
             if filterDeck.isEmpty {
                 (filterPack.contains(card.pack_code))
                 &&
-                (filterType == "any" || card.type_code == filterType)
+                (filterType == "any" || card.type_name == filterType)
                 &&
                 (filterSphere == "all" || card.sphere_code == filterSphere)
                 &&
@@ -116,6 +116,6 @@ struct CardAnatomy {
     }
 
     enum CardType: String, CaseIterable {
-        case hero, ally, attachment, event, campaign
+        case hero, ally, attachment, event, quest = "player side quest", contract, campaign
     }
 }
