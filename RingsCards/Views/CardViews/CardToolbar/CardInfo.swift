@@ -15,12 +15,10 @@ struct CardInfo: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        HStack {
-            if count <= 1 {
-                Text("\(count) card")
-            } else {
-                Text("\(count) cards")
-            }
+        if count <= 1 {
+            Text("\(count) card")
+        } else {
+            Text("\(count) cards")
         }
     }
 }

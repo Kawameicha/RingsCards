@@ -44,7 +44,7 @@ struct DeckAdd: View {
 
         NavigationView {
             List {
-                ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("Add \(type)")) {
                         ForEach(cards.filter { card in
                             (card.type_name.contains("\(type)"))

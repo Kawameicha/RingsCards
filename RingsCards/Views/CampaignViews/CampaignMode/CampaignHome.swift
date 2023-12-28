@@ -59,10 +59,10 @@ struct CampaignHome: View {
                 CampaignHost(campaign: campaign)
                     .presentationDetents([.medium, .large])
             }
-            .sheet(isPresented: $editDecks) {
-                CampaignDeckHost(campaign: campaign)
-                    .presentationDetents([.medium, .large])
-            }
+//            .sheet(isPresented: $editDecks) {
+//                CampaignDeckHost(campaign: campaign)
+//                    .presentationDetents([.medium, .large])
+//            }
         }
     }
 }

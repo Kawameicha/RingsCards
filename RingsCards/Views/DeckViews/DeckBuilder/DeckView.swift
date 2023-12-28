@@ -51,7 +51,7 @@ struct DeckView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
                         ForEach(cards.filter { card in
                             (card.type_name.contains("\(type)"))

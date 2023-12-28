@@ -2,7 +2,7 @@
 //  CardList.swift
 //  RingsCards
 //
-//  Created by Christoph Freier on 20.08.23.
+//  Created by Christoph Freier on 27.12.23.
 //
 
 import SwiftUI
@@ -36,9 +36,9 @@ struct CardList: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        NavigationView {
+        NavigationStack {
             List {
-                ForEach(CardAnatomy.CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
                         ForEach(cards.filter { card in
                             card.type_name.contains("\(type)")
@@ -52,20 +52,7 @@ struct CardList: View {
                     }
                 }
             }
-            .refreshable {
-                await CardResponse.refresh(modelContext: modelContext)
-            }
-            .navigationTitle("Player Cards")
-            .searchable(text: $viewCardModel.searchText)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    FilterButton()
-                }
-
-                ToolbarItem(placement: .topBarTrailing) {
-                    SortButton()
-                }
-
                 ToolbarItem(placement: .bottomBar) {
                     CardInfo(count: cards.count)
                 }

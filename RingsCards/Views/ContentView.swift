@@ -9,29 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
     @Environment(ViewDeckModel.self) private var viewDeckModel
     @Environment(ViewCampaignModel.self) private var viewCampaignModel
     @Environment(\.modelContext) private var modelContext
-    @Query private var packs: [Pack]
-
-    var collection: [String] {
-        packs.map { pack in
-            pack.isInCollection ? pack.packCode : ""
-        }
-    }
 
     var body: some View {
         TabView {
-            CardList(
-                filterSphere: viewCardModel.filterSphere,
-                filterType: viewCardModel.filterType,
-                filterPack: collection,
-//                   filterDeck: viewCardModel.filterDeck,
-                sortParameter: viewCardModel.sortParameter,
-                sortOrder: viewCardModel.sortOrder,
-                searchText: viewCardModel.searchText
-            )
+            CardHome()
                 .tabItem {
                     Label("Cards", systemImage: "rectangle.portrait.fill")
             }

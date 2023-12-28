@@ -71,6 +71,10 @@ final class Card: Identifiable {
     }
 }
 
+enum CardType: String, CaseIterable {
+    case hero, ally, attachment, event, quest = "player side quest", contract, campaign
+}
+
 extension Card {
     static func predicate(
         searchText: String,
@@ -93,29 +97,5 @@ extension Card {
                 (filterDeck.contains(card.code))
             }
         }
-    }
-}
-
-struct CardAnatomy {
-    let title: String
-    let cost: Int
-    let threatCost: Int
-    let sphere: CardSphere
-    let willpower: Int
-    let attack: Int
-    let defense: Int
-    let hitPoint: Int
-    let resource: CardSphere
-    let traits: [String]
-    let gameText: String
-    let cardType: CardType
-    let set: [String:Int]
-
-    enum CardSphere: String, CaseIterable {
-        case leadership, tactics, spirit, lore, neutral, baggins, fellowship
-    }
-
-    enum CardType: String, CaseIterable {
-        case hero, ally, attachment, event, quest = "player side quest", contract, campaign
     }
 }
