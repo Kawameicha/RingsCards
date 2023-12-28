@@ -103,5 +103,8 @@ struct Packs {
         Pack(cycleName: "Starter Decks", cycleCode: "DoG", cyclePosition: 201, packName: "Defenders of Gondor", packCode: "DoG", packPosition: 3),
         Pack(cycleName: "Starter Decks", cycleCode: "RoR", cyclePosition: 201, packName: "Riders of Rohan", packCode: "RoR", packPosition: 4),
         Pack(cycleName: "Scenario Packs", cycleCode: "tDoM", cyclePosition: 202, packName: "The Dark of Mirkwood", packCode: "tDoM", packPosition: 1),
+        Pack(cycleName: "Scenario Packs", cycleCode: "tSotS", cyclePosition: 202, packName: "The Scouring of the Shire", packCode: "tSotS", packPosition: 2),
+        Pack(cycleName: "Scenario Packs", cycleCode: "tNaA", cyclePosition: 202, packName: "The Nine are Abroad", packCode: "tNaA", packPosition: 3),
+        Pack(cycleName: "Scenario Packs", cycleCode: "tSoE", cyclePosition: 202, packName: "The Siege of Erebor", packCode: "tSoE", packPosition: 4),
     ]
 }

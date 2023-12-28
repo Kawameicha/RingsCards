@@ -20,21 +20,21 @@ struct DeckCardInfo: View {
         let heroes = self.deck.heroes.reduce(0) { (result, keyValue) in
             return result + keyValue.value }
 
-        HStack {
-            VStack {
-                if heroes == 0 {
-                    Text("\(player - heroes) cards")
-                    Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")
-                        .foregroundStyle(.red)
-                } else if (player - heroes) < 50 {
-                    Text("\(player - heroes) cards")
-                    Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few cards")
-                        .foregroundStyle(.red)
-                } else {
-                    Text("\(player - heroes) cards")
-                }
+//        HStack {
+        VStack {
+            if heroes == 0 {
+                Text("\(player - heroes) cards")
+                Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")
+                    .foregroundStyle(.red)
+            } else if (player - heroes) < 50 {
+                Text("\(player - heroes) cards")
+                Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few cards")
+                    .foregroundStyle(.red)
+            } else {
+                Text("\(player - heroes) cards")
             }
         }
+//        }
     }
 }
 

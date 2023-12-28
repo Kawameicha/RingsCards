@@ -15,13 +15,13 @@ struct CampaignInfo: View {
     var body: some View {
         @Bindable var viewCampaignModel = viewCampaignModel
 
-        HStack {
-            if count <= 1 {
-                Text("\(count) campaign")
-            } else {
-                Text("\(count) campaigns")
-            }
+//        HStack {
+        if count <= 1 {
+            Text("\(count) campaign")
+        } else {
+            Text("\(count) campaigns")
         }
+//        }
     }
 }
 
