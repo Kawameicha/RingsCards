@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeckInfo: View {
-    @Environment(ViewDeckModel.self) private var viewDeckModel
+    @Environment(ViewDeckModel.self) var viewDeckModel
 
     var count: Int = 0
 

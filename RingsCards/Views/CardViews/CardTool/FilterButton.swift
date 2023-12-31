@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FilterButton: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
+    @Environment(ViewCardModel.self) var viewCardModel
 
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
@@ -19,7 +19,7 @@ struct FilterButton: View {
                     Text(parameter.name)
                 }
             }
-            
+
             Picker("By Type", selection: $viewCardModel.filterType) {
                 ForEach(FilterType.allCases) { parameter in
                     Text(parameter.name)

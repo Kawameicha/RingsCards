@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardInfo: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
+    @Environment(ViewCardModel.self) var viewCardModel
 
     var count: Int = 0
 

@@ -35,6 +35,7 @@ struct CampaignCardList: View {
                                        filterPack: filterPack,
                                        filterDeck: campaign.slots.map{ String($0.key) })
         switch sortParameter {
+        case .code: _cards = Query(filter: predicate, sort: \.code, order: sortOrder)
         case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
         case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
         }

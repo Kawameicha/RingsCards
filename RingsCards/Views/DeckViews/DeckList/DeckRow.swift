@@ -20,13 +20,13 @@ struct DeckRow: View {
                     .font(.system(size: 42.0))
             }
 
-        VStack(alignment: .leading, spacing: 3) {
-            Text(deck.name)
-                .font(.headline)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(deck.name)
+                    .font(.headline)
 
-            Text("\(deck.heroes.count) Heroes, Cards up to \(deck.last_pack)")
-                .foregroundColor(.secondary)
-                .font(.subheadline)
+                Text("\(deck.heroes.count) Heroes, Cards up to \(deck.last_pack)")
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
             }
         }
     }

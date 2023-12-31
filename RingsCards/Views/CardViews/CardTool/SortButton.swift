@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SortButton: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
+    @Environment(ViewCardModel.self) var viewCardModel
 
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
@@ -42,7 +42,7 @@ extension SortOrder {
 }
 
 enum SortParameter: String, CaseIterable, Identifiable {
-    case name, sphere
+    case code, name, sphere
     var id: Self { self }
     var name: String { rawValue.capitalized }
 }

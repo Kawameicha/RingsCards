@@ -10,8 +10,8 @@ import SwiftData
 
 struct DeckNew: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Environment(\.modelContext) private var modelContext
-    @State private var deckName: String = ""
+    @Environment(\.modelContext) var modelContext
+    @State var deckName: String = ""
 
     var body: some View {
         Form {
@@ -23,8 +23,7 @@ struct DeckNew: View {
                 HStack {
                     Spacer()
                     Button("Create Deck", action: {
-                        modelContext.insert(Deck(name: deckName,
-                                                 date_creation: Date()))
+                        modelContext.insert(Deck(name: deckName, date_creation: Date()))
 
                         self.presentationMode.wrappedValue.dismiss()
                     })

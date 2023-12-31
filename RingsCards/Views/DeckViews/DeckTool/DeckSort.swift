@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeckSort: View {
-    @Environment(ViewDeckModel.self) private var viewDeckModel
+    @Environment(ViewDeckModel.self) var viewDeckModel
 
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel

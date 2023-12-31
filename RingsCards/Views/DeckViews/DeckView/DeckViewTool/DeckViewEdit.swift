@@ -1,5 +1,5 @@
 //
-//  DeckEdit.swift
+//  DeckViewEdit.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 25.09.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeckEdit: View {
+struct DeckViewEdit: View {
     var deck: Deck
     var card: Card
     var value = 0
@@ -17,12 +17,12 @@ struct DeckEdit: View {
             VStack(spacing: 9) {
                 Button {
                     if value < card.deck_limit {
-                        deck.self.slots["\(card.code)", default: value] += 1
-                        deck.self.date_update = .now
-                        
+                        deck.slots["\(card.code)", default: value] += 1
+                        deck.date_update = .now
+
                         if card.threat != nil {
-                            deck.self.starting_threat += card.threat ?? 0
-                            deck.self.heroes["\(card.code)", default: value] += 1
+                            deck.starting_threat += card.threat ?? 0
+                            deck.heroes["\(card.code)", default: value] += 1
                         }
                     }
                 } label: {
@@ -32,15 +32,15 @@ struct DeckEdit: View {
 
                 Button {
                     if value > 1 {
-                        deck.self.slots["\(card.code)", default: value] -= 1
-                        deck.self.date_update = .now
+                        deck.slots["\(card.code)", default: value] -= 1
+                        deck.date_update = .now
                     } else if value == 1 {
-                        deck.self.slots["\(card.code)"] = nil
-                        deck.self.date_update = .now
-                        
+                        deck.slots["\(card.code)"] = nil
+                        deck.date_update = .now
+
                         if card.threat != nil {
-                            deck.self.starting_threat -= card.threat ?? 0
-                            deck.self.heroes["\(card.code)", default: value] -= 1
+                            deck.starting_threat -= card.threat ?? 0
+                            deck.heroes["\(card.code)"] = nil
                         }
                     }
                 } label: {
@@ -57,7 +57,7 @@ struct DeckEdit: View {
 #Preview {
     ModelPreview { deck in
         ModelPreview { card in
-            DeckEdit(deck: deck, card: card)
+            DeckViewEdit(deck: deck, card: card)
         }
     }
     .modelContainer(previewModelContainer)

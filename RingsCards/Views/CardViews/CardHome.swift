@@ -9,46 +9,32 @@ import SwiftUI
 import SwiftData
 
 struct CardHome: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
-    @Environment(\.modelContext) private var modelContext
-
-    // Make it an observable object and use CollectionToggle
-    @Query private var packs: [Pack]
-
-    var collection: [String] {
-        packs.map { pack in
-            pack.isInCollection ? pack.packCode : ""
-        }
-    }
-    // ----------
+    @Environment(ViewCardModel.self) var viewCardModel
+    @Environment(\.modelContext) var modelContext
+    @Query(filter: #Predicate<Pack> { pack in
+        pack.isInCollection }) var packs: [Pack]
 
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
         NavigationView {
             CardList(
+                deck: Deck.emptyDeck,
+                editCard: .constant(false),
+                viewCard: .constant(false),
                 filterSphere: viewCardModel.filterSphere,
                 filterType: viewCardModel.filterType,
-                filterPack: collection,
+                filterPack: packs.map { $0.packCode },
                 filterDeck: [],
                 sortParameter: viewCardModel.sortParameter,
                 sortOrder: viewCardModel.sortOrder,
                 searchText: viewCardModel.searchText
             )
-                .refreshable {
-                    await CardResponse.refresh(modelContext: modelContext)
-                }
-                .navigationTitle("Player Cards")
-                .searchable(text: $viewCardModel.searchText)
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        FilterButton()
-                    }
-
-                    ToolbarItem(placement: .topBarTrailing) {
-                        SortButton()
-                    }
-                }
+            .refreshable {
+                await CardResponse.refresh(modelContext: modelContext)
+            }
+            .navigationTitle("Player Cards")
+            .searchable(text: $viewCardModel.searchText)
         }
     }
 }
@@ -57,4 +43,5 @@ struct CardHome: View {
     CardHome()
         .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
+        .environment(ViewDeckModel())
 }

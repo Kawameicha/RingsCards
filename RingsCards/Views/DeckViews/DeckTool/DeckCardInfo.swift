@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeckCardInfo: View {
-    @Environment(ViewDeckModel.self) private var viewDeckModel
+    @Environment(ViewDeckModel.self) var viewDeckModel
 
     var deck: Deck
 
@@ -20,7 +20,6 @@ struct DeckCardInfo: View {
         let heroes = self.deck.heroes.reduce(0) { (result, keyValue) in
             return result + keyValue.value }
 
-//        HStack {
         VStack {
             if heroes == 0 {
                 Text("\(player - heroes) cards")
@@ -34,7 +33,6 @@ struct DeckCardInfo: View {
                 Text("\(player - heroes) cards")
             }
         }
-//        }
     }
 }
 

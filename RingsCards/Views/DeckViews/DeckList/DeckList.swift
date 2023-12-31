@@ -9,10 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct DeckList: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
-    @Environment(ViewDeckModel.self) private var viewDeckModel
-    @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Deck.date_update, order: .reverse) private var decks: [Deck]
+    @Environment(\.modelContext) var modelContext
+    @Query var decks: [Deck]
 
     init(
         sortDeckParameter: SortDeckParameter = .name,
@@ -28,7 +26,6 @@ struct DeckList: View {
     }
 
     var body: some View {
-        @Bindable var viewDeckModel = viewDeckModel
 
         NavigationView {
             List {
@@ -38,14 +35,7 @@ struct DeckList: View {
                 } else {
                     ForEach(decks) { deck in
                         NavigationLink {
-                            DeckView(deck: deck,
-                                     filterSphere: viewCardModel.filterSphere,
-                                     filterType: viewCardModel.filterType,
-//                                     filterPack: viewCardModel.filterPack,
-                                     filterDeck: deck.slots.map{ String($0.key) },
-                                     sortParameter: viewCardModel.sortParameter,
-                                     sortOrder: viewCardModel.sortOrder,
-                                     searchText: viewCardModel.searchText)
+                            DeckViewHome(deck: deck)
                         } label: {
                             DeckRow(deck: deck)
                         }
@@ -53,8 +43,6 @@ struct DeckList: View {
                     .onDelete(perform: deleteItems)
                 }
             }
-            .navigationTitle("My Decks")
-            .searchable(text: $viewDeckModel.searchText)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     DeckSort()
@@ -73,8 +61,8 @@ struct DeckList: View {
     }
 
     func deleteItems(offsets: IndexSet) {
-            for index in offsets {
-                modelContext.delete(decks[index])
+        for index in offsets {
+            modelContext.delete(decks[index])
         }
     }
 }
@@ -82,6 +70,5 @@ struct DeckList: View {
 #Preview {
     DeckList()
         .modelContainer(previewModelContainer)
-        .environment(ViewCardModel())
         .environment(ViewDeckModel())
 }

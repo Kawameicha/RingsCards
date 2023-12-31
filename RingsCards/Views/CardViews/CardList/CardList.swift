@@ -9,11 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct CardList: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
-    @Environment(\.modelContext) private var modelContext
-    @Query private var cards: [Card]
+    @Environment(ViewCardModel.self) var viewCardModel
+    @Environment(\.modelContext) var modelContext
+    @Query var cards: [Card]
+
+    @Bindable var deck: Deck
+    @Binding var editCard: Bool
+    @Binding var viewCard: Bool
 
     init(
+        deck: Deck,
+        editCard: Binding<Bool>,
+        viewCard: Binding<Bool>,
+
         filterSphere: FilterSphere = .all,
         filterType: FilterType = .any,
         filterPack: [String] = [],
@@ -22,12 +30,19 @@ struct CardList: View {
         sortOrder: SortOrder = .forward,
         searchText: String = ""
     ) {
-        let predicate = Card.predicate(searchText: searchText,
-                                       filterSphere: filterSphere.rawValue,
-                                       filterType: filterType.rawValue,
-                                       filterPack: filterPack,
-                                       filterDeck: filterDeck)
+        self.deck = deck
+        self._editCard = editCard
+        self._viewCard = viewCard
+
+        let predicate = Card.predicate(
+            searchText: searchText,
+            filterSphere: filterSphere.rawValue,
+            filterType: filterType.rawValue,
+            filterPack: filterPack,
+            filterDeck: filterDeck
+        )
         switch sortParameter {
+        case .code: _cards = Query(filter: predicate, sort: \.code, order: sortOrder)
         case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
         case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
         }
@@ -46,13 +61,25 @@ struct CardList: View {
                             NavigationLink {
                                 CardView(card: card)
                             } label: {
-                                CardRow(card: card)
+                                if editCard {
+                                    DeckViewEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
+                                } else {
+                                    CardRow(card: card)
+                                }
                             }
                         }
                     }
                 }
             }
             .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    FilterButton()
+                }
+
+                ToolbarItem(placement: .topBarTrailing) {
+                    SortButton()
+                }
+
                 ToolbarItem(placement: .bottomBar) {
                     CardInfo(count: cards.count)
                 }
@@ -62,7 +89,10 @@ struct CardList: View {
 }
 
 #Preview {
-    CardList()
-        .modelContainer(previewModelContainer)
-        .environment(ViewCardModel())
+    return ModelPreview { deck in
+        CardList(deck: deck, editCard: .constant(false), viewCard: .constant(false))
+    }
+    .modelContainer(previewModelContainer)
+    .environment(ViewCardModel())
+    .environment(ViewDeckModel())
 }

@@ -10,10 +10,10 @@ import SwiftData
 
 @main
 struct RingsCardsApp: App {
-    @StateObject private var ringsData = RingsData()
-    @State private var viewCardModel = ViewCardModel()
-    @State private var viewDeckModel = ViewDeckModel()
-    @State private var viewCampaignModel = ViewCampaignModel()
+    @StateObject var ringsData = RingsData()
+    @State var viewCardModel = ViewCardModel()
+    @State var viewDeckModel = ViewDeckModel()
+    @State var viewCampaignModel = ViewCampaignModel()
 
     var body: some Scene {
         WindowGroup {
