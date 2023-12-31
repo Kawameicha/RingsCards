@@ -81,7 +81,7 @@ struct CardList: View {
                 }
 
                 ToolbarItem(placement: .bottomBar) {
-                    CardInfo(count: cards.count)
+                    CardInfo(count: cards.count, deck: deck)
                 }
             }
         }
@@ -89,7 +89,7 @@ struct CardList: View {
 }
 
 #Preview {
-    return ModelPreview { deck in
+    ModelPreview { deck in
         CardList(deck: deck, editCard: .constant(false), viewCard: .constant(false))
     }
     .modelContainer(previewModelContainer)

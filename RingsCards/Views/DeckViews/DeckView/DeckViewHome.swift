@@ -36,10 +36,6 @@ struct DeckViewHome: View {
                 .navigationTitle($deck.name)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .bottomBar) {
-                        DeckCardInfo(deck: deck)
-                    }
-
                     ToolbarTitleMenu {
                         Button {
                             viewCard.toggle()
@@ -72,10 +68,6 @@ struct DeckViewHome: View {
                 .navigationTitle($deck.name)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .bottomBar) {
-                        DeckCardInfo(deck: deck)
-                    }
-
                     ToolbarTitleMenu {
                         Button {
                             viewCard.toggle()
