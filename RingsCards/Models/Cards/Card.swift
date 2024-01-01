@@ -38,8 +38,9 @@ final class Card: Identifiable {
     let has_errata: Bool
     let url: String
     let imagesrc: String
+    var userCollection: UserCollection?
 
-    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, traits: String?, text: String?, flavor: String?, is_unique: Bool, threat: Int? = nil, cost: String? = nil, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, deck_limit: Int, illustrator: String?, octgnid: String?, has_errata: Bool, url: String, imagesrc: String) {
+    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, traits: String?, text: String?, flavor: String?, is_unique: Bool, threat: Int? = nil, cost: String? = nil, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, deck_limit: Int, illustrator: String?, octgnid: String?, has_errata: Bool, url: String, imagesrc: String, userCollection: UserCollection? = nil) {
         self.pack_code = pack_code
         self.pack_name = pack_name
         self.type_code = type_code
@@ -68,6 +69,7 @@ final class Card: Identifiable {
         self.has_errata = has_errata
         self.url = url
         self.imagesrc = imagesrc
+        self.userCollection = userCollection
     }
 }
 
@@ -86,7 +88,8 @@ extension Card {
 
         return #Predicate<Card> { card in
             if filterDeck.isEmpty {
-                (filterPack.contains(card.pack_code))
+//                (filterPack.contains(card.pack_code))
+                (card.userCollection?.isInCollection == true)
                 &&
                 (filterType == "any" || card.type_name == filterType)
                 &&

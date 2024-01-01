@@ -47,6 +47,8 @@ let previewModelContainer: ModelContainer = {
                                 has_errata: item.has_errata,
                                 url: item.url,
                                 imagesrc: item.imagesrc)
+
+                let userCollection = UserCollection(card: card, isInCollection: true)
                     container.mainContext.insert(card)
             }
 

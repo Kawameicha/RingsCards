@@ -31,7 +31,7 @@ struct CardHome: View {
                 searchText: viewCardModel.searchText
             )
             .refreshable {
-                await CardResponse.refresh(modelContext: modelContext)
+                await CardResponse.refresh(modelContext: modelContext, packs: packs)
             }
             .navigationTitle("Player Cards")
             .searchable(text: $viewCardModel.searchText)

@@ -79,7 +79,7 @@ enum DownloadError: Error {
 
 extension CardResponse {
     @MainActor
-    static func refresh(modelContext: ModelContext) async {
+    static func refresh(modelContext: ModelContext, packs: [Pack]) async {
         do {
             let cards = try await fetchCards()
 
@@ -112,6 +112,9 @@ extension CardResponse {
                                 has_errata: item.has_errata,
                                 url: item.url,
                                 imagesrc: item.imagesrc)
+
+                if packs.map({ $0.packCode }).contains(item.pack_code) {
+                    _ = UserCollection(card: card, isInCollection: card.userCollection?.isInCollection ?? true) }
                     modelContext.insert(card)
             }
 
