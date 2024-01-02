@@ -88,8 +88,7 @@ extension Card {
 
         return #Predicate<Card> { card in
             if filterDeck.isEmpty {
-//                (filterPack.contains(card.pack_code))
-                (card.userCollection?.isInCollection == true)
+                (filterPack.isEmpty || filterPack.contains(card.pack_code))
                 &&
                 (filterType == "any" || card.type_name == filterType)
                 &&

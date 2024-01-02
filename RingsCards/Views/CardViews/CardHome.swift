@@ -13,28 +13,37 @@ struct CardHome: View {
     @Environment(\.modelContext) var modelContext
     @Query(filter: #Predicate<Pack> { pack in
         pack.isInCollection }) var packs: [Pack]
+    @State private var cardList = false
 
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
         NavigationView {
-            CardList(
-                deck: Deck.emptyDeck,
-                editCard: .constant(false),
-                viewCard: .constant(false),
-                filterSphere: viewCardModel.filterSphere,
-                filterType: viewCardModel.filterType,
-                filterPack: packs.map { $0.packCode },
-                filterDeck: [],
-                sortParameter: viewCardModel.sortParameter,
-                sortOrder: viewCardModel.sortOrder,
-                searchText: viewCardModel.searchText
-            )
-            .refreshable {
-                await CardResponse.refresh(modelContext: modelContext, packs: packs)
+            if cardList {
+                CardList(
+                    deck: Deck.emptyDeck,
+                    editCard: .constant(false),
+                    viewCard: .constant(false),
+                    filterSphere: viewCardModel.filterSphere,
+                    filterType: viewCardModel.filterType,
+                    filterPack: packs.map { $0.packCode },
+                    filterDeck: [],
+                    sortParameter: viewCardModel.sortParameter,
+                    sortOrder: viewCardModel.sortOrder,
+                    searchText: viewCardModel.searchText
+                )
+                .refreshable {
+                    await CardResponse.refresh(modelContext: modelContext, packs: packs)
+                }
+                .navigationTitle("Player Cards")
+                .searchable(text: $viewCardModel.searchText)
             }
-            .navigationTitle("Player Cards")
-            .searchable(text: $viewCardModel.searchText)
+        }
+        .onAppear {
+            cardList = true
+        }
+        .onDisappear {
+            cardList = false
         }
     }
 }

@@ -9,31 +9,18 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(ViewCampaignModel.self) var viewCampaignModel
-    @Environment(\.modelContext) var modelContext
+    @State private var selection: AppScreen? = .cards
+    @State private var prefersTabNavigation = true
 
     var body: some View {
-        TabView {
-            CardHome()
-                .tabItem {
-                    Label("Cards", systemImage: "rectangle.portrait.fill")
-                }
-            DeckHome()
-                .tabItem {
-                    Label("Decks", systemImage: "person.3.fill")
-                }
-            CampaignList(
-                sortCampaignParameter: viewCampaignModel.sortCampaignParameter,
-                sortOrder: viewCampaignModel.sortOrder,
-                searchText: viewCampaignModel.searchText
-            )
-            .tabItem {
-                Label("Campaigns", systemImage: "book.fill")
+        if prefersTabNavigation {
+            AppTabView(selection: $selection)
+        } else {
+            NavigationSplitView {
+                AppSidebarList(selection: $selection)
+            } detail: {
+                AppDetailColumn(screen: selection)
             }
-            SettingView()
-                .tabItem {
-                    Label("Settings", systemImage: "slider.horizontal.3")
-                }
         }
     }
 }

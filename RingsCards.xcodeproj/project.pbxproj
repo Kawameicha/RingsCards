@@ -32,6 +32,8 @@
 		59355A082AD2962800C894B3 /* PackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59355A072AD2962800C894B3 /* PackList.swift */; };
 		5939A0412A9B8973008DC370 /* Scenarios.json in Resources */ = {isa = PBXBuildFile; fileRef = 5939A0402A9B8973008DC370 /* Scenarios.json */; };
 		5944A3DD2A9B3D5F00E6F562 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */; };
+		594AB53D2B4352260075D176 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB53C2B4352260075D176 /* AppSidebarList.swift */; };
+		594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB53E2B4352500075D176 /* AppDetailColumn.swift */; };
 		594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B766A2AA7026200ED71AF /* CampaignList.swift */; };
 		594B766D2AA7050800ED71AF /* CampaignRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B766C2AA7050800ED71AF /* CampaignRow.swift */; };
 		594E38E22AD29EBC00577EE0 /* Packs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E38E12AD29EBC00577EE0 /* Packs.swift */; };
@@ -53,6 +55,8 @@
 		5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997196A2AC3011D0095AAE7 /* SampleDeck.swift */; };
 		59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59992F562AAB0CE300C6307E /* DeckNew.swift */; };
 		59A4E2C62AFEA71E00CE9BEA /* CampaignCardEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */; };
+		59A5E6582B43345F0028A3DE /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5E6572B43345F0028A3DE /* AppScreen.swift */; };
+		59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5E6592B4335E20028A3DE /* AppTabView.swift */; };
 		59A844D22B01695600BC76D9 /* CampaignHeroList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A844D12B01695600BC76D9 /* CampaignHeroList.swift */; };
 		59AFE7E72B29E396008AF007 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE7E62B29E396008AF007 /* SFUIText-Regular.ttf */; };
 		59AFE7F02B29E4FA008AF007 /* SFUIText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE7EE2B29E4FA008AF007 /* SFUIText-Italic.ttf */; };
@@ -116,6 +120,8 @@
 		59355A072AD2962800C894B3 /* PackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackList.swift; sourceTree = "<group>"; };
 		5939A0402A9B8973008DC370 /* Scenarios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Scenarios.json; sourceTree = "<group>"; };
 		5944A3DC2A9B3D5F00E6F562 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
+		594AB53C2B4352260075D176 /* AppSidebarList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
+		594AB53E2B4352500075D176 /* AppDetailColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
 		594B766A2AA7026200ED71AF /* CampaignList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignList.swift; sourceTree = "<group>"; };
 		594B766C2AA7050800ED71AF /* CampaignRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignRow.swift; sourceTree = "<group>"; };
 		594E38E12AD29EBC00577EE0 /* Packs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packs.swift; sourceTree = "<group>"; };
@@ -137,6 +143,8 @@
 		5997196A2AC3011D0095AAE7 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		59992F562AAB0CE300C6307E /* DeckNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckNew.swift; sourceTree = "<group>"; };
 		59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardEdit.swift; sourceTree = "<group>"; };
+		59A5E6572B43345F0028A3DE /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		59A5E6592B4335E20028A3DE /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		59A844D12B01695600BC76D9 /* CampaignHeroList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignHeroList.swift; sourceTree = "<group>"; };
 		59AFE7E62B29E396008AF007 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.ttf"; sourceTree = "<group>"; };
 		59AFE7EE2B29E4FA008AF007 /* SFUIText-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Italic.ttf"; sourceTree = "<group>"; };
@@ -378,6 +386,7 @@
 				5912EE212A93662800B2F8B5 /* CardViews */,
 				729BF2982A95812900E67871 /* DeckViews */,
 				729BF2972A95810800E67871 /* CampaignViews */,
+				59A5E6562B4334500028A3DE /* Navigation */,
 				595A66B12A9DE84F0040C952 /* SettingViews */,
 			);
 			path = Views;
@@ -429,6 +438,17 @@
 				59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */,
 			);
 			path = CampaignCards;
+			sourceTree = "<group>";
+		};
+		59A5E6562B4334500028A3DE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				594AB53E2B4352500075D176 /* AppDetailColumn.swift */,
+				59A5E6572B43345F0028A3DE /* AppScreen.swift */,
+				594AB53C2B4352260075D176 /* AppSidebarList.swift */,
+				59A5E6592B4335E20028A3DE /* AppTabView.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		59A844D02B01692400BC76D9 /* CampaignHeroes */ = {
@@ -666,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B943FA2AC6BE8D0059C52A /* FilterButton.swift in Sources */,
+				59A5E6582B43345F0028A3DE /* AppScreen.swift in Sources */,
 				59A4E2C62AFEA71E00CE9BEA /* CampaignCardEdit.swift in Sources */,
 				59E5F8FC2B029A2E0028BCFB /* CampaignHeroFallen.swift in Sources */,
 				59862D752A91F62100628449 /* RingsData.swift in Sources */,
@@ -695,6 +716,7 @@
 				595078752AC5D8FA007BFAA0 /* SortButton.swift in Sources */,
 				59B1A3862AEFE29F00ADB701 /* EncounterList.swift in Sources */,
 				59C9B8BB2A9751B700520310 /* UserEdit.swift in Sources */,
+				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
 				59FD325F2AEE62EF00D9597B /* KeywordList.swift in Sources */,
 				5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */,
 				59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */,
@@ -722,6 +744,7 @@
 				59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */,
 				5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */,
 				59A844D22B01695600BC76D9 /* CampaignHeroList.swift in Sources */,
+				594AB53D2B4352260075D176 /* AppSidebarList.swift in Sources */,
 				59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */,
 				59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */,
 				59862D702A91F13100628449 /* Card.swift in Sources */,
@@ -733,6 +756,7 @@
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
 				59E5F8F62B027C6B0028BCFB /* CampaignDeckHost.swift in Sources */,
 				59EA4DE02B4184330078F7F8 /* UserCollection.swift in Sources */,
+				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,
 				596DD7EF2A9E161C00556B7B /* ScenarioView.swift in Sources */,
 				5944A3DD2A9B3D5F00E6F562 /* Scenario.swift in Sources */,
 				594B766D2AA7050800ED71AF /* CampaignRow.swift in Sources */,
