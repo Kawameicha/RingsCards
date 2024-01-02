@@ -75,6 +75,8 @@ final class Card: Identifiable {
 
 enum CardType: String, CaseIterable {
     case hero, ally, attachment, event, quest = "player side quest", contract, campaign
+    var id: Self { self }
+    var name: String { rawValue.capitalized }
 }
 
 extension Card {

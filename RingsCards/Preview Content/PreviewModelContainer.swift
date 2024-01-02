@@ -20,35 +20,36 @@ let previewModelContainer: ModelContainer = {
         if try modelContext.fetch(FetchDescriptor<Card>()).isEmpty {
             let cards = CardJSONDecoder.decode(from: "Cards")
 
-            cards.forEach { item in
-                let card = Card(pack_code: item.pack_code,
-                                pack_name: item.pack_name,
-                                type_code: item.type_code,
-                                type_name: item.type_name,
-                                sphere_code: item.sphere_code,
-                                sphere_name: item.sphere_name,
-                                position: item.position,
-                                code: item.code,
-                                name: item.name,
-                                traits: item.traits,
-                                text: item.text,
-                                flavor: item.flavor,
-                                is_unique: item.is_unique,
-                                threat: item.threat,
-                                cost: item.cost,
-                                willpower: item.willpower,
-                                attack: item.attack,
-                                defense: item.defense,
-                                health: item.health,
-                                quantity: item.quantity,
-                                deck_limit: item.deck_limit,
-                                illustrator: item.illustrator,
-                                octgnid: item.octgnid,
-                                has_errata: item.has_errata,
-                                url: item.url,
-                                imagesrc: item.imagesrc)
+            cards.forEach { card in
+                let card = Card(pack_code: card.pack_code,
+                                pack_name: card.pack_name,
+                                type_code: card.type_code,
+                                type_name: card.type_name,
+                                sphere_code: card.sphere_code,
+                                sphere_name: card.sphere_name,
+                                position: card.position,
+                                code: card.code,
+                                name: card.name,
+                                traits: card.traits,
+                                text: card.text,
+                                flavor: card.flavor,
+                                is_unique: card.is_unique,
+                                threat: card.threat,
+                                cost: card.cost,
+                                willpower: card.willpower,
+                                attack: card.attack,
+                                defense: card.defense,
+                                health: card.health,
+                                quantity: card.quantity,
+                                deck_limit: card.deck_limit,
+                                illustrator: card.illustrator,
+                                octgnid: card.octgnid,
+                                has_errata: card.has_errata,
+                                url: card.url,
+                                imagesrc: card.imagesrc)
 
-                let userCollection = UserCollection(card: card, isInCollection: true)
+                // MARK: this only to used together with UserCollection
+                // let userCollection = UserCollection(card: card, isInCollection: true)
                     container.mainContext.insert(card)
             }
 

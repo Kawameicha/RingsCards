@@ -57,7 +57,7 @@ struct CardList: View {
                     Section(header: Text("\(type)")) {
                         ForEach(cards.filter { card in
                             card.type_name.contains("\(type)")
-                        }) {card in
+                        }) { card in
                             NavigationLink {
                                 CardView(card: card)
                             } label: {
