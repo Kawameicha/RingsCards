@@ -14,7 +14,7 @@ class Keyword {
     @Attribute(.unique) let code: String
     let name: String
     let text: String
-    
+
     init(id: Int, code: String, name: String, text: String) {
         self.id = id
         self.code = code

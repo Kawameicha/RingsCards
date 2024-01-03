@@ -13,16 +13,18 @@ struct DeckViewHome: View {
     @Environment(\.modelContext) var modelContext
     @Query(filter: #Predicate<Pack> { pack in
         pack.isInCollection }) var packs: [Pack]
-
     @State var editCard = false
     @State var viewCard = false
     @Bindable var deck: Deck
 
     var body: some View {
+        @Bindable var viewCardModel = viewCardModel
+
         NavigationView {
             if viewCard {
                 CardList(
                     deck: deck,
+                    deckView: true,
                     editCard: .constant(true),
                     viewCard: $viewCard,
                     filterSphere: viewCardModel.filterSphere,
@@ -35,26 +37,21 @@ struct DeckViewHome: View {
                 )
                 .navigationTitle($deck.name)
                 .navigationBarTitleDisplayMode(.inline)
+                .searchable(text: $viewCardModel.searchText)
                 .toolbar {
-                    ToolbarTitleMenu {
-                        Button {
-                            viewCard.toggle()
-                        } label: {
-                            Label("Add Card", systemImage: "plus.rectangle.portrait")
-                        }
+                    ToolbarItemGroup(placement: .topBarTrailing) {
+                        DeckViewButton(viewCard: $viewCard)
+                    }
 
-                        Button {
-                            editCard.toggle()
-                        } label: {
-                            Label("Edit Deck", systemImage: "plus.forwardslash.minus")
-                        }
-
-                        RenameButton()
+                    ToolbarItemGroup(placement: .secondaryAction) {
+                        CardFilterButton()
+                        CardSortButton()
                     }
                 }
             } else {
                 CardList(
                     deck: deck,
+                    deckView: true,
                     editCard: $editCard,
                     viewCard: .constant(false),
                     filterSphere: viewCardModel.filterSphere,
@@ -68,24 +65,14 @@ struct DeckViewHome: View {
                 .navigationTitle($deck.name)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarTitleMenu {
-                        Button {
-                            viewCard.toggle()
-                        } label: {
-                            Label("Add Card", systemImage: "plus.rectangle.portrait")
-                        }
-
-                        Button {
-                            editCard.toggle()
-                        } label: {
-                            Label("Edit Deck", systemImage: "plus.forwardslash.minus")
-                        }
-
-                        RenameButton()
+                    ToolbarItemGroup(placement: .topBarTrailing) {
+                        DeckViewButton(viewCard: $viewCard)
+                        DeckEditButton(editCard: $editCard)
                     }
                 }
             }
         }
+        .toolbar(.hidden, for: .bottomBar, .navigationBar)
     }
 }
 

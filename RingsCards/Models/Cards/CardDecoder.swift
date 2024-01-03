@@ -116,9 +116,8 @@ extension CardResponse {
                 // MARK: this only to used together with UserCollection
                 // if packs.map({ $0.packCode }).contains(card.pack_code) {
                 //    _ = UserCollection(card: card, isInCollection: card.userCollection?.isInCollection ?? true) }
-                    modelContext.insert(card)
+                modelContext.insert(card)
             }
-
         } catch {
             fatalError("Failed to fetch cards")
         }

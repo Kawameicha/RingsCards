@@ -50,7 +50,7 @@ let previewModelContainer: ModelContainer = {
 
                 // MARK: this only to used together with UserCollection
                 // let userCollection = UserCollection(card: card, isInCollection: true)
-                    container.mainContext.insert(card)
+                container.mainContext.insert(card)
             }
 
             if try modelContext.fetch(FetchDescriptor<Deck>()).isEmpty {

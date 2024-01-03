@@ -16,9 +16,13 @@ struct DeckHome: View {
         @Bindable var viewDeckModel = viewDeckModel
 
         NavigationView {
-            DeckList()
-                .navigationTitle("My Decks")
-                .searchable(text: $viewDeckModel.searchText)
+            DeckList(
+                sortDeckParameter: viewDeckModel.sortDeckParameter,
+                sortOrder: viewDeckModel.sortOrder,
+                searchText: viewDeckModel.searchText
+            )
+            .navigationTitle("My Decks")
+            .searchable(text: $viewDeckModel.searchText)
         }
     }
 }

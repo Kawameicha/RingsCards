@@ -8,16 +8,10 @@
 import SwiftUI
 
 struct CardInfo: View {
-    @Environment(ViewCardModel.self) var viewCardModel
-    @Environment(ViewDeckModel.self) var viewDeckModel
-
     var count: Int = 0
     var deck: Deck
 
     var body: some View {
-        @Bindable var viewCardModel = viewCardModel
-        @Bindable var viewDeckModel = viewDeckModel
-
         if !(deck.slots.isEmpty) {
             let player = deck.slots.reduce(0) { (result, keyValue) in
                 return result + keyValue.value }
@@ -50,6 +44,4 @@ struct CardInfo: View {
         CardInfo(deck: deck)
     }
     .modelContainer(previewModelContainer)
-    .environment(ViewCardModel())
-    .environment(ViewDeckModel())
 }

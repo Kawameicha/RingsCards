@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DeckList: View {
+    @Environment(ViewDeckModel.self) var viewDeckModel
     @Environment(\.modelContext) var modelContext
     @Query var decks: [Deck]
 
@@ -17,25 +18,32 @@ struct DeckList: View {
         sortOrder: SortOrder = .forward,
         searchText: String = ""
     ) {
-        let predicate = Deck.predicate(searchText: searchText)
+        let predicate = Deck.predicate(
+            searchText: searchText
+        )
         switch sortDeckParameter {
         case .name: _decks = Query(filter: predicate, sort: \.name, order: sortOrder)
-        case .date_creation: _decks = Query(filter: predicate, sort: \.date_creation, order: sortOrder)
         case .date_update: _decks = Query(filter: predicate, sort: \.date_update, order: sortOrder)
+        case .date_creation: _decks = Query(filter: predicate, sort: \.date_creation, order: sortOrder)
         }
     }
 
     var body: some View {
+        @Bindable var viewDeckModel = viewDeckModel
 
         NavigationView {
             List {
                 if decks.isEmpty {
-                    NavigationLink(destination: DeckNew(),
-                                   label: { Text("Create a Deck") })
+                    NavigationLink {
+                        DeckNew()
+                    } label: {
+                        Text("Create a Deck")
+                    }
                 } else {
                     ForEach(decks) { deck in
                         NavigationLink {
                             DeckViewHome(deck: deck)
+                                .toolbar(.hidden, for: .bottomBar)
                         } label: {
                             DeckRow(deck: deck)
                         }
@@ -44,16 +52,12 @@ struct DeckList: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    DeckSort()
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    DeckSortButton()
+                    DeckNewButton()
                 }
-
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink(destination: DeckNew(),
-                                   label: { Image(systemName: "plus") })
-                }
-
-                ToolbarItem(placement: .bottomBar) {
+                
+                ToolbarItem(placement: .status) {
                     DeckInfo(count: decks.count)
                 }
             }
@@ -71,4 +75,5 @@ struct DeckList: View {
     DeckList()
         .modelContainer(previewModelContainer)
         .environment(ViewDeckModel())
+        .environment(ViewCardModel())
 }

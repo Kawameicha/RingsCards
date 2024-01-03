@@ -1,9 +1,9 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The detail column of the split view.
-*/
+//
+//  AppDetailColumn.swift
+//  RingsCards
+//
+//  Created by Christoph Freier on 01.01.24.
+//
 
 import SwiftUI
 import SwiftData

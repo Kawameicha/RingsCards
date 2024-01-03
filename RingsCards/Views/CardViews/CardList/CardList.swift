@@ -12,13 +12,14 @@ struct CardList: View {
     @Environment(ViewCardModel.self) var viewCardModel
     @Environment(\.modelContext) var modelContext
     @Query var cards: [Card]
-
     @Bindable var deck: Deck
+    var deckView = false
     @Binding var editCard: Bool
     @Binding var viewCard: Bool
 
     init(
         deck: Deck,
+        deckView: Bool,
         editCard: Binding<Bool>,
         viewCard: Binding<Bool>,
 
@@ -31,6 +32,7 @@ struct CardList: View {
         searchText: String = ""
     ) {
         self.deck = deck
+        self.deckView = deckView
         self._editCard = editCard
         self._viewCard = viewCard
 
@@ -51,37 +53,54 @@ struct CardList: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        NavigationStack {
-            List {
-                ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
-                    Section(header: Text("\(type)")) {
-                        ForEach(cards.filter { card in
-                            card.type_name.contains("\(type)")
-                        }) { card in
-                            NavigationLink {
-                                CardView(card: card)
-                            } label: {
-                                if editCard {
-                                    DeckViewEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
-                                } else {
+        NavigationView {
+            if deckView {
+                List {
+                    ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                        Section(header: Text("\(type)")) {
+                            ForEach(cards.filter { card in
+                                card.type_name.contains("\(type)")
+                            }) { card in
+                                NavigationLink {
+                                    CardView(card: card)
+                                        .toolbar(.hidden, for: .bottomBar)
+                                } label: {
+                                    if editCard {
+                                        CardEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
+                                    } else {
+                                        CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                List {
+                    ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                        Section(header: Text("\(type)")) {
+                            ForEach(cards.filter { card in
+                                card.type_name.contains("\(type)")
+                            }) { card in
+                                NavigationLink {
+                                    CardView(card: card)
+                                        .toolbar(.hidden, for: .bottomBar)
+                                } label: {
                                     CardRow(card: card)
                                 }
                             }
                         }
                     }
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    FilterButton()
-                }
-
-                ToolbarItem(placement: .topBarTrailing) {
-                    SortButton()
-                }
-
-                ToolbarItem(placement: .bottomBar) {
-                    CardInfo(count: cards.count, deck: deck)
+                .toolbar {
+                    ToolbarItemGroup(placement: .topBarTrailing) {
+                        CardFilterButton()
+                        CardSortButton()
+                    }
+                    
+                    ToolbarItem(placement: .status) {
+                        CardInfo(count: cards.count, deck: deck)
+                    }
                 }
             }
         }
@@ -90,7 +109,7 @@ struct CardList: View {
 
 #Preview {
     ModelPreview { deck in
-        CardList(deck: deck, editCard: .constant(false), viewCard: .constant(false))
+        CardList(deck: deck, deckView: false, editCard: .constant(false), viewCard: .constant(false))
     }
     .modelContainer(previewModelContainer)
     .environment(ViewCardModel())

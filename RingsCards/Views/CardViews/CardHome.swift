@@ -13,7 +13,7 @@ struct CardHome: View {
     @Environment(\.modelContext) var modelContext
     @Query(filter: #Predicate<Pack> { pack in
         pack.isInCollection }) var packs: [Pack]
-    @State private var cardList = false
+    @State var cardList = false
 
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
@@ -22,6 +22,7 @@ struct CardHome: View {
             if cardList {
                 CardList(
                     deck: Deck.emptyDeck,
+                    deckView: false,
                     editCard: .constant(false),
                     viewCard: .constant(false),
                     filterSphere: viewCardModel.filterSphere,

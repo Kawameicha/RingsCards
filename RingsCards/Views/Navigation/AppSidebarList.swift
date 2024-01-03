@@ -1,22 +1,22 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The sidebar list.
-*/
+//
+//  AppSidebarList.swift
+//  RingsCards
+//
+//  Created by Christoph Freier on 01.01.24.
+//
 
 import SwiftUI
 
 struct AppSidebarList: View {
     @Binding var selection: AppScreen?
-    
+
     var body: some View {
         List(AppScreen.allCases, selection: $selection) { screen in
             NavigationLink(value: screen) {
                 screen.label
             }
         }
-        .navigationTitle("Backyard Birds")
+        .navigationTitle("RingsCards")
     }
 }
 

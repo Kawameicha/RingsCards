@@ -1,5 +1,5 @@
 //
-//  SortButton.swift
+//  CardSortButton.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 28.09.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SortButton: View {
+struct CardSortButton: View {
     @Environment(ViewCardModel.self) var viewCardModel
 
     var body: some View {
@@ -48,6 +48,6 @@ enum SortParameter: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    SortButton()
+    CardSortButton()
         .environment(ViewCardModel())
 }

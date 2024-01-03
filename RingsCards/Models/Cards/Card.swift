@@ -99,6 +99,8 @@ extension Card {
                 (searchText.isEmpty || card.name.localizedStandardContains(searchText))
             } else {
                 (filterDeck.contains(card.code))
+                &&
+                (searchText.isEmpty || card.name.localizedStandardContains(searchText))
             }
         }
     }

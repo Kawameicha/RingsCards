@@ -9,8 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var selection: AppScreen? = .cards
-    @State private var prefersTabNavigation = true
+    @State var selection: AppScreen? = .cards
+    @State var prefersTabNavigation = true
 
     var body: some View {
         if prefersTabNavigation {

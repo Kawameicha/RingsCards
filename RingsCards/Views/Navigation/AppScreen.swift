@@ -30,7 +30,7 @@ extension AppScreen {
             Label("Settings", systemImage: "slider.horizontal.3")
         }
     }
-    
+
     @ViewBuilder
     var destination: some View {
         switch self {

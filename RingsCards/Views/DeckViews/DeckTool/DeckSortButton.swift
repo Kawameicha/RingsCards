@@ -1,5 +1,5 @@
 //
-//  DeckSort.swift
+//  DeckSortButton.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 16.12.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeckSort: View {
+struct DeckSortButton: View {
     @Environment(ViewDeckModel.self) var viewDeckModel
 
     var body: some View {
@@ -39,6 +39,6 @@ enum SortDeckParameter: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    DeckSort()
+    DeckSortButton()
         .environment(ViewDeckModel())
 }

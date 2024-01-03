@@ -1,5 +1,5 @@
 //
-//  FilterButton.swift
+//  CardFilterButton.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 29.09.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FilterButton: View {
+struct CardFilterButton: View {
     @Environment(ViewCardModel.self) var viewCardModel
 
     var body: some View {
@@ -45,6 +45,6 @@ enum FilterType: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    FilterButton()
+    CardFilterButton()
         .environment(ViewCardModel())
 }
