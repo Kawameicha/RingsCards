@@ -31,35 +31,32 @@ struct DeckList: View {
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel
 
-        NavigationView {
-            List {
-                if decks.isEmpty {
+        List {
+            if decks.isEmpty {
+                NavigationLink {
+                    DeckNew()
+                } label: {
+                    Text("Create a Deck")
+                }
+            } else {
+                ForEach(decks) { deck in
                     NavigationLink {
-                        DeckNew()
+                        DeckViewHome(deck: deck)
                     } label: {
-                        Text("Create a Deck")
+                        DeckRow(deck: deck)
                     }
-                } else {
-                    ForEach(decks) { deck in
-                        NavigationLink {
-                            DeckViewHome(deck: deck)
-                                .toolbar(.hidden, for: .bottomBar)
-                        } label: {
-                            DeckRow(deck: deck)
-                        }
-                    }
-                    .onDelete(perform: deleteItems)
                 }
+                .onDelete(perform: deleteItems)
             }
-            .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    DeckSortButton()
-                    DeckNewButton()
-                }
-                
-                ToolbarItem(placement: .status) {
-                    DeckInfo(count: decks.count)
-                }
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                DeckSortButton()
+                DeckNewButton()
+            }
+
+            ToolbarItem(placement: .bottomBar) {
+                DeckInfo(count: decks.count)
             }
         }
     }

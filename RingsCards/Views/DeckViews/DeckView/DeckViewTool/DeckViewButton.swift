@@ -14,7 +14,7 @@ struct DeckViewButton: View {
         Button {
             viewCard.toggle()
         } label: {
-            Label("Add Cards", systemImage: viewCard ? "checkmark.rectangle.portrait" : "plus.rectangle.portrait")
+            Label("Add Cards", systemImage: viewCard ? "pencil.slash" : "pencil.line")
         }
     }
 }

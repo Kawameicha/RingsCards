@@ -20,59 +20,56 @@ struct DeckViewHome: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        NavigationView {
-            if viewCard {
-                CardList(
-                    deck: deck,
-                    deckView: true,
-                    editCard: .constant(true),
-                    viewCard: $viewCard,
-                    filterSphere: viewCardModel.filterSphere,
-                    filterType: viewCardModel.filterType,
-                    filterPack: packs.map { $0.packCode },
-                    filterDeck: [],
-                    sortParameter: viewCardModel.sortParameter,
-                    sortOrder: viewCardModel.sortOrder,
-                    searchText: viewCardModel.searchText
-                )
-                .navigationTitle($deck.name)
-                .navigationBarTitleDisplayMode(.inline)
-                .searchable(text: $viewCardModel.searchText)
-                .toolbar {
-                    ToolbarItemGroup(placement: .topBarTrailing) {
-                        DeckViewButton(viewCard: $viewCard)
-                    }
-
-                    ToolbarItemGroup(placement: .secondaryAction) {
-                        CardFilterButton()
-                        CardSortButton()
-                    }
+        if viewCard {
+            CardList(
+                deck: deck,
+                deckView: true,
+                editCard: .constant(true),
+                viewCard: $viewCard,
+                filterSphere: viewCardModel.filterSphere,
+                filterType: viewCardModel.filterType,
+                filterPack: packs.map { $0.packCode },
+                filterDeck: [],
+                sortParameter: viewCardModel.sortParameter,
+                sortOrder: viewCardModel.sortOrder,
+                searchText: viewCardModel.searchText
+            )
+            .navigationTitle($deck.name)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
+            .searchable(text: $viewCardModel.searchText)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    DeckViewButton(viewCard: $viewCard)
                 }
-            } else {
-                CardList(
-                    deck: deck,
-                    deckView: true,
-                    editCard: $editCard,
-                    viewCard: .constant(false),
-                    filterSphere: viewCardModel.filterSphere,
-                    filterType: viewCardModel.filterType,
-                    filterPack: [],
-                    filterDeck: deck.slots.map{ String($0.key) },
-                    sortParameter: viewCardModel.sortParameter,
-                    sortOrder: viewCardModel.sortOrder,
-                    searchText: viewCardModel.searchText
-                )
-                .navigationTitle($deck.name)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItemGroup(placement: .topBarTrailing) {
-                        DeckViewButton(viewCard: $viewCard)
-                        DeckEditButton(editCard: $editCard)
-                    }
+
+                ToolbarItemGroup(placement: .secondaryAction) {
+                    CardFilterButton()
+                    CardSortButton()
+                }
+            }
+        } else {
+            CardList(
+                deck: deck,
+                deckView: true,
+                editCard: $editCard,
+                viewCard: .constant(false),
+                filterSphere: viewCardModel.filterSphere,
+                filterType: viewCardModel.filterType,
+                filterPack: [],
+                filterDeck: deck.slots.map{ String($0.key) },
+                sortParameter: viewCardModel.sortParameter,
+                sortOrder: viewCardModel.sortOrder,
+                searchText: viewCardModel.searchText
+            )
+            .navigationTitle($deck.name)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    DeckViewButton(viewCard: $viewCard)
+                    DeckEditButton(editCard: $editCard)
                 }
             }
         }
-        .toolbar(.hidden, for: .bottomBar, .navigationBar)
     }
 }
 

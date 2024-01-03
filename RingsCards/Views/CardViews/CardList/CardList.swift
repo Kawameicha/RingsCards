@@ -53,55 +53,35 @@ struct CardList: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        NavigationView {
-            if deckView {
-                List {
-                    ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
-                        Section(header: Text("\(type)")) {
-                            ForEach(cards.filter { card in
-                                card.type_name.contains("\(type)")
-                            }) { card in
-                                NavigationLink {
-                                    CardView(card: card)
-                                        .toolbar(.hidden, for: .bottomBar)
-                                } label: {
-                                    if editCard {
-                                        CardEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
-                                    } else {
-                                        CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
-                                    }
-                                }
+        List {
+            ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                Section(header: Text("\(type)")) {
+                    ForEach(cards.filter { card in
+                        card.type_name.contains("\(type)")
+                    }) { card in
+                        NavigationLink {
+                            CardView(card: card)
+                        } label: {
+                            if editCard {
+                                CardEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
+                            } else {
+                                CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
                             }
                         }
                     }
                 }
-            } else {
-                List {
-                    ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
-                        Section(header: Text("\(type)")) {
-                            ForEach(cards.filter { card in
-                                card.type_name.contains("\(type)")
-                            }) { card in
-                                NavigationLink {
-                                    CardView(card: card)
-                                        .toolbar(.hidden, for: .bottomBar)
-                                } label: {
-                                    CardRow(card: card)
-                                }
-                            }
-                        }
-                    }
+            }
+        }
+        .toolbar {
+            if !deckView {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    CardFilterButton()
+                    CardSortButton()
                 }
-                .toolbar {
-                    ToolbarItemGroup(placement: .topBarTrailing) {
-                        CardFilterButton()
-                        CardSortButton()
-                    }
-                    
-                    ToolbarItem(placement: .status) {
-                        CardInfo(count: cards.count, deck: deck)
-                    }
-                }
+            }
+
+            ToolbarItem(placement: .bottomBar) {
+                CardInfo(count: cards.count, deck: deck)
             }
         }
     }
