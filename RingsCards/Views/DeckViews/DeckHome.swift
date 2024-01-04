@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct DeckHome: View {
     @Environment(ViewDeckModel.self) var viewDeckModel

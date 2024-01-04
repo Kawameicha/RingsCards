@@ -39,7 +39,7 @@ extension AppScreen {
         case .decks:
             DeckHome()
         case .campaigns:
-            CampaignList()
+            CampaignHome()
         case .settings:
             SettingView()
         }

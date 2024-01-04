@@ -1,5 +1,5 @@
 //
-//  CampaignSort.swift
+//  CampaignSortButton.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 16.12.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CampaignSort: View {
+struct CampaignSortButton: View {
     @Environment(ViewCampaignModel.self) private var viewCampaignModel
 
     var body: some View {
@@ -39,6 +39,6 @@ enum SortCampaignParameter: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    CampaignSort()
+    CampaignSortButton()
         .environment(ViewCampaignModel())
 }

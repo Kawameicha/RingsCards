@@ -15,13 +15,13 @@ struct CampaignRow: View {
             Image(systemName: "square.text.square")
                 .font(.system(size: 42.0))
 
-        VStack(alignment: .leading, spacing: 3) {
-            Text(campaign.name)
-                .font(.headline)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(campaign.name)
+                    .font(.headline)
 
-            Text("\(campaign.creation.formatted(date: .abbreviated, time: .shortened))")
-                .foregroundColor(.secondary)
-                .font(.subheadline)
+                Text("\(campaign.creation.formatted(date: .abbreviated, time: .shortened))")
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
             }
         }
     }

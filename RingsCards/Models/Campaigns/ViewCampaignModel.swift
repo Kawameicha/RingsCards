@@ -10,7 +10,7 @@ import SwiftData
 
 @Observable
 class ViewCampaignModel {
-    var sortCampaignParameter: SortCampaignParameter = .name
+    var sortCampaignParameter: SortCampaignParameter = .date_update
     var sortOrder: SortOrder = .forward
     var searchText: String = ""
 }

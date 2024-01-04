@@ -148,5 +148,4 @@ struct CampaignNew: View {
 
 #Preview {
     CampaignNew()
-        .modelContainer(previewModelContainer)
 }
