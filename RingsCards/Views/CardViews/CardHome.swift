@@ -23,8 +23,11 @@ struct CardHome: View {
                 CardList(
                     deck: Deck.emptyDeck,
                     deckView: false,
+                    campaign: Campaign.emptyCampaign,
+                    campaignView: false,
                     editCard: .constant(false),
                     viewCard: .constant(false),
+                    editBoons: .constant(false),
                     filterSphere: viewCardModel.filterSphere,
                     filterType: viewCardModel.filterType,
                     filterPack: packs.map { $0.packCode },

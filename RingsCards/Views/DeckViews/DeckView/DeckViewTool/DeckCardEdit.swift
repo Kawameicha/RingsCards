@@ -1,5 +1,5 @@
 //
-//  CardEdit.swift
+//  DeckCardEdit.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 25.09.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardEdit: View {
+struct DeckCardEdit: View {
     var deck: Deck
     var card: Card
     var value = 0
@@ -57,7 +57,7 @@ struct CardEdit: View {
 #Preview {
     ModelPreview { deck in
         ModelPreview { card in
-            CardEdit(deck: deck, card: card)
+            DeckCardEdit(deck: deck, card: card)
         }
     }
     .modelContainer(previewModelContainer)

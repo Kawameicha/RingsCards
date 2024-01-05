@@ -18,20 +18,19 @@ struct ScenarioItem: View {
     }
 
     var body: some View {
-            HStack(spacing: 0) {
-                CompletedMark(isSet: Bindable(campaign).completed[scenarioIndex])
-                    .buttonStyle(PlainButtonStyle())
-                    .font(.system(size: 42.0))
+        HStack(spacing: 0) {
+            CompletedMark(isSet: Bindable(campaign).completed[scenarioIndex])
+                .buttonStyle(PlainButtonStyle())
+                .font(.system(size: 42.0))
 
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(scenario.name)
-                        .font(.headline)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(scenario.name)
+                    .font(.headline)
 
-                    Text(scenario.pack)
-                        .foregroundColor(.secondary)
-                        .font(.subheadline)
-                }
+                Text(scenario.pack)
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
             }
-        .frame(minWidth: 300, maxWidth: 300)
+        }
     }
 }

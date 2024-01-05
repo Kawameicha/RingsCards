@@ -19,24 +19,24 @@ struct ScenarioVStack: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Scenarios")
-                .font(.headline)
-                .padding(.leading, 15)
-                .padding(.top, 5)
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(scenario) { scenario in
-                        NavigationLink {
-                            ScenarioView(campaign: campaign, scenario: scenario)
-                        } label: {
-                            ScenarioItem(campaign: campaign, scenario: scenario)
+            GeometryReader { item in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(scenario) { scenario in
+                            NavigationLink {
+                                ScenarioView(campaign: campaign, scenario: scenario)
+                            } label: {
+                                ScenarioItem(campaign: campaign, scenario: scenario)
+                            }
+                            .frame(width: item.size.width,alignment: .center)
                         }
-                        .containerRelativeFrame(.horizontal, count: 1, span: 1, spacing: 1)
                     }
                 }
             }
             .padding()
+            .onAppear {
+                UIScrollView.appearance().isPagingEnabled = true
+            }
         }
     }
 }

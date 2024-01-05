@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct CampaignViewHome: View {
-    @State var editDecks = false
-    @State var editHeroes = false
     @State var editBoons = false
     @State var editNotes = false
     @Bindable var campaign: Campaign
 
     var body: some View {
-        ScrollView {
+        List {
+            Text("Scenarios")
+                .font(.headline)
             ScenarioVStack(campaign: campaign)
-            //                ForEach(campaign.decks ?? []) { deck in
-            //                    CampaignHeroList(campaign: campaign, deck: deck)
-            //                }
-            CampaignCardList(campaign: campaign, editBoons: $editBoons)
+                .listRowSeparator(.hidden)
+            Spacer()
+            
+            Text("Boons & Burdens")
+                .font(.headline)
+                .listRowSeparator(.hidden)
+            CardList(deck: Deck.emptyDeck,
+                     deckView: false,
+                     campaign: campaign,
+                     campaignView: true,
+                     editCard: .constant(false),
+                     viewCard: .constant(false),
+                     editBoons: $editBoons)
         }
         .navigationTitle($campaign.name)
         .toolbar {

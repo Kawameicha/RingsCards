@@ -14,14 +14,20 @@ struct CardList: View {
     @Query var cards: [Card]
     @Bindable var deck: Deck
     var deckView = false
+    @Bindable var campaign: Campaign
+    var campaignView = false
     @Binding var editCard: Bool
     @Binding var viewCard: Bool
+    @Binding var editBoons: Bool
 
     init(
         deck: Deck,
         deckView: Bool,
+        campaign: Campaign,
+        campaignView: Bool,
         editCard: Binding<Bool>,
         viewCard: Binding<Bool>,
+        editBoons: Binding<Bool>,
 
         filterSphere: FilterSphere = .all,
         filterType: FilterType = .any,
@@ -33,8 +39,11 @@ struct CardList: View {
     ) {
         self.deck = deck
         self.deckView = deckView
+        self.campaign = campaign
+        self.campaignView = campaignView
         self._editCard = editCard
         self._viewCard = viewCard
+        self._editBoons = editBoons
 
         let predicate = Card.predicate(
             searchText: searchText,
@@ -53,35 +62,57 @@ struct CardList: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        List {
-            ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
-                Section(header: Text("\(type)")) {
-                    ForEach(cards.filter { card in
-                        card.type_name.contains("\(type)")
-                    }) { card in
-                        NavigationLink {
-                            CardView(card: card)
-                        } label: {
-                            if editCard {
-                                CardEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
-                            } else {
-                                CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
+        if !campaignView {
+            List {
+                ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
+                    Section(header: Text("\(type)")) {
+                        ForEach(cards.filter { card in
+                            card.type_name.contains("\(type)")
+                        }) { card in
+                            NavigationLink {
+                                CardView(card: card)
+                            } label: {
+                                if editCard {
+                                    DeckCardEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
+                                } else {
+                                    CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        .toolbar {
-            if !deckView {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    CardFilterButton()
-                    CardSortButton()
+            .toolbar {
+                if !deckView {
+                    ToolbarItemGroup(placement: .topBarTrailing) {
+                        CardFilterButton()
+                        CardSortButton()
+                    }
+                }
+
+                ToolbarItem(placement: .bottomBar) {
+                    CardInfo(count: cards.count, deck: deck)
                 }
             }
-
-            ToolbarItem(placement: .bottomBar) {
-                CardInfo(count: cards.count, deck: deck)
+        } else if !editBoons {
+            ForEach(cards.filter { card in
+                campaign.slots.filter { $1 > 0 }.map { $0.key }.contains(card.code)
+            }) { card in
+                NavigationLink {
+                    CardView(card: card)
+                } label: {
+                    CardRow(card: card, value: campaign.slots["\(card.code)", default: 0])
+                }
+            }
+        } else {
+            ForEach(cards.filter { card in
+                campaign.slots.map{ String($0.key) }.contains(card.code)
+            }) { card in
+                NavigationLink {
+                    CardView(card: card)
+                } label: {
+                    CampaignCardEdit(campaign: campaign, card: card, value: campaign.slots["\(card.code)", default: 0])
+                }
             }
         }
     }
@@ -89,7 +120,16 @@ struct CardList: View {
 
 #Preview {
     ModelPreview { deck in
-        CardList(deck: deck, deckView: false, editCard: .constant(false), viewCard: .constant(false))
+        ModelPreview { campaign in
+            CardList(
+                deck: deck,
+                deckView: false,
+                campaign: campaign,
+                campaignView: false,
+                editCard: .constant(false),
+                viewCard: .constant(false),
+                editBoons: .constant(false))
+        }
     }
     .modelContainer(previewModelContainer)
     .environment(ViewCardModel())
