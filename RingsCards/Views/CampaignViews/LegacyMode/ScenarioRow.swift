@@ -8,18 +8,13 @@
 import SwiftUI
 
 struct ScenarioRow: View {
-    @EnvironmentObject var ringsData: RingsData
-
     var campaign: Campaign
     var scenario: Scenario
-
-    var scenarioIndex: Int {
-        campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0
-    }
+    var scenarioIndex: Int { campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0 }
 
     var body: some View {
         HStack(spacing: 3) {
-            CompletedMark(isSet: Bindable(campaign.self).completed[scenarioIndex])
+            ScenarioViewMark(isSet: Bindable(campaign.self).completed[scenarioIndex])
                 .buttonStyle(PlainButtonStyle())
                 .font(.system(size: 42.0))
 
@@ -35,12 +30,15 @@ struct ScenarioRow: View {
     }
 }
 
-//struct ScenarioRow_Previews: PreviewProvider {
-//    static var campaigns = RingsData().campaigns
-//    static var scenarios = RingsData().scenarios
-//
-//    static var previews: some View {
-//            ScenarioRow(campaign: Campaign.default, scenario: scenarios[0])
-//                .environmentObject(RingsData())
-//    }
-//}
+#Preview {
+    ModelPreview { scenario in
+        ScenarioRow(campaign: Campaign(name: "",
+                                       code: "",
+                                       scenarios: Array(1...3),
+                                       completed: Array(repeating: false, count:3),
+                                       campaignMode: true,
+                                       slots: [:]),
+                    scenario: scenario)
+    }
+    .modelContainer(previewModelContainer)
+}

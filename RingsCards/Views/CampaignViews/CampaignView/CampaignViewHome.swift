@@ -16,10 +16,10 @@ struct CampaignViewHome: View {
         List {
             Text("Scenarios")
                 .font(.headline)
-            ScenarioVStack(campaign: campaign)
+            ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
                 .listRowSeparator(.hidden)
             Spacer()
-            
+
             Text("Boons & Burdens")
                 .font(.headline)
                 .listRowSeparator(.hidden)
@@ -50,6 +50,5 @@ struct CampaignViewHome: View {
         CampaignViewHome(campaign: campaign)
     }
     .modelContainer(previewModelContainer)
-    .environmentObject(RingsData())
     .environment(ViewCardModel())
 }

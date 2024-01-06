@@ -1,5 +1,5 @@
 //
-//  EncounterList.swift
+//  ScenarioViewEncounter.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 30.10.23.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct EncounterList: View {
+struct ScenarioViewEncounter: View {
     var scenario: Scenario
 
     var body: some View {
         LazyVStack(alignment: .leading) {
             ForEach(scenario.encounters) { encounter in
                 HStack {
-                    CircleIcon(image: Image(encounter.code))
+                    ScenarioViewIcon(image: Image(encounter.code))
 
                     VStack(alignment: .leading) {
                         Text(encounter.name)
@@ -32,10 +32,9 @@ struct EncounterList: View {
     }
 }
 
-struct EncounterList_Previews: PreviewProvider {
-    static var scenarios = RingsData().scenarios
-
-    static var previews: some View {
-        EncounterList(scenario: scenarios[0])
+#Preview {
+    ModelPreview { scenario in
+        ScenarioViewEncounter(scenario: scenario)
     }
+    .modelContainer(previewModelContainer)
 }

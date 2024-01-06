@@ -10,10 +10,10 @@ import SwiftData
 
 struct CampaignNew: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Environment(\.modelContext) private var modelContext
-    @State private var campaignName: String = ""
-    @State private var campaignMode: Bool = false
-    @State private var selectedCode: CampaignCode = .core
+    @Environment(\.modelContext) var modelContext
+    @State var campaignName: String = ""
+    @State var campaignMode: Bool = false
+    @State var selectedCode: CampaignCode = .core
 
     var body: some View {
         Form {

@@ -1,5 +1,5 @@
 //
-//  CompletedMark.swift
+//  ScenarioViewMark.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 21.08.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompletedMark: View {
+struct ScenarioViewMark: View {
     @Binding var isSet: Bool
 
     var body: some View {
@@ -22,5 +22,5 @@ struct CompletedMark: View {
 }
 
 #Preview {
-    CompletedMark(isSet: .constant(true))
+    ScenarioViewMark(isSet: .constant(true))
 }

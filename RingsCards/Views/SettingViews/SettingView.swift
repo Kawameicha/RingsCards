@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct SettingView: View {
-    @EnvironmentObject var ringsData: RingsData
-    @State private var showingProfile = false
-
     var body: some View {
         NavigationView {
             List {
@@ -23,24 +20,11 @@ struct SettingView: View {
                 }
             }
             .navigationTitle("Settings")
-            .toolbar {
-                Button {
-                    showingProfile.toggle()
-                } label: {
-                    Label("User Profile", systemImage: "person.crop.circle")
-                }
-            }
-            .sheet(isPresented: $showingProfile) {
-                UserHost()
-                    .environmentObject(ringsData)
-                    .presentationDetents([.medium, .large])
-            }
         }
     }
 }
 
 #Preview {
     SettingView()
-        .environmentObject(RingsData())
         .modelContainer(previewModelContainer)
 }

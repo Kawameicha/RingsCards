@@ -10,7 +10,6 @@ import SwiftData
 
 @main
 struct RingsCardsApp: App {
-    @StateObject var ringsData = RingsData()
     @State var viewCardModel = ViewCardModel()
     @State var viewDeckModel = ViewDeckModel()
     @State var viewCampaignModel = ViewCampaignModel()
@@ -18,7 +17,6 @@ struct RingsCardsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(ringsData)
                 .environment(viewCardModel)
                 .environment(viewDeckModel)
                 .environment(viewCampaignModel)

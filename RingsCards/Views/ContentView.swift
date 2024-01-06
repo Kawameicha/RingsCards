@@ -27,7 +27,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(RingsData())
         .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
         .environment(ViewDeckModel())

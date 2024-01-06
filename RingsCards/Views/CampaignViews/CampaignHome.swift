@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CampaignHome: View {
-    @Environment(ViewCampaignModel.self) private var viewCampaignModel
-    @Environment(\.modelContext) private var modelContext
+    @Environment(ViewCampaignModel.self) var viewCampaignModel
+    @Environment(\.modelContext) var modelContext
 
     var body: some View {
         @Bindable var viewCampaignModel = viewCampaignModel

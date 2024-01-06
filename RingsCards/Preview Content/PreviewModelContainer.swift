@@ -11,7 +11,7 @@ import SwiftData
 let previewModelContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Pack.self, Keyword.self,
+            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Keyword.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
 
@@ -51,6 +51,31 @@ let previewModelContainer: ModelContainer = {
                 // MARK: this only to used together with UserCollection
                 // let userCollection = UserCollection(card: card, isInCollection: true)
                 container.mainContext.insert(card)
+            }
+
+            let scenarios = ScenarioJSONDecoder.decode(from: "Scenarios")
+            
+            scenarios.forEach { scenario in
+                let scenario = Scenario(id: scenario.id,
+                                        name: scenario.name,
+                                        nameCanonical: scenario.nameCanonical,
+                                        pack: scenario.pack,
+                                        encounters: scenario.encounters,
+                                        keywords: scenario.keywords,
+                                        flavorIntro: scenario.flavorIntro,
+                                        ruling: scenario.ruling,
+                                        doNotRead: scenario.doNotRead,
+                                        easyEnemies: scenario.easy_enemies,
+                                        easyLocations: scenario.easy_locations,
+                                        easyTreacheries: scenario.easy_treacheries,
+                                        normalEnemies: scenario.normal_enemies,
+                                        normalLocations: scenario.normal_locations,
+                                        normalTreacheries: scenario.normal_treacheries,
+                                        nightmareEnemies: scenario.nightmare_enemies,
+                                        nightmareLocations: scenario.nightmare_locations,
+                                        nightmareTreacheries: scenario.nightmare_treacheries)
+
+                container.mainContext.insert(scenario)
             }
 
             if try modelContext.fetch(FetchDescriptor<Deck>()).isEmpty {

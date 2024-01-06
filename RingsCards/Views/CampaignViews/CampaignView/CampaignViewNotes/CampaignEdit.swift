@@ -26,9 +26,3 @@ struct CampaignEdit: View {
         }
     }
 }
-
-//struct CampaignEdit_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CampaignEdit(campaign: .constant(.default))
-//    }
-//}

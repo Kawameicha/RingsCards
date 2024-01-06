@@ -23,7 +23,6 @@ struct AppTabView: View {
 
 #Preview {
     AppTabView(selection: .constant(.cards))
-        .environmentObject(RingsData())
         .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
         .environment(ViewDeckModel())

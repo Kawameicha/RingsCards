@@ -1,5 +1,5 @@
 //
-//  ScenarioView.swift
+//  ScenarioViewHome.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 29.08.23.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ScenarioView: View {
+struct ScenarioViewHome: View {
     var campaign: Campaign
     var scenario: Scenario
-    
+
     var scenarioIndex: Int {
         campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0
     }
@@ -22,7 +22,7 @@ struct ScenarioView: View {
                         Text(scenario.name)
                             .font(.title)
 
-                        CircleIcon(image: Image(scenario.nameCanonical))
+                        ScenarioViewIcon(image: Image(scenario.nameCanonical))
 
                         Text(scenario.pack)
                     }
@@ -38,9 +38,9 @@ struct ScenarioView: View {
 
                 Text("The *\(scenario.name)* encounter deck is built with all the cards from the following encounter sets:")
 
-                EncounterList(scenario: scenario)
+                ScenarioViewEncounter(scenario: scenario)
                 
-                ScenarioChart(scenario: scenario)
+                ScenarioViewChart(scenario: scenario)
 
                 Text("The rules for each of the keywords present in the *\(scenario.name)* encounter deck are as follows:")
 
@@ -78,10 +78,15 @@ struct ScenarioView: View {
     }
 }
 
-//struct ScenarioView_Previews: PreviewProvider {
-//    static var scenarios = RingsData().scenarios
-//
-//    static var previews: some View {
-//            ScenarioView(scenario: scenarios[0])
-//    }
-//}
+#Preview {
+    ModelPreview { scenario in
+        ScenarioViewHome(campaign: Campaign(name: "",
+                                            code: "",
+                                            scenarios: Array(1...3),
+                                            completed: Array(repeating: false, count:3),
+                                            campaignMode: true,
+                                            slots: [:]),
+                         scenario: scenario)
+    }
+    .modelContainer(previewModelContainer)
+}

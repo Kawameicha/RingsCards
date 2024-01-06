@@ -11,7 +11,6 @@ import SwiftData
 struct KeywordList: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var keywords: [Keyword]
-
     var scenario: Scenario
 
     init(
@@ -21,8 +20,9 @@ struct KeywordList: View {
     ) {
         self.scenario = scenario
 
-        let predicate = Keyword.predicate(filterScenario: scenario.keywords.map { $0.name })
-
+        let predicate = Keyword.predicate(
+            filterScenario: scenario.keywords.map { $0.name }
+        )
         _keywords = Query(filter: predicate, sort: \.name)
     }
 
@@ -38,4 +38,11 @@ struct KeywordList: View {
         }
         .padding()
     }
+}
+
+#Preview {
+    ModelPreview { scenario in
+        KeywordList(scenario: scenario, filterScenario: [])
+    }
+    .modelContainer(previewModelContainer)
 }

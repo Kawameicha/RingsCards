@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ScenarioVStack: View {
-    @EnvironmentObject var ringsData: RingsData
-
+    @Query var scenarios: [Scenario]
     var campaign: Campaign
-    var scenario: [Scenario] {
-        ringsData.scenarios.filter{ scenario in
-            campaign.scenarios.contains(scenario.id)
-        }
+
+    init(
+        campaign: Campaign,
+
+        filterCampaign: [Int] = []
+    ) {
+        self.campaign = campaign
+
+        let predicate = Scenario.predicate(
+            filterCampaign: filterCampaign
+        )
+        _scenarios = Query(filter: predicate, sort: \.id)
     }
 
     var body: some View {
@@ -22,9 +30,9 @@ struct ScenarioVStack: View {
             GeometryReader { item in
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 0) {
-                        ForEach(scenario) { scenario in
+                        ForEach(scenarios) { scenario in
                             NavigationLink {
-                                ScenarioView(campaign: campaign, scenario: scenario)
+                                ScenarioViewHome(campaign: campaign, scenario: scenario)
                             } label: {
                                 ScenarioItem(campaign: campaign, scenario: scenario)
                             }
@@ -43,8 +51,7 @@ struct ScenarioVStack: View {
 
 #Preview {
     ModelPreview { campaign in
-        ScenarioVStack(campaign: campaign)
+        ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
     }
-    .environmentObject(RingsData())
     .modelContainer(previewModelContainer)
 }

@@ -44,7 +44,7 @@ struct CampaignList: View {
                         if campaign.campaignMode == true {
                             CampaignViewHome(campaign: campaign)
                         } else {
-                            ScenarioList(campaign: campaign)
+                            ScenarioList(campaign: campaign, filterCampaign: campaign.scenarios)
                         }
                     } label: {
                         CampaignRow(campaign: campaign)

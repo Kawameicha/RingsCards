@@ -1,5 +1,5 @@
 //
-//  CircleIcon.swift
+//  ScenarioViewIcon.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 20.08.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleIcon: View {
+struct ScenarioViewIcon: View {
     var image: Image
 
     var body: some View {
@@ -21,6 +21,6 @@ struct CircleIcon: View {
 }
 
 #Preview {
-    CircleIcon(image: Image("passage-through-mirkwood"))
+    ScenarioViewIcon(image: Image("passage-through-mirkwood"))
 }
 
