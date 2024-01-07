@@ -22,7 +22,7 @@ struct ScenarioViewHome: View {
                         Text(scenario.name)
                             .font(.title)
 
-                        ScenarioViewIcon(image: Image(scenario.nameCanonical))
+                        ScenarioViewIcon(image: Image(scenario.code))
 
                         Text(scenario.pack)
                     }
@@ -30,7 +30,7 @@ struct ScenarioViewHome: View {
 
                 Divider()
 
-                Text(.init(scenario.flavorIntro))
+                Text(.init(scenario.flavorText.flavorIntro))
                     .font(.system(size: 18, weight: .light, design: .serif))
                     .italic()
 
@@ -46,8 +46,8 @@ struct ScenarioViewHome: View {
 
                 KeywordList(scenario: scenario)
 
-                if scenario.ruling != "" {
-                    Text(.init(scenario.ruling.iconsAndSpheres()))
+                if scenario.flavorText.ruling != "" {
+                    Text(.init(scenario.flavorText.ruling.iconsAndSpheres()))
                         .font(Font.custom("SFUIText-Regular", size: 16))
                 }
 
@@ -66,8 +66,8 @@ struct ScenarioViewHome: View {
                 )
                 
                 if campaign.self.completed[scenarioIndex] {
-                    if scenario.doNotRead != "" {
-                        Text(.init(scenario.doNotRead))
+                    if scenario.flavorText.doNotRead != "" {
+                        Text(.init(scenario.flavorText.doNotRead))
                             .font(.system(size: 18, weight: .light, design: .serif))
                             .italic()
                     }

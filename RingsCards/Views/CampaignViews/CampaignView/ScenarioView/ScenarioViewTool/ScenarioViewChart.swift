@@ -20,15 +20,15 @@ struct ScenarioViewChart: View {
 
     var body: some View {
         let currentScenario: [ScenarioByDifficulty] = [
-            ScenarioByDifficulty(key: "Enemies", value: scenario.easyEnemies, difficulty: "Easy"),
-            ScenarioByDifficulty(key: "Locations", value: scenario.easyLocations, difficulty: "Easy"),
-            ScenarioByDifficulty(key: "Treacheries", value: scenario.easyTreacheries, difficulty: "Easy"),
-            ScenarioByDifficulty(key: "Enemies", value: scenario.normalEnemies, difficulty: "Normal"),
-            ScenarioByDifficulty(key: "Locations", value: scenario.normalLocations, difficulty: "Normal"),
-            ScenarioByDifficulty(key: "Treacheries", value: scenario.normalTreacheries, difficulty: "Normal"),
-            ScenarioByDifficulty(key: "Enemies", value: scenario.nightmareEnemies, difficulty: "Nightmare"),
-            ScenarioByDifficulty(key: "Locations", value: scenario.nightmareLocations, difficulty: "Nightmare"),
-            ScenarioByDifficulty(key: "Treacheries", value: scenario.nightmareTreacheries, difficulty: "Nightmare")
+            ScenarioByDifficulty(key: "Enemies", value: scenario.statistics.easyEnemies, difficulty: "Easy"),
+            ScenarioByDifficulty(key: "Locations", value: scenario.statistics.easyLocations, difficulty: "Easy"),
+            ScenarioByDifficulty(key: "Treacheries", value: scenario.statistics.easyTreacheries, difficulty: "Easy"),
+            ScenarioByDifficulty(key: "Enemies", value: scenario.statistics.normalEnemies, difficulty: "Normal"),
+            ScenarioByDifficulty(key: "Locations", value: scenario.statistics.normalLocations, difficulty: "Normal"),
+            ScenarioByDifficulty(key: "Treacheries", value: scenario.statistics.normalTreacheries, difficulty: "Normal"),
+            ScenarioByDifficulty(key: "Enemies", value: scenario.statistics.nightmareEnemies, difficulty: "Nightmare"),
+            ScenarioByDifficulty(key: "Locations", value: scenario.statistics.nightmareLocations, difficulty: "Nightmare"),
+            ScenarioByDifficulty(key: "Treacheries", value: scenario.statistics.nightmareTreacheries, difficulty: "Nightmare")
         ]
 
         VStack {

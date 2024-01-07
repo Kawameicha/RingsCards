@@ -17,8 +17,8 @@ struct CampaignViewHome: View {
             Text("Scenarios")
                 .font(.headline)
             ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
+                .frame(height: 120)
                 .listRowSeparator(.hidden)
-            Spacer()
 
             Text("Boons & Burdens")
                 .font(.headline)

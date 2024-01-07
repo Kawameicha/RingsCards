@@ -36,7 +36,7 @@ struct ScenarioVStack: View {
                             } label: {
                                 ScenarioItem(campaign: campaign, scenario: scenario)
                             }
-                            .frame(width: item.size.width,alignment: .center)
+                            .frame(width: item.size.width, alignment: .center)
                         }
                     }
                 }

@@ -54,26 +54,26 @@ let previewModelContainer: ModelContainer = {
             }
 
             let scenarios = ScenarioJSONDecoder.decode(from: "Scenarios")
-            
+
             scenarios.forEach { scenario in
                 let scenario = Scenario(id: scenario.id,
+                                        code: scenario.nameCanonical,
                                         name: scenario.name,
-                                        nameCanonical: scenario.nameCanonical,
                                         pack: scenario.pack,
                                         encounters: scenario.encounters,
                                         keywords: scenario.keywords,
-                                        flavorIntro: scenario.flavorIntro,
-                                        ruling: scenario.ruling,
-                                        doNotRead: scenario.doNotRead,
-                                        easyEnemies: scenario.easy_enemies,
-                                        easyLocations: scenario.easy_locations,
-                                        easyTreacheries: scenario.easy_treacheries,
-                                        normalEnemies: scenario.normal_enemies,
-                                        normalLocations: scenario.normal_locations,
-                                        normalTreacheries: scenario.normal_treacheries,
-                                        nightmareEnemies: scenario.nightmare_enemies,
-                                        nightmareLocations: scenario.nightmare_locations,
-                                        nightmareTreacheries: scenario.nightmare_treacheries)
+                                        flavorText: FlavorText(flavorIntro: scenario.flavorIntro,
+                                                               ruling: scenario.ruling,
+                                                               doNotRead: scenario.doNotRead),
+                                        statistics: Statistic(easyEnemies: scenario.easy_enemies,
+                                                              easyLocations: scenario.easy_locations,
+                                                              easyTreacheries: scenario.easy_treacheries,
+                                                              normalEnemies: scenario.normal_enemies,
+                                                              normalLocations: scenario.normal_locations,
+                                                              normalTreacheries: scenario.normal_treacheries,
+                                                              nightmareEnemies: scenario.nightmare_enemies,
+                                                              nightmareLocations: scenario.nightmare_locations,
+                                                              nightmareTreacheries: scenario.nightmare_treacheries))
 
                 container.mainContext.insert(scenario)
             }
