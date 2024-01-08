@@ -11,7 +11,7 @@ import SwiftData
 @Observable
 class ViewCardModel {
     var filterSphere: FilterSphere = .all
-    var filterType: FilterType = .any
+    var filterType: FilterType = .Hero
     var filterPack: [String] = []
     var filterDeck: [String] = []
     var sortParameter: SortParameter = .name

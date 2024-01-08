@@ -18,7 +18,7 @@ struct CardView: View {
                 .padding(.bottom, -200)
 
             VStack(alignment: .leading) {
-                if card.is_unique == true {
+                if card.cardDetails.is_unique == true {
                     Text("\u{E607} " + card.name)
                         .font(Font.custom("SFUIText-Regular", size: 28))
                 } else {
@@ -43,20 +43,20 @@ struct CardView: View {
                         Text("Cost:" + " \(card.cost ?? "")")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.willpower != nil {
-                        Text("\(card.willpower ?? 0)" + " \u{E600}")
+                    if card.cardDetails.willpower != nil {
+                        Text("\(card.cardDetails.willpower ?? 0)" + " \u{E600}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.attack != nil {
-                        Text("\(card.attack ?? 0)" + " \u{E601}")
+                    if card.cardDetails.attack != nil {
+                        Text("\(card.cardDetails.attack ?? 0)" + " \u{E601}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.defense != nil {
-                        Text("\(card.defense ?? 0)" + " \u{E602}")
+                    if card.cardDetails.defense != nil {
+                        Text("\(card.cardDetails.defense ?? 0)" + " \u{E602}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.health != nil {
-                        Text("\(card.health ?? 0)" + " \u{E603}")
+                    if card.cardDetails.health != nil {
+                        Text("\(card.cardDetails.health ?? 0)" + " \u{E603}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
                 }
@@ -66,16 +66,16 @@ struct CardView: View {
 
                 GroupBox {
                     VStack(alignment: .leading, spacing: 20) {
-                        if card.text != "" {
-                            Text(.init(card.text
+                        if card.cardDetails.text != "" {
+                            Text(.init(card.cardDetails.text
                                 .htmlToMarkDown()
                                 .iconsAndSpheres()
                             ))
                             .font(Font.custom("SFUIText-Regular", size: 16))
                         }
 
-                        if card.flavor != "" {
-                            Text(.init(card.flavor
+                        if card.cardDetails.flavor != "" {
+                            Text(.init(card.cardDetails.flavor
                                 .htmlToMarkDown()
                             ))
                             .font(.system(size: 14, weight: .light, design: .serif))
@@ -83,10 +83,10 @@ struct CardView: View {
                         }
 
                         HStack {
-                            Text("Illus. \(card.illustrator)")
+                            Text("Illus. \(card.cardDetails.illustrator)")
                                 .font(.footnote)
                             Spacer()
-                            Text("\(card.pack_name) # \(card.position)")
+                            Text("\(card.pack_name) # \(card.cardDetails.position)")
                                 .font(.footnote)
                         }
                     }

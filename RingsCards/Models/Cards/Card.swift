@@ -16,46 +16,53 @@ final class Card: Identifiable {
     let type_name: String
     let sphere_code: String
     let sphere_name: String
-    let position: Int
     @Attribute(.unique) let code: String
     let name: String
     let traits: String
-    let text: String
-    let flavor: String
-    let is_unique: Bool
     let threat: Int? = nil
     let cost: String? = nil
-    let victory: Int? = nil
-    let quest: Int? = nil
-    let willpower: Int? = nil
-    let attack: Int? = nil
-    let defense: Int? = nil
-    let health: Int? = nil
-    let quantity: Int
     let deck_limit: Int
-    let illustrator: String
-    let octgnid: String
-    let has_errata: Bool
-    let url: String
-    let imagesrc: String
-    var userCollection: UserCollection?
+    let cardDetails: CardDetail
 
-    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, traits: String?, text: String?, flavor: String?, is_unique: Bool, threat: Int? = nil, cost: String? = nil, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, deck_limit: Int, illustrator: String?, octgnid: String?, has_errata: Bool, url: String, imagesrc: String, userCollection: UserCollection? = nil) {
+    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, code: String, name: String, traits: String? = "", threat: Int? = nil, cost: String? = nil, deck_limit: Int, cardDetails: CardDetail) {
         self.pack_code = pack_code
         self.pack_name = pack_name
         self.type_code = type_code
         self.type_name = type_name
         self.sphere_code = sphere_code
         self.sphere_name = sphere_name
-        self.position = position
         self.code = code
         self.name = name
         self.traits = traits ?? ""
+        self.threat = threat
+        self.cost = cost
+        self.deck_limit = deck_limit
+        self.cardDetails = cardDetails
+    }
+}
+
+struct CardDetail: Hashable, Codable {
+    var position: Int
+    var text: String
+    var flavor: String
+    var is_unique: Bool
+    var victory: Int? = nil
+    var quest: Int? = nil
+    var willpower: Int? = nil
+    var attack: Int? = nil
+    var defense: Int? = nil
+    var health: Int? = nil
+    var quantity: Int
+    var illustrator: String
+    var has_errata: Bool
+    var url: String
+    var imagesrc: String
+
+    init(position: Int, text: String? = "", flavor: String? = "", is_unique: Bool, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, illustrator: String? = "", has_errata: Bool, url: String, imagesrc: String) {
+        self.position = position
         self.text = text ?? ""
         self.flavor = flavor ?? ""
         self.is_unique = is_unique
-        self.threat = threat
-        self.cost = cost
         self.victory = victory
         self.quest = quest
         self.willpower = willpower
@@ -63,13 +70,10 @@ final class Card: Identifiable {
         self.defense = defense
         self.health = health
         self.quantity = quantity
-        self.deck_limit = deck_limit
         self.illustrator = illustrator ?? ""
-        self.octgnid = octgnid ?? ""
         self.has_errata = has_errata
         self.url = url
         self.imagesrc = imagesrc
-        self.userCollection = userCollection
     }
 }
 

@@ -11,7 +11,7 @@ struct CardImage: View {
     var card: Card
 
     var body: some View {
-        AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.imagesrc)")) { image in
+        AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.cardDetails.imagesrc)")) { image in
             image
                 .resizable()
                 .scaledToFit()
