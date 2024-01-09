@@ -1,5 +1,5 @@
 //
-//  SettingView.swift
+//  SettingHome.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 29.08.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingView: View {
+struct SettingHome: View {
     var body: some View {
         NavigationView {
             List {
@@ -18,6 +18,14 @@ struct SettingView: View {
                         Text("Edit Collection")
                     }
                 }
+                
+                Section(header: Text("Rules")) {
+                    NavigationLink {
+                        KeywordList()
+                    } label: {
+                        Text("All Keywords")
+                    }
+                }
             }
             .navigationTitle("Settings")
         }
@@ -25,6 +33,7 @@ struct SettingView: View {
 }
 
 #Preview {
-    SettingView()
+    SettingHome()
         .modelContainer(previewModelContainer)
+        .environment(ViewCardModel())
 }

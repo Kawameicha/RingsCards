@@ -44,7 +44,7 @@ struct ScenarioViewHome: View {
 
                 Text("The rules for each of the keywords present in the *\(scenario.name)* encounter deck are as follows:")
 
-                KeywordList(scenario: scenario)
+                ScenarioKeywordList(scenario: scenario)
 
                 if scenario.flavorText.ruling != "" {
                     Text(.init(scenario.flavorText.ruling.iconsAndSpheres()))

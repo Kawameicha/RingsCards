@@ -15,15 +15,15 @@ struct CardImage: View {
             image
                 .resizable()
                 .scaledToFit()
-                .frame(width: 350)
+//                .frame(width: 350)
         } placeholder: {
             ProgressView()
         }
         .clipShape(
-            Circle().offset(y:-50))
-        .overlay {
-            Circle().stroke(.white, lineWidth: 4).offset(y:-50)
-        }
+            Rectangle().offset(y:-200))
+//        .overlay {
+//            Circle().stroke(.white, lineWidth: 4).offset(y:-50)
+//        }
         .shadow(radius: 9)
     }
 }

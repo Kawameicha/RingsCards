@@ -40,7 +40,8 @@
 		595078722AC5D7D1007BFAA0 /* ViewCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595078712AC5D7D1007BFAA0 /* ViewCardModel.swift */; };
 		595078752AC5D8FA007BFAA0 /* CardSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595078742AC5D8FA007BFAA0 /* CardSortButton.swift */; };
 		5951BA712AB061380047DE1F /* ScenarioViewChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951BA702AB061380047DE1F /* ScenarioViewChart.swift */; };
-		595A66B32A9DE8930040C952 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A66B22A9DE8930040C952 /* SettingView.swift */; };
+		5952A4652B4D63C20051CB55 /* KeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952A4642B4D63C20051CB55 /* KeywordList.swift */; };
+		595A66B32A9DE8930040C952 /* SettingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A66B22A9DE8930040C952 /* SettingHome.swift */; };
 		595C7BE92A93985D0094E64F /* ScenarioViewMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */; };
 		596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DD7EE2A9E161C00556B7B /* ScenarioViewHome.swift */; };
 		5979A1BF2A9E4D6A00E1CAE1 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979A1BE2A9E4D6A00E1CAE1 /* Pack.swift */; };
@@ -92,7 +93,7 @@
 		59FD32572AEE4A8300D9597B /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32562AEE4A8300D9597B /* Keyword.swift */; };
 		59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32582AEE4B1800D9597B /* Keywords.swift */; };
 		59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325C2AEE4D2700D9597B /* KeywordView.swift */; };
-		59FD325F2AEE62EF00D9597B /* KeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* KeywordList.swift */; };
+		59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */; };
 		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +131,8 @@
 		595078712AC5D7D1007BFAA0 /* ViewCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCardModel.swift; sourceTree = "<group>"; };
 		595078742AC5D8FA007BFAA0 /* CardSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSortButton.swift; sourceTree = "<group>"; };
 		5951BA702AB061380047DE1F /* ScenarioViewChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewChart.swift; sourceTree = "<group>"; };
-		595A66B22A9DE8930040C952 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		5952A4642B4D63C20051CB55 /* KeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordList.swift; sourceTree = "<group>"; };
+		595A66B22A9DE8930040C952 /* SettingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHome.swift; sourceTree = "<group>"; };
 		595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewMark.swift; sourceTree = "<group>"; };
 		596DD7EE2A9E161C00556B7B /* ScenarioViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewHome.swift; sourceTree = "<group>"; };
 		5979A1BE2A9E4D6A00E1CAE1 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
@@ -184,7 +186,7 @@
 		59FD32562AEE4A8300D9597B /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		59FD32582AEE4B1800D9597B /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
 		59FD325C2AEE4D2700D9597B /* KeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordView.swift; sourceTree = "<group>"; };
-		59FD325E2AEE62EF00D9597B /* KeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordList.swift; sourceTree = "<group>"; };
+		59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioKeywordList.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,10 +366,20 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		5952A4632B4D639F0051CB55 /* KeywordView */ = {
+			isa = PBXGroup;
+			children = (
+				5952A4642B4D63C20051CB55 /* KeywordList.swift */,
+				59FD325C2AEE4D2700D9597B /* KeywordView.swift */,
+			);
+			path = KeywordView;
+			sourceTree = "<group>";
+		};
 		595A66B12A9DE84F0040C952 /* SettingViews */ = {
 			isa = PBXGroup;
 			children = (
-				595A66B22A9DE8930040C952 /* SettingView.swift */,
+				595A66B22A9DE8930040C952 /* SettingHome.swift */,
+				5952A4632B4D639F0051CB55 /* KeywordView */,
 				59355A042AD28FCE00C894B3 /* PackView */,
 				59C9B8B52A97434100520310 /* UserViews */,
 			);
@@ -561,8 +573,7 @@
 		59FD325B2AEE4D0900D9597B /* ScenarioViewKeyword */ = {
 			isa = PBXGroup;
 			children = (
-				59FD325E2AEE62EF00D9597B /* KeywordList.swift */,
-				59FD325C2AEE4D2700D9597B /* KeywordView.swift */,
+				59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */,
 			);
 			path = ScenarioViewKeyword;
 			sourceTree = "<group>";
@@ -699,7 +710,7 @@
 				59C9B8BB2A9751B700520310 /* UserEdit.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
-				59FD325F2AEE62EF00D9597B /* KeywordList.swift in Sources */,
+				59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */,
 				59809C6E2B444FDE004BD1F2 /* DeckNewButton.swift in Sources */,
 				5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */,
 				59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */,
@@ -718,7 +729,7 @@
 				59C1404D2AC1C26500A9F20C /* DeckCardEdit.swift in Sources */,
 				59D8353F2AFF8F3B000C160E /* ScenarioVStack.swift in Sources */,
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,
-				595A66B32A9DE8930040C952 /* SettingView.swift in Sources */,
+				595A66B32A9DE8930040C952 /* SettingHome.swift in Sources */,
 				59CC78D72B46E57E00F29E18 /* CampaignBoonButton.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,
 				590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */,
@@ -743,6 +754,7 @@
 				59EA4DE02B4184330078F7F8 /* UserCollection.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,
 				596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */,
+				5952A4652B4D63C20051CB55 /* KeywordList.swift in Sources */,
 				594B766D2AA7050800ED71AF /* CampaignRow.swift in Sources */,
 				59355A082AD2962800C894B3 /* PackList.swift in Sources */,
 			);

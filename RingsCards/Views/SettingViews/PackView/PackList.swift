@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct PackList: View {
+    @Environment(ViewCardModel.self) var viewCardModel
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Pack.packPosition) private var packs: [Pack]
 
@@ -16,24 +17,42 @@ struct PackList: View {
     "Dream-chaser", "Haradrim", "Ered Mithrin", "Vengeance of Mordor", "Oaths of the Rohirrim", "The Hobbit", "The Lord of the Rings", "Starter Decks", "Scenario Packs"]
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(allCycles, id:\.self) { cycle in
-                    Section(header: Text("\(cycle)")) {
-                        ForEach(packs.filter { pack in
-                            pack.cycleName.contains("\(cycle)")
-                        }) { pack in
+        List {
+            ForEach(allCycles, id:\.self) { cycle in
+                Section(header: Text("\(cycle)")) {
+                    ForEach(packs.filter { pack in
+                        pack.cycleName.contains("\(cycle)")
+                    }) { pack in
+                        NavigationLink {
+                            CardList(
+                                deck: Deck.emptyDeck,
+                                deckView: true,
+                                campaign: Campaign.emptyCampaign,
+                                campaignView: false,
+                                editCard: .constant(false),
+                                viewCard: .constant(false),
+                                editBoons: .constant(false),
+                                filterSphere: viewCardModel.filterSphere,
+                                filterType: FilterType.any,
+                                filterPack: [pack.packCode],
+                                filterDeck: [],
+                                sortParameter: SortParameter.code,
+                                sortOrder: viewCardModel.sortOrder,
+                                searchText: viewCardModel.searchText
+                            )
+                        } label: {
                             PackRow(packs: pack)
                         }
                     }
                 }
             }
-            .navigationTitle("My Collection")
         }
+        .navigationTitle("My Collection")
     }
 }
 
 #Preview {
     PackList()
         .modelContainer(previewModelContainer)
+        .environment(ViewCardModel())
 }

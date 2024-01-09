@@ -12,10 +12,16 @@ struct CardView: View {
     var card: Card
 
     var body: some View {
-        ScrollView {
+        List {
+//            CardImage(card: card)
+//                .offset(y: -100)
+//                .padding(.bottom, -200)
             CardImage(card: card)
-                .offset(y: -100)
-                .padding(.bottom, -200)
+                .offset(y: 120)
+                .scaledToFill()
+                .frame(height: 300)
+                .clipped()
+                .listRowInsets(EdgeInsets())
 
             VStack(alignment: .leading) {
                 if card.cardDetails.is_unique == true {
@@ -35,27 +41,21 @@ struct CardView: View {
                 .foregroundColor(.secondary)
 
                 HStack(alignment: .center, spacing: 20) {
-                    if card.threat != nil {
+                    if card.type_code == "hero" {
                         Text("Threat:" + " \(card.threat ?? 0)")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.cost != nil {
+                    if card.type_code != "hero" {
                         Text("Cost:" + " \(card.cost ?? "")")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.cardDetails.willpower != nil {
+                    if card.cardDetails.health != 0 {
                         Text("\(card.cardDetails.willpower ?? 0)" + " \u{E600}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
-                    }
-                    if card.cardDetails.attack != nil {
                         Text("\(card.cardDetails.attack ?? 0)" + " \u{E601}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
-                    }
-                    if card.cardDetails.defense != nil {
                         Text("\(card.cardDetails.defense ?? 0)" + " \u{E602}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
-                    }
-                    if card.cardDetails.health != nil {
                         Text("\(card.cardDetails.health ?? 0)" + " \u{E603}")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
@@ -94,7 +94,7 @@ struct CardView: View {
                 }
                 .backgroundStyle(Color(card.sphere_name))
             }
-            .padding()
+//            .padding()
         }
     }
 }

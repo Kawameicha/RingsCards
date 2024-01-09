@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PackIcon: View {
     @Environment(\.colorScheme) var colorScheme
-
     var image: Image
 
     var body: some View {

@@ -30,7 +30,7 @@ struct CardList: View {
         editBoons: Binding<Bool>,
 
         filterSphere: FilterSphere = .all,
-        filterType: FilterType = .Hero,
+        filterType: FilterType = .any,
         filterPack: [String] = [],
         filterDeck: [String] = [],
         sortParameter: SortParameter = .name,

@@ -1,5 +1,5 @@
 //
-//  KeywordList.swift
+//  ScenarioKeywordList.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 29.10.23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct KeywordList: View {
+struct ScenarioKeywordList: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var keywords: [Keyword]
     var scenario: Scenario
@@ -42,7 +42,7 @@ struct KeywordList: View {
 
 #Preview {
     ModelPreview { scenario in
-        KeywordList(scenario: scenario, filterScenario: [])
+        ScenarioKeywordList(scenario: scenario, filterScenario: [])
     }
     .modelContainer(previewModelContainer)
 }

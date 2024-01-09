@@ -41,7 +41,7 @@ extension AppScreen {
         case .campaigns:
             CampaignHome()
         case .settings:
-            SettingView()
+            SettingHome()
         }
     }
 }
