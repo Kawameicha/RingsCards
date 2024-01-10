@@ -8,28 +8,50 @@
 import SwiftUI
 
 struct CampaignViewHome: View {
+    @Environment(ViewDeckModel.self) var viewDeckModel
+    @Environment(\.modelContext) var modelContext
     @State var editBoons = false
     @State var editNotes = false
     @Bindable var campaign: Campaign
+    var decks: [Deck]
+
+    init(editBoons: Bool = false,
+         editNotes: Bool = false,
+         campaign: Campaign,
+         decks: [Deck]
+    ) {
+//        self.editBoons = editBoons
+//        self.editNotes = editNotes
+        self.campaign = campaign
+        self.decks = campaign.decks ?? [Deck.emptyDeck]
+    }
 
     var body: some View {
         List {
-            Text("Scenarios")
-                .font(.headline)
-            ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
-                .frame(height: 120)
-                .listRowSeparator(.hidden)
+            Section {
+                Text("Scenarios")
+//                    .listRowSeparator(.hidden)
+                ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
+                    .frame(height: 120)
+            }
 
-            Text("Boons & Burdens")
-                .font(.headline)
-                .listRowSeparator(.hidden)
-            CardList(deck: Deck.emptyDeck,
-                     deckView: false,
-                     campaign: campaign,
-                     campaignView: true,
-                     editCard: .constant(false),
-                     viewCard: .constant(false),
-                     editBoons: $editBoons)
+            Section {
+                Text("Decks")
+//                    .listRowSeparator(.hidden)
+                DeckList(campaign: campaign, campaignView: true, campaignDeck: false)
+            }
+
+            Section {
+                Text("Boons & Burdens")
+//                    .listRowSeparator(.hidden)
+                CardList(deck: Deck.emptyDeck,
+                         deckView: false,
+                         campaign: campaign,
+                         campaignView: true,
+                         editCard: .constant(false),
+                         viewCard: .constant(false),
+                         editBoons: $editBoons)
+            }
         }
         .navigationTitle($campaign.name)
         .toolbar {
@@ -47,8 +69,9 @@ struct CampaignViewHome: View {
 
 #Preview {
     ModelPreview { campaign in
-        CampaignViewHome(campaign: campaign)
+        CampaignViewHome(campaign: campaign, decks: [Deck.emptyDeck])
     }
     .modelContainer(previewModelContainer)
     .environment(ViewCardModel())
+    .environment(ViewDeckModel())
 }

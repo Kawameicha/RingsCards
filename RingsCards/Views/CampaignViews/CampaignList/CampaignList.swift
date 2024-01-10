@@ -42,7 +42,7 @@ struct CampaignList: View {
                 ForEach(campaigns) { campaign in
                     NavigationLink {
                         if campaign.campaignMode == true {
-                            CampaignViewHome(campaign: campaign)
+                            CampaignViewHome(campaign: campaign, decks: campaign.decks ?? [Deck.emptyDeck])
                         } else {
                             ScenarioList(campaign: campaign, filterCampaign: campaign.scenarios)
                         }

@@ -23,7 +23,7 @@ struct DeckNew: View {
                 HStack {
                     Spacer()
                     Button("Create Deck", action: {
-                        modelContext.insert(Deck(name: deckName, date_creation: Date()))
+                        modelContext.insert(Deck(name: deckName, date_creation: Date(), slots: ["": 0]))
 
                         self.presentationMode.wrappedValue.dismiss()
                     })

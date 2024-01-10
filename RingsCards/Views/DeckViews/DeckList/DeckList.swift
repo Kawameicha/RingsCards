@@ -12,12 +12,23 @@ struct DeckList: View {
     @Environment(ViewDeckModel.self) var viewDeckModel
     @Environment(\.modelContext) var modelContext
     @Query var decks: [Deck]
+    @Bindable var campaign: Campaign
+    var campaignView = false
+    var campaignDeck = false
 
     init(
+        campaign: Campaign,
+        campaignView: Bool,
+        campaignDeck: Bool,
+
         sortDeckParameter: SortDeckParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = ""
     ) {
+        self.campaign = campaign
+        self.campaignView = campaignView
+        self.campaignDeck = campaignDeck
+
         let predicate = Deck.predicate(
             searchText: searchText
         )
@@ -31,32 +42,85 @@ struct DeckList: View {
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel
 
-        List {
-            if decks.isEmpty {
+        if campaignView {
+            let campaignDecks = campaign.decks ?? [Deck.emptyDeck]
+
+            ForEach(campaignDecks) { deck in
                 NavigationLink {
-                    DeckNew()
+                    DeckViewHome(deck: deck)
                 } label: {
-                    Text("Create a Deck")
+                    DeckRow(deck: deck)
                 }
-            } else {
-                ForEach(decks) { deck in
-                    NavigationLink {
-                        DeckViewHome(deck: deck)
+                .swipeActions(edge: .trailing) {
+                    Button {
+                        campaign.decks?.remove(at: campaign.decks?.lastIndex(of: deck) ?? 0)
                     } label: {
-                        DeckRow(deck: deck)
+                        Label("Detach Deck", systemImage: "minus.circle")
+                    }
+                    .tint(.red)
+                }
+            }
+            if campaignDecks.count <= 4 {
+                NavigationLink {
+                    DeckList(campaign: campaign, campaignView: false, campaignDeck: true)
+                } label: {
+                    Text("Attach a Deck")
+                }
+            }
+        } else if campaignDeck {
+            List {
+                if decks.isEmpty {
+                    NavigationLink {
+                        DeckNew()
+                    } label: {
+                        Text("Create a Deck")
+                    }
+                } else {
+                    ForEach(decks) { deck in
+                        NavigationLink {
+                            DeckViewHome(deck: deck)
+                        } label: {
+                            DeckRow(deck: deck)
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button {
+                                campaign.decks?.insert(deck, at: campaign.decks?.endIndex ?? 0)
+                            } label: {
+                                Label("Attach Deck", systemImage: "plus.circle")
+                            }
+                            .tint(.green)
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                DeckSortButton()
-                DeckNewButton()
+        } else {
+            List {
+                if decks.isEmpty {
+                    NavigationLink {
+                        DeckNew()
+                    } label: {
+                        Text("Create a Deck")
+                    }
+                } else {
+                    ForEach(decks) { deck in
+                        NavigationLink {
+                            DeckViewHome(deck: deck)
+                        } label: {
+                            DeckRow(deck: deck)
+                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                }
             }
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    DeckSortButton()
+                    DeckNewButton()
+                }
 
-            ToolbarItem(placement: .bottomBar) {
-                DeckInfo(count: decks.count)
+                ToolbarItem(placement: .bottomBar) {
+                    DeckInfo(count: decks.count)
+                }
             }
         }
     }
@@ -69,8 +133,10 @@ struct DeckList: View {
 }
 
 #Preview {
-    DeckList()
-        .modelContainer(previewModelContainer)
-        .environment(ViewDeckModel())
-        .environment(ViewCardModel())
+    ModelPreview { campaign in
+        DeckList(campaign: campaign, campaignView: false, campaignDeck: false)
+    }
+    .modelContainer(previewModelContainer)
+    .environment(ViewDeckModel())
+    .environment(ViewCardModel())
 }
