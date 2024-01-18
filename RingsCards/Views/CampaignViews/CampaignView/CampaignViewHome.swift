@@ -44,13 +44,18 @@ struct CampaignViewHome: View {
             Section {
                 Text("Boons & Burdens")
 //                    .listRowSeparator(.hidden)
-                CardList(deck: Deck.emptyDeck,
-                         deckView: false,
-                         campaign: campaign,
-                         campaignView: true,
-                         editCard: .constant(false),
-                         viewCard: .constant(false),
-                         editBoons: $editBoons)
+                CardList(
+                    deck: Deck.emptyDeck,
+                    deckView: false,
+                    campaign: campaign,
+                    campaignView: true,
+                    editCard: .constant(false),
+                    viewCard: .constant(false),
+                    editBoons: $editBoons,
+                    filterPack: [],
+                    filterDeck: campaign.slots.map { String($0.key) },
+                    sortParameter: SortParameter.code
+                )
             }
         }
         .navigationTitle($campaign.name)

@@ -34,7 +34,8 @@ struct CardHome: View {
                     filterDeck: [],
                     sortParameter: viewCardModel.sortParameter,
                     sortOrder: viewCardModel.sortOrder,
-                    searchText: viewCardModel.searchText
+                    searchText: viewCardModel.searchText,
+                    offset: viewCardModel.offset
                 )
                 .refreshable {
                     await CardResponse.refresh(modelContext: modelContext, packs: packs)
@@ -48,6 +49,7 @@ struct CardHome: View {
         }
         .onDisappear {
             cardList = false
+            viewCardModel.offset = 1
         }
     }
 }

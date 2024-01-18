@@ -74,9 +74,6 @@
 		59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF02AA5CEC80058CB2A /* Campaign.swift */; };
 		59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF62AA5DB720058CB2A /* CampaignHost.swift */; };
 		59C87AF92AA5DDB70058CB2A /* CampaignEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF82AA5DDB70058CB2A /* CampaignEdit.swift */; };
-		59C9B8B72A97438000520310 /* UserHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C9B8B62A97438000520310 /* UserHost.swift */; };
-		59C9B8B92A9743B500520310 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C9B8B82A9743B500520310 /* UserView.swift */; };
-		59C9B8BB2A9751B700520310 /* UserEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C9B8BA2A9751B700520310 /* UserEdit.swift */; };
 		59CC10802B49515F005B5729 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC107F2B49515F005B5729 /* User.swift */; };
 		59CC78D42B46DF2600F29E18 /* CampaignNewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78D32B46DF2600F29E18 /* CampaignNewButton.swift */; };
 		59CC78D72B46E57E00F29E18 /* CampaignBoonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78D62B46E57E00F29E18 /* CampaignBoonButton.swift */; };
@@ -88,7 +85,6 @@
 		59EA4DD42B4010290078F7F8 /* DeckViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DD32B4010290078F7F8 /* DeckViewHome.swift */; };
 		59EA4DD62B4028D30078F7F8 /* DeckHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DD52B4028D30078F7F8 /* DeckHome.swift */; };
 		59EA4DDA2B4037D00078F7F8 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DD92B4037D00078F7F8 /* CardInfo.swift */; };
-		59EA4DE02B4184330078F7F8 /* UserCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DDF2B4184330078F7F8 /* UserCollection.swift */; };
 		59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EDE7122AC8632F001288AE /* SampleCampaign.swift */; };
 		59FD32572AEE4A8300D9597B /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32562AEE4A8300D9597B /* Keyword.swift */; };
 		59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32582AEE4B1800D9597B /* Keywords.swift */; };
@@ -166,9 +162,6 @@
 		59C87AF02AA5CEC80058CB2A /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		59C87AF62AA5DB720058CB2A /* CampaignHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignHost.swift; sourceTree = "<group>"; };
 		59C87AF82AA5DDB70058CB2A /* CampaignEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignEdit.swift; sourceTree = "<group>"; };
-		59C9B8B62A97438000520310 /* UserHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHost.swift; sourceTree = "<group>"; };
-		59C9B8B82A9743B500520310 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		59C9B8BA2A9751B700520310 /* UserEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEdit.swift; sourceTree = "<group>"; };
 		59CC107F2B49515F005B5729 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59CC78D32B46DF2600F29E18 /* CampaignNewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignNewButton.swift; sourceTree = "<group>"; };
 		59CC78D62B46E57E00F29E18 /* CampaignBoonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignBoonButton.swift; sourceTree = "<group>"; };
@@ -181,7 +174,6 @@
 		59EA4DD32B4010290078F7F8 /* DeckViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewHome.swift; sourceTree = "<group>"; };
 		59EA4DD52B4028D30078F7F8 /* DeckHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckHome.swift; sourceTree = "<group>"; };
 		59EA4DD92B4037D00078F7F8 /* CardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
-		59EA4DDF2B4184330078F7F8 /* UserCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollection.swift; sourceTree = "<group>"; };
 		59EDE7122AC8632F001288AE /* SampleCampaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCampaign.swift; sourceTree = "<group>"; };
 		59FD32562AEE4A8300D9597B /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		59FD32582AEE4B1800D9597B /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
@@ -311,7 +303,6 @@
 			children = (
 				59862D6F2A91F13100628449 /* Card.swift */,
 				595078662AC59A9F007BFAA0 /* CardDecoder.swift */,
-				59EA4DDF2B4184330078F7F8 /* UserCollection.swift */,
 				595078712AC5D7D1007BFAA0 /* ViewCardModel.swift */,
 			);
 			path = Cards;
@@ -381,7 +372,6 @@
 				595A66B22A9DE8930040C952 /* SettingHome.swift */,
 				5952A4632B4D639F0051CB55 /* KeywordView */,
 				59355A042AD28FCE00C894B3 /* PackView */,
-				59C9B8B52A97434100520310 /* UserViews */,
 			);
 			path = SettingViews;
 			sourceTree = "<group>";
@@ -491,16 +481,6 @@
 				595078742AC5D8FA007BFAA0 /* CardSortButton.swift */,
 			);
 			path = CardTool;
-			sourceTree = "<group>";
-		};
-		59C9B8B52A97434100520310 /* UserViews */ = {
-			isa = PBXGroup;
-			children = (
-				59C9B8BA2A9751B700520310 /* UserEdit.swift */,
-				59C9B8B62A97438000520310 /* UserHost.swift */,
-				59C9B8B82A9743B500520310 /* UserView.swift */,
-			);
-			path = UserViews;
 			sourceTree = "<group>";
 		};
 		59CC78D52B46E54D00F29E18 /* CampaignViewTool */ = {
@@ -695,7 +675,6 @@
 				59809C702B44542F004BD1F2 /* DeckViewButton.swift in Sources */,
 				59CC78D42B46DF2600F29E18 /* CampaignNewButton.swift in Sources */,
 				598F51E52AA8747E00A1C06B /* CampaignNew.swift in Sources */,
-				59C9B8B72A97438000520310 /* UserHost.swift in Sources */,
 				59C82C222B13A5840073C4FA /* htmlToMarkdown.swift in Sources */,
 				59EA4DD62B4028D30078F7F8 /* DeckHome.swift in Sources */,
 				5951BA712AB061380047DE1F /* ScenarioViewChart.swift in Sources */,
@@ -707,7 +686,6 @@
 				5922F3DA2B2DB3B80037E4D4 /* ViewCampaignModel.swift in Sources */,
 				595078752AC5D8FA007BFAA0 /* CardSortButton.swift in Sources */,
 				59B1A3862AEFE29F00ADB701 /* ScenarioViewEncounter.swift in Sources */,
-				59C9B8BB2A9751B700520310 /* UserEdit.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
 				59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */,
@@ -720,7 +698,6 @@
 				595C7BE92A93985D0094E64F /* ScenarioViewMark.swift in Sources */,
 				59CC10802B49515F005B5729 /* User.swift in Sources */,
 				595078672AC59A9F007BFAA0 /* CardDecoder.swift in Sources */,
-				59C9B8B92A9743B500520310 /* UserView.swift in Sources */,
 				595078722AC5D7D1007BFAA0 /* ViewCardModel.swift in Sources */,
 				590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */,
 				59355A062AD2902000C894B3 /* PackRow.swift in Sources */,
@@ -751,7 +728,6 @@
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
-				59EA4DE02B4184330078F7F8 /* UserCollection.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,
 				596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */,
 				5952A4652B4D63C20051CB55 /* KeywordList.swift in Sources */,

@@ -35,7 +35,8 @@ struct CardList: View {
         filterDeck: [String] = [],
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
-        searchText: String = ""
+        searchText: String = "",
+        offset: Int = 1
     ) {
         self.deck = deck
         self.deckView = deckView
@@ -52,11 +53,21 @@ struct CardList: View {
             filterPack: filterPack,
             filterDeck: filterDeck
         )
-        switch sortParameter {
-        case .code: _cards = Query(filter: predicate, sort: \.code, order: sortOrder)
-        case .name: _cards = Query(filter: predicate, sort: \.name, order: sortOrder)
-        case .sphere: _cards = Query(filter: predicate, sort: \.sphere_code, order: sortOrder)
+        var descriptor: FetchDescriptor<Card> {
+            let limit = 100
+            var sortBy: [SortDescriptor<Card>]
+
+            switch sortParameter {
+            case .code: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.code, order: sortOrder)]
+            case .name: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.name, order: sortOrder)]
+            case .sphere: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.sphere_code, order: sortOrder)]
+            }
+
+            var descriptor = FetchDescriptor<Card>(predicate: predicate, sortBy: sortBy)
+            descriptor.fetchLimit = offset * limit
+            return descriptor
         }
+        _cards = Query(descriptor)
     }
 
     var body: some View {
@@ -78,6 +89,7 @@ struct CardList: View {
                                     CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
                                 }
                             }
+                            .onAppear { if card == self.cards.last { viewCardModel.offset += 1 } }
                         }
                     }
                 }

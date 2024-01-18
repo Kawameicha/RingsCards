@@ -22,9 +22,10 @@ final class Card: Identifiable {
     let threat: Int? = nil
     let cost: String? = nil
     let deck_limit: Int
+    let cardCategory: Int
     let cardDetails: CardDetail
 
-    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, code: String, name: String, traits: String? = "", threat: Int? = nil, cost: String? = nil, deck_limit: Int, cardDetails: CardDetail) {
+    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, code: String, name: String, traits: String? = "", threat: Int? = nil, cost: String? = nil, deck_limit: Int, cardCategory: Int, cardDetails: CardDetail) {
         self.pack_code = pack_code
         self.pack_name = pack_name
         self.type_code = type_code
@@ -37,6 +38,7 @@ final class Card: Identifiable {
         self.threat = threat
         self.cost = cost
         self.deck_limit = deck_limit
+        self.cardCategory = cardCategory
         self.cardDetails = cardDetails
     }
 }

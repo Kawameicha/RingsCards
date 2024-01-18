@@ -39,6 +39,29 @@ struct CardResponse: Decodable {
     var imagesrc: String
 }
 
+extension CardResponse {
+    var cardCategory: Int {
+        switch type_code {
+        case "hero":
+            return 1
+        case "ally":
+            return 2
+        case "attachment":
+            return 3
+        case "event":
+            return 4
+        case "player-side-quest":
+            return 5
+        case "contract":
+            return 6
+        case "treasure":
+            return 7
+        default:
+            return 8
+        }
+    }
+}
+
 struct CardJSONDecoder {
     static func decode(from fileName: String) -> [CardResponse] {
 
@@ -96,6 +119,7 @@ extension CardResponse {
                                 threat: card.threat,
                                 cost: card.cost,
                                 deck_limit: card.deck_limit,
+                                cardCategory: card.cardCategory,
                                 cardDetails: CardDetail(position: card.position,
                                                        text: card.text,
                                                        flavor: card.flavor,
@@ -112,9 +136,6 @@ extension CardResponse {
                                                        url: card.url,
                                                        imagesrc: card.imagesrc))
 
-                // MARK: this only to used together with UserCollection
-                // if packs.map({ $0.packCode }).contains(card.pack_code) {
-                //    _ = UserCollection(card: card, isInCollection: card.userCollection?.isInCollection ?? true) }
                 modelContext.insert(card)
             }
         } catch {

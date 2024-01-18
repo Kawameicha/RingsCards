@@ -63,7 +63,7 @@ struct DeckViewHome: View {
                 filterSphere: viewCardModel.filterSphere,
                 filterType: viewCardModel.filterType,
                 filterPack: [],
-                filterDeck: deck.slots.map{ String($0.key) },
+                filterDeck: deck.slots.map { String($0.key) },
                 sortParameter: viewCardModel.sortParameter,
                 sortOrder: viewCardModel.sortOrder,
                 searchText: viewCardModel.searchText

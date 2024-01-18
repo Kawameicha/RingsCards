@@ -33,6 +33,7 @@ let previewModelContainer: ModelContainer = {
                                 threat: card.threat,
                                 cost: card.cost,
                                 deck_limit: card.deck_limit,
+                                cardCategory: card.cardCategory,
                                 cardDetails: CardDetail(position: card.position,
                                                        text: card.text,
                                                        flavor: card.flavor,
@@ -49,8 +50,6 @@ let previewModelContainer: ModelContainer = {
                                                        url: card.url,
                                                        imagesrc: card.imagesrc))
 
-                // MARK: this only to used together with UserCollection
-                // let userCollection = UserCollection(card: card, isInCollection: true)
                 container.mainContext.insert(card)
             }
 
