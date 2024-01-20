@@ -102,7 +102,7 @@ enum DownloadError: Error {
 
 extension CardResponse {
     @MainActor
-    static func refresh(modelContext: ModelContext, packs: [Pack]) async {
+    static func refresh(modelContext: ModelContext) async {
         do {
             let cards = try await fetchCards()
 

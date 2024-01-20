@@ -74,7 +74,6 @@
 		59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF02AA5CEC80058CB2A /* Campaign.swift */; };
 		59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF62AA5DB720058CB2A /* CampaignHost.swift */; };
 		59C87AF92AA5DDB70058CB2A /* CampaignEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF82AA5DDB70058CB2A /* CampaignEdit.swift */; };
-		59CC10802B49515F005B5729 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC107F2B49515F005B5729 /* User.swift */; };
 		59CC78D42B46DF2600F29E18 /* CampaignNewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78D32B46DF2600F29E18 /* CampaignNewButton.swift */; };
 		59CC78D72B46E57E00F29E18 /* CampaignBoonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78D62B46E57E00F29E18 /* CampaignBoonButton.swift */; };
 		59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78D82B46E58E00F29E18 /* CampaignNoteButton.swift */; };
@@ -90,6 +89,7 @@
 		59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32582AEE4B1800D9597B /* Keywords.swift */; };
 		59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325C2AEE4D2700D9597B /* KeywordView.swift */; };
 		59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */; };
+		59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */; };
 		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
 /* End PBXBuildFile section */
 
@@ -162,7 +162,6 @@
 		59C87AF02AA5CEC80058CB2A /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		59C87AF62AA5DB720058CB2A /* CampaignHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignHost.swift; sourceTree = "<group>"; };
 		59C87AF82AA5DDB70058CB2A /* CampaignEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignEdit.swift; sourceTree = "<group>"; };
-		59CC107F2B49515F005B5729 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59CC78D32B46DF2600F29E18 /* CampaignNewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignNewButton.swift; sourceTree = "<group>"; };
 		59CC78D62B46E57E00F29E18 /* CampaignBoonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignBoonButton.swift; sourceTree = "<group>"; };
 		59CC78D82B46E58E00F29E18 /* CampaignNoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignNoteButton.swift; sourceTree = "<group>"; };
@@ -179,6 +178,7 @@
 		59FD32582AEE4B1800D9597B /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
 		59FD325C2AEE4D2700D9597B /* KeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordView.swift; sourceTree = "<group>"; };
 		59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioKeywordList.swift; sourceTree = "<group>"; };
+		59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,6 +294,7 @@
 			children = (
 				5979A1BE2A9E4D6A00E1CAE1 /* Pack.swift */,
 				594E38E12AD29EBC00577EE0 /* Packs.swift */,
+				59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */,
 			);
 			path = Packs;
 			sourceTree = "<group>";
@@ -321,9 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				59C87AF02AA5CEC80058CB2A /* Campaign.swift */,
-				593282682B4850D200914E92 /* Scenario.swift */,
-				5932826A2B4858FF00914E92 /* ScenarioDecoder.swift */,
 				5922F3D92B2DB3B80037E4D4 /* ViewCampaignModel.swift */,
+				59C9DD222B5AD9EF0094B3FB /* Scenarios */,
 			);
 			path = Campaigns;
 			sourceTree = "<group>";
@@ -349,7 +349,6 @@
 		595078702AC5BC1B007BFAA0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				59CC107F2B49515F005B5729 /* User.swift */,
 				59AFE7F42B29E8BA008AF007 /* Fonts */,
 				59FD325A2AEE4B9200D9597B /* Keywords */,
 				594E38E02AD29EA900577EE0 /* Packs */,
@@ -481,6 +480,15 @@
 				595078742AC5D8FA007BFAA0 /* CardSortButton.swift */,
 			);
 			path = CardTool;
+			sourceTree = "<group>";
+		};
+		59C9DD222B5AD9EF0094B3FB /* Scenarios */ = {
+			isa = PBXGroup;
+			children = (
+				593282682B4850D200914E92 /* Scenario.swift */,
+				5932826A2B4858FF00914E92 /* ScenarioDecoder.swift */,
+			);
+			path = Scenarios;
 			sourceTree = "<group>";
 		};
 		59CC78D52B46E54D00F29E18 /* CampaignViewTool */ = {
@@ -687,6 +695,7 @@
 				595078752AC5D8FA007BFAA0 /* CardSortButton.swift in Sources */,
 				59B1A3862AEFE29F00ADB701 /* ScenarioViewEncounter.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
+				59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */,
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
 				59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */,
 				59809C6E2B444FDE004BD1F2 /* DeckNewButton.swift in Sources */,
@@ -696,7 +705,6 @@
 				5922F3DD2B2DB4430037E4D4 /* CampaignInfo.swift in Sources */,
 				59809C722B4457F4004BD1F2 /* DeckEditButton.swift in Sources */,
 				595C7BE92A93985D0094E64F /* ScenarioViewMark.swift in Sources */,
-				59CC10802B49515F005B5729 /* User.swift in Sources */,
 				595078672AC59A9F007BFAA0 /* CardDecoder.swift in Sources */,
 				595078722AC5D7D1007BFAA0 /* ViewCardModel.swift in Sources */,
 				590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */,

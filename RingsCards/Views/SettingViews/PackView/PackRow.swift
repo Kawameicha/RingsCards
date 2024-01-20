@@ -6,18 +6,16 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct PackRow: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var cards: [Card]
     @Bindable var packs: Pack
 
     var body: some View {
-        HStack{
+        HStack {
             PackIcon(image: Image(packs.cycleCode))
 
             Toggle("\(packs.packName)", isOn: $packs.isInCollection)
+                .toggleStyle(CheckboxStyle())
         }
     }
 }

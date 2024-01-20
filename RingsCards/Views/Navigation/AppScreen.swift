@@ -12,7 +12,6 @@ enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case decks
     case campaigns
     case settings
-    
     var id: AppScreen { self }
 }
 

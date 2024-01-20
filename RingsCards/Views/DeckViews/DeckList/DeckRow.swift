@@ -11,6 +11,11 @@ struct DeckRow: View {
     var deck: Deck
 
     var body: some View {
+        let player = deck.slots.reduce(0) { (result, keyValue) in
+            return result + keyValue.value }
+        let heroes = deck.heroes.reduce(0) { (result, keyValue) in
+            return result + keyValue.value }
+
         HStack(spacing: 3) {
             if deck.starting_threat != 0 {
                 Image(systemName: "\(deck.starting_threat).square")
@@ -23,10 +28,16 @@ struct DeckRow: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(deck.name)
                     .font(.headline)
-
-                Text("\(deck.heroes.count) Heroes, Cards up to \(deck.last_pack)")
-                    .foregroundColor(.secondary)
-                    .font(.subheadline)
+                
+                if player - heroes < 2 {
+                    Text("\(heroes) Heroes, \(player - heroes) Card")
+                        .foregroundColor(.secondary)
+                        .font(.subheadline)
+                } else {
+                    Text("\(heroes) Heroes, \(player - heroes) Cards")
+                        .foregroundColor(.secondary)
+                        .font(.subheadline)
+                }
             }
         }
     }

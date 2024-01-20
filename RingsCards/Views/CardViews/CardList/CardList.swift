@@ -118,7 +118,7 @@ struct CardList: View {
             }
         } else {
             ForEach(cards.filter { card in
-                campaign.slots.map{ String($0.key) }.contains(card.code)
+                campaign.slots.map { String($0.key) }.contains(card.code)
             }) { card in
                 NavigationLink {
                     CardView(card: card)

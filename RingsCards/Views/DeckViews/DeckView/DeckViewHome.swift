@@ -21,6 +21,8 @@ struct DeckViewHome: View {
         @Bindable var viewCardModel = viewCardModel
 
         if viewCard {
+            CardInfo(deck: deck)
+
             CardList(
                 deck: deck,
                 deckView: true,
@@ -52,6 +54,8 @@ struct DeckViewHome: View {
                 }
             }
         } else {
+            CardInfo(deck: deck)
+
             CardList(
                 deck: deck,
                 deckView: true,

@@ -11,12 +11,9 @@ struct KeywordView: View {
     var keyword: Keyword
 
     var body: some View {
-        VStack(alignment: .leading) {
-                VStack {
-                    Text(keyword.name)
-                        .font(.title)
-                }
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+        VStack {
+            Text(keyword.name)
+                .font(.title)
 
             Divider()
 

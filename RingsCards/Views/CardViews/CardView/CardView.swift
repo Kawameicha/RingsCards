@@ -13,9 +13,6 @@ struct CardView: View {
 
     var body: some View {
         List {
-//            CardImage(card: card)
-//                .offset(y: -100)
-//                .padding(.bottom, -200)
             CardImage(card: card)
                 .offset(y: 120)
                 .scaledToFill()
@@ -45,7 +42,7 @@ struct CardView: View {
                         Text("Threat:" + " \(card.threat ?? 0)")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }
-                    if card.type_code != "hero" {
+                    if card.cost != nil {
                         Text("Cost:" + " \(card.cost ?? "")")
                             .font(Font.custom("SFUIText-Regular", size: 20))
                     }

@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct AppDetailColumn: View {
     var screen: AppScreen?
-    
+
     var body: some View {
         Group {
             if let screen {

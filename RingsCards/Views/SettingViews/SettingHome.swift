@@ -18,7 +18,7 @@ struct SettingHome: View {
                         Text("Edit Collection")
                     }
                 }
-                
+
                 Section(header: Text("Rules")) {
                     NavigationLink {
                         KeywordList()
