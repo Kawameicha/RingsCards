@@ -26,6 +26,7 @@ final class Deck: Identifiable {
 //    var nb_favorites: Int
 //    var nb_comments: Int
     var starting_threat: Int
+    var campaigns: [Campaign]?
 
     init(name: String, date_creation: Date = .now, heroes: [String:Int]? = [:], slots: [String:Int]? = [:]) {
         self.name = name

@@ -21,13 +21,13 @@ struct CardHome: View {
         NavigationView {
             if cardList {
                 CardList(
-                    deck: Deck.emptyDeck,
-                    deckView: false,
-                    campaign: Campaign.emptyCampaign,
-                    campaignView: false,
-                    editCard: .constant(false),
-                    viewCard: .constant(false),
-                    editBoons: .constant(false),
+//                    deck: Deck.emptyDeck,
+//                    deckView: false,
+//                    campaign: Campaign.emptyCampaign,
+//                    campaignView: false,
+//                    editCard: .constant(false),
+//                    viewCard: .constant(false),
+//                    editBoons: .constant(false),
                     filterSphere: viewCardModel.filterSphere,
                     filterType: viewCardModel.filterType,
                     filterPack: packs.map { $0.packCode },
@@ -35,7 +35,7 @@ struct CardHome: View {
                     sortParameter: viewCardModel.sortParameter,
                     sortOrder: viewCardModel.sortOrder,
                     searchText: viewCardModel.searchText,
-                    offset: viewCardModel.offset
+                    listOffset: viewCardModel.listOffset
                 )
                 .refreshable {
                     await CardResponse.refresh(modelContext: modelContext)
@@ -46,10 +46,11 @@ struct CardHome: View {
         }
         .onAppear {
             cardList = true
+            viewCardModel.listOffset = 1
         }
         .onDisappear {
             cardList = false
-            viewCardModel.offset = 1
+            viewCardModel.listOffset = 1
         }
     }
 }

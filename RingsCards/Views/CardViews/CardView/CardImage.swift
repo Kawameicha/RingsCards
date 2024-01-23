@@ -11,20 +11,21 @@ struct CardImage: View {
     var card: Card
 
     var body: some View {
-        AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.cardDetails.imagesrc)")) { image in
-            image
-                .resizable()
-                .scaledToFit()
-//                .frame(width: 350)
-        } placeholder: {
-            ProgressView()
+        AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.cardDetails.imagesrc)")) { phase in
+            switch phase {
+            case .empty:
+                ProgressView()
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+            case .success(let image):
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            case .failure:
+                Image(systemName: "AppIcon")
+            @unknown default:
+                EmptyView()
+            }
         }
-        .clipShape(
-            Rectangle().offset(y:-200))
-//        .overlay {
-//            Circle().stroke(.white, lineWidth: 4).offset(y:-50)
-//        }
-        .shadow(radius: 9)
     }
 }
 

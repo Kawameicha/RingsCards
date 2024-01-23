@@ -33,13 +33,13 @@ struct CardFilterButton: View {
 }
 
 enum FilterSphere: String, CaseIterable, Identifiable {
-    case all, leadership, tactics, spirit, lore, neutral, baggins, fellowship
+    case all = "all spheres", leadership, tactics, spirit, lore, neutral, baggins, fellowship
     var id: Self { self }
     var name: String { rawValue.capitalized }
 }
 
 enum FilterType: String, CaseIterable, Identifiable {
-    case any, Hero, Ally, Attachment, Event, quest = "Player Side Quest", Contract, Campaign
+    case any = "all types", Hero, Ally, Attachment, Event, quest = "Player Side Quest", Contract, Campaign
     var id: Self { self }
     var name: String { rawValue.capitalized }
 }

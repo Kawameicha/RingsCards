@@ -139,7 +139,7 @@ extension CardResponse {
                 modelContext.insert(card)
             }
         } catch {
-            fatalError("Failed to fetch cards")
+            print("Failed to fetch cards")
         }
     }
 }

@@ -292,9 +292,9 @@
 		594E38E02AD29EA900577EE0 /* Packs */ = {
 			isa = PBXGroup;
 			children = (
+				59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */,
 				5979A1BE2A9E4D6A00E1CAE1 /* Pack.swift */,
 				594E38E12AD29EBC00577EE0 /* Packs.swift */,
-				59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */,
 			);
 			path = Packs;
 			sourceTree = "<group>";

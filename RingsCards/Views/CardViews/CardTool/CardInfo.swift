@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CardInfo: View {
-    var count: Int = 0
     var deck: Deck
+    var count = 0
 
     var body: some View {
         if !(deck.slots.isEmpty) {

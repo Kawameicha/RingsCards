@@ -42,7 +42,7 @@ extension SortOrder {
 }
 
 enum SortParameter: String, CaseIterable, Identifiable {
-    case code, name, sphere
+    case code = "Pack", name, cost, sphere
     var id: Self { self }
     var name: String { rawValue.capitalized }
 }

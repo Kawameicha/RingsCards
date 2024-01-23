@@ -13,21 +13,21 @@ struct CardList: View {
     @Environment(\.modelContext) var modelContext
     @Query var cards: [Card]
     @Bindable var deck: Deck
-    var deckView = false
+    var deckView: Bool
     @Bindable var campaign: Campaign
-    var campaignView = false
+    var campaignView: Bool
     @Binding var editCard: Bool
     @Binding var viewCard: Bool
     @Binding var editBoons: Bool
 
     init(
-        deck: Deck,
-        deckView: Bool,
-        campaign: Campaign,
-        campaignView: Bool,
-        editCard: Binding<Bool>,
-        viewCard: Binding<Bool>,
-        editBoons: Binding<Bool>,
+        deck: Deck = Deck.emptyDeck,
+        deckView: Bool = false,
+        campaign: Campaign = Campaign.emptyCampaign,
+        campaignView: Bool = false,
+        editCard: Binding<Bool> = .constant(false),
+        viewCard: Binding<Bool> = .constant(false),
+        editBoons: Binding<Bool> = .constant(false),
 
         filterSphere: FilterSphere = .all,
         filterType: FilterType = .any,
@@ -36,7 +36,7 @@ struct CardList: View {
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = "",
-        offset: Int = 1
+        listOffset: Int = 1
     ) {
         self.deck = deck
         self.deckView = deckView
@@ -60,11 +60,12 @@ struct CardList: View {
             switch sortParameter {
             case .code: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.code, order: sortOrder)]
             case .name: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.name, order: sortOrder)]
+            case .cost: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.cost, order: sortOrder), SortDescriptor(\.threat, order: sortOrder)]
             case .sphere: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.sphere_code, order: sortOrder)]
             }
 
             var descriptor = FetchDescriptor<Card>(predicate: predicate, sortBy: sortBy)
-            descriptor.fetchLimit = offset * limit
+            descriptor.fetchLimit = listOffset * limit
             return descriptor
         }
         _cards = Query(descriptor)
@@ -73,7 +74,12 @@ struct CardList: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        if !campaignView {
+        if cards.isEmpty {
+            ScrollView {
+                Spacer(minLength: 200)
+                    ContentUnavailableView("Refresh to load some cards", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
+            }
+        } else if !campaignView {
             List {
                 ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
@@ -89,7 +95,7 @@ struct CardList: View {
                                     CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
                                 }
                             }
-                            .onAppear { if card == self.cards.last { viewCardModel.offset += 1 } }
+                            .onAppear { if card == self.cards.last { viewCardModel.listOffset += 1 } }
                         }
                     }
                 }
@@ -102,9 +108,9 @@ struct CardList: View {
                     }
                 }
 
-                ToolbarItem(placement: .bottomBar) {
-                    CardInfo(count: cards.count, deck: deck)
-                }
+//                ToolbarItem(placement: .bottomBar) {
+//                    CardInfo(deck: deck, count: cards.count)
+//                }
             }
         } else if !editBoons {
             ForEach(cards.filter { card in
@@ -131,19 +137,20 @@ struct CardList: View {
 }
 
 #Preview {
-    ModelPreview { deck in
+//    ModelPreview { deck in
         ModelPreview { campaign in
             CardList(
-                deck: deck,
-                deckView: false,
-                campaign: campaign,
-                campaignView: false,
-                editCard: .constant(false),
-                viewCard: .constant(false),
-                editBoons: .constant(false))
-        }
+//                deck: deck,
+//                deckView: false,
+                campaign: campaign
+//                campaignView: false,
+//                editCard: .constant(false),
+//                viewCard: .constant(false),
+//                editBoons: .constant(false)
+            )
+//        }
     }
     .modelContainer(previewModelContainer)
     .environment(ViewCardModel())
-    .environment(ViewDeckModel())
+//    .environment(ViewDeckModel())
 }

@@ -37,6 +37,7 @@ struct CampaignNew: View {
                 }
 
                 Toggle("Campaign Mode", isOn: $campaignMode)
+                    .toggleStyle(CheckboxStyle())
             }
 
             Section {

@@ -98,9 +98,9 @@ extension Card {
             if filterDeck.isEmpty {
                 (filterPack.isEmpty || filterPack.contains(card.pack_code))
                 &&
-                (filterType == "any" || card.type_name == filterType)
+                (filterType == "all types" || card.type_name == filterType)
                 &&
-                (filterSphere == "all" || card.sphere_code == filterSphere)
+                (filterSphere == "all spheres" || card.sphere_code == filterSphere)
                 &&
                 (searchText.isEmpty || card.name.localizedStandardContains(searchText))
             } else {
