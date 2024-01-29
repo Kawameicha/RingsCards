@@ -13,21 +13,24 @@ struct CardHome: View {
     @Environment(\.modelContext) var modelContext
     @Query(filter: #Predicate<Pack> { pack in
         pack.isInCollection }) var packs: [Pack]
-    @State var cardList = false
+    @Query var cards: [Card]
+//    @State var cardList = false
 
+    init() {
+        var descriptor: FetchDescriptor<Card> {
+            var descriptor = FetchDescriptor<Card>()
+            descriptor.fetchLimit = 1
+            return descriptor
+        }
+        _cards = Query(descriptor)
+    }
+    
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
         NavigationView {
-            if cardList {
+            if cards.count != 0 {
                 CardList(
-//                    deck: Deck.emptyDeck,
-//                    deckView: false,
-//                    campaign: Campaign.emptyCampaign,
-//                    campaignView: false,
-//                    editCard: .constant(false),
-//                    viewCard: .constant(false),
-//                    editBoons: .constant(false),
                     filterSphere: viewCardModel.filterSphere,
                     filterType: viewCardModel.filterType,
                     filterPack: packs.map { $0.packCode },
@@ -42,14 +45,24 @@ struct CardHome: View {
                 }
                 .navigationTitle("Player Cards")
                 .searchable(text: $viewCardModel.searchText)
+            } else {
+                ScrollView {
+                    Spacer(minLength: 200)
+                    ContentUnavailableView("Refresh to load some cards", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
+                }
+                .refreshable {
+                    await CardResponse.refresh(modelContext: modelContext)
+                }
+                .navigationTitle("Player Cards")
+                .searchable(text: $viewCardModel.searchText)
             }
         }
         .onAppear {
-            cardList = true
+//            cardList = true
             viewCardModel.listOffset = 1
         }
         .onDisappear {
-            cardList = false
+//            cardList = false
             viewCardModel.listOffset = 1
         }
     }

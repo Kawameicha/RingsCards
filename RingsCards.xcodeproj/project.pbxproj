@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590710272B616190002E907C /* DeckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590710262B616190002E907C /* DeckBox.swift */; };
 		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
 		590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsUserData.swift */; };
 		5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912EE232A93668700B2F8B5 /* CardRow.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590710262B616190002E907C /* DeckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBox.swift; sourceTree = "<group>"; };
 		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		590874762AC3379A00E768F2 /* RingsUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsUserData.swift; sourceTree = "<group>"; };
 		5912EE232A93668700B2F8B5 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 				593223632A9CA7F300AA7751 /* DeckList.swift */,
 				59992F562AAB0CE300C6307E /* DeckNew.swift */,
 				593223612A9CA71200AA7751 /* DeckRow.swift */,
+				590710262B616190002E907C /* DeckBox.swift */,
 			);
 			path = DeckList;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				59D835412AFF92A2000C160E /* CampaignViewHome.swift in Sources */,
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
+				590710272B616190002E907C /* DeckBox.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,
 				596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */,
@@ -877,6 +881,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RingsCards/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RingsCards;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -889,6 +895,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -907,6 +917,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RingsCards/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RingsCards;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -919,6 +931,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

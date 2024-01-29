@@ -74,12 +74,7 @@ struct CardList: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        if cards.isEmpty {
-            ScrollView {
-                Spacer(minLength: 200)
-                    ContentUnavailableView("Refresh to load some cards", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
-            }
-        } else if !campaignView {
+        if !campaignView {
             List {
                 ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
@@ -107,10 +102,6 @@ struct CardList: View {
                         CardSortButton()
                     }
                 }
-
-//                ToolbarItem(placement: .bottomBar) {
-//                    CardInfo(deck: deck, count: cards.count)
-//                }
             }
         } else if !editBoons {
             ForEach(cards.filter { card in
@@ -137,20 +128,11 @@ struct CardList: View {
 }
 
 #Preview {
-//    ModelPreview { deck in
-        ModelPreview { campaign in
-            CardList(
-//                deck: deck,
-//                deckView: false,
-                campaign: campaign
-//                campaignView: false,
-//                editCard: .constant(false),
-//                viewCard: .constant(false),
-//                editBoons: .constant(false)
-            )
-//        }
+    ModelPreview { campaign in
+        CardList(
+            campaign: campaign
+        )
     }
     .modelContainer(previewModelContainer)
     .environment(ViewCardModel())
-//    .environment(ViewDeckModel())
 }
