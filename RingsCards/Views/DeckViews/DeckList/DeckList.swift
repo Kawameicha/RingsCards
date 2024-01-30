@@ -15,6 +15,7 @@ struct DeckList: View {
     @Bindable var campaign: Campaign
     var campaignView = false
     var campaignDeck = false
+    @State private var confirmDelete = false
 
     init(
         campaign: Campaign,
@@ -108,8 +109,29 @@ struct DeckList: View {
                         } label: {
                             DeckRow(deck: deck)
                         }
+                        .swipeActions(edge: .trailing) {
+                            Button {
+                                if deck.campaigns?.count ?? 0 > 0 {
+                                    confirmDelete = true
+                                } else {
+                                    modelContext.delete(deck)
+                                }
+                            } label: {
+                                Label("Delete Deck", systemImage: "trash")
+                            }
+                            .tint(.red)
+                        }
+                        .alert(isPresented:$confirmDelete) {
+                            Alert(
+                                title: Text("Are you sure you want to delete this deck?"),
+                                message: Text("This deck is used in one or more campaigns"),
+                                primaryButton: .destructive(Text("Delete")) {
+                                    modelContext.delete(deck)
+                                },
+                                secondaryButton: .cancel()
+                            )
+                        }
                     }
-                    .onDelete(perform: deleteItems)
                 }
             }
             .toolbar {
@@ -122,12 +144,6 @@ struct DeckList: View {
                     DeckInfo(count: decks.count)
                 }
             }
-        }
-    }
-
-    func deleteItems(offsets: IndexSet) {
-        for index in offsets {
-            modelContext.delete(decks[index])
         }
     }
 }
