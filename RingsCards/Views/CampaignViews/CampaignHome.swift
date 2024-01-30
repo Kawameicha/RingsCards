@@ -22,6 +22,7 @@ struct CampaignHome: View {
             )
             .navigationTitle("My Campaigns")
             .searchable(text: $viewCampaignModel.searchText)
+            .disableAutocorrection(true)
         }
     }
 }

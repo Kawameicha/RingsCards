@@ -25,6 +25,7 @@ struct DeckHome: View {
             )
             .navigationTitle("My Decks")
             .searchable(text: $viewDeckModel.searchText)
+            .disableAutocorrection(true)
         }
     }
 }

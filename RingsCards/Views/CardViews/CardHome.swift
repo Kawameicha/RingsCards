@@ -45,6 +45,7 @@ struct CardHome: View {
                 }
                 .navigationTitle("Player Cards")
                 .searchable(text: $viewCardModel.searchText)
+                .disableAutocorrection(true)
             } else {
                 ScrollView {
                     Spacer(minLength: 200)
