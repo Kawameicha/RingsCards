@@ -17,7 +17,11 @@ struct CardRow: View {
                 Image(systemName: "\(card.threat ?? 0).square")
                     .foregroundColor(Color(card.sphere_name))
                     .font(.system(size: 42.0))
-            } else if card.cost != nil && card.cost != "x" {
+            } else if card.cost == "X" {
+                Image(systemName: "x.circle")
+                    .foregroundColor(Color(card.sphere_name))
+                    .font(.system(size: 42.0))
+            } else if card.cost != nil {
                 Image(systemName: "\(Int(card.cost!) ?? 0).circle")
                     .foregroundColor(Color(card.sphere_name))
                     .font(.system(size: 42.0))
