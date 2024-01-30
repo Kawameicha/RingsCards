@@ -26,6 +26,14 @@ struct SettingHome: View {
                         Text("All Keywords")
                     }
                 }
+
+                Section(header: Text("Support")) {
+                    NavigationLink {
+                        SupportHome()
+                    } label: {
+                        Text("About Rings Cards")
+                    }
+                }
             }
             .navigationTitle("Settings")
         }

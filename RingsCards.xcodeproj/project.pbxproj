@@ -10,6 +10,7 @@
 		590710272B616190002E907C /* DeckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590710262B616190002E907C /* DeckBox.swift */; };
 		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
 		590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsUserData.swift */; };
+		590E53972B69500E0009E5A3 /* SupportHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590E53962B69500E0009E5A3 /* SupportHome.swift */; };
 		5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912EE232A93668700B2F8B5 /* CardRow.swift */; };
 		592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CA2A90A993002A7648 /* RingsCardsApp.swift */; };
 		592264CD2A90A993002A7648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592264CC2A90A993002A7648 /* ContentView.swift */; };
@@ -98,6 +99,7 @@
 		590710262B616190002E907C /* DeckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBox.swift; sourceTree = "<group>"; };
 		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		590874762AC3379A00E768F2 /* RingsUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsUserData.swift; sourceTree = "<group>"; };
+		590E53962B69500E0009E5A3 /* SupportHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportHome.swift; sourceTree = "<group>"; };
 		5912EE232A93668700B2F8B5 /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
 		592264CA2A90A993002A7648 /* RingsCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsCardsApp.swift; sourceTree = "<group>"; };
 		592264CC2A90A993002A7648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -195,6 +197,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		590E53952B694FF10009E5A3 /* SupportView */ = {
+			isa = PBXGroup;
+			children = (
+				590E53962B69500E0009E5A3 /* SupportHome.swift */,
+			);
+			path = SupportView;
+			sourceTree = "<group>";
+		};
 		5912EE212A93662800B2F8B5 /* CardViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +383,7 @@
 				595A66B22A9DE8930040C952 /* SettingHome.swift */,
 				5952A4632B4D639F0051CB55 /* KeywordView */,
 				59355A042AD28FCE00C894B3 /* PackView */,
+				590E53952B694FF10009E5A3 /* SupportView */,
 			);
 			path = SettingViews;
 			sourceTree = "<group>";
@@ -704,6 +715,7 @@
 				59809C6E2B444FDE004BD1F2 /* DeckNewButton.swift in Sources */,
 				5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */,
 				59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */,
+				590E53972B69500E0009E5A3 /* SupportHome.swift in Sources */,
 				593223642A9CA7F300AA7751 /* DeckList.swift in Sources */,
 				5922F3DD2B2DB4430037E4D4 /* CampaignInfo.swift in Sources */,
 				59809C722B4457F4004BD1F2 /* DeckEditButton.swift in Sources */,
