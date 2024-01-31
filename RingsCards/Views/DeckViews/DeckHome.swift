@@ -14,7 +14,7 @@ struct DeckHome: View {
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel
 
-        NavigationView {
+        NavigationStack {
             DeckList(
                 campaign: Campaign.emptyCampaign,
                 campaignView: false,

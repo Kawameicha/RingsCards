@@ -9,29 +9,23 @@ import SwiftUI
 
 struct SettingHome: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Section(header: Text("Cards")) {
-                    NavigationLink {
+                    NavigationLink("Edit Collection") {
                         PackList()
-                    } label: {
-                        Text("Edit Collection")
                     }
                 }
 
                 Section(header: Text("Rules")) {
-                    NavigationLink {
+                    NavigationLink("All Keywords") {
                         KeywordList()
-                    } label: {
-                        Text("All Keywords")
                     }
                 }
 
                 Section(header: Text("Support")) {
-                    NavigationLink {
+                    NavigationLink("About Rings Cards") {
                         SupportHome()
-                    } label: {
-                        Text("About Rings Cards")
                     }
                 }
             }

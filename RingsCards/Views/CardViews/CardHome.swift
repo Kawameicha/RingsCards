@@ -28,7 +28,7 @@ struct CardHome: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        NavigationView {
+        NavigationStack {
             if cards.count != 0 {
                 CardList(
                     filterSphere: viewCardModel.filterSphere,

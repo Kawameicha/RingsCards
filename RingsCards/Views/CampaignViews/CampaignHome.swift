@@ -14,7 +14,7 @@ struct CampaignHome: View {
     var body: some View {
         @Bindable var viewCampaignModel = viewCampaignModel
 
-        NavigationView {
+        NavigationStack {
             CampaignList(
                 sortCampaignParameter: viewCampaignModel.sortCampaignParameter,
                 sortOrder: viewCampaignModel.sortOrder,
