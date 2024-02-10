@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		590710272B616190002E907C /* DeckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590710262B616190002E907C /* DeckBox.swift */; };
 		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
 		590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsUserData.swift */; };
 		590E53972B69500E0009E5A3 /* SupportHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590E53962B69500E0009E5A3 /* SupportHome.swift */; };
@@ -96,7 +95,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		590710262B616190002E907C /* DeckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBox.swift; sourceTree = "<group>"; };
 		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		590874762AC3379A00E768F2 /* RingsUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsUserData.swift; sourceTree = "<group>"; };
 		590E53962B69500E0009E5A3 /* SupportHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportHome.swift; sourceTree = "<group>"; };
@@ -558,7 +556,6 @@
 				593223632A9CA7F300AA7751 /* DeckList.swift */,
 				59992F562AAB0CE300C6307E /* DeckNew.swift */,
 				593223612A9CA71200AA7751 /* DeckRow.swift */,
-				590710262B616190002E907C /* DeckBox.swift */,
 			);
 			path = DeckList;
 			sourceTree = "<group>";
@@ -750,7 +747,6 @@
 				59D835412AFF92A2000C160E /* CampaignViewHome.swift in Sources */,
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
-				590710272B616190002E907C /* DeckBox.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,
 				596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */,
