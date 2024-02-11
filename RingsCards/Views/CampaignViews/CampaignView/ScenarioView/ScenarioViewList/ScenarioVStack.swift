@@ -40,7 +40,6 @@ struct ScenarioVStack: View {
                         }
                     }
                 }
-//                .scrollBounceBehavior(.always)
                 .scrollClipDisabled()
             }
             .padding()
