@@ -11,7 +11,7 @@ import SwiftData
 let previewModelContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Keyword.self,
+            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Keyword.self, Rule.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
 
@@ -92,6 +92,17 @@ let previewModelContainer: ModelContainer = {
             
             if try modelContext.fetch(FetchDescriptor<Keyword>()).isEmpty {
                 Keywords.contents.forEach { container.mainContext.insert($0) }
+            }
+
+            let rules = RuleJSONDecoder.decode(from: "Rules")
+
+            rules.forEach { rule in
+                let rule = Rule(id: rule.id,
+                                name: rule.name,
+                                text: rule.text,
+                                seeAlso: rule.seeAlso)
+
+                container.mainContext.insert(rule)
             }
         }
 

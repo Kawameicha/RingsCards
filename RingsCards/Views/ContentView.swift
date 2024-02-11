@@ -30,4 +30,5 @@ struct ContentView: View {
         .environment(ViewCardModel())
         .environment(ViewDeckModel())
         .environment(ViewCampaignModel())
+        .environment(ViewRuleModel())
 }

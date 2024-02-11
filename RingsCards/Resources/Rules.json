@@ -1,0 +1,244 @@
+[
+  {
+    "id": "the_golden_rules",
+    "name": "The Golden Rule",
+    "text": "If the text of this Rules Reference directly contradicts the text of the Learn to Play book, the text of this guide takes precedence.\n\nIf the ability text of a card directly contradicts the text of either the Rules Reference or the Learn to Play book, the text of the card takes precedence.",
+    "seeAlso": []
+  },
+  {
+    "id": "the_grim_rule",
+    "name": "The Grim Rule",
+    "text": "If players are unable to find the answer to a rules or timing conflict in this Rules Reference, resolve the conflict in the manner that the players perceive to be the worst possible resolution with regards to winning the scenario.",
+    "seeAlso": []
+  },
+  {
+    "id": "ability",
+    "name": "Ability, Card Ability",
+    "text": "An ability is the special game text that a card contributes to the game. Card abilities fall into one of the following types: action, forced, keyword, constant ability, response, or when revealed ability.\n\n ∙ The initiation of an action or response ability is optional. The word “may” also incorporates a player option into the resolution of an ability. The player who controls the card on which an optional ability exists determines whether or not they wish to use that ability at the appropriate time.\n\n ∙ The application or initiation of the following types of abilities is mandatory: constant abilities, when revealed abilities, and forced abilities.\n\n ∙ The initiation of any keyword which uses the word “may” in its keyword description is optional. The application of all other keywords is mandatory.\n\n ∙ Card abilities only interact with, and can only target, cards that are in play, unless the ability specifically refers to an out-of-play area or element. Card abilities on characters and attachments can only be initiated or affect the game from an in-play area unless they specifically refer to being used from an out-of-play area, or require that the card be out of play for the ability to resolve. Event cards implicitly interact with the game from an out-of- play area, as established by the rules of the event card type.\n\n ∙ A card ability can only be initiated if its effect has the potential to change the game state. This potential is assessed without taking into account the consequences of the cost payment or any other ability interactions.\n\n ∙ A card ability can only be initiated if its cost (after modifiers) has the potential to be paid in full.\n\n ∙ When an ability has more than one sentence of text, the ability should be resolved one sentence at a time.\n\n ∙ An ability prefaced by a bold-face timing trigger followed by a colon is referred to as a “triggered ability.”",
+    "seeAlso": [
+        {
+            "id": "action",
+            "name": "Action"
+        },
+        {
+            "id": "effects",
+            "name": "Effects"
+        },
+        {
+            "id": "response",
+            "name": "Response"
+        },
+        {
+            "id": "forced",
+            "name": "Forced"
+        },
+        {
+            "id": "keywords",
+            "name": "Keywords"
+        },
+        {
+            "id": "constant_ability",
+            "name": "Constant Ability"
+        }
+    ]
+  },
+  {
+    "id": "action",
+    "name": "Action, Action Ability",
+    "text": "Some abilities are labeled by the word “Action” followed by ability text. These abilities can only be initiated by a player during an action window. For details on when action windows occur during each round.\n\nSome action abilities have a phase name as a precursor to the word “Action.” Such abilities are still considered action abilities, with the restriction that they can only be initiated during an action window in the specified phase.\n\nAn action must be resolved as completely as possible before the next action can be initiated.\n\nA player may initiate an action ability from:\n\n ∙ A hero, ally, or attachment card that is in play and under their control.\n\n ∙ An event card in their hand.\n\n ∙ An out-of-play card they own with an ability that specifies that it triggers from an out-of-play state, or requires the card to be out of play in order to resolve.\n\n ∙ An objective, quest, or location ability in play with the boldface “Action:” trigger.",
+    "seeAlso": [
+        {
+            "id": "ability",
+            "name": "Ability"
+        },
+        {
+            "id": "triggered_ability",
+            "name": "Triggered Ability"
+        }
+    ]
+  },
+  {
+    "id": "active_location",
+    "name": "Active Location",
+    "text": "When the players travel to a location, it is removed from the staging area and placed next to the quest deck, causing it to become the active location.\n\n ∙ There can only be one active location at a time. The players cannot travel if another location card is active.\n\n ∙ The active location does not contribute its threat strength to the total threat strength in the staging area.\n\n ∙ The active location acts as a buffer for the current quest. Any progress tokens that would be placed on the current quest are instead placed on the active location, up to that location’s quest points.\n\n ∙ If the active location becomes explored by a game or card effect that requires the placement of multiple progress on the quest (and the progress is instead being placed on the active location), the remaining progress created by the effect is placed on the current quest.",
+    "seeAlso": [
+        {
+            "id": "explored",
+            "name": "Explored"
+        },
+        {
+            "id": "travel",
+            "name": "Travel"
+        }
+    ]
+  },
+  {
+    "id": "active_player",
+    "name": "Active Player",
+    "text": "The phrase “active player” is used to refer to a player who is obligated to perform (or granted the option to perform) a specific game function during a framework step or special action window.",
+    "seeAlso": []
+  },
+  {
+    "id": "after",
+    "name": "After",
+    "text": "The word “after” refers to a game occurrence that has just been concluded. Many response abilities use the term “after” to specify the timing of their triggering conditions.",
+    "seeAlso": [
+        {
+            "id": "response",
+            "name": "Response"
+        },
+        {
+            "id": "triggered_ability",
+            "name": "Triggered Ability"
+        }
+    ]
+  },
+  {
+    "id": "ally_cards",
+    "name": "Ally Cards",
+    "text": "Ally cards represent characters (friends, followers, creatures, and hirelings) that assist a player’s heroes on the quest. Ally cards are played from a player’s hand, and they remain in play until they are destroyed.",
+    "seeAlso": [
+        {
+            "id": "damage",
+            "name": "Damage"
+        },
+        {
+            "id": "destroy",
+            "name": "Destroy"
+        },
+        {
+            "id": "hit_points",
+            "name": "Hit Points"
+        }
+    ]
+  },
+  {
+    "id": "attachment_cards",
+    "name": "Attachment Cards",
+    "text": "Attachment cards represent weapons, armor, artifacts, equipment, skills, and conditions. When played, they are attached to (placed slightly overlapped by) another card or game element, and they tend to modify or influence the activity of the card or game element to which they are attached.\n\n ∙ An attachment cannot enter play if there is no eligible card or game element to which it can attach.\n\n ∙ There is no limit to the number of attachments that can be attached to a card or game element.\n\n ∙ If the card to which an attachment is attached leaves play, simultaneously discard the attachment.\n\n ∙ Play restrictions, such as “attach to a _**Gondor**_ hero” are checked only at the time the attachment enters play.\n\n ∙ A player has the option to play attachments by attaching them to another player’s character. When an attachment enters play attached to a character under another player’s control, that player gains control of the attachment.\n\n ∙ An attachment card readies and exhausts independently of the card to which it is attached.",
+    "seeAlso": [
+        {
+            "id": "cannot_have_attachments",
+            "name": "“Cannot have attachments”"
+        }
+    ]
+  },
+  {
+    "id": "attack_strength",
+    "name": "Attack Strength",
+    "text": "Each character and enemy has an attack strength. This value is the amount of damage that character or enemy deals when it attacks.\n\n ∙ Attack strength is denoted by the [attack] symbol.",
+    "seeAlso": [
+        {
+            "id": "combat_phase",
+            "name": "Combat Phase"
+        }
+    ]
+  },
+  {
+    "id": "attacks_outside_the_combat_phase",
+    "name": "Attacks Outside the Combat Phase",
+    "text": "If an enemy makes an attack outside of the combat phase, deal it a shadow card and follow each step of “Enemy Attack Resolution”.\n\nIf a player makes an attack outside the combat phase, follow each step of “Player Attack Resolution”.",
+    "seeAlso": [
+        {
+            "id": "enemy_attack_resolution",
+            "name": "“Enemy Attack Resolution”"
+        },
+        {
+            "id": "player_attack_resolution",
+            "name": "“Player Attack Resolution”"
+        }
+    ]
+  },
+  {
+    "id": "base_value",
+    "name": "Base Value",
+    "text": "The value of a quantity before other modifiers are applied. For most quantities, it is also the printed value.",
+    "seeAlso": []
+  },
+  {
+    "id": "blank",
+    "name": "Blank",
+    "text": "If an ability causes a card’s printed text box to be considered “blank,” that text box is treated as if it did not have any of its printed text. Text gained from another source is not blanked.\n\n ∙ Included in a card’s text box are its abilities, keywords, and traits.\n\n ∙ A card with a blank text box retains its flavor and/or story text.",
+    "seeAlso": []
+  },
+  {
+    "id": "cancel",
+    "name": "Cancel",
+    "text": "Some card abilities (usually response abilities) can “cancel” other card or game effects. Cancel abilities interrupt the initiation of an effect, and prevent the effect from initiating. Because of this, cancel abilities have timing priority over all other abilities.\n\n ∙ If an effect is canceled, that effect is no longer imminent, and further abilities (including cancels) cannot be initiated in reference to the canceled effect.\n\n ∙ When the effects of an ability are canceled, the ability is still considered to have been used, and any costs have still been paid.\n\n ∙ If the effects of an event card are canceled, the card is still considered to have been played, and it is still placed in its owner’s discard pile.\n\n ∙ If the effects of a treachery card are canceled, the card is still considered to have been revealed, and it is still placed in the encounter discard pile.",
+    "seeAlso": [
+        {
+            "id": "cost",
+            "name": "Cost"
+        },
+        {
+            "id": "ability",
+            "name": "Ability"
+        },
+        {
+            "id": "triggering_condition",
+            "name": "Triggering Condition"
+        }
+    ]
+  },
+  {
+    "id": "cannot",
+    "name": "Cannot",
+    "text": "The word “cannot” is absolute, and cannot be countermanded by other abilities or effects.",
+    "seeAlso": []
+  },
+  {
+    "id": "cannot_be_damaged",
+    "name": "“Cannot be damaged”",
+    "text": "A card that “cannot be damaged” cannot have damage assigned, dealt, reassigned, or moved to it, and it cannot be chosen to take damage or be chosen as the target of an effect that would damage it.\n\n ∙ Any pre-existing damage on a card that gains “cannot be damaged” remains on that card.\n\n ∙ A card that “cannot be damaged” can still be driven from play by non-damaging effects, such as discard.",
+    "seeAlso": []
+  },
+  {
+    "id": "cannot_have_attachments",
+    "name": "“Cannot have attachments”",
+    "text": "A card with the text “Cannot have attachments” cannot have attachment cards attached to it.\n\n ∙ If a trait precedes the word “attachments,” the card cannot have attachments of the specified trait, but it can have attachments that do not possess that trait.\n\n ∙ If a character gains the text “cannot have attachments,” any attachments on that character must immediately be discarded.",
+    "seeAlso": [
+        {
+            "id": "attachment_cards",
+            "name": "Attachment Cards"
+        }
+    ]
+  },
+  {
+    "id": "card_types",
+    "name": "Card Types",
+    "text": "The game’s card types are: quest, enemy, location, treachery, objective, hero, ally, attachment, and event.\n\n ∙ If an ability causes a card type to change (such as an ally card becoming an enemy card), it loses all other card types it might possess and functions as would any card of the new type.",
+    "seeAlso": []
+  },
+  {
+    "id": "character_cards",
+    "name": "Character Cards",
+    "text": "Character cards represent the different companions who come together to complete each quest.\n\n ∙ Character cards are divided into 2 types: heroes and allies. Any ability that refers to a “character” refers to both types.\n\nSome abilities, however, may refer only to a particular type, or may exclude a type, based on the ability text.\n\n ∙ Characters enter play ready, in a player’s play area, and under their owner’s control.\n\n ∙ Characters remain in play unless they are destroyed or removed by a game step or ability.",
+    "seeAlso": [
+        {
+            "id": "ally_cards",
+            "name": "Ally Cards"
+        },
+        {
+            "id": "hero_cards",
+            "name": "Hero Cards"
+        },
+        {
+            "id": "damage",
+            "name": "Damage"
+        },
+        {
+            "id": "destroy",
+            "name": "Destroy"
+        },
+        {
+            "id": "hit_points",
+            "name": "Hit Points"
+        },
+        {
+            "id": "unique_cards",
+            "name": "Unique Cards"
+        }
+    ]
+  }
+]
+

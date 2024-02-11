@@ -13,6 +13,7 @@ struct RingsCardsApp: App {
     @State var viewCardModel = ViewCardModel()
     @State var viewDeckModel = ViewDeckModel()
     @State var viewCampaignModel = ViewCampaignModel()
+    @State var viewRuleModel = ViewRuleModel()
 
     var body: some Scene {
         WindowGroup {
@@ -20,6 +21,7 @@ struct RingsCardsApp: App {
                 .environment(viewCardModel)
                 .environment(viewDeckModel)
                 .environment(viewCampaignModel)
+                .environment(ViewRuleModel())
         }
         .modelContainer(ringsUserData)
     }

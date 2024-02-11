@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct SettingHome: View {
+    @Environment(ViewRuleModel.self) var viewRuleModel
+    @Environment(\.modelContext) var modelContext
+
     var body: some View {
+        @Bindable var viewRuleModel = viewRuleModel
+
         NavigationView {
             List {
                 Section(header: Text("Cards")) {
@@ -21,9 +26,15 @@ struct SettingHome: View {
 
                 Section(header: Text("Rules")) {
                     NavigationLink {
+                        RuleList(searchText: viewRuleModel.searchText)
+                    } label: {
+                        Text("Glossary")
+                    }
+
+                    NavigationLink {
                         KeywordList()
                     } label: {
-                        Text("All Keywords")
+                        Text("Keywords")
                     }
                 }
 
@@ -44,4 +55,5 @@ struct SettingHome: View {
     SettingHome()
         .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
+        .environment(ViewRuleModel())
 }

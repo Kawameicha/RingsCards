@@ -11,16 +11,14 @@ struct KeywordView: View {
     var keyword: Keyword
 
     var body: some View {
-        VStack {
+        ScrollView {
             Text(keyword.name)
                 .font(.title)
 
             Divider()
 
-            ScrollView {
-                Text(.init(keyword.text.iconsAndSpheres()))
-                    .font(Font.custom("SFUIText-Regular", size: 16))
-            }
+            Text(.init(keyword.text.iconsAndSpheres()))
+                .font(Font.custom("SFUIText-Regular", size: 16))
         }
         .padding()
     }
