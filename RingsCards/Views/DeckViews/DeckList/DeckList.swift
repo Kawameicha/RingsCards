@@ -140,7 +140,7 @@ struct DeckList: View {
                     DeckNewButton()
                 }
 
-                ToolbarItem(placement: .bottomBar) {
+                ToolbarItem(placement: .principal) {
                     DeckInfo(count: decks.count)
                 }
             }
