@@ -19,6 +19,7 @@ extension String {
         text = text.replacing("[defense]", with: "\u{E602}")
         text = text.replacing("[health]", with: "\u{E603}")
         text = text.replacing("[threat]", with: "\u{E604}")
+        text = text.replacing("[unique]", with: "\u{E607}")
         text = text.replacing("[player]", with: "\u{E622}")
 
         text = text.replacing("[spirit]", with: "\u{E608}")
@@ -27,6 +28,7 @@ extension String {
         text = text.replacing("[lore]", with: "\u{E60B}")
         text = text.replacing("[baggins]", with: "\u{E60C}")
         text = text.replacing("[fellowship]", with: "\u{E60D}")
+        text = text.replacing("[neutral]", with: "\u{E60E}")
 
         return text
     }
