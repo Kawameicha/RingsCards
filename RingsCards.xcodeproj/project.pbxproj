@@ -92,9 +92,6 @@
 		59EA4DD62B4028D30078F7F8 /* DeckHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DD52B4028D30078F7F8 /* DeckHome.swift */; };
 		59EA4DDA2B4037D00078F7F8 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DD92B4037D00078F7F8 /* CardInfo.swift */; };
 		59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EDE7122AC8632F001288AE /* SampleCampaign.swift */; };
-		59FD32572AEE4A8300D9597B /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32562AEE4A8300D9597B /* Keyword.swift */; };
-		59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD32582AEE4B1800D9597B /* Keywords.swift */; };
-		59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325C2AEE4D2700D9597B /* KeywordView.swift */; };
 		59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */; };
 		59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */; };
 		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
@@ -188,9 +185,6 @@
 		59EA4DD52B4028D30078F7F8 /* DeckHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckHome.swift; sourceTree = "<group>"; };
 		59EA4DD92B4037D00078F7F8 /* CardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		59EDE7122AC8632F001288AE /* SampleCampaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCampaign.swift; sourceTree = "<group>"; };
-		59FD32562AEE4A8300D9597B /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
-		59FD32582AEE4B1800D9597B /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
-		59FD325C2AEE4D2700D9597B /* KeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordView.swift; sourceTree = "<group>"; };
 		59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioKeywordList.swift; sourceTree = "<group>"; };
 		59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
@@ -372,7 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				59AFE7F42B29E8BA008AF007 /* Fonts */,
-				59FD325A2AEE4B9200D9597B /* Keywords */,
 				594E38E02AD29EA900577EE0 /* Packs */,
 				59C779592B79153A002AFB03 /* Rules */,
 			);
@@ -383,7 +376,6 @@
 			isa = PBXGroup;
 			children = (
 				5952A4642B4D63C20051CB55 /* KeywordList.swift */,
-				59FD325C2AEE4D2700D9597B /* KeywordView.swift */,
 			);
 			path = KeywordView;
 			sourceTree = "<group>";
@@ -594,15 +586,6 @@
 			path = DeckList;
 			sourceTree = "<group>";
 		};
-		59FD325A2AEE4B9200D9597B /* Keywords */ = {
-			isa = PBXGroup;
-			children = (
-				59FD32562AEE4A8300D9597B /* Keyword.swift */,
-				59FD32582AEE4B1800D9597B /* Keywords.swift */,
-			);
-			path = Keywords;
-			sourceTree = "<group>";
-		};
 		59FD325B2AEE4D0900D9597B /* ScenarioViewKeyword */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,7 +710,6 @@
 				59C140462AC1789A00A9F20C /* Deck.swift in Sources */,
 				5922F3D52B2DA0510037E4D4 /* DeckSortButton.swift in Sources */,
 				592264F52A90AB09002A7648 /* CardView.swift in Sources */,
-				59FD325D2AEE4D2700D9597B /* KeywordView.swift in Sources */,
 				59809C702B44542F004BD1F2 /* DeckViewButton.swift in Sources */,
 				59CC78D42B46DF2600F29E18 /* CampaignNewButton.swift in Sources */,
 				598F51E52AA8747E00A1C06B /* CampaignNew.swift in Sources */,
@@ -771,12 +753,10 @@
 				5979A1BF2A9E4D6A00E1CAE1 /* Pack.swift in Sources */,
 				593282692B4850D200914E92 /* Scenario.swift in Sources */,
 				59C82C242B13AECD0073C4FA /* iconsAndSpheres.swift in Sources */,
-				59FD32572AEE4A8300D9597B /* Keyword.swift in Sources */,
 				59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */,
 				5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */,
 				594AB53D2B4352260075D176 /* AppSidebarList.swift in Sources */,
 				59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */,
-				59FD32592AEE4B1800D9597B /* Keywords.swift in Sources */,
 				59862D702A91F13100628449 /* Card.swift in Sources */,
 				593223622A9CA71200AA7751 /* DeckRow.swift in Sources */,
 				59C357442AAF5374009CA291 /* CardImage.swift in Sources */,

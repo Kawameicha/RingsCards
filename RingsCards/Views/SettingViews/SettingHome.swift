@@ -32,7 +32,7 @@ struct SettingHome: View {
                     }
 
                     NavigationLink {
-                        KeywordList()
+                        KeywordList(searchText: viewRuleModel.searchText)
                     } label: {
                         Text("Keywords")
                     }

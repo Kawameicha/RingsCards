@@ -11,7 +11,7 @@ import SwiftData
 let ringsUserData: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Keyword.self, Rule.self,
+            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Rule.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: false)
         )
 
@@ -46,13 +46,12 @@ let ringsUserData: ModelContainer = {
             Packs.contents.forEach { container.mainContext.insert($0) }
         }
 
-        Keywords.contents.forEach { container.mainContext.insert($0) }
-
         let rules = RuleJSONDecoder.decode(from: "Rules")
 
         rules.forEach { rule in
             let rule = Rule(id: rule.id,
                             name: rule.name,
+                            isKeyword: rule.isKeyword,
                             text: rule.text,
                             seeAlso: rule.seeAlso)
 

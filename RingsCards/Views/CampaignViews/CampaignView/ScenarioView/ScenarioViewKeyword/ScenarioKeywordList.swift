@@ -9,28 +9,27 @@ import SwiftUI
 import SwiftData
 
 struct ScenarioKeywordList: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var keywords: [Keyword]
+    @Environment(\.modelContext) var modelContext
+    @Query var keywords: [Rule]
     var scenario: Scenario
 
     init(
-        scenario: Scenario,
-
-        filterScenario: [String] = []
+        scenario: Scenario
     ) {
         self.scenario = scenario
 
-        let predicate = Keyword.predicate(
-            filterScenario: scenario.keywords.map { $0.name }
+        let predicate = Rule.predicate(
+            searchText: "",
+            filterRule: scenario.keywords.map { $0.code }
         )
-        _keywords = Query(filter: predicate, sort: \.name)
+        _keywords = Query(filter: predicate, sort: \.id)
     }
 
     var body: some View {
         LazyVStack(alignment: .leading) {
             ForEach(keywords) { keyword in
                 NavigationLink {
-                    KeywordView(keyword: keyword)
+                    RuleView(rule: keyword)
                 } label: {
                     Text("∙ \(keyword.name)")
                 }
@@ -42,7 +41,7 @@ struct ScenarioKeywordList: View {
 
 #Preview {
     ModelPreview { scenario in
-        ScenarioKeywordList(scenario: scenario, filterScenario: [])
+        ScenarioKeywordList(scenario: scenario)
     }
     .modelContainer(previewModelContainer)
 }

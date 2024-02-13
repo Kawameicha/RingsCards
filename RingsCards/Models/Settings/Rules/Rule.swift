@@ -12,12 +12,14 @@ import SwiftData
 class Rule {
     @Attribute(.unique) let id: String
     let name: String
+    let isKeyword: Bool
     let text: String
     let seeAlso: [SeeAlso]
 
-    init(id: String, name: String, text: String, seeAlso: [SeeAlso]) {
+    init(id: String, name: String, isKeyword: Bool, text: String, seeAlso: [SeeAlso]) {
         self.id = id
         self.name = name
+        self.isKeyword = isKeyword
         self.text = text
         self.seeAlso = seeAlso
     }
@@ -37,7 +39,7 @@ extension Rule {
         return #Predicate<Rule> { rule in
             (filterRule.isEmpty || filterRule.contains(rule.id))
             &&
-            ((searchText.isEmpty || rule.name.localizedStandardContains(searchText)))
+            (searchText.isEmpty || rule.name.localizedStandardContains(searchText))
         }
     }
 }

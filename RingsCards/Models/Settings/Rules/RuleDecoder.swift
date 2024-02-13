@@ -11,6 +11,7 @@ import SwiftData
 struct RuleResponse: Decodable {
     var id: String
     var name: String
+    var isKeyword: Bool
     var text: String
     var seeAlso: [SeeAlso]
 }

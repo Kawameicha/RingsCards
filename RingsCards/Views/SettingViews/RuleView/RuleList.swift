@@ -14,14 +14,13 @@ struct RuleList: View {
     @Query var rules: [Rule]
 
     init(
-        filterRule: [String] = [],
         searchText: String = ""
     ) {
         let predicate = Rule.predicate(
             searchText: searchText,
-            filterRule: filterRule
+            filterRule: []
         )
-        _rules = Query(filter: predicate, sort: \.name)
+        _rules = Query(filter: predicate, sort: \.id)
     }
 
     var body: some View {
