@@ -39,17 +39,10 @@ struct PackList: View {
                     ForEach(packs.filter { pack in
                         pack.cycleName.contains("\(cycle)")
                     }) { pack in
-                        NavigationLink {
-                            CardList(
-                                filterSphere: .all,
-                                filterType: .any,
-                                filterPack: [pack.packCode],
-                                filterDeck: [],
-                                sortParameter: SortParameter.code,
-                                sortOrder: SortOrder.forward,
-                                searchText: ""
-                            )
-                        } label: {
+                        NavigationLink(value: Router.cardList(
+                            filterPack: [pack.packCode],
+                            filterDeck: []
+                        )) {
                             PackRow(packs: pack)
                         }
                     }

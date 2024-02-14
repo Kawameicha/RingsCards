@@ -63,11 +63,13 @@ struct Statistic: Hashable, Codable {
 
 extension Scenario {
     static func predicate(
-        filterCampaign: [Int]
+        filterCampaign: [Int],
+        searchText: String = ""
     ) -> Predicate<Scenario> {
         
         return #Predicate<Scenario> { scenario in
-            (filterCampaign.contains(scenario.id))
+            (filterCampaign.contains(scenario.id)) &&
+            (searchText.isEmpty || scenario.name.localizedStandardContains(searchText))
         }
     }
 }

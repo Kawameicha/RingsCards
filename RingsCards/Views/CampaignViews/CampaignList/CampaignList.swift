@@ -33,21 +33,21 @@ struct CampaignList: View {
 
         List {
             if campaigns.isEmpty {
-                NavigationLink {
-                    CampaignNew()
-                } label: {
+                NavigationLink(value: Router.campaignNew) {
                     Text("Create a Campaign")
                 }
             } else {
                 ForEach(campaigns) { campaign in
-                    NavigationLink {
-                        if campaign.campaignMode == true {
-                            CampaignViewHome(campaign: campaign, decks: campaign.decks ?? [Deck.emptyDeck])
-                        } else {
-                            ScenarioList(campaign: campaign, filterCampaign: campaign.scenarios)
+                    
+                    if campaign.campaignMode == true {
+                        NavigationLink(value: Router.campaignViewHome(campaign: campaign, decks: campaign.decks ?? [Deck.emptyDeck])) {
+                            CampaignRow(campaign: campaign)
                         }
-                    } label: {
-                        CampaignRow(campaign: campaign)
+                        
+                    } else {
+                        NavigationLink(value: Router.scenarioList(campaign: campaign, filterCampaign: campaign.scenarios)) {
+                            CampaignRow(campaign: campaign)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)

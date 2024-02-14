@@ -25,9 +25,7 @@ struct KeywordList: View {
 
         List {
             ForEach(keywords) { keyword in
-                NavigationLink {
-                    RuleView(rule: keyword)
-                } label: {
+                NavigationLink(value: Router.ruleView(keyword)) {
                     Text("\(keyword.name)")
                 }
             }

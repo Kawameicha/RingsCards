@@ -34,13 +34,25 @@ extension AppScreen {
     var destination: some View {
         switch self {
         case .cards:
-            CardHome()
+            NavigationStack {
+                CardHome()
+                    .withRouter()
+            }
         case .decks:
-            DeckHome()
+            NavigationStack {
+                DeckHome()
+                    .withRouter()
+            }
         case .campaigns:
-            CampaignHome()
+            NavigationStack {
+                CampaignHome()
+                    .withRouter()
+            }
         case .settings:
-            SettingHome()
+            NavigationStack {
+                SettingHome()
+                    .withRouter()
+            }
         }
     }
 }

@@ -47,9 +47,7 @@ struct DeckList: View {
             let campaignDecks = campaign.decks ?? [Deck.emptyDeck]
 
             ForEach(campaignDecks) { deck in
-                NavigationLink {
-                    DeckViewHome(deck: deck)
-                } label: {
+                NavigationLink(value: Router.deckViewHome(deck: deck)) {
                     DeckRow(deck: deck)
                 }
                 .swipeActions(edge: .trailing) {
@@ -62,25 +60,19 @@ struct DeckList: View {
                 }
             }
             if campaignDecks.count <= 4 {
-                NavigationLink {
-                    DeckList(campaign: campaign, campaignView: false, campaignDeck: true)
-                } label: {
+                NavigationLink(value: Router.deckList(campaign: campaign, campaignView: false, campaignDeck: true)) {
                     Text("Attach a Deck")
                 }
             }
         } else if campaignDeck {
             List {
                 if decks.isEmpty {
-                    NavigationLink {
-                        DeckNew()
-                    } label: {
+                    NavigationLink(value: Router.deckNew) {
                         Text("Create a Deck")
                     }
                 } else {
                     ForEach(decks) { deck in
-                        NavigationLink {
-                            DeckViewHome(deck: deck)
-                        } label: {
+                        NavigationLink(value: Router.deckViewHome(deck: deck)) {
                             DeckRow(deck: deck)
                         }
                         .swipeActions(edge: .trailing) {
@@ -97,16 +89,12 @@ struct DeckList: View {
         } else {
             List {
                 if decks.isEmpty {
-                    NavigationLink {
-                        DeckNew()
-                    } label: {
+                    NavigationLink(value: Router.deckNew) {
                         Text("Create a Deck")
                     }
                 } else {
                     ForEach(decks) { deck in
-                        NavigationLink {
-                            DeckViewHome(deck: deck)
-                        } label: {
+                        NavigationLink(value: Router.deckViewHome(deck: deck)) {
                             DeckRow(deck: deck)
                         }
                         .swipeActions(edge: .trailing) {
