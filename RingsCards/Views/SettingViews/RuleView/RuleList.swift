@@ -13,14 +13,20 @@ struct RuleList: View {
     @Environment(\.modelContext) var modelContext
     @Query var rules: [Rule]
 
+//    init(
+//        searchText: String = ""
+//    ) {
+//        let predicate = Rule.predicate(
+//            searchText: searchText,
+//            filterRule: []
+//        )
+//        _rules = Query(filter: predicate, sort: \.id)
+//    }
     init(
         searchText: String = ""
     ) {
-        let predicate = Rule.predicate(
-            searchText: searchText,
-            filterRule: []
-        )
-        _rules = Query(filter: predicate, sort: \.id)
+        _rules = Query(filter: #Predicate<Rule> { rule in
+            !rule.isKeyword && (searchText.isEmpty || rule.name.localizedStandardContains(searchText))}, sort: \Rule.id)
     }
 
     var body: some View {

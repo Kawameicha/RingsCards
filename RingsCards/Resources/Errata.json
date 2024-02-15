@@ -1,0 +1,290 @@
+[
+  {
+    "id": "beravor",
+    "code": "01012",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.”"
+  },
+  {
+    "id": "will_of_the_west",
+    "code": "01049",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Choose a player. Shuffle that player’s discard pile back into his deck. Remove Will of the West from the game.”"
+  },
+  {
+    "id": "feint",
+    "code": "01034",
+    "isOfficial": true,
+    "text": "Should read: “**Combat Action**: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.”"
+  },
+  {
+    "id": "thicket_of_spears",
+    "code": "01036",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Choose a player. That player’s engaged enemies cannot attack that player this phase.”"
+  },
+  {
+    "id": "horn_of_gondor",
+    "code": "01042",
+    "isOfficial": true,
+    "text": "Should read: “**Response**: After a character is destroyed, add 1 resource to attached hero’s pool.”"
+  },
+  {
+    "id": "wanderin_took",
+    "code": "01043",
+    "isOfficial": true,
+    "text": "Should read: “(Limit once per round.)”"
+  },
+  {
+    "id": "protector_of_lorien",
+    "code": "01070",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Discard a card from your hand to give attached hero +1 [defense] or +1 [willpower] until the end of the phase. Limit 3 times per phase.”"
+  },
+  {
+    "id": "boromir",
+    "code": "02095",
+    "isOfficial": true,
+    "text": "Should read: “Raise your threat by 1 to ready Boromir. (Limit once per phase.)”"
+  },
+  {
+    "id": "narvi_s_belt",
+    "code": "03003",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Exhaust Narvi’s Belt to give attached hero a [leadership], [lore], [tactics], or [spirit] icon until the end of the phase.”"
+  },
+  {
+    "id": "zigil_miner",
+    "code": "03009",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Exhaust Zigil Miner and name a number to discard the top 2 cards of your deck. If at least one of those cards has cost equal to the named number, choose a hero you control. For each card that matches the named number, add 1 resource to that hero’s resource pool.”"
+  },
+  {
+    "id": "out_of_the_wild",
+    "code": "04036",
+    "isOfficial": true,
+    "text": "Should read: “Shuffle the encounter deck. Add Out of the Wild to the victory display.”"
+  },
+  {
+    "id": "hama",
+    "code": "04076",
+    "isOfficial": true,
+    "text": "Should read: “(Limit 3 times per game for the group.)”"
+  },
+  {
+    "id": "erebor_battle_master",
+    "code": "04079",
+    "isOfficial": false,
+    "text": "Should read: “Erebor Battle Master gets +1 [attack] for each other _**Dwarf**_ ally you control. (Limit +4 [attack].)"
+  },
+  {
+    "id": "out_of_sight",
+    "code": "04081",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Enemies engaged with you cannot attack you this phase.”"
+  },
+  {
+    "id": "love_of_tales",
+    "code": "04085",
+    "isOfficial": true,
+    "text": "Should read: “**Response**: After a _**Song**_ card is played, exhaust Love of Tales to add 1 resource...”"
+  },
+  {
+    "id": "we_are_not_idle",
+    "code": "04129",
+    "isOfficial": true,
+    "text": "Should read: “Exhaust X _**Dwarf**_ heroes to add X...”"
+  },
+  {
+    "id": "a_elbereth_gilthoniel",
+    "code": "04132",
+    "isOfficial": true,
+    "text": "Title should read: “A Elbereth! Gilthoniel!” Should read: “**Response**: After a non-unique enemy attacks you...”"
+  },
+  {
+    "id": "nori",
+    "code": "131003",
+    "isOfficial": true,
+    "text": "Should read: “**Response**: After you play a _**Dwarf**_ character from your hand, reduce your threat by 1.”"
+  },
+  {
+    "id": "thror_s_map",
+    "code": "131013",
+    "isOfficial": false,
+    "text": "Should read: “**Travel Action**: Discard Thrór’s Map to choose a location in the staging area...”"
+  },
+  {
+    "id": "ravens_of_the_mountain",
+    "code": "132011",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Exhaust a hero you control to shuffle the encounter deck and look at its top card...”"
+  },
+  {
+    "id": "expert_treasure_hunter",
+    "code": "132017",
+    "isOfficial": true,
+    "text": "Should read: “Attach to a hero. Limit 1 per hero.”"
+  },
+  {
+    "id": "a_watchful_peace",
+    "code": "05012",
+    "isOfficial": true,
+    "text": "Should read: “**Response**: After a location worth no victory points leaves play as an explored location...”"
+  },
+  {
+    "id": "master_of_lore",
+    "code": "05016",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Exhaust Master of Lore to name a card type. Lower the cost for you to play the next [lore] card of that type by 1 until the end of the phase (to a minimum of 1).”"
+  },
+  {
+    "id": "trained_for_war",
+    "code": "06036",
+    "isOfficial": true,
+    "text": "Should read: “**Action**: Until the end of the phase, if the current quest does not have siege, it gains battle.”"
+  },
+  {
+    "id": "caldara",
+    "code": "06107",
+    "isOfficial": true,
+    "text": "Should read: “(Limit once per game.)”"
+  },
+  {
+    "id": "blue_mountain_trader",
+    "code": "08006",
+    "isOfficial": true,
+    "text": "Should read: “(Limit once per game.)”"
+  },
+  {
+    "id": "wingfoot",
+    "code": "08092",
+    "isOfficial": true,
+    "text": "Should read: “If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.””"
+  },
+  {
+    "id": "envoy_of_pelargir",
+    "code": "33013",
+    "isOfficial": false,
+    "text": "Should have 1 printed Hit Point (not 2)."
+  },
+  {
+    "id": "faramir",
+    "code": "33010",
+    "isOfficial": false,
+    "text": "Should have the Traits _**Gondor. Ranger. Noble.**_"
+  },
+  {
+    "id": "helm_of_secrecy",
+    "code": "33033",
+    "isOfficial": false,
+    "text": "Should read: “**Action**: Choose a hero you control and discard all tokens from it. Select a different non-[fellowship], non-[baggins] hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments to the hero from your collection.”"
+  },
+  {
+    "id": "daeron_s_runes",
+    "code": "32020",
+    "isOfficial": false,
+    "text": "Should read: “**Action**: Draw 2 cards. Then, discard 1 card from your hand.”"
+  },
+  {
+    "id": "elrond_s_counsel",
+    "code": "32021",
+    "isOfficial": false,
+    "text": "Should read: “**Action**: If you control a unique _**Noldor**_ character, give another character +1 [willpower] until the end of the phase and lower your threat by 3.”"
+  },
+  {
+    "id": "a_burning_brand",
+    "code": "02033",
+    "isOfficial": false,
+    "text": "Should read: “Attach to a [lore] character. Restricted.\n\n**Response**: Exhaust A Burning Brand to cancel a shadow effect just triggered during an attack that attached character is defending.”"
+  },
+  {
+    "id": "dain_ironfoot",
+    "code": "02116",
+    "isOfficial": false,
+    "text": "Should have the Traits _**Dwarf. Noble.**_"
+  },
+  {
+    "id": "legacy_of_durin",
+    "code": "04061",
+    "isOfficial": false,
+    "text": "Should read: “**Response**: After you play a _**Dwarf**_ character from your hand, exhaust Legacy of Durin to draw 1 card.”"
+  },
+  {
+    "id": "healing_herbs",
+    "code": "04109",
+    "isOfficial": false,
+    "text": "Should have the Trait _**Item.**_"
+  },
+  {
+    "id": "silvan_refugee",
+    "code": "06037",
+    "isOfficial": false,
+    "text": "Should have the Traits _**Silvan. Scout.**_"
+  },
+  {
+    "id": "deorwine",
+    "code": "12060",
+    "isOfficial": false,
+    "text": "Should read: “While Déorwine is defending, he gains: “**Response**: Spend 1 [leadership] resource to cancel a shadow effect just triggered. Any player may trigger this response.”"
+  },
+  {
+    "id": "ered_luin_miner",
+    "code": "12066",
+    "isOfficial": false,
+    "text": "Should read: “**Response**: After Ered Luin Miner is discarded from your deck, put it into play under your control.”"
+  },
+  {
+    "id": "windfola",
+    "code": "12116",
+    "isOfficial": false,
+    "text": "Should read: “**Response**: After attached character is removed from the quest, exhaust Windfola to commit that character to the quest.”"
+  },
+  {
+    "id": "dwarf_pipe",
+    "code": "17007",
+    "isOfficial": false,
+    "text": "Should read: “**Response**: After a card is discarded from your deck, exhaust Dwarf Pipe to place that card on the bottom of your deck.”"
+  },
+  {
+    "id": "quickbeam",
+    "code": "17135",
+    "isOfficial": false,
+    "text": "Should have the uniqueness symbol before the card name."
+  },
+  {
+    "id": "helm_of_secrecy",
+    "code": "22090",
+    "isOfficial": false,
+    "text": "Should read: “**Action**: Choose a hero you control and discard all tokens from it. Select a different non-[fellowship], non-[baggins] hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments to the hero from your collection.”"
+  },
+  {
+    "id": "gandalf_s_delay",
+    "code": "141078",
+    "isOfficial": false,
+    "text": "Should read: “Skip the draw cards step during the first round of the game.”"
+  },
+  {
+    "id": "iarion_s_pendant",
+    "code": "10157",
+    "isOfficial": false,
+    "text": "Should read: “Attach to a character. Attached character gets +1 [willpower].”"
+  },
+  {
+    "id": "mysterious_omens",
+    "code": "10160",
+    "isOfficial": false,
+    "text": "Should read: “Forced: When Mysterious Omens is defeated, remove it from the Campaign Pool. Then, each player may choose 1 of the following boons and attach it to a hero they control: Cunning, Hardy, Resolute, Ruthless, or Stalwart. The players have earned those boons and add them to the Campaign Pool.”"
+  },
+  {
+    "id": "lily_cotton",
+    "code": "301003",
+    "isOfficial": false,
+    "text": "Should read: “**Action**: Exhaust Lily Cotton to ready a different Hobbit ally and add Lily Cotton’s [willpower], [attack], and [defense] to that ally’s [willpower], [attack], and [defense] respectively until the end of the phase. At the end of the phase, if that ally is still in play, return it to its owner’s hand. (Limit once per phase.)”"
+  },
+  {
+    "id": "gavin",
+    "code": "301011",
+    "isOfficial": false,
+    "text": "Should read: “**Response**: After an encounter card without surge is revealed, exhaust Gavin to give that card surge and add 1 resource to the pool of a Scout hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.”"
+  }
+]

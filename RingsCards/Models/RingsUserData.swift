@@ -11,7 +11,7 @@ import SwiftData
 let ringsUserData: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Rule.self,
+            for: Card.self, Deck.self, Campaign.self, Scenario.self, Erratum.self, Pack.self, Rule.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: false)
         )
 
@@ -40,6 +40,17 @@ let ringsUserData: ModelContainer = {
                                                           nightmareTreacheries: scenario.nightmare_treacheries))
 
             container.mainContext.insert(scenario)
+        }
+
+        let errata = ErratumJSONDecoder.decode(from: "Errata")
+
+        errata.forEach { erratum in
+            let erratum = Erratum(id: erratum.id,
+                                  code: erratum.code,
+                                  isOfficial: erratum.isOfficial,
+                                  text: erratum.text)
+
+            container.mainContext.insert(erratum)
         }
 
         if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {

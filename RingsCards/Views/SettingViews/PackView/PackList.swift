@@ -41,15 +41,14 @@ struct PackList: View {
                     }) { pack in
                         NavigationLink {
                             CardList(
-                                filterSphere: viewCardModel.filterSphere,
-                                filterType: viewCardModel.filterType,
+                                filterSphere: .all,
+                                filterType: .any,
                                 filterPack: [pack.packCode],
                                 filterDeck: [],
-                                sortParameter: viewCardModel.sortParameter,
-                                sortOrder: viewCardModel.sortOrder,
-                                searchText: viewCardModel.searchText
+                                sortParameter: SortParameter.code,
+                                sortOrder: SortOrder.forward,
+                                searchText: ""
                             )
-                            .searchable(text: $viewCardModel.searchText)
                         } label: {
                             PackRow(packs: pack)
                         }

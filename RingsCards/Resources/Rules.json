@@ -475,6 +475,13 @@
     ]
   },
   {
+    "id": "devoted",
+    "name": "Devoted",
+    "isKeyword": true,
+    "text": "The devoted keyword appears on some player cards in this cycle. While each non-Baggins, non-Fellowship hero you control shares at least one _**Trait**_ with a card with the devoted keyword, that card does not require a resource match. The _**Trait**_ that is shared does not need to be the same for each hero.\n\n For example, an ally with the devoted keyword and the _**Gondor**_ and _**Scout**_ traits may be played without a resource match if al of your heroes have the _**Gondor**_ trait, all of your heroes have the _**Scout**_ trait, or some of your heroes have the _**Gondor**_ trait and the remainder have the _**Scout**_ trait.",
+    "seeAlso": []
+  },
+  {
     "id": "dire",
     "name": "Dire",
     "isKeyword": true,
@@ -1026,7 +1033,8 @@
     "id": "permanent",
     "name": "Permanent",
     "isKeyword": false,
-    "text": "Campaign Pool rules.",
+    "text": "Permanent is a keyword found on some boons and burdens. Once a boon or burden with the permanent keyword is earned, it is attached to a hero and that choice is recorded in the Campaign Log. A card with the permanent keyword can only be attached to one hero for the duration of a campaign. Attachments with the permanent keyword cannot be discarded from the attached hero while that hero is in play. If a hero leaves play, attachments with the permanent keyword attached to that hero are removed from the game.",
+    "text": "Permanent is a keyword found on some boons and burdens. Once a boon or burden with the permanent keyword is earned, it is attached to a hero and that choice is recorded in the Campaign Log. A card with the permanent keyword can only be attached to one hero for the duration of a campaign. Attachments with the permanent keyword cannot be discarded from the attached hero while that hero is in play. If a hero leaves play, attachments with the permanent keyword attached to that hero are removed from the game.",
     "seeAlso": []
   },
   {
@@ -1350,6 +1358,13 @@
     "seeAlso": []
   },
   {
+    "id": "secrecy_x",
+    "name": "Secrecy X",
+    "isKeyword": true,
+    "text": "Secrecy lowers the cost to play the card by the specified value, provided the threat of the player who is playing the card is 20 or below. Secrecy only applies when the card is played from hand, and never modifies the printed cost of the card.",
+    "seeAlso": []
+  },
+  {
     "id": "self_referential_abilities",
     "name": "Self-referential Abilities",
     "isKeyword": false,
@@ -1610,6 +1625,13 @@
             "name": "Ownership and Control"
         }
     ]
+  },
+  {
+    "id": "valour",
+    "name": "Valour",
+    "isKeyword": true,
+    "text": "**Action** and **Response** abilities with the Valour trigger, presented as “**Valour Action**” or “**Valour Response**,” can only be triggered by a player whose threat is 40 or higher.\n\nIf a card has two effects, one with the **Valour** trigger and one without, a player may only choose one of these effects to trigger when they play the card. They may still only choose the effect with the **Valour** trigger if their threat is 40 or higher.",
+    "seeAlso": []
   },
   {
     "id": "vast",

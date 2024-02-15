@@ -29,7 +29,7 @@ struct CardView: View {
                     .onTapGesture {
                         isTapped.toggle()
                     }
-                
+
                 VStack(alignment: .leading) {
                     if card.cardDetails.is_unique == true {
                         Text("\u{E607} " + card.name)
@@ -68,9 +68,9 @@ struct CardView: View {
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    
+
                     Divider()
-                    
+
                     GroupBox {
                         VStack(alignment: .leading, spacing: 20) {
                             if card.cardDetails.text != "" {
@@ -80,7 +80,7 @@ struct CardView: View {
                                 ))
                                 .font(Font.custom("SFUIText-Regular", size: 16))
                             }
-                            
+
                             if card.cardDetails.flavor != "" {
                                 Text(.init(card.cardDetails.flavor
                                     .htmlToMarkDown()
@@ -88,7 +88,7 @@ struct CardView: View {
                                 .font(.system(size: 14, weight: .light, design: .serif))
                                 .italic()
                             }
-                            
+
                             HStack {
                                 Text("Illus. \(card.cardDetails.illustrator)")
                                     .font(.footnote)
@@ -100,6 +100,8 @@ struct CardView: View {
                         .frame(maxWidth: .infinity)
                     }
                     .backgroundStyle(Color(card.sphere_name))
+
+                    CardErratum(card: card)
                 }
             }
         }

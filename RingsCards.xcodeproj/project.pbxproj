@@ -76,6 +76,10 @@
 		59C779602B791836002AFB03 /* RuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7795F2B791836002AFB03 /* RuleList.swift */; };
 		59C779622B791A0D002AFB03 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C779612B791A0D002AFB03 /* RuleView.swift */; };
 		59C779642B7935E4002AFB03 /* ViewRuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C779632B7935E4002AFB03 /* ViewRuleModel.swift */; };
+		59C779662B7BFA05002AFB03 /* Errata.json in Resources */ = {isa = PBXBuildFile; fileRef = 59C779652B7BFA05002AFB03 /* Errata.json */; };
+		59C779692B7BFAFF002AFB03 /* Erratum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C779682B7BFAFF002AFB03 /* Erratum.swift */; };
+		59C7796B2B7BFB42002AFB03 /* ErratumDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7796A2B7BFB42002AFB03 /* ErratumDecoder.swift */; };
+		59C7796F2B7E7E18002AFB03 /* CardErratum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7796E2B7E7E18002AFB03 /* CardErratum.swift */; };
 		59C82C222B13A5840073C4FA /* htmlToMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C82C212B13A5840073C4FA /* htmlToMarkdown.swift */; };
 		59C82C242B13AECD0073C4FA /* iconsAndSpheres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C82C232B13AECD0073C4FA /* iconsAndSpheres.swift */; };
 		59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF02AA5CEC80058CB2A /* Campaign.swift */; };
@@ -167,6 +171,10 @@
 		59C7795F2B791836002AFB03 /* RuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleList.swift; sourceTree = "<group>"; };
 		59C779612B791A0D002AFB03 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		59C779632B7935E4002AFB03 /* ViewRuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRuleModel.swift; sourceTree = "<group>"; };
+		59C779652B7BFA05002AFB03 /* Errata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Errata.json; sourceTree = "<group>"; };
+		59C779682B7BFAFF002AFB03 /* Erratum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Erratum.swift; sourceTree = "<group>"; };
+		59C7796A2B7BFB42002AFB03 /* ErratumDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErratumDecoder.swift; sourceTree = "<group>"; };
+		59C7796E2B7E7E18002AFB03 /* CardErratum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardErratum.swift; sourceTree = "<group>"; };
 		59C82C212B13A5840073C4FA /* htmlToMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = htmlToMarkdown.swift; sourceTree = "<group>"; };
 		59C82C232B13AECD0073C4FA /* iconsAndSpheres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconsAndSpheres.swift; sourceTree = "<group>"; };
 		59C851962B277E03009327D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -365,6 +373,7 @@
 		595078702AC5BC1B007BFAA0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				59C779672B7BFAE9002AFB03 /* Erratas */,
 				59AFE7F42B29E8BA008AF007 /* Fonts */,
 				594E38E02AD29EA900577EE0 /* Packs */,
 				59C779592B79153A002AFB03 /* Rules */,
@@ -421,8 +430,9 @@
 			isa = PBXGroup;
 			children = (
 				59862D722A91F46000628449 /* Cards.json */,
-				5939A0402A9B8973008DC370 /* Scenarios.json */,
+				59C779652B7BFA05002AFB03 /* Errata.json */,
 				59C779572B7914AC002AFB03 /* Rules.json */,
+				5939A0402A9B8973008DC370 /* Scenarios.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -519,6 +529,15 @@
 			path = RuleView;
 			sourceTree = "<group>";
 		};
+		59C779672B7BFAE9002AFB03 /* Erratas */ = {
+			isa = PBXGroup;
+			children = (
+				59C779682B7BFAFF002AFB03 /* Erratum.swift */,
+				59C7796A2B7BFB42002AFB03 /* ErratumDecoder.swift */,
+			);
+			path = Erratas;
+			sourceTree = "<group>";
+		};
 		59C9DD222B5AD9EF0094B3FB /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				592264F42A90AB09002A7648 /* CardView.swift */,
+				59C7796E2B7E7E18002AFB03 /* CardErratum.swift */,
 				59C357432AAF5374009CA291 /* CardImage.swift */,
 			);
 			path = CardView;
@@ -681,6 +701,7 @@
 				59C779582B7914AC002AFB03 /* Rules.json in Resources */,
 				5939A0412A9B8973008DC370 /* Scenarios.json in Resources */,
 				59AFE7F02B29E4FA008AF007 /* SFUIText-Italic.ttf in Resources */,
+				59C779662B7BFA05002AFB03 /* Errata.json in Resources */,
 				59AFE7F32B29E56D008AF007 /* SFUIText-BoldItalic.ttf in Resources */,
 				592264D22A90A995002A7648 /* Preview Assets.xcassets in Resources */,
 				592264CF2A90A995002A7648 /* Assets.xcassets in Resources */,
@@ -700,6 +721,7 @@
 				59C7795D2B79167C002AFB03 /* RuleDecoder.swift in Sources */,
 				59A4E2C62AFEA71E00CE9BEA /* CampaignCardEdit.swift in Sources */,
 				59C87AF92AA5DDB70058CB2A /* CampaignEdit.swift in Sources */,
+				59C7796B2B7BFB42002AFB03 /* ErratumDecoder.swift in Sources */,
 				59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */,
 				59862D772A91FC4300628449 /* CardHome.swift in Sources */,
 				5922F3D32B2D9FA30037E4D4 /* DeckInfo.swift in Sources */,
@@ -761,9 +783,11 @@
 				593223622A9CA71200AA7751 /* DeckRow.swift in Sources */,
 				59C357442AAF5374009CA291 /* CardImage.swift in Sources */,
 				599719692AC300EC0095AAE7 /* PreviewModelContainer.swift in Sources */,
+				59C7796F2B7E7E18002AFB03 /* CardErratum.swift in Sources */,
 				59D835412AFF92A2000C160E /* CampaignViewHome.swift in Sources */,
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
+				59C779692B7BFAFF002AFB03 /* Erratum.swift in Sources */,
 				59C779622B791A0D002AFB03 /* RuleView.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,

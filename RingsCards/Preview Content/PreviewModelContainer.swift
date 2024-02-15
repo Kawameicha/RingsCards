@@ -11,7 +11,7 @@ import SwiftData
 let previewModelContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Card.self, Deck.self, Campaign.self, Scenario.self, Pack.self, Rule.self,
+            for: Card.self, Deck.self, Campaign.self, Scenario.self, Erratum.self, Pack.self, Rule.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
 
@@ -53,6 +53,14 @@ let previewModelContainer: ModelContainer = {
                 container.mainContext.insert(card)
             }
 
+            if try modelContext.fetch(FetchDescriptor<Deck>()).isEmpty {
+                SampleDeck.contents.forEach { container.mainContext.insert($0) }
+            }
+
+            if try modelContext.fetch(FetchDescriptor<Campaign>()).isEmpty {
+                SampleCampaign.contents.forEach { container.mainContext.insert($0) }
+            }
+
             let scenarios = ScenarioJSONDecoder.decode(from: "Scenarios")
 
             scenarios.forEach { scenario in
@@ -78,12 +86,15 @@ let previewModelContainer: ModelContainer = {
                 container.mainContext.insert(scenario)
             }
 
-            if try modelContext.fetch(FetchDescriptor<Deck>()).isEmpty {
-                SampleDeck.contents.forEach { container.mainContext.insert($0) }
-            }
+            let errata = ErratumJSONDecoder.decode(from: "Errata")
 
-            if try modelContext.fetch(FetchDescriptor<Campaign>()).isEmpty {
-                SampleCampaign.contents.forEach { container.mainContext.insert($0) }
+            errata.forEach { erratum in
+                let erratum = Erratum(id: erratum.id,
+                                      code: erratum.code,
+                                      isOfficial: erratum.isOfficial,
+                                      text: erratum.text)
+
+                container.mainContext.insert(erratum)
             }
 
             if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {
