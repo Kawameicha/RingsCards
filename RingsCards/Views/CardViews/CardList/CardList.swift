@@ -155,6 +155,7 @@ private struct CardListView: View {
                 }
             }
             .searchable(text: $viewCardModel.searchText)
+            .disableAutocorrection(true)
             .toolbar {
                 if !deckView {
                     ToolbarItemGroup(placement: .topBarTrailing) {

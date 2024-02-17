@@ -29,7 +29,7 @@ struct ScenarioVStack: View {
         VStack(alignment: .leading) {
             GeometryReader { item in
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 0) {
+                    HStack(alignment: .top, spacing: 10) {
                         ForEach(scenarios) { scenario in
                             NavigationLink(value: Router.scenarioViewHome(campaign: campaign, scenario: scenario)) {
                                 ScenarioItem(campaign: campaign, scenario: scenario)
