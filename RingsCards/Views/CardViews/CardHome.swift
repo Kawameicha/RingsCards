@@ -28,23 +28,16 @@ struct CardHome: View {
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        NavigationView {
+        Group {
             if cards.count != 0 {
                 CardList(
-                    filterSphere: viewCardModel.filterSphere,
-                    filterType: viewCardModel.filterType,
                     filterPack: packs.map { $0.packCode },
-                    filterDeck: [],
-                    sortParameter: viewCardModel.sortParameter,
-                    sortOrder: viewCardModel.sortOrder,
-                    searchText: viewCardModel.searchText,
-                    listOffset: viewCardModel.listOffset
+                    filterDeck: []
                 )
                 .refreshable {
                     await CardResponse.refresh(modelContext: modelContext)
                 }
                 .navigationTitle("Player Cards")
-                .searchable(text: $viewCardModel.searchText)
                 .disableAutocorrection(true)
             } else {
                 ScrollView {
@@ -55,7 +48,6 @@ struct CardHome: View {
                     await CardResponse.refresh(modelContext: modelContext)
                 }
                 .navigationTitle("Player Cards")
-                .searchable(text: $viewCardModel.searchText)
             }
         }
         .onAppear {

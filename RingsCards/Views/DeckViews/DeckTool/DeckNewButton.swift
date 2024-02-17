@@ -9,9 +9,7 @@ import SwiftUI
 
 struct DeckNewButton: View {
     var body: some View {
-        NavigationLink {
-            DeckNew()
-        } label: {
+        NavigationLink(value: Router.deckNew) {
             Image(systemName: "plus")
         }
     }

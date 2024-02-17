@@ -40,9 +40,7 @@ struct RuleView: View {
                         .font(.headline)
 
                     ForEach(relatedRules) { rule in
-                        NavigationLink {
-                            RuleView(rule: rule)
-                        } label: {
+                        NavigationLink(value: Router.ruleView(rule)) {
                             Text("∙ \(rule.name)")
                         }
                     }

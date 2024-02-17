@@ -9,9 +9,7 @@ import SwiftUI
 
 struct CampaignNewButton: View {
     var body: some View {
-        NavigationLink {
-            CampaignNew()
-        } label: {
+        NavigationLink(value: Router.campaignNew) {
             Image(systemName: "plus")
         }
     }

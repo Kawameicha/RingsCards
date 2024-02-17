@@ -13,17 +13,15 @@ struct CampaignHome: View {
 
     var body: some View {
         @Bindable var viewCampaignModel = viewCampaignModel
-
-        NavigationView {
-            CampaignList(
-                sortCampaignParameter: viewCampaignModel.sortCampaignParameter,
-                sortOrder: viewCampaignModel.sortOrder,
-                searchText: viewCampaignModel.searchText
-            )
-            .navigationTitle("My Campaigns")
-            .searchable(text: $viewCampaignModel.searchText)
-            .disableAutocorrection(true)
-        }
+        
+        CampaignList(
+            sortCampaignParameter: viewCampaignModel.sortCampaignParameter,
+            sortOrder: viewCampaignModel.sortOrder,
+            searchText: viewCampaignModel.searchText
+        )
+        .navigationTitle("My Campaigns")
+        .searchable(text: $viewCampaignModel.searchText)
+        .disableAutocorrection(true)
     }
 }
 

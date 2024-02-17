@@ -99,6 +99,7 @@
 		59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */; };
 		59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */; };
 		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
+		F8443BFA2B7E4B630032AA7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8443BF92B7E4B630032AA7F /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +197,7 @@
 		59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioKeywordList.swift; sourceTree = "<group>"; };
 		59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
+		F8443BF92B7E4B630032AA7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +475,7 @@
 				59A5E6572B43345F0028A3DE /* AppScreen.swift */,
 				594AB53C2B4352260075D176 /* AppSidebarList.swift */,
 				59A5E6592B4335E20028A3DE /* AppTabView.swift */,
+				F8443BF92B7E4B630032AA7F /* Router.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				59C1404D2AC1C26500A9F20C /* DeckCardEdit.swift in Sources */,
 				59D8353F2AFF8F3B000C160E /* ScenarioVStack.swift in Sources */,
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,
+				F8443BFA2B7E4B630032AA7F /* Router.swift in Sources */,
 				595A66B32A9DE8930040C952 /* SettingHome.swift in Sources */,
 				59CC78D72B46E57E00F29E18 /* CampaignBoonButton.swift in Sources */,
 				592264CB2A90A993002A7648 /* RingsCardsApp.swift in Sources */,

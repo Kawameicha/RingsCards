@@ -31,18 +31,12 @@ struct DeckViewHome: View {
                 editCard: .constant(true),
                 viewCard: $viewCard,
                 editBoons: .constant(false),
-                filterSphere: viewCardModel.filterSphere,
-                filterType: viewCardModel.filterType,
                 filterPack: packs.map { $0.packCode },
-                filterDeck: [],
-                sortParameter: viewCardModel.sortParameter,
-                sortOrder: viewCardModel.sortOrder,
-                searchText: viewCardModel.searchText
+                filterDeck: []
             )
             .navigationTitle($deck.name)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden()
-            .searchable(text: $viewCardModel.searchText)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     DeckViewButton(viewCard: $viewCard)
@@ -64,13 +58,8 @@ struct DeckViewHome: View {
                 editCard: $editCard,
                 viewCard: .constant(false),
                 editBoons: .constant(false),
-                filterSphere: viewCardModel.filterSphere,
-                filterType: viewCardModel.filterType,
                 filterPack: [],
-                filterDeck: deck.slots.map { String($0.key) },
-                sortParameter: viewCardModel.sortParameter,
-                sortOrder: viewCardModel.sortOrder,
-                searchText: viewCardModel.searchText
+                filterDeck: deck.slots.map { String($0.key) }
             )
             .navigationTitle($deck.name)
             .toolbar {

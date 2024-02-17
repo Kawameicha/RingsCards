@@ -31,9 +31,7 @@ struct ScenarioVStack: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 0) {
                         ForEach(scenarios) { scenario in
-                            NavigationLink {
-                                ScenarioViewHome(campaign: campaign, scenario: scenario)
-                            } label: {
+                            NavigationLink(value: Router.scenarioViewHome(campaign: campaign, scenario: scenario)) {
                                 ScenarioItem(campaign: campaign, scenario: scenario)
                             }
                             .frame(width: item.size.width, alignment: .center)

@@ -14,40 +14,30 @@ struct SettingHome: View {
     var body: some View {
         @Bindable var viewRuleModel = viewRuleModel
 
-        NavigationView {
-            List {
-                Section(header: Text("Cards")) {
-                    NavigationLink {
-                        PackList()
-                    } label: {
-                        Text("Edit Collection")
-                    }
-                }
-
-                Section(header: Text("Rules")) {
-                    NavigationLink {
-                        RuleList(searchText: viewRuleModel.searchText)
-                    } label: {
-                        Text("Glossary")
-                    }
-
-                    NavigationLink {
-                        KeywordList(searchText: viewRuleModel.searchText)
-                    } label: {
-                        Text("Keywords")
-                    }
-                }
-
-                Section(header: Text("Support")) {
-                    NavigationLink {
-                        SupportHome()
-                    } label: {
-                        Text("About Rings Cards")
-                    }
+        List {
+            Section(header: Text("Cards")) {
+                NavigationLink(value: Router.packList) {
+                    Text("Edit Collection")
                 }
             }
-            .navigationTitle("Settings")
+            
+            Section(header: Text("Rules")) {
+                NavigationLink(value: Router.ruleList) {
+                    Text("Glossary")
+                }
+                
+                NavigationLink(value: Router.keywordList) {
+                    Text("Keywords")
+                }
+            }
+            
+            Section(header: Text("Support")) {
+                NavigationLink(value: Router.supportHome) {
+                    Text("About Rings Cards")
+                }
+            }
         }
+        .navigationTitle("Settings")
     }
 }
 

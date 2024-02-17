@@ -13,20 +13,18 @@ struct DeckHome: View {
 
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel
-
-        NavigationView {
-            DeckList(
-                campaign: Campaign.emptyCampaign,
-                campaignView: false,
-                campaignDeck: false,
-                sortDeckParameter: viewDeckModel.sortDeckParameter,
-                sortOrder: viewDeckModel.sortOrder,
-                searchText: viewDeckModel.searchText
-            )
-            .navigationTitle("My Decks")
-            .searchable(text: $viewDeckModel.searchText)
-            .disableAutocorrection(true)
-        }
+        
+        DeckList(
+            campaign: Campaign.emptyCampaign,
+            campaignView: false,
+            campaignDeck: false,
+            sortDeckParameter: viewDeckModel.sortDeckParameter,
+            sortOrder: viewDeckModel.sortOrder,
+            searchText: viewDeckModel.searchText
+        )
+        .navigationTitle("My Decks")
+        .searchable(text: $viewDeckModel.searchText)
+        .disableAutocorrection(true)
     }
 }
 
