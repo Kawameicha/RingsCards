@@ -17,7 +17,7 @@ struct ScenarioItem: View {
             label: Text("Scenario \(scenarioIndex + 1)")
                 .font(.subheadline)
         ) {
-            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 3) {
+            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 ScenarioViewMark(isSet: Bindable(campaign).completed[scenarioIndex])
                     .buttonStyle(PlainButtonStyle())
                     .font(.system(size: 44.0))

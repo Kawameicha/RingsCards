@@ -29,7 +29,7 @@ struct ScenarioVStack: View {
         VStack(alignment: .leading) {
             GeometryReader { item in
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 10) {
+                    HStack(alignment: .top) {
                         ForEach(scenarios) { scenario in
                             NavigationLink(value: Router.scenarioViewHome(campaign: campaign, scenario: scenario)) {
                                 ScenarioItem(campaign: campaign, scenario: scenario)
@@ -38,12 +38,11 @@ struct ScenarioVStack: View {
                         }
                     }
                 }
+                .scrollTargetLayout()
                 .scrollClipDisabled()
             }
-            .padding()
-            .onAppear {
-                UIScrollView.appearance().isPagingEnabled = true
-            }
+            .scrollTargetBehavior(.paging)
+            .safeAreaPadding(.horizontal)
         }
     }
 }
