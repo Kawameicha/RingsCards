@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct PackList: View {
-    @Environment(ViewCardModel.self) var viewCardModel
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Pack.packPosition) private var packs: [Pack]
 
@@ -31,7 +30,6 @@ struct PackList: View {
     ]
 
     var body: some View {
-        @Bindable var viewCardModel = viewCardModel
 
         List {
             ForEach(allCycles, id:\.self) { cycle in
@@ -55,6 +53,5 @@ struct PackList: View {
 
 #Preview {
     PackList()
-        .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
 }

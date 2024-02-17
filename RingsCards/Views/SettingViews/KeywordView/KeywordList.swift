@@ -14,7 +14,7 @@ struct KeywordList: View {
 
     var body: some View {
         @Bindable var viewRuleModel = viewRuleModel
-        
+
         KeywordListView(searchText: viewRuleModel.searchText)
             .navigationTitle("Keywords")
             .searchable(text: $viewRuleModel.searchText)
@@ -23,14 +23,14 @@ struct KeywordList: View {
 
 private struct KeywordListView: View {
     @Query var keywords: [Rule]
-    
+
     init(
         searchText: String = ""
     ) {
         _keywords = Query(filter: #Predicate<Rule> { rule in
             rule.isKeyword && (searchText.isEmpty || rule.name.localizedStandardContains(searchText))}, sort: \Rule.id)
     }
-    
+
     var body: some View {
         List {
             ForEach(keywords) { keyword in

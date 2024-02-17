@@ -478,7 +478,7 @@
     "id": "devoted",
     "name": "Devoted",
     "isKeyword": true,
-    "text": "The devoted keyword appears on some player cards in this cycle. While each non-Baggins, non-Fellowship hero you control shares at least one _**Trait**_ with a card with the devoted keyword, that card does not require a resource match. The _**Trait**_ that is shared does not need to be the same for each hero.\n\n For example, an ally with the devoted keyword and the _**Gondor**_ and _**Scout**_ traits may be played without a resource match if al of your heroes have the _**Gondor**_ trait, all of your heroes have the _**Scout**_ trait, or some of your heroes have the _**Gondor**_ trait and the remainder have the _**Scout**_ trait.",
+    "text": "While each non-Baggins, non-Fellowship hero you control shares at least one _**Trait**_ with a card with the devoted keyword, that card does not require a resource match. The _**Trait**_ that is shared does not need to be the same for each hero.\n\n For example, an ally with the devoted keyword and the _**Gondor**_ and _**Scout**_ traits may be played without a resource match if al of your heroes have the _**Gondor**_ trait, all of your heroes have the _**Scout**_ trait, or some of your heroes have the _**Gondor**_ trait and the remainder have the _**Scout**_ trait.",
     "seeAlso": []
   },
   {
@@ -917,7 +917,7 @@
     "id": "looter",
     "name": "Looter",
     "isKeyword": true,
-    "text": "Looter is a keyword that appears on enemies in this quest. After you engage an enemy with the Looter keyword, place a random card from your hand and the top X cards of your deck into that enemy's loot pile. This is done every time an enemy with the Looter keyword engages a player, even if there are already cards in that enemy's loot pile.",
+    "text": "After you engage an enemy with the Looter keyword, place a random card from your hand and the top X cards of your deck into that enemy's loot pile. This is done every time an enemy with the Looter keyword engages a player, even if there are already cards in that enemy's loot pile. Cards in a loot pile are not in play and are under no player’s control.",
     "seeAlso": []
   },
   {

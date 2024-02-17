@@ -68,7 +68,8 @@ extension Scenario {
     ) -> Predicate<Scenario> {
         
         return #Predicate<Scenario> { scenario in
-            (filterCampaign.contains(scenario.id)) &&
+            (filterCampaign.contains(scenario.id))
+            &&
             (searchText.isEmpty || scenario.name.localizedStandardContains(searchText))
         }
     }

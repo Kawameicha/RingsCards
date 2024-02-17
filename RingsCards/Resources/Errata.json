@@ -153,7 +153,7 @@
     "id": "blue_mountain_trader",
     "code": "08006",
     "isOfficial": true,
-    "text": "Should read: “(Limit once per game.)”"
+    "text": "Should read: “...Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue Mountain Trader is discarded. (Limit once per round.)”"
   },
   {
     "id": "wingfoot",

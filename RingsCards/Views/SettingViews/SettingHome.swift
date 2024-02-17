@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct SettingHome: View {
-    @Environment(ViewRuleModel.self) var viewRuleModel
     @Environment(\.modelContext) var modelContext
 
     var body: some View {
-        @Bindable var viewRuleModel = viewRuleModel
-
         List {
             Section(header: Text("Cards")) {
                 NavigationLink(value: Router.packList) {
                     Text("Edit Collection")
                 }
             }
-            
+
             Section(header: Text("Rules")) {
                 NavigationLink(value: Router.ruleList) {
                     Text("Glossary")
@@ -30,7 +27,7 @@ struct SettingHome: View {
                     Text("Keywords")
                 }
             }
-            
+
             Section(header: Text("Support")) {
                 NavigationLink(value: Router.supportHome) {
                     Text("About Rings Cards")
@@ -43,7 +40,4 @@ struct SettingHome: View {
 
 #Preview {
     SettingHome()
-        .modelContainer(previewModelContainer)
-        .environment(ViewCardModel())
-        .environment(ViewRuleModel())
 }
