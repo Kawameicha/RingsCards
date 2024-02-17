@@ -20,6 +20,7 @@ struct CampaignHome: View {
             searchText: viewCampaignModel.searchText
         )
         .navigationTitle("My Campaigns")
+        .searchable(text: $viewCampaignModel.searchText)
         .disableAutocorrection(true)
     }
 }
