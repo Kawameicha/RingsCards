@@ -48,7 +48,7 @@ struct PackList: View {
                             filterPack: [pack.packCode],
                             filterDeck: []
                         )) {
-                            PackRow(packs: pack)
+                            PackRow(pack: pack)
                         }
                     }
                 }

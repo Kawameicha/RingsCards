@@ -842,9 +842,9 @@
     {
         "id": "the_dark_of_mirkwood",
         "packName": "The Dark of Mirkwood",
-        "packCode": "tDoM",
+        "packCode": "TDoM",
         "packSort": 100,
-        "cycleCode": "tDoM",
+        "cycleCode": "TDoM",
         "cycleName": "Scenario Packs",
         "cycleSort": 103,
         "isCycle": false
@@ -852,9 +852,9 @@
     {
         "id": "the_scouring_of_the_shire",
         "packName": "The Scouring of the Shire",
-        "packCode": "tSotS",
+        "packCode": "TSotS",
         "packSort": 101,
-        "cycleCode": "tSotS",
+        "cycleCode": "TSotS",
         "cycleName": "Scenario Packs",
         "cycleSort": 103,
         "isCycle": false
@@ -862,9 +862,9 @@
     {
         "id": "the_nine_are_abroad",
         "packName": "The Nine are Abroad",
-        "packCode": "tNaA",
+        "packCode": "TNaN",
         "packSort": 102,
-        "cycleCode": "tNaA",
+        "cycleCode": "TNaN",
         "cycleName": "Scenario Packs",
         "cycleSort": 103,
         "isCycle": false
@@ -872,9 +872,9 @@
     {
         "id": "the_siege_of_erebor",
         "packName": "The Siege of Erebor",
-        "packCode": "tSoE",
+        "packCode": "TSoEr",
         "packSort": 103,
-        "cycleCode": "tSoE",
+        "cycleCode": "TSoEr",
         "cycleName": "Scenario Packs",
         "cycleSort": 103,
         "isCycle": false

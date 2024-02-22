@@ -35,8 +35,8 @@ struct CardSortButton: View {
 extension SortOrder {
     var name: String {
         switch self {
-        case .forward: "Forward"
-        case .reverse: "Reverse"
+        case .forward: "Increasing"
+        case .reverse: "Decreasing"
         }
     }
 }
