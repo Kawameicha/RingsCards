@@ -22,7 +22,7 @@ struct SettingHome: View {
                 NavigationLink(value: Router.ruleList) {
                     Text("Glossary")
                 }
-                
+
                 NavigationLink(value: Router.keywordList) {
                     Text("Keywords")
                 }

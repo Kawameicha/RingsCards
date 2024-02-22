@@ -97,8 +97,22 @@ let previewModelContainer: ModelContainer = {
                 container.mainContext.insert(erratum)
             }
 
-            if try modelContext.fetch(FetchDescriptor<Pack>()).isEmpty {
-                Packs.contents.forEach { container.mainContext.insert($0) }
+            let collection = try modelContext.fetch(FetchDescriptor<Pack>()).map { $0.id }
+            let packs = PackJSONDecoder.decode(from: "Packs")
+
+            packs.forEach { pack in
+                let pack = Pack(id: pack.id,
+                                packName: pack.packName,
+                                packCode: pack.packCode,
+                                packSort: pack.packSort,
+                                cycleName: pack.cycleName,
+                                cycleCode: pack.cycleCode,
+                                cycleSort: pack.cycleSort,
+                                isCycle: pack.isCycle)
+
+                if !collection.contains(pack.id) {
+                    container.mainContext.insert(pack)
+                }
             }
 
             let rules = RuleJSONDecoder.decode(from: "Rules")

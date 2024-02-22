@@ -10,7 +10,7 @@ import SwiftData
 
 struct PackList: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Pack.packPosition) private var packs: [Pack]
+    @Query(sort: \Pack.packSort) private var packs: [Pack]
 
     let allCycles: [String] = [
         "Shadows of Mirkwood",
@@ -30,8 +30,15 @@ struct PackList: View {
     ]
 
     var body: some View {
-
         List {
+            GroupBox(
+                label: Label("Cards shown", systemImage: "info.bubble")
+                    .foregroundColor(.yellow)
+            ) {
+                Text("Use these controls to limit which cards are visible throughout the app to those in your collection.")
+            }
+            .groupBoxStyle(PlainGroupBoxStyle())
+
             ForEach(allCycles, id:\.self) { cycle in
                 Section(header: Text("\(cycle)")) {
                     ForEach(packs.filter { pack in
@@ -53,5 +60,5 @@ struct PackList: View {
 
 #Preview {
     PackList()
-        .environment(ViewCardModel())
+        .modelContainer(ringsUserData)
 }

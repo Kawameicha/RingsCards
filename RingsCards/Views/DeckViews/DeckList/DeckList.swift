@@ -97,28 +97,35 @@ struct DeckList: View {
                         NavigationLink(value: Router.deckViewHome(deck: deck)) {
                             DeckRow(deck: deck)
                         }
-                        .swipeActions(edge: .trailing) {
-                            Button {
-                                if deck.campaigns?.count ?? 0 > 0 {
-                                    confirmDelete = true
-                                } else {
-                                    modelContext.delete(deck)
-                                }
-                            } label: {
-                                Label("Delete Deck", systemImage: "trash")
-                            }
-                            .tint(.red)
-                        }
-                        .alert(isPresented:$confirmDelete) {
-                            Alert(
-                                title: Text("Are you sure you want to delete this deck?"),
-                                message: Text("This deck is used in one or more campaigns"),
-                                primaryButton: .destructive(Text("Delete")) {
-                                    modelContext.delete(deck)
-                                },
-                                secondaryButton: .cancel()
-                            )
-                        }
+//                        .swipeActions(edge: .trailing) {
+//                            Button {
+//                                if deck.campaigns?.count ?? 0 > 0 {
+//                                    confirmDelete = true
+//                                } else {
+//                                    modelContext.delete(deck)
+//                                }
+//                            } label: {
+//                                Label("Delete Deck", systemImage: "trash")
+//                            }
+//                            .tint(.red)
+//                        }
+//                        .alert(isPresented:$confirmDelete) {
+//                            Alert(
+//                                title: Text("Are you sure you want to delete this deck?"),
+//                                message: Text("This deck is used in one or more campaigns."),
+//                                primaryButton: .destructive(Text("Delete")) {
+//                                    modelContext.delete(deck)
+//                                },
+//                                secondaryButton: .cancel()
+//                            )
+//                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                    .alert(isPresented:$confirmDelete) {
+                        Alert(
+                            title: Text("This deck is used in one or more campaigns."),
+                            message: Text("It cannot be deleted for the moment.")
+                        )
                     }
                 }
             }
@@ -131,6 +138,16 @@ struct DeckList: View {
                 ToolbarItem(placement: .principal) {
                     DeckInfo(count: decks.count)
                 }
+            }
+        }
+    }
+
+    func deleteItems(offsets: IndexSet) {
+        for index in offsets {
+            if decks[index].campaigns?.count ?? 0 > 0 {
+                confirmDelete = true
+            } else {
+                modelContext.delete(decks[index])
             }
         }
     }

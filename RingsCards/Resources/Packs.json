@@ -1,0 +1,882 @@
+[
+    {
+        "id": "core_set",
+        "packName": "Core Set",
+        "packCode": "Core",
+        "packSort": 0,
+        "cycleCode": "Core",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "the_hunt_for_gollum",
+        "packName": "The Hunt for Gollum",
+        "packCode": "HfG",
+        "packSort": 1,
+        "cycleCode": "SoM",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "conflict_at_the_carrock",
+        "packName": "Conflict at the Carrock",
+        "packCode": "CatC",
+        "packSort": 2,
+        "cycleCode": "SoM",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "a_journey_to_rhosgobel",
+        "packName": "A Journey to Rhosgobel",
+        "packCode": "JtR",
+        "packSort": 3,
+        "cycleCode": "SoM",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "the_hills_of_emyn_muil",
+        "packName": "The Hills of Emyn Muil",
+        "packCode": "HoEM",
+        "packSort": 4,
+        "cycleCode": "SoM",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "the_dead_marshes",
+        "packName": "The Dead Marshes",
+        "packCode": "TDM",
+        "packSort": 5,
+        "cycleCode": "SoM",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "return_to_mirkwood",
+        "packName": "Return to Mirkwood",
+        "packCode": "RtM",
+        "packSort": 6,
+        "cycleCode": "SoM",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "campaign_cards",
+        "packName": "Campaign Cards",
+        "packCode": "RevCore",
+        "packSort": 7,
+        "cycleCode": "Core",
+        "cycleName": "Shadows of Mirkwood",
+        "cycleSort": 0,
+        "isCycle": true
+    },
+    {
+        "id": "khazad_dum",
+        "packName": "Khazad-dûm",
+        "packCode": "KD",
+        "packSort": 0,
+        "cycleCode": "KD",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "the_redhorn_gate",
+        "packName": "The Redhorn Gate",
+        "packCode": "TRG",
+        "packSort": 1,
+        "cycleCode": "D",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "road_to_rivendell",
+        "packName": "Road to Rivendell",
+        "packCode": "RtR",
+        "packSort": 2,
+        "cycleCode": "D",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "the_watcher_in_the_water",
+        "packName": "The Watcher in the Water",
+        "packCode": "WitW",
+        "packSort": 3,
+        "cycleCode": "D",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "the_long_dark",
+        "packName": "The Long Dark",
+        "packCode": "TLD",
+        "packSort": 4,
+        "cycleCode": "D",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "foundations_of_stone",
+        "packName": "Foundations of Stone",
+        "packCode": "FoS",
+        "packSort": 5,
+        "cycleCode": "D",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "shadow_and_flame",
+        "packName": "Shadow and Flame",
+        "packCode": "SaF",
+        "packSort": 6,
+        "cycleCode": "D",
+        "cycleName": "Dwarrowdelf",
+        "cycleSort": 1,
+        "isCycle": true
+    },
+    {
+        "id": "heirs_of_numenor",
+        "packName": "Heirs of Numenor",
+        "packCode": "HoN",
+        "packSort": 0,
+        "cycleCode": "HoN",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "the_steward_s_fear",
+        "packName": "The Steward's Fear",
+        "packCode": "TSF",
+        "packSort": 1,
+        "cycleCode": "AtS",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "the_druadan_forest",
+        "packName": "The Druadan Forest",
+        "packCode": "TDF",
+        "packSort": 2,
+        "cycleCode": "AtS",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "encounter_at_amon_din",
+        "packName": "Encounter at Amon Din",
+        "packCode": "EaAD",
+        "packSort": 3,
+        "cycleCode": "AtS",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "assault_on_osgiliath",
+        "packName": "Assault on Osgiliat",
+        "packCode": "AoO",
+        "packSort": 4,
+        "cycleCode": "AtS",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "the_blood_of_gondor",
+        "packName": "The Blood of Gondor",
+        "packCode": "BoG",
+        "packSort": 5,
+        "cycleCode": "AtS",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "the_morgul_vale",
+        "packName": "The Morgul Vale",
+        "packCode": "TMV",
+        "packSort": 6,
+        "cycleCode": "AtS",
+        "cycleName": "Against the Shadow",
+        "cycleSort": 2,
+        "isCycle": true
+    },
+    {
+        "id": "the_voice_of_isengard",
+        "packName": "The Voice of Isengard",
+        "packCode": "VoI",
+        "packSort": 0,
+        "cycleCode": "VoI",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "the_dunland_trap",
+        "packName": "The Dunland Trap",
+        "packCode": "TDT",
+        "packSort": 1,
+        "cycleCode": "TRM",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "the_three_trials",
+        "packName": "The Three Trials",
+        "packCode": "TTT",
+        "packSort": 2,
+        "cycleCode": "TRM",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "trouble_in_tharbad",
+        "packName": "Trouble in Tharbad",
+        "packCode": "TiT",
+        "packSort": 3,
+        "cycleCode": "TRM",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "the_nin_in_eilph",
+        "packName": "The Nin-in-Eilph",
+        "packCode": "NiE",
+        "packSort": 4,
+        "cycleCode": "TRM",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "celebrimbor_s_secret",
+        "packName": "Celebrimbor's Secret",
+        "packCode": "CS",
+        "packSort": 5,
+        "cycleCode": "TRM",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "the_antlered_crown",
+        "packName": "The Antlered Crown",
+        "packCode": "TAC",
+        "packSort": 6,
+        "cycleCode": "TRM",
+        "cycleName": "The Ring-maker",
+        "cycleSort": 3,
+        "isCycle": true
+    },
+    {
+        "id": "the_lost_realm",
+        "packName": "The Lost Realm",
+        "packCode": "TLR",
+        "packSort": 0,
+        "cycleCode": "TLR",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "the_wastes_of_eriador",
+        "packName": "The Wastes of Eriador",
+        "packCode": "WoE",
+        "packSort": 1,
+        "cycleCode": "AA",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "escape_from_mount_gram",
+        "packName": "Escape from Mount Gram",
+        "packCode": "EfMG",
+        "packSort": 2,
+        "cycleCode": "AA",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "across_the_ettenmoors",
+        "packName": "Across the Ettenmoors",
+        "packCode": "AtE",
+        "packSort": 3,
+        "cycleCode": "AA",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "the_treachery_of_rhudaur",
+        "packName": "The Treachery of Rhudaur",
+        "packCode": "ToR",
+        "packSort": 4,
+        "cycleCode": "AA",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "the_battle_of_carn_dum",
+        "packName": "The Battle of Carn Dûm",
+        "packCode": "BoCD",
+        "packSort": 5,
+        "cycleCode": "AA",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "the_dread_realm",
+        "packName": "The Dread Realm",
+        "packCode": "TDR",
+        "packSort": 6,
+        "cycleCode": "AA",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "campaig_cards",
+        "packName": "Campaign Cards",
+        "packCode": "AACE",
+        "packSort": 7,
+        "cycleCode": "AACE",
+        "cycleName": "Angmar Awakened",
+        "cycleSort": 4,
+        "isCycle": true
+    },
+    {
+        "id": "the_grey_havens",
+        "packName": "The Grey Havens",
+        "packCode": "TGH",
+        "packSort": 0,
+        "cycleCode": "TGH",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "flight_of_the_stormcaller",
+        "packName": "Flight of the Stormcaller",
+        "packCode": "FotS",
+        "packSort": 1,
+        "cycleCode": "DC",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "the_thing_in_the_depths",
+        "packName": "The Thing in the Depths",
+        "packCode": "TitD",
+        "packSort": 2,
+        "cycleCode": "DC",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "temple_of_the_deceived",
+        "packName": "Temple of the Deceived",
+        "packCode": "TotD",
+        "packSort": 3,
+        "cycleCode": "DC",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "the_drowned_ruins",
+        "packName": "The Drowned Ruins",
+        "packCode": "DR",
+        "packSort": 4,
+        "cycleCode": "DC",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "a_storm_on_cobas_haven",
+        "packName": "A Storm on Cobas Haven",
+        "packCode": "SoCH",
+        "packSort": 5,
+        "cycleCode": "DC",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "the_city_of_corsairs",
+        "packName": "The City of Corsairs",
+        "packCode": "CoC",
+        "packSort": 6,
+        "cycleCode": "DC",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
+        "id": "the_sands_of_harad",
+        "packName": "The Sands of Harad",
+        "packCode": "TSoH",
+        "packSort": 0,
+        "cycleCode": "TSoH",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "the_mumakil",
+        "packName": "The Mûmakil",
+        "packCode": "M",
+        "packSort": 1,
+        "cycleCode": "H",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "race_across_harad",
+        "packName": "Race Across Harad",
+        "packCode": "RAH",
+        "packSort": 2,
+        "cycleCode": "H",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "beneath_the_sands",
+        "packName": "Beneath the Sands",
+        "packCode": "BtS",
+        "packSort": 3,
+        "cycleCode": "H",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "the_black_serpent",
+        "packName": "The Black Serpent",
+        "packCode": "TBS",
+        "packSort": 4,
+        "cycleCode": "H",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "the_dungeons_of_cirith_gurat",
+        "packName": "The Dungeons of Cirith Gurat",
+        "packCode": "DoCG",
+        "packSort": 5,
+        "cycleCode": "H",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "the_crossings_of_poros",
+        "packName": "The Crossings of Poros",
+        "packCode": "CoP",
+        "packSort": 6,
+        "cycleCode": "H",
+        "cycleName": "Haradrim",
+        "cycleSort": 6,
+        "isCycle": true
+    },
+    {
+        "id": "the_wilds_of_rhovanion",
+        "packName": "The Wilds of Rhovanion",
+        "packCode": "TWoR",
+        "packSort": 0,
+        "cycleCode": "TWoR",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "the_withered_heath",
+        "packName": "The Withered Heath",
+        "packCode": "TWH",
+        "packSort": 1,
+        "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "roam_across_rhovanion",
+        "packName": "Roam Across Rhovanion",
+        "packCode": "RAR",
+        "packSort": 2,
+        "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "fire_in_the_night",
+        "packName": "Fire in the Night",
+        "packCode": "FitN",
+        "packSort": 3,
+        "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "the_ghost_of_framsburg",
+        "packName": "The Ghost of Framsburg",
+        "packCode": "TGoF",
+        "packSort": 4,
+        "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "mount_gundabad",
+        "packName": "Mount Gundabad",
+        "packCode": "MG",
+        "packSort": 5,
+        "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "the_fate_of_wilderland",
+        "packName": "The Fate of Wilderland",
+        "packCode": "TFoW",
+        "packSort": 7,
+        "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "a_shadow_in_the_east",
+        "packName": "A Shadow in the East",
+        "packCode": "ASitE",
+        "packSort": 0,
+        "cycleCode": "ASitE",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "wrath_and_ruin",
+        "packName": "Wrath and Ruin",
+        "packCode": "WaR",
+        "packSort": 1,
+        "cycleCode": "VoM",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "the_city_of_ulfast",
+        "packName": "The City of Ulfast",
+        "packCode": "TCoU",
+        "packSort": 2,
+        "cycleCode": "VoM",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "challenge_of_the_wainriders",
+        "packName": "Challenge of the Wainriders",
+        "packCode": "CotW",
+        "packSort": 3,
+        "cycleCode": "VoM",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "under_the_ash_mountains",
+        "packName": "Under the Ash Mountains",
+        "packCode": "UtAM",
+        "packSort": 4,
+        "cycleCode": "VoM",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "the_land_of_sorrow",
+        "packName": "The Land of Sorrow",
+        "packCode": "TLoS",
+        "packSort": 5,
+        "cycleCode": "VoM",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "the_fortress_of_nurn",
+        "packName": "The Fortress of Nurn",
+        "packCode": "TFoN",
+        "packSort": 7,
+        "cycleCode": "VoM",
+        "cycleName": "Vengeance of Mordor",
+        "cycleSort": 8,
+        "isCycle": true
+    },
+    {
+        "id": "children_of_eorl",
+        "packName": "Children of Eorl",
+        "packCode": "CoE",
+        "packSort": 0,
+        "cycleCode": "CoE",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "the_aldburg_plot",
+        "packName": "The Aldburg Plot",
+        "packCode": "TAP",
+        "packSort": 1,
+        "cycleCode": "OotR",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "fire_on_the_eastemnet",
+        "packName": "Fire on the Eastemnet",
+        "packCode": "FotE",
+        "packSort": 2,
+        "cycleCode": "OotR",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "the_gap_of_rohan",
+        "packName": "The Gap of Rohan",
+        "packCode": "TGoR",
+        "packSort": 3,
+        "cycleCode": "OotR",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "the_glittering_caves",
+        "packName": "The Glittering Caves",
+        "packCode": "TGC",
+        "packSort": 4,
+        "cycleCode": "OotR",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "mustering_of_the_rohirrim",
+        "packName": "Mustering of the Rohirrim",
+        "packCode": "MotR",
+        "packSort": 5,
+        "cycleCode": "OotR",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "blood_in_the_isen",
+        "packName": "Blood in the Isen",
+        "packCode": "BitI",
+        "packSort": 7,
+        "cycleCode": "OotR",
+        "cycleName": "Oaths of the Rohirrim",
+        "cycleSort": 9,
+        "isCycle": true
+    },
+    {
+        "id": "over_hill_and_under_hill",
+        "packName": "Over Hill and Under Hill",
+        "packCode": "OHaUH",
+        "packSort": 0,
+        "cycleCode": "OHaUH",
+        "cycleName": "The Hobbit",
+        "cycleSort": 100,
+        "isCycle": false
+    },
+    {
+        "id": "on_the_doorstep",
+        "packName": "On the Doorstep",
+        "packCode": "OtD",
+        "packSort": 1,
+        "cycleCode": "OtD",
+        "cycleName": "The Hobbit",
+        "cycleSort": 100,
+        "isCycle": false
+    },
+    {
+        "id": "the_black_riders",
+        "packName": "The Black Riders",
+        "packCode": "TBR",
+        "packSort": 0,
+        "cycleCode": "TBR",
+        "cycleName": "The Lord of the Rings",
+        "cycleSort": 101,
+        "isCycle": false
+    },
+    {
+        "id": "the_road_darkens",
+        "packName": "The Road Darkens",
+        "packCode": "TRD",
+        "packSort": 1,
+        "cycleCode": "TRD",
+        "cycleName": "The Lord of the Rings",
+        "cycleSort": 101,
+        "isCycle": false
+    },
+    {
+        "id": "the_treason_of_saruman",
+        "packName": "The Treason of Saruman",
+        "packCode": "ToS",
+        "packSort": 3,
+        "cycleCode": "ToS",
+        "cycleName": "The Lord of the Rings",
+        "cycleSort": 101,
+        "isCycle": false
+    },
+    {
+        "id": "the_land_of_shadow",
+        "packName": "The Land of Shadow",
+        "packCode": "LoS",
+        "packSort": 4,
+        "cycleCode": "LoS",
+        "cycleName": "The Lord of the Rings",
+        "cycleSort": 101,
+        "isCycle": false
+    },
+    {
+        "id": "the_flame_of_the_west",
+        "packName": "The Flame of the West",
+        "packCode": "FotW",
+        "packSort": 5,
+        "cycleCode": "FotW",
+        "cycleName": "The Lord of the Rings",
+        "cycleSort": 101,
+        "isCycle": false
+    },
+    {
+        "id": "the_mountain_of_fire",
+        "packName": "The Mountain of Fire",
+        "packCode": "MoF",
+        "packSort": 6,
+        "cycleCode": "MoF",
+        "cycleName": "The Lord of the Rings",
+        "cycleSort": 101,
+        "isCycle": false
+    },
+    {
+        "id": "dwarves_of_durin",
+        "packName": "Dwarves of Durin",
+        "packCode": "DoD",
+        "packSort": 0,
+        "cycleCode": "DoD",
+        "cycleName": "Starter Decks",
+        "cycleSort": 102,
+        "isCycle": false
+    },
+    {
+        "id": "elves_of_lorien",
+        "packName": "Elves of Lórien",
+        "packCode": "EoL",
+        "packSort": 1,
+        "cycleCode": "EoL",
+        "cycleName": "Starter Decks",
+        "cycleSort": 102,
+        "isCycle": false
+    },
+    {
+        "id": "defenders_of_gondor",
+        "packName": "Defenders of Gondor",
+        "packCode": "DoG",
+        "packSort": 2,
+        "cycleCode": "DoG",
+        "cycleName": "Starter Decks",
+        "cycleSort": 102,
+        "isCycle": false
+    },
+    {
+        "id": "riders_of_rohan",
+        "packName": "Riders of Rohan",
+        "packCode": "RoR",
+        "packSort": 3,
+        "cycleCode": "RoR",
+        "cycleName": "Starter Decks",
+        "cycleSort": 102,
+        "isCycle": false
+    },
+    {
+        "id": "the_dark_of_mirkwood",
+        "packName": "The Dark of Mirkwood",
+        "packCode": "tDoM",
+        "packSort": 100,
+        "cycleCode": "tDoM",
+        "cycleName": "Scenario Packs",
+        "cycleSort": 103,
+        "isCycle": false
+    },
+    {
+        "id": "the_scouring_of_the_shire",
+        "packName": "The Scouring of the Shire",
+        "packCode": "tSotS",
+        "packSort": 101,
+        "cycleCode": "tSotS",
+        "cycleName": "Scenario Packs",
+        "cycleSort": 103,
+        "isCycle": false
+    },
+    {
+        "id": "the_nine_are_abroad",
+        "packName": "The Nine are Abroad",
+        "packCode": "tNaA",
+        "packSort": 102,
+        "cycleCode": "tNaA",
+        "cycleName": "Scenario Packs",
+        "cycleSort": 103,
+        "isCycle": false
+    },
+    {
+        "id": "the_siege_of_erebor",
+        "packName": "The Siege of Erebor",
+        "packCode": "tSoE",
+        "packSort": 103,
+        "cycleCode": "tSoE",
+        "cycleName": "Scenario Packs",
+        "cycleSort": 103,
+        "isCycle": false
+    }
+]

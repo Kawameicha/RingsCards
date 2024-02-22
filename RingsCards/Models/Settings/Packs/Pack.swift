@@ -10,21 +10,25 @@ import SwiftData
 
 @Model
 class Pack {
+    @Attribute(.unique) let id: String
+    let packName: String
+    let packCode: String
+    let packSort: Int
     let cycleName: String
     let cycleCode: String
-    let cyclePosition: Int
-    let packName: String
-    @Attribute(.unique) let packCode: String
-    let packPosition: Int
+    let cycleSort: Int
+    let isCycle: Bool
     var isInCollection = false
 
-    init(cycleName: String, cycleCode: String, cyclePosition: Int, packName: String, packCode: String, packPosition: Int, isInCollection: Bool = false) {
-        self.cycleName = cycleName
-        self.cycleCode = cycleCode
-        self.cyclePosition = cyclePosition
+    init(id: String, packName: String, packCode: String, packSort: Int, cycleName: String, cycleCode: String, cycleSort: Int, isCycle: Bool, isInCollection: Bool = false) {
+        self.id = id
         self.packName = packName
         self.packCode = packCode
-        self.packPosition = packPosition
+        self.packSort = packSort
+        self.cycleName = cycleName
+        self.cycleCode = cycleCode
+        self.cycleSort = cycleSort
+        self.isCycle = isCycle
         self.isInCollection = isInCollection
     }
 }
