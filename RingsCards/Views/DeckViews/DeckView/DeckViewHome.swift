@@ -59,7 +59,7 @@ struct DeckViewHome: View {
                 viewCard: .constant(false),
                 editBoons: .constant(false),
                 filterPack: [],
-                filterDeck: deck.slots.map { String($0.key) }
+                filterDeck: deck.cardSlots.map { String($0.key) }
             )
             .navigationTitle($deck.name)
             .toolbar {

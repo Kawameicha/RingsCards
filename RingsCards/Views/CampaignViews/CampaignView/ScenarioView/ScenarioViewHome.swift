@@ -80,8 +80,8 @@ struct ScenarioViewHome: View {
 
 #Preview {
     ModelPreview { scenario in
-        ScenarioViewHome(campaign: Campaign(name: "",
-                                            code: "",
+        ScenarioViewHome(campaign: Campaign(code: "",
+                                            name: "",
                                             scenarios: Array(1...3),
                                             completed: Array(repeating: false, count:3),
                                             campaignMode: true,

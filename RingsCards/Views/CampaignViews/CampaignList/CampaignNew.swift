@@ -45,99 +45,99 @@ struct CampaignNew: View {
                     Spacer()
                     Button("Create Campaign", action: {
                         if selectedCode == .Core {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(1...3),
                                                          completed: Array(repeating: false, count:3),
                                                          campaignMode: campaignMode,
                                                          slots: ["01132": 0, "01133": 0, "01134": 0, "01135": 0, "01136": 0, "01137": 0, "01138": 0]))
                         } else if selectedCode == .SoM {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(4...9),
                                                          completed: Array(repeating: false, count:6),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .D {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(11...19),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .AtS {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(21...29),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .TRM {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(31...39),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .AA && campaignMode {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: "AACE",
+                            modelContext.insert(Campaign(code: "AACE",
+                                                         name: campaignName,
                                                          scenarios: Array(41...49),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: campaignMode,
                                                          slots: ["10157": 0, "10158": 0, "10159": 0, "10160": 0, "10161": 0, "10162": 0, "10163": 0, "10164": 0, "10165": 0, "10166": 0, "10167": 0, "10168": 0, "10169": 0, "10170": 0, "10171": 0, "10172": 0, "10173": 0, "10174": 0, "10175": 0, "10176": 0, "10177": 0, "10178": 0, "10179": 0, "10180": 0, "10181": 0, "10182": 0, "10183": 0, "10184": 0, "10185": 0, "10186": 0, "10187": 0, "10188": 0, "10189": 0, "10190": 0, "10191": 0, "10192": 0]))
                         } else if selectedCode == .AA {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(41...49),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: campaignMode,
                                                          slots: ["10157": 0, "10158": 0, "10159": 0, "10160": 0, "10161": 0, "10162": 0, "10163": 0, "10164": 0, "10165": 0, "10166": 0, "10167": 0, "10168": 0, "10169": 0, "10170": 0, "10171": 0, "10172": 0, "10173": 0, "10174": 0, "10175": 0, "10176": 0, "10177": 0, "10178": 0, "10179": 0, "10180": 0, "10181": 0, "10182": 0, "10183": 0, "10184": 0, "10185": 0, "10186": 0, "10187": 0, "10188": 0, "10189": 0, "10190": 0, "10191": 0, "10192": 0]))
                         } else if selectedCode == .DC {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(51...59),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .H {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(61...69),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .EM {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(71...79),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .VoM {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(81...89),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .OotR {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(91...99),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .OHaUH {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(1001...1006),
                                                          completed: Array(repeating: false, count:6),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
                         } else if selectedCode == .TBR {
-                            modelContext.insert(Campaign(name: campaignName,
-                                                         code: selectedCode.rawValue,
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
                                                          scenarios: Array(1011...1028),
                                                          completed: Array(repeating: false, count:18),
                                                          campaignMode: campaignMode,

@@ -11,19 +11,14 @@ struct DeckRow: View {
     var deck: Deck
 
     var body: some View {
-        let player = deck.slots.reduce(0) { (result, keyValue) in
+        let player = deck.cardSlots.reduce(0) { (result, keyValue) in
             return result + keyValue.value }
         let heroes = deck.heroes.reduce(0) { (result, keyValue) in
             return result + keyValue.value }
 
         HStack(spacing: 3) {
-            if deck.starting_threat != 0 {
-                Image(systemName: "\(deck.starting_threat).square")
-                    .font(.system(size: 42.0))
-            } else {
-                Image(systemName: "x.square")
-                    .font(.system(size: 42.0))
-            }
+            Image(systemName: "\(deck.threat).square")
+                .font(.system(size: 42.0))
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(deck.name)

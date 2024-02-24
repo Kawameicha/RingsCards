@@ -10,47 +10,39 @@ import SwiftData
 
 @Model
 final class Deck: Identifiable {
+    @Attribute(.unique) let uuid = UUID()
+    var code: Int
     var name: String
-    let date_creation: Date
-    var date_update: Date
-//    var description_md: String
-//    var user_id: Int
+    let created: Date
+    var updated: Date
+    var version: String
+    var deckNote: String
+    var deckTags: [String]
+    var threat: Int
     var heroes: [String:Int]
-    var slots: [String:Int]
-//    var sideslots: [String:Int]
-//    var version: String
-    var last_pack: String
-//    var freeze_comments: String?
-//    var is_published: Bool
-//    var nb_votes: Int
-//    var nb_favorites: Int
-//    var nb_comments: Int
-    var starting_threat: Int
+    var cardSlots: [String:Int]
+    var sideSlots: [String:Int]
     var campaigns: [Campaign]?
 
-    init(name: String, date_creation: Date = .now, heroes: [String:Int]? = [:], slots: [String:Int]? = [:]) {
+    init(code: Int? = 0, name: String, created: Date = .now, updated: Date = .now, version: String? = "1.0", deckNote: String? = "", deckTags: [String]? = [], threat: Int? = 0, heroes: [String : Int]? = [:], cardSlots: [String : Int]? = [:], sideSlots: [String : Int]? = [:], campaigns: [Campaign]? = []) {
+        self.code = code ?? 0
         self.name = name
-        self.date_creation = date_creation
-        self.date_update = date_creation
-//        self.description_md = ""
-//        self.user_id = 0
+        self.created = created
+        self.updated = updated
+        self.version = version ?? "1.0"
+        self.deckNote = deckNote ?? ""
+        self.deckTags = deckTags ?? []
+        self.threat = threat ?? 0
         self.heroes = heroes ?? [:]
-        self.slots = slots ?? [:]
-//        self.sideslots = [:]
-//        self.version = ""
-        self.last_pack = "Core Set"
-//        self.freeze_comments = ""
-//        self.is_published = false
-//        self.nb_votes = 0
-//        self.nb_favorites = 0
-//        self.nb_comments = 0
-        self.starting_threat = 0
+        self.cardSlots = cardSlots ?? [:]
+        self.sideSlots = sideSlots ?? [:]
+        self.campaigns = campaigns
     }
 }
 
 extension Deck {
     static var emptyDeck: Deck {
-        Deck(name: "", heroes: [:], slots: [:])
+        Deck(name: "")
     }
 }
 

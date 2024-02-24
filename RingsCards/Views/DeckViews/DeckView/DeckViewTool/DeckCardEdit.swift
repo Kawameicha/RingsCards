@@ -17,11 +17,11 @@ struct DeckCardEdit: View {
             VStack(spacing: 9) {
                 Button {
                     if value < card.deck_limit {
-                        deck.slots["\(card.code)", default: value] += 1
-                        deck.date_update = .now
+                        deck.cardSlots["\(card.code)", default: value] += 1
+                        deck.updated = .now
 
                         if card.threat != nil {
-                            deck.starting_threat += card.threat ?? 0
+                            deck.threat += card.threat ?? 0
                             deck.heroes["\(card.code)", default: value] += 1
                         }
                     }
@@ -32,14 +32,14 @@ struct DeckCardEdit: View {
 
                 Button {
                     if value > 1 {
-                        deck.slots["\(card.code)", default: value] -= 1
-                        deck.date_update = .now
+                        deck.cardSlots["\(card.code)", default: value] -= 1
+                        deck.updated = .now
                     } else if value == 1 {
-                        deck.slots["\(card.code)"] = nil
-                        deck.date_update = .now
+                        deck.cardSlots["\(card.code)"] = nil
+                        deck.updated = .now
 
                         if card.threat != nil {
-                            deck.starting_threat -= card.threat ?? 0
+                            deck.threat -= card.threat ?? 0
                             deck.heroes["\(card.code)"] = nil
                         }
                     }

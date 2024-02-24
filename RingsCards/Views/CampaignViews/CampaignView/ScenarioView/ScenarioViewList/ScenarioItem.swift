@@ -32,13 +32,14 @@ struct ScenarioItem: View {
                 ScenarioViewIcon(image: Image(scenario.code))
             }
         }
+        .groupBoxStyle(PlainGroupBoxStyle())
     }
 }
 
 #Preview {
     ModelPreview { scenario in
-        ScenarioItem(campaign: Campaign(name: "",
-                                        code: "",
+        ScenarioItem(campaign: Campaign(code: "",
+                                        name: "",
                                         scenarios: Array(1...3),
                                         completed: Array(repeating: false, count:3),
                                         campaignMode: true,

@@ -12,8 +12,8 @@ struct CardInfo: View {
     var count = 0
 
     var body: some View {
-        if !(deck.slots.isEmpty) {
-            let player = deck.slots.reduce(0) { (result, keyValue) in
+        if !(deck.cardSlots.isEmpty) {
+            let player = deck.cardSlots.reduce(0) { (result, keyValue) in
                 return result + keyValue.value }
             let heroes = deck.heroes.reduce(0) { (result, keyValue) in
                 return result + keyValue.value }

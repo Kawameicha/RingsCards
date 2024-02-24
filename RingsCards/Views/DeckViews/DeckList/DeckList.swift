@@ -35,8 +35,8 @@ struct DeckList: View {
         )
         switch sortDeckParameter {
         case .name: _decks = Query(filter: predicate, sort: \.name, order: sortOrder)
-        case .date_update: _decks = Query(filter: predicate, sort: \.date_update, order: sortOrder)
-        case .date_creation: _decks = Query(filter: predicate, sort: \.date_creation, order: sortOrder)
+        case .date_update: _decks = Query(filter: predicate, sort: \.updated, order: sortOrder)
+        case .date_creation: _decks = Query(filter: predicate, sort: \.created, order: sortOrder)
         }
     }
 

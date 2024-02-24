@@ -144,9 +144,9 @@ private struct CardListView: View {
                         }) { card in
                             NavigationLink(value: Router.cardView(card)) {
                                 if editCard {
-                                    DeckCardEdit(deck: deck, card: card, value: deck.slots["\(card.code)", default: 0])
+                                    DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])
                                 } else {
-                                    CardRow(card: card, value: deck.slots["\(card.code)", default: 0])
+                                    CardRow(card: card, value: deck.cardSlots["\(card.code)", default: 0])
                                 }
                             }
                             .onAppear { if card == self.cards.last { viewCardModel.listOffset += 1 } }

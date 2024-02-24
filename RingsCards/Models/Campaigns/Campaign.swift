@@ -10,9 +10,9 @@ import SwiftData
 
 @Model
 class Campaign {
-    let uuid = UUID()
-    var name: String
+    @Attribute(.unique) let uuid = UUID()
     let code: String
+    var name: String
     let created: Date
     var updated: Date
     let scenarios: [Int]
@@ -24,9 +24,9 @@ class Campaign {
     var slots: [String:Int]
     var decks: [Deck]
 
-    init(name: String, code: String, created: Date = .now, updated: Date = .now, scenarios: [Int], completed: [Bool], campaignMode: Bool, campaignNote: String? = "", fallenHeroes: [String : Int]? = [:], threatModifs: Int? = 0, slots: [String : Int]? = [:], decks: [Deck]? = []) {
-        self.name = name
+    init(code: String, name: String, created: Date = .now, updated: Date = .now, scenarios: [Int], completed: [Bool], campaignMode: Bool, campaignNote: String? = "", fallenHeroes: [String : Int]? = [:], threatModifs: Int? = 0, slots: [String : Int]? = [:], decks: [Deck]? = []) {
         self.code = code
+        self.name = name
         self.created = created
         self.updated = updated
         self.scenarios = scenarios
@@ -42,7 +42,7 @@ class Campaign {
 
 extension Campaign {
     static var emptyCampaign: Campaign {
-        Campaign(name: "", code: "", scenarios: [], completed: [], campaignMode: false)
+        Campaign(code: "", name: "", scenarios: [], completed: [], campaignMode: false)
     }
 }
 

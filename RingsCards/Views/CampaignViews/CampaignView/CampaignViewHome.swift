@@ -30,7 +30,7 @@ struct CampaignViewHome: View {
                 Text("Scenarios")
 //                    .listRowSeparator(.hidden)
                 ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
-                    .frame(height: 140)
+                    .frame(height: 80)
             }
 
             Section {

@@ -32,8 +32,8 @@ struct ScenarioRow: View {
 
 #Preview {
     ModelPreview { scenario in
-        ScenarioRow(campaign: Campaign(name: "",
-                                       code: "",
+        ScenarioRow(campaign: Campaign(code: "",
+                                       name: "",
                                        scenarios: Array(1...3),
                                        completed: Array(repeating: false, count:3),
                                        campaignMode: true,
