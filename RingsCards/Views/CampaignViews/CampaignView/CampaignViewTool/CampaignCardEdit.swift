@@ -18,7 +18,7 @@ struct CampaignCardEdit: View {
                 Button {
                     if value < card.deck_limit {
                         campaign.slots["\(card.code)", default: value] += 1
-                        campaign.update = .now
+                        campaign.updated = .now
                     }
                 } label: {
                     Image(systemName: "plus.square")
@@ -28,10 +28,10 @@ struct CampaignCardEdit: View {
                 Button {
                     if value > 1 {
                         campaign.slots["\(card.code)", default: value] -= 1
-                        campaign.update = .now
+                        campaign.updated = .now
                     } else if value == 1 {
                         campaign.slots["\(card.code)"] = 0
-                        campaign.update = .now
+                        campaign.updated = .now
                     }
                 } label: {
                     Image(systemName: "minus.square")

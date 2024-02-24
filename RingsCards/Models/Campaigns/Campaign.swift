@@ -10,43 +10,45 @@ import SwiftData
 
 @Model
 class Campaign {
+    let uuid = UUID()
     var name: String
     let code: String
-    let creation: Date
-    var update: Date
+    let created: Date
+    var updated: Date
     let scenarios: [Int]
     var completed: [Bool]
-    var fallenHeroes: [String:Int]
-    var threatPenalty: Int
-    var notes: String
     var campaignMode: Bool
+    var campaignNote: String
+    var fallenHeroes: [String:Int]
+    var threatModifs: Int
     var slots: [String:Int]
-    var decks: [Deck]?
+    var decks: [Deck]
 
-    init(name: String, code: String, creation: Date = .now, scenarios: [Int], completed: [Bool], fallenHeroes: [String:Int]? = [:], campaignMode: Bool, slots: [String:Int], decks: [Deck]? = []) {
+    init(name: String, code: String, created: Date = .now, updated: Date = .now, scenarios: [Int], completed: [Bool], campaignMode: Bool, campaignNote: String? = "", fallenHeroes: [String : Int]? = [:], threatModifs: Int? = 0, slots: [String : Int]? = [:], decks: [Deck]? = []) {
         self.name = name
         self.code = code
-        self.creation = creation
-        self.update = creation
+        self.created = created
+        self.updated = updated
         self.scenarios = scenarios
         self.completed = completed
-        self.fallenHeroes = fallenHeroes ?? [:]
-        self.threatPenalty = 0
-        self.notes = ""
         self.campaignMode = campaignMode
-        self.slots = slots
-        self.decks = decks
+        self.campaignNote = campaignNote ?? ""
+        self.fallenHeroes = fallenHeroes ?? [:]
+        self.threatModifs = threatModifs ?? 0
+        self.slots = slots ?? [:]
+        self.decks = decks ?? []
     }
 }
 
 extension Campaign {
     static var emptyCampaign: Campaign {
-        Campaign(name: "", code: "", scenarios: [], completed: [], campaignMode: false, slots: [:])
+        Campaign(name: "", code: "", scenarios: [], completed: [], campaignMode: false)
     }
 }
 
 enum CampaignCode: String, CaseIterable {
-    case core, mirkwood, dwarrowdelf, shadow, ring, angmar, dream, haradrim, mithrin, mordor, rohirrim, hobbit, lotr
+    case Core, SoM, D, AtS, TRM, AA, DC, H, EM, VoM, OotR, OHaUH, TBR
+    var id: Self { self }
 }
 
 extension Campaign {

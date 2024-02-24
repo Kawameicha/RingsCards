@@ -20,10 +20,8 @@ struct CampaignViewHome: View {
          campaign: Campaign,
          decks: [Deck]
     ) {
-//        self.editBoons = editBoons
-//        self.editNotes = editNotes
         self.campaign = campaign
-        self.decks = campaign.decks ?? [Deck.emptyDeck]
+        self.decks = campaign.decks
     }
 
     var body: some View {

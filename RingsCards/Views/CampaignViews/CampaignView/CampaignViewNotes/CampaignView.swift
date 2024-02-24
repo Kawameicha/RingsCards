@@ -16,17 +16,17 @@ struct CampaignView: View {
                 Text(campaign.name)
                     .bold()
                     .font(.title)
-                Text("Created: ") + Text("\(campaign.creation.formatted(date: .abbreviated, time: .shortened))")
+                Text("Created: ") + Text("\(campaign.created.formatted(date: .abbreviated, time: .shortened))")
 
                 Divider()
 
                 HStack {
-                    Text("Threat Penalty: \(campaign.threatPenalty)")
+                    Text("Threat Penalty: \(campaign.threatModifs)")
                 }
 
                 Divider()
 
-                Text("Notes: \(campaign.notes)")
+                Text("Notes: \(campaign.campaignNote)")
             }
         }
     }

@@ -23,8 +23,8 @@ struct CampaignList: View {
         )
         switch sortCampaignParameter {
         case .name: _campaigns = Query(filter: predicate, sort: \.name, order: sortOrder)
-        case .date_update: _campaigns = Query(filter: predicate, sort: \.update, order: sortOrder)
-        case .date_creation: _campaigns = Query(filter: predicate, sort: \.creation, order: sortOrder)
+        case .date_update: _campaigns = Query(filter: predicate, sort: \.updated, order: sortOrder)
+        case .date_creation: _campaigns = Query(filter: predicate, sort: \.created, order: sortOrder)
         }
     }
 
@@ -40,7 +40,7 @@ struct CampaignList: View {
                 ForEach(campaigns) { campaign in
                     
                     if campaign.campaignMode == true {
-                        NavigationLink(value: Router.campaignViewHome(campaign: campaign, decks: campaign.decks ?? [Deck.emptyDeck])) {
+                        NavigationLink(value: Router.campaignViewHome(campaign: campaign, decks: campaign.decks)) {
                             CampaignRow(campaign: campaign)
                         }
                         

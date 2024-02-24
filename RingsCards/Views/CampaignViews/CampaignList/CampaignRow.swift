@@ -12,14 +12,13 @@ struct CampaignRow: View {
 
     var body: some View {
         HStack(spacing: 3) {
-            Image(systemName: "square.text.square")
-                .font(.system(size: 42.0))
+            PackIcon(image: Image(campaign.code), frame: 50)
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(campaign.name)
                     .font(.headline)
 
-                Text("\(campaign.creation.formatted(date: .abbreviated, time: .shortened))")
+                Text("\(campaign.created.formatted(date: .abbreviated, time: .shortened))")
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             }

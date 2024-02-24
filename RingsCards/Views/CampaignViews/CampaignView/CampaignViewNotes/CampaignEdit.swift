@@ -21,7 +21,7 @@ struct CampaignEdit: View {
             HStack {
                 Text("Notes").bold()
                 Divider()
-                TextEditor(text: $campaign.notes)
+                TextEditor(text: $campaign.campaignNote)
             }
         }
     }

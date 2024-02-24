@@ -44,7 +44,7 @@ struct DeckList: View {
         @Bindable var viewDeckModel = viewDeckModel
 
         if campaignView {
-            let campaignDecks = campaign.decks ?? [Deck.emptyDeck]
+            let campaignDecks = campaign.decks
 
             ForEach(campaignDecks) { deck in
                 NavigationLink(value: Router.deckViewHome(deck: deck)) {
@@ -52,7 +52,7 @@ struct DeckList: View {
                 }
                 .swipeActions(edge: .trailing) {
                     Button {
-                        campaign.decks?.remove(at: campaign.decks?.lastIndex(of: deck) ?? 0)
+                        campaign.decks.remove(at: campaign.decks.lastIndex(of: deck) ?? 0)
                     } label: {
                         Label("Detach Deck", systemImage: "minus.circle")
                     }
@@ -77,7 +77,7 @@ struct DeckList: View {
                         }
                         .swipeActions(edge: .trailing) {
                             Button {
-                                campaign.decks?.insert(deck, at: campaign.decks?.endIndex ?? 0)
+                                campaign.decks.insert(deck, at: campaign.decks.endIndex)
                             } label: {
                                 Label("Attach Deck", systemImage: "plus.circle")
                             }

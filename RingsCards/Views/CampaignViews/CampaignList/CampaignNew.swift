@@ -13,7 +13,7 @@ struct CampaignNew: View {
     @Environment(\.modelContext) var modelContext
     @State var campaignName: String = ""
     @State var campaignMode: Bool = false
-    @State var selectedCode: CampaignCode = .core
+    @State var selectedCode: CampaignCode = .Core
 
     var body: some View {
         Form {
@@ -21,19 +21,19 @@ struct CampaignNew: View {
                 TextField("New Campaign Name", text: $campaignName)
 
                 Picker("Select Cycle", selection: $selectedCode) {
-                    Text("Core Set").tag(CampaignCode.core)
-                    Text("Shadows of Mirkwood").tag(CampaignCode.mirkwood)
-                    Text("Dwarrowdelf").tag(CampaignCode.dwarrowdelf)
-                    Text("Against the Shadow").tag(CampaignCode.shadow)
-                    Text("The Ring-maker").tag(CampaignCode.ring)
-                    Text("Angmar Awakened").tag(CampaignCode.angmar)
-                    Text("Dream-chaser").tag(CampaignCode.dream)
-                    Text("Haradrim").tag(CampaignCode.haradrim)
-                    Text("Ered Mithrin").tag(CampaignCode.mithrin)
-                    Text("Vengeance of Mordor").tag(CampaignCode.mordor)
-                    Text("Oaths of the Rohirrim").tag(CampaignCode.rohirrim)
-                    Text("The Hobbit").tag(CampaignCode.hobbit)
-                    Text("The Lord of the Rings").tag(CampaignCode.lotr)
+                    Text("Core Set").tag(CampaignCode.Core)
+                    Text("Shadows of Mirkwood").tag(CampaignCode.SoM)
+                    Text("Dwarrowdelf").tag(CampaignCode.D)
+                    Text("Against the Shadow").tag(CampaignCode.AtS)
+                    Text("The Ring-maker").tag(CampaignCode.TRM)
+                    Text("Angmar Awakened").tag(CampaignCode.AA)
+                    Text("Dream-chaser").tag(CampaignCode.DC)
+                    Text("Haradrim").tag(CampaignCode.H)
+                    Text("Ered Mithrin").tag(CampaignCode.EM)
+                    Text("Vengeance of Mordor").tag(CampaignCode.VoM)
+                    Text("Oaths of the Rohirrim").tag(CampaignCode.OotR)
+                    Text("The Hobbit").tag(CampaignCode.OHaUH)
+                    Text("The Lord of the Rings").tag(CampaignCode.TBR)
                 }
 
                 Toggle("Campaign Mode", isOn: $campaignMode)
@@ -44,91 +44,98 @@ struct CampaignNew: View {
                 HStack {
                     Spacer()
                     Button("Create Campaign", action: {
-                        if selectedCode == .core {
+                        if selectedCode == .Core {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(1...3),
                                                          completed: Array(repeating: false, count:3),
                                                          campaignMode: campaignMode,
                                                          slots: ["01132": 0, "01133": 0, "01134": 0, "01135": 0, "01136": 0, "01137": 0, "01138": 0]))
-                        } else if selectedCode == .mirkwood {
+                        } else if selectedCode == .SoM {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(4...9),
                                                          completed: Array(repeating: false, count:6),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .dwarrowdelf {
+                        } else if selectedCode == .D {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(11...19),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .shadow {
+                        } else if selectedCode == .AtS {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(21...29),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .ring {
+                        } else if selectedCode == .TRM {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(31...39),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .angmar {
+                        } else if selectedCode == .AA && campaignMode {
+                            modelContext.insert(Campaign(name: campaignName,
+                                                         code: "AACE",
+                                                         scenarios: Array(41...49),
+                                                         completed: Array(repeating: false, count:9),
+                                                         campaignMode: campaignMode,
+                                                         slots: ["10157": 0, "10158": 0, "10159": 0, "10160": 0, "10161": 0, "10162": 0, "10163": 0, "10164": 0, "10165": 0, "10166": 0, "10167": 0, "10168": 0, "10169": 0, "10170": 0, "10171": 0, "10172": 0, "10173": 0, "10174": 0, "10175": 0, "10176": 0, "10177": 0, "10178": 0, "10179": 0, "10180": 0, "10181": 0, "10182": 0, "10183": 0, "10184": 0, "10185": 0, "10186": 0, "10187": 0, "10188": 0, "10189": 0, "10190": 0, "10191": 0, "10192": 0]))
+                        } else if selectedCode == .AA {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(41...49),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: campaignMode,
                                                          slots: ["10157": 0, "10158": 0, "10159": 0, "10160": 0, "10161": 0, "10162": 0, "10163": 0, "10164": 0, "10165": 0, "10166": 0, "10167": 0, "10168": 0, "10169": 0, "10170": 0, "10171": 0, "10172": 0, "10173": 0, "10174": 0, "10175": 0, "10176": 0, "10177": 0, "10178": 0, "10179": 0, "10180": 0, "10181": 0, "10182": 0, "10183": 0, "10184": 0, "10185": 0, "10186": 0, "10187": 0, "10188": 0, "10189": 0, "10190": 0, "10191": 0, "10192": 0]))
-                        } else if selectedCode == .dream {
+                        } else if selectedCode == .DC {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(51...59),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .haradrim {
+                        } else if selectedCode == .H {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(61...69),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .mithrin {
+                        } else if selectedCode == .EM {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(71...79),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .mordor {
+                        } else if selectedCode == .VoM {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(81...89),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .rohirrim {
+                        } else if selectedCode == .OotR {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(91...99),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .hobbit {
+                        } else if selectedCode == .OHaUH {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(1001...1006),
                                                          completed: Array(repeating: false, count:6),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .lotr {
+                        } else if selectedCode == .TBR {
                             modelContext.insert(Campaign(name: campaignName,
                                                          code: selectedCode.rawValue,
                                                          scenarios: Array(1011...1028),
