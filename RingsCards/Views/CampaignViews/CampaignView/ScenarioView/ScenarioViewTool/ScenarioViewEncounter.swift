@@ -12,7 +12,7 @@ struct ScenarioViewEncounter: View {
 
     var body: some View {
         LazyVStack(alignment: .leading) {
-            ForEach(scenario.encounters) { encounter in
+            ForEach(scenario.encounterSets) { encounter in
                 HStack {
                     ScenarioViewIcon(image: Image(encounter.code))
 

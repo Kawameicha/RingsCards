@@ -14,51 +14,74 @@ final class Scenario: Identifiable {
     let code: String
     let name: String
     let pack: String
-    let encounters: [Encounter]
-    let keywords: [KeywordUsed]
+    let encounterSets: [EncounterSets]
+    let encounterRule: [EncounterRule]
     let flavorText: FlavorText
-    let statistics: Statistic
+    let statistics: Statistics
 
-    init(id: Int, code: String, name: String, pack: String, encounters: [Encounter], keywords: [KeywordUsed], flavorText: FlavorText, statistics: Statistic) {
+    init(id: Int, code: String, name: String, pack: String, encounterSets: [EncounterSets], encounterRule: [EncounterRule], flavorText: FlavorText, statistics: Statistics) {
         self.id = id
         self.code = code
         self.name = name
         self.pack = pack
-        self.encounters = encounters
-        self.keywords = keywords
+        self.encounterSets = encounterSets
+        self.encounterRule = encounterRule
         self.flavorText = flavorText
         self.statistics = statistics
     }
 }
 
-struct Encounter: Hashable, Codable, Identifiable {
+struct EncounterSets: Hashable, Codable, Identifiable {
     let id: Int
     let code: String
     let name: String
 }
 
-struct KeywordUsed: Hashable, Codable, Identifiable {
+struct EncounterRule: Hashable, Codable, Identifiable {
     let id: Int
     let code: String
     let name: String
 }
 
 struct FlavorText: Hashable, Codable {
-    let flavorIntro: String
-    let ruling: String
-    let doNotRead: String
+    let intro: String
+    let rules: String
+    let outro: String
 }
 
-struct Statistic: Hashable, Codable {
+struct Statistics: Hashable, Codable {
+    var hasEasy: Bool
+    var hasNightmare: Bool
+    var easyCards: Int
     let easyEnemies: Int
     let easyLocations: Int
     let easyTreacheries: Int
+    var easyShadows: Int
+    var easyObjectives: Int
+    var easyObjectiveAllies: Int
+    var easyObjectiveLocations: Int
+    var easySurges: Int
+    var easyEncounterSideQuests: Int
+    var normalCards: Int
     let normalEnemies: Int
     let normalLocations: Int
     let normalTreacheries: Int
+    var normalShadows: Int
+    var normalObjectives: Int
+    var normalObjectiveAllies: Int
+    var normalObjectiveLocations: Int
+    var normalSurges: Int
+    var normalEncounterSideQuests: Int
+    var nightmareCards: Int
     let nightmareEnemies: Int
     let nightmareLocations: Int
     let nightmareTreacheries: Int
+    var nightmareShadows: Int
+    var nightmareObjectives: Int
+    var nightmareObjectiveAllies: Int
+    var nightmareObjectiveLocations: Int
+    var nightmareSurges: Int
+    var nightmareEncounterSideQuests: Int
 }
 
 extension Scenario {

@@ -16,8 +16,8 @@ struct ScenarioResponse: Decodable {
     var nameCanonical: String
     var date_creation: String
     var date_update: String
-    var encounters: [Encounter]
-    var keywords: [KeywordUsed]
+    var encounters: [EncounterSets]
+    var keywords: [EncounterRule]
     var flavorIntro: String
     var ruling: String
     var doNotRead: String

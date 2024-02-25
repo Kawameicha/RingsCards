@@ -20,7 +20,7 @@ struct ScenarioKeywordList: View {
 
         let predicate = Rule.predicate(
             searchText: "",
-            filterRule: scenario.keywords.map { $0.code }
+            filterRule: scenario.encounterRule.map { $0.code }
         )
         _keywords = Query(filter: predicate, sort: \.id)
     }

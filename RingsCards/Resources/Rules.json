@@ -348,6 +348,18 @@
     ]
   },
   {
+    "id": "control",
+    "name": "Control",
+    "isKeyword": false,
+    "text": "",
+    "seeAlso": [
+        {
+            "id": "ownership_and_control",
+            "name": "Ownership and Control"
+        }
+    ]
+  },
+  {
     "id": "copy_of_a_card",
     "name": "Copy (of a card)",
     "isKeyword": false,
