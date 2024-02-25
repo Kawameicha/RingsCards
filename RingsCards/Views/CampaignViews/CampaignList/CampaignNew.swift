@@ -32,8 +32,8 @@ struct CampaignNew: View {
                     Text("Ered Mithrin").tag(CampaignCode.EM)
                     Text("Vengeance of Mordor").tag(CampaignCode.VoM)
                     Text("Oaths of the Rohirrim").tag(CampaignCode.OotR)
-                    Text("The Hobbit").tag(CampaignCode.OHaUH)
-                    Text("The Lord of the Rings").tag(CampaignCode.TBR)
+                    Text("The Hobbit").tag(CampaignCode.Hobbit)
+                    Text("The Lord of the Rings").tag(CampaignCode.LotR)
                 }
 
                 Toggle("Campaign Mode", isOn: $campaignMode)
@@ -128,14 +128,14 @@ struct CampaignNew: View {
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
-                        } else if selectedCode == .OHaUH {
+                        } else if selectedCode == .Hobbit {
                             modelContext.insert(Campaign(code: selectedCode.rawValue,
                                                          name: campaignName,
                                                          scenarios: Array(1001...1006),
                                                          completed: Array(repeating: false, count:6),
-                                                         campaignMode: false,
-                                                         slots: ["": 0]))
-                        } else if selectedCode == .TBR {
+                                                         campaignMode: campaignMode,
+                                                         slots: ["131020": 0, "131021": 0, "131022": 0, "132019": 0, "132020": 0, "132021": 0, "132022": 0, "132023": 0, "132024": 0]))
+                        } else if selectedCode == .LotR {
                             modelContext.insert(Campaign(code: selectedCode.rawValue,
                                                          name: campaignName,
                                                          scenarios: Array(1011...1028),
