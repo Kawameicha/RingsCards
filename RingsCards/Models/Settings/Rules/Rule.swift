@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Rule {
+class Rule: Identifiable {
     @Attribute(.unique) let id: String
     let name: String
     let isKeyword: Bool

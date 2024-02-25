@@ -13,16 +13,16 @@ struct CardRow: View {
 
     var body: some View {
         HStack(spacing: 3) {
-            if card.threat != nil {
-                Image(systemName: "\(card.threat ?? 0).square")
+            if card.costs.threat != 0 {
+                Image(systemName: "\(card.costs.threat).square")
                     .foregroundColor(Color(card.sphere_name))
                     .font(.system(size: 42.0))
-            } else if card.cost == "X" {
+            } else if card.costs.cost == "X" {
                 Image(systemName: "x.circle")
                     .foregroundColor(Color(card.sphere_name))
                     .font(.system(size: 42.0))
-            } else if card.cost != nil {
-                Image(systemName: "\(Int(card.cost!) ?? 0).circle")
+            } else if card.costs.cost != "" {
+                Image(systemName: "\(Int(card.costs.cost) ?? 0).circle")
                     .foregroundColor(Color(card.sphere_name))
                     .font(.system(size: 42.0))
             } else {
@@ -42,7 +42,7 @@ struct CardRow: View {
                         .font(.headline)
                 }
 
-                Text(card.traits)
+                Text(card.texts.traits)
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             }

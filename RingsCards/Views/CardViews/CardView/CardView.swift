@@ -31,7 +31,7 @@ struct CardView: View {
                     }
 
                 VStack(alignment: .leading) {
-                    if card.cardDetails.is_unique == true {
+                    if card.is_unique == true {
                         Text("\u{E607} " + card.name)
                             .font(Font.custom("SFUIText-Regular", size: 28))
                     } else {
@@ -40,7 +40,7 @@ struct CardView: View {
                     }
                     
                     HStack {
-                        Text(card.traits)
+                        Text(card.texts.traits)
                         Spacer()
                         Text(card.type_name)
                     }
@@ -49,21 +49,21 @@ struct CardView: View {
                     
                     HStack(alignment: .center, spacing: 20) {
                         if card.type_code == "hero" {
-                            Text("Threat:" + " \(card.threat ?? 0)")
+                            Text("Threat:" + " \(card.costs.threat)")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
                         }
-                        if card.cost != nil {
-                            Text("Cost:" + " \(card.cost ?? "")")
+                        if card.costs.cost != "" {
+                            Text("Cost:" + " \(card.costs.cost)")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
                         }
-                        if card.cardDetails.health != 0 {
-                            Text("\(card.cardDetails.willpower ?? 0)" + " \u{E600}")
+                        if card.stats.health != 0 {
+                            Text("\(card.stats.willpower ?? 0)" + " \u{E600}")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
-                            Text("\(card.cardDetails.attack ?? 0)" + " \u{E601}")
+                            Text("\(card.stats.attack ?? 0)" + " \u{E601}")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
-                            Text("\(card.cardDetails.defense ?? 0)" + " \u{E602}")
+                            Text("\(card.stats.defense ?? 0)" + " \u{E602}")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
-                            Text("\(card.cardDetails.health ?? 0)" + " \u{E603}")
+                            Text("\(card.stats.health ?? 0)" + " \u{E603}")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
                         }
                     }
@@ -73,16 +73,16 @@ struct CardView: View {
 
                     GroupBox {
                         VStack(alignment: .leading, spacing: 20) {
-                            if card.cardDetails.text != "" {
-                                Text(.init(card.cardDetails.text
+                            if card.texts.text != "" {
+                                Text(.init(card.texts.text
                                     .htmlToMarkDown()
                                     .iconsAndSpheres()
                                 ))
                                 .font(Font.custom("SFUIText-Regular", size: 16))
                             }
 
-                            if card.cardDetails.flavor != "" {
-                                Text(.init(card.cardDetails.flavor
+                            if card.texts.flavor != "" {
+                                Text(.init(card.texts.flavor
                                     .htmlToMarkDown()
                                 ))
                                 .font(.system(size: 14, weight: .light, design: .serif))
@@ -90,10 +90,10 @@ struct CardView: View {
                             }
 
                             HStack {
-                                Text("Illus. \(card.cardDetails.illustrator)")
+                                Text("Illus. \(card.texts.illustrator)")
                                     .font(.footnote)
                                 Spacer()
-                                Text("\(card.pack_name) # \(card.cardDetails.position)")
+                                Text("\(card.pack_name) # \(card.position)")
                                     .font(.footnote)
                             }
                         }

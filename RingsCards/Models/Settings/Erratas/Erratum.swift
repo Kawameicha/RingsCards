@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Erratum {
+class Erratum: Identifiable {
     @Attribute(.unique) let id: String
     let code: String
     let isOfficial: Bool

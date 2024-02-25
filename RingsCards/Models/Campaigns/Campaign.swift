@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Campaign {
+class Campaign: Identifiable {
     @Attribute(.unique) let uuid = UUID()
     let code: String
     var name: String

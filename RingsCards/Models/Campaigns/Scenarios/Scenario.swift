@@ -31,14 +31,12 @@ final class Scenario: Identifiable {
     }
 }
 
-struct EncounterSets: Hashable, Codable, Identifiable {
-    let id: Int
+struct EncounterSets: Hashable, Codable {
     let code: String
     let name: String
 }
 
-struct EncounterRule: Hashable, Codable, Identifiable {
-    let id: Int
+struct EncounterRule: Hashable, Codable {
     let code: String
     let name: String
 }
@@ -50,38 +48,38 @@ struct FlavorText: Hashable, Codable {
 }
 
 struct Statistics: Hashable, Codable {
-    var hasEasy: Bool
-    var hasNightmare: Bool
-    var easyCards: Int
+    let hasEasy: Bool
+    let hasNightmare: Bool
+    let easyCards: Int
     let easyEnemies: Int
     let easyLocations: Int
     let easyTreacheries: Int
-    var easyShadows: Int
-    var easyObjectives: Int
-    var easyObjectiveAllies: Int
-    var easyObjectiveLocations: Int
-    var easySurges: Int
-    var easyEncounterSideQuests: Int
-    var normalCards: Int
+    let easyShadows: Int
+    let easyObjectives: Int
+    let easyObjectiveAllies: Int
+    let easyObjectiveLocations: Int
+    let easySurges: Int
+    let easyEncounterSideQuests: Int
+    let normalCards: Int
     let normalEnemies: Int
     let normalLocations: Int
     let normalTreacheries: Int
-    var normalShadows: Int
-    var normalObjectives: Int
-    var normalObjectiveAllies: Int
-    var normalObjectiveLocations: Int
-    var normalSurges: Int
-    var normalEncounterSideQuests: Int
-    var nightmareCards: Int
+    let normalShadows: Int
+    let normalObjectives: Int
+    let normalObjectiveAllies: Int
+    let normalObjectiveLocations: Int
+    let normalSurges: Int
+    let normalEncounterSideQuests: Int
+    let nightmareCards: Int
     let nightmareEnemies: Int
     let nightmareLocations: Int
     let nightmareTreacheries: Int
-    var nightmareShadows: Int
-    var nightmareObjectives: Int
-    var nightmareObjectiveAllies: Int
-    var nightmareObjectiveLocations: Int
-    var nightmareSurges: Int
-    var nightmareEncounterSideQuests: Int
+    let nightmareShadows: Int
+    let nightmareObjectives: Int
+    let nightmareObjectiveAllies: Int
+    let nightmareObjectiveLocations: Int
+    let nightmareSurges: Int
+    let nightmareEncounterSideQuests: Int
 }
 
 extension Scenario {

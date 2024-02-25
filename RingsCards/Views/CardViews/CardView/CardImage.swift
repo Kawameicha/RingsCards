@@ -11,7 +11,7 @@ struct CardImage: View {
     var card: Card
 
     var body: some View {
-        AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.cardDetails.imagesrc)")) { phase in
+        AsyncImage(url: URL(string: "https://www.ringsdb.com\(card.texts.imagesrc)")) { phase in
             switch phase {
             case .empty:
                 ProgressView()

@@ -16,66 +16,90 @@ final class Card: Identifiable {
     let type_name: String
     let sphere_code: String
     let sphere_name: String
+    let position: Int
     @Attribute(.unique) let code: String
     let name: String
-    let traits: String
-    let threat: Int? = nil
-    let cost: String? = nil
+    let is_unique: Bool
+    let quantity: Int
     let deck_limit: Int
-    let cardCategory: Int
-    let cardDetails: CardDetail
+    let cardSort: Int
+    let costs: CardCost
+    let stats: CardStat
+    let texts: CardText
 
-    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, code: String, name: String, traits: String? = "", threat: Int? = nil, cost: String? = nil, deck_limit: Int, cardCategory: Int, cardDetails: CardDetail) {
+    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, is_unique: Bool, quantity: Int, deck_limit: Int, cardSort: Int, costs: CardCost, stats: CardStat, texts: CardText) {
         self.pack_code = pack_code
         self.pack_name = pack_name
         self.type_code = type_code
         self.type_name = type_name
         self.sphere_code = sphere_code
         self.sphere_name = sphere_name
+        self.position = position
         self.code = code
         self.name = name
-        self.traits = traits ?? ""
-        self.threat = threat
-        self.cost = cost
+        self.is_unique = is_unique
+        self.quantity = quantity
         self.deck_limit = deck_limit
-        self.cardCategory = cardCategory
-        self.cardDetails = cardDetails
+        self.cardSort = cardSort
+        self.costs = costs
+        self.stats = stats
+        self.texts = texts
     }
 }
 
-struct CardDetail: Hashable, Codable {
-    var position: Int
-    var text: String
-    var flavor: String
-    var is_unique: Bool
-    var victory: Int? = nil
-    var quest: Int? = nil
+struct CardCost: Hashable, Codable {
+    var cost: String
+    var threat: Int
+    var engagement: String
+
+    init(cost: String? = "", threat: Int? = 0, engagement: String? = "") {
+        self.cost = cost ?? ""
+        self.threat = threat ?? 0
+        self.engagement = engagement ?? ""
+    }
+}
+
+struct CardStat: Hashable, Codable {
     var willpower: Int? = nil
     var attack: Int? = nil
     var defense: Int? = nil
     var health: Int? = nil
-    var quantity: Int
+    var threat: Int? = nil
+    var quest: Int? = nil
+    var victory: Int? = nil
+
+    init(willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, threat: Int? = nil, quest: Int? = nil, victory: Int? = nil) {
+        self.willpower = willpower
+        self.attack = attack
+        self.defense = defense
+        self.health = health
+        self.threat = threat
+        self.quest = quest
+        self.victory = victory
+    }
+}
+
+struct CardText: Hashable, Codable {
+    var traits: String
+    var text: String
+    var flavor: String
+    var shadow: String
+    var encounterSet: String
     var illustrator: String
     var has_errata: Bool
     var url: String
     var imagesrc: String
 
-    init(position: Int, text: String? = "", flavor: String? = "", is_unique: Bool, victory: Int? = nil, quest: Int? = nil, willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, quantity: Int, illustrator: String? = "", has_errata: Bool, url: String, imagesrc: String) {
-        self.position = position
+    init(traits: String? = "", text: String? = "", flavor: String? = "", shadow: String? = "", encounterSet: String? = "", illustrator: String? = "", has_errata: Bool? = false, url: String? = "", imagesrc: String? = "") {
+        self.traits = traits ?? ""
         self.text = text ?? ""
         self.flavor = flavor ?? ""
-        self.is_unique = is_unique
-        self.victory = victory
-        self.quest = quest
-        self.willpower = willpower
-        self.attack = attack
-        self.defense = defense
-        self.health = health
-        self.quantity = quantity
+        self.shadow = shadow ?? ""
+        self.encounterSet = encounterSet ?? ""
         self.illustrator = illustrator ?? ""
-        self.has_errata = has_errata
-        self.url = url
-        self.imagesrc = imagesrc
+        self.has_errata = has_errata ?? false
+        self.url = url ?? ""
+        self.imagesrc = imagesrc ?? ""
     }
 }
 

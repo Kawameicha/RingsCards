@@ -40,7 +40,7 @@ struct CardResponse: Decodable {
 }
 
 extension CardResponse {
-    var cardCategory: Int {
+    var cardSort: Int {
         switch type_code {
         case "hero":
             return 1
@@ -113,28 +113,28 @@ extension CardResponse {
                                 type_name: card.type_name,
                                 sphere_code: card.sphere_code,
                                 sphere_name: card.sphere_name,
+                                position: card.position,
                                 code: card.code,
                                 name: card.name,
-                                traits: card.traits,
-                                threat: card.threat,
-                                cost: card.cost,
+                                is_unique: card.is_unique,
+                                quantity: card.quantity,
                                 deck_limit: card.deck_limit,
-                                cardCategory: card.cardCategory,
-                                cardDetails: CardDetail(position: card.position,
-                                                       text: card.text,
-                                                       flavor: card.flavor,
-                                                       is_unique: card.is_unique,
-                                                       victory: card.victory,
-                                                       quest: card.quest,
-                                                       willpower:  card.willpower,
-                                                       attack: card.attack,
-                                                       defense: card.defense,
-                                                       health: card.health,
-                                                       quantity: card.quantity,
-                                                       illustrator: card.illustrator,
-                                                       has_errata: card.has_errata,
-                                                       url: card.url,
-                                                       imagesrc: card.imagesrc))
+                                cardSort: card.cardSort,
+                                costs: CardCost(cost: card.cost,
+                                                threat: card.threat),
+                                stats: CardStat(willpower: card.willpower,
+                                                attack: card.attack,
+                                                defense: card.defense,
+                                                health: card.health,
+                                                quest: card.quest,
+                                                victory: card.victory),
+                                texts: CardText(traits: card.traits,
+                                                text: card.text,
+                                                flavor: card.flavor,
+                                                illustrator: card.illustrator,
+                                                has_errata: card.has_errata,
+                                                url: card.url,
+                                                imagesrc: card.imagesrc))
 
                 modelContext.insert(card)
             }

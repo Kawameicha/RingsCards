@@ -117,10 +117,10 @@ private struct CardListView: View {
             var sortBy: [SortDescriptor<Card>]
 
             switch sortParameter {
-            case .code: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.code, order: sortOrder)]
-            case .name: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.name, order: sortOrder)]
-            case .cost: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.cost, order: sortOrder), SortDescriptor(\.threat, order: sortOrder)]
-            case .sphere: sortBy = [SortDescriptor(\Card.cardCategory), SortDescriptor(\.sphere_code, order: sortOrder)]
+            case .code: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.code, order: sortOrder)]
+            case .name: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.name, order: sortOrder)]
+            case .cost: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.costs.cost, order: sortOrder), SortDescriptor(\.costs.threat, order: sortOrder)]
+            case .sphere: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.sphere_code, order: sortOrder)]
             }
 
             var descriptor = FetchDescriptor<Card>(predicate: predicate, sortBy: sortBy)

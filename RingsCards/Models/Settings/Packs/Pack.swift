@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Pack {
+class Pack: Identifiable {
     @Attribute(.unique) let id: String
     let packName: String
     let packCode: String
