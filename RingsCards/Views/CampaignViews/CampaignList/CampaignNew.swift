@@ -34,6 +34,7 @@ struct CampaignNew: View {
                     Text("Oaths of the Rohirrim").tag(CampaignCode.OotR)
                     Text("The Hobbit").tag(CampaignCode.Hobbit)
                     Text("The Lord of the Rings").tag(CampaignCode.LotR)
+                    Text("The Dark of Mirkwood").tag(CampaignCode.TDoM)
                 }
 
                 Toggle("Campaign Mode", isOn: $campaignMode)
@@ -142,6 +143,13 @@ struct CampaignNew: View {
                                                          completed: Array(repeating: false, count:18),
                                                          campaignMode: campaignMode,
                                                          slots: ["141017": 0, "141018": 0, "141019": 0, "141020": 0, "141021": 0, "141077": 0, "141078": 0, "141079": 0, "141080": 0, "141081": 0, "141082": 0, "141083": 0, "141084": 0, "142011": 0, "142012": 0, "142013": 0, "142014": 0, "142015": 0, "142016": 0, "142017": 0, "142018": 0, "142084": 0, "142085": 0, "142086": 0, "142087": 0, "142088": 0, "142089": 0, "142090": 0, "143015": 0, "143016": 0, "143017": 0, "143018": 0, "143019": 0, "143020": 0, "143021": 0, "143068": 0, "144014": 0, "144015": 0, "144052": 0, "145014": 0, "145015": 0, "145016": 0, "145062": 0, "145068": 0, "146041": 0]))
+                        } else if selectedCode == .TDoM {
+                            modelContext.insert(Campaign(code: selectedCode.rawValue,
+                                                         name: campaignName,
+                                                         scenarios: Array(1031...1032),
+                                                         completed: Array(repeating: false, count:2),
+                                                         campaignMode: campaignMode,
+                                                         slots: ["41041": 0, "41042": 0, "41043": 0, "41044": 0, "41045": 0, "41046": 0, "41047": 0, "41048": 0 , "41049": 0]))
                         }
 
                         self.presentationMode.wrappedValue.dismiss()

@@ -9131,5 +9131,141 @@
       "nightmare_objective_locations": 0,
       "nightmare_surges": 5,
       "nightmare_encounter_side_quests": 0
+    },
+    {
+      "id": 1031,
+      "code": "The Oath",
+      "name": "The Oath",
+      "nameCanonical": "the-oath",
+      "pack": "Two-Player Limited Edition Starter",
+      "date_creation": "2019-01-14T23:41:45-02:00",
+      "date_update": "2021-04-24T08:02:48-03:00",
+      "encounters": [
+        {
+          "id": 175,
+          "code": "the-goblins",
+          "name": "The Goblins"
+        },
+        {
+          "id": 176,
+          "code": "the-oath",
+          "name": "The Oath"
+        }
+      ],
+      "keywords": [
+          {
+              "id": 2,
+              "code": "doomed_x",
+              "name": "Doomed X"
+          },
+          {
+              "id": 1,
+              "code": "surge",
+              "name": "Surge"
+          }
+      ],
+      "flavorIntro": "After a brief stay in Lórien, the heroes were on their way back to Thranduil with news of a recent ordeal in Dol Guldur. They had just crossed the Anduin River when they saw smoke billowing up from the eaves of Mirkwood. They followed the black plumes to the remains of a Woodman village. Dead bodies lay strewn among the blackened wreck of a Woodman village. Some had black-feathered arrows sticking from their backs while others were cruelly hewn.\n\n“This is Orc work!” cursed one of the heroes.\n\n“It was... Goblins... did this,” a raspy voice came from one of the figures on the ground. It was a Woodman with an arrow in his back. He struggled to lift his head. “They took... our families,” he groaned. “You must... rescue them!”\n\nThe Woodman’s eyes pleaded with the heroes even as his strength failed him. One of the companions knelt at his side and spoke, “We will find your people and rescue them if we can, or avenge them if we cannot. You have my word.”\n\nThe injured man nodded and exhaled his last breath. Wasting no time, the heroes searched for sign of the Goblins’ trail. It was easy enough to find: a heavy trampling that led deeper into the forest. The heroes drew their weapons and followed the trail into the woods.",
+      "ruling": "",
+      "doNotRead": "",
+      "has_easy": true,
+      "has_nightmare": false,
+      "easy_cards": 21,
+      "easy_enemies": 7,
+      "easy_locations": 8,
+      "easy_treacheries": 6,
+      "easy_shadows": 9,
+      "easy_objectives": 0,
+      "easy_objective_allies": 0,
+      "easy_objective_locations": 0,
+      "easy_surges": 4,
+      "easy_encounter_side_quests": 0,
+      "normal_cards": 29,
+      "normal_enemies": 11,
+      "normal_locations": 10,
+      "normal_treacheries": 8,
+      "normal_shadows": 12,
+      "normal_objectives": 0,
+      "normal_objective_allies": 0,
+      "normal_objective_locations": 0,
+      "normal_surges": 6,
+      "normal_encounter_side_quests": 0,
+      "nightmare_cards": 29,
+      "nightmare_enemies": 11,
+      "nightmare_locations": 10,
+      "nightmare_treacheries": 8,
+      "nightmare_shadows": 12,
+      "nightmare_objectives": 0,
+      "nightmare_objective_allies": 0,
+      "nightmare_objective_locations": 0,
+      "nightmare_surges": 6,
+      "nightmare_encounter_side_quests": 0
+    },
+    {
+      "id": 1032,
+      "code": "The Caves of Nibin-Dûm",
+      "name": "The Caves of Nibin-Dûm",
+      "nameCanonical": "the-caves-of-nibin-dum",
+      "pack": "Two-Player Limited Edition Starter",
+      "date_creation": "2019-01-14T23:42:10-02:00",
+      "date_update": "2021-04-24T08:03:08-03:00",
+      "encounters": [
+        {
+          "id": 175,
+          "code": "the-goblins",
+          "name": "The Goblins"
+        },
+        {
+          "id": 177,
+          "code": "the-caves-of-nibin-dum",
+          "name": "The Caves of Nibin-Dûm"
+        }
+      ],
+      "keywords": [
+          {
+              "id": 2,
+              "code": "doomed_x",
+              "name": "Doomed X"
+          },
+          {
+              "id": 1,
+              "code": "surge",
+              "name": "Surge"
+          }
+      ],
+      "flavorIntro": "After a day and night of tracking the Goblins that attacked the Woodman village, the companions had defeated the Goblins’ rearguard and reached the creatures’ secret hideaway: a forgotten Dwarf hold in the Mountains of Mirkwood once named Nibin-dûm.\n\nThe Elves had long ago fled the southern reaches of Mirkwood when the Necromancer first took up his abode in Dol Guldur, but the Dwarves of Nibin-dûm did not abandon their ancestral home. They remained a secret people in the Mountains of Mirkwood until an earthquake shattered their halls and collapsed their mines. After the disaster struck, the Dwarves finally abandoned Nibin-dûm and joined their cousins in the Iron Hills.\n\nYears later, as the power of Dol Guldur reached north, a tribe of Goblins discovered Nibin-dûm and took it for themselves. From this hidden stronghold, they would issue forth at times to raid the Woodmen who dared live under the shadow of Mirkwood.\n\nIt was these Goblins that the heroes pursued through the forest, and it was their captives that the companions had sworn to rescue. So it was that the heroes discovered the entrance to the Goblins’ hidden lair and entered to fulfill their oath.",
+      "ruling": "",
+      "doNotRead": "",
+      "has_easy": true,
+      "has_nightmare": false,
+      "easy_cards": 24,
+      "easy_enemies": 8,
+      "easy_locations": 9,
+      "easy_treacheries": 6,
+      "easy_shadows": 13,
+      "easy_objectives": 1,
+      "easy_objective_allies": 0,
+      "easy_objective_locations": 0,
+      "easy_surges": 0,
+      "easy_encounter_side_quests": 0,
+      "normal_cards": 32,
+      "normal_enemies": 12,
+      "normal_locations": 11,
+      "normal_treacheries": 8,
+      "normal_shadows": 14,
+      "normal_objectives": 1,
+      "normal_objective_allies": 0,
+      "normal_objective_locations": 0,
+      "normal_surges": 2,
+      "normal_encounter_side_quests": 0,
+      "nightmare_cards": 32,
+      "nightmare_enemies": 12,
+      "nightmare_locations": 11,
+      "nightmare_treacheries": 8,
+      "nightmare_shadows": 14,
+      "nightmare_objectives": 1,
+      "nightmare_objective_allies": 0,
+      "nightmare_objective_locations": 0,
+      "nightmare_surges": 2,
+      "nightmare_encounter_side_quests": 0
     }
 ]
