@@ -31,8 +31,12 @@ struct DeckViewHome: View {
                 editCard: .constant(true),
                 viewCard: $viewCard,
                 editBoons: .constant(false),
+                filterSphere: viewCardModel.filterSphere,
+                filterType: viewCardModel.filterType,
                 filterPack: packs.map { $0.packCode },
-                filterDeck: []
+                filterDeck: [],
+                sortParameter: viewCardModel.sortParameter,
+                sortOrder: viewCardModel.sortOrder
             )
             .navigationTitle($deck.name)
             .navigationBarTitleDisplayMode(.inline)

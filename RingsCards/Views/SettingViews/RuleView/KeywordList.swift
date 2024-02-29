@@ -17,7 +17,8 @@ struct KeywordList: View {
 
         KeywordListView(searchText: viewRuleModel.searchText)
             .navigationTitle("Keywords")
-            .searchable(text: $viewRuleModel.searchText)
+            .searchable(text: $viewRuleModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+            .disableAutocorrection(true)
     }
 }
 

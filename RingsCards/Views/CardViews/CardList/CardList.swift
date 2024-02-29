@@ -11,21 +11,15 @@ import SwiftData
 struct CardList: View {
     @Environment(ViewCardModel.self) var viewCardModel
     @Environment(\.modelContext) var modelContext
+    @Query var cards: [Card]
+    @Bindable var deck: Deck
+    var deckView: Bool
+    @Bindable var campaign: Campaign
+    var campaignView: Bool
+    @Binding var editCard: Bool
+    @Binding var viewCard: Bool
+    @Binding var editBoons: Bool
 
-    @Bindable private var deck: Deck
-    @Bindable private var campaign: Campaign
-    
-    @Binding private var editCard: Bool
-    @Binding private var viewCard: Bool
-    @Binding private var editBoons: Bool
-    
-    private var deckView: Bool
-    private var campaignView: Bool
-    
-    private var filterPack: [String]
-    private var filterDeck: [String]
-    private var sortParameter: SortParameter?
-    
     init(
         deck: Deck = Deck.emptyDeck,
         deckView: Bool = false,
@@ -34,76 +28,24 @@ struct CardList: View {
         editCard: Binding<Bool> = .constant(false),
         viewCard: Binding<Bool> = .constant(false),
         editBoons: Binding<Bool> = .constant(false),
+
+        filterSphere: FilterSphere = .all,
+        filterType: FilterType = .any,
         filterPack: [String] = [],
         filterDeck: [String] = [],
-        sortParameter: SortParameter? = nil
+        sortParameter: SortParameter = .name,
+        sortOrder: SortOrder = .forward,
+        searchText: String = "",
+        listOffset: Int = 1
     ) {
         self.deck = deck
         self.deckView = deckView
         self.campaign = campaign
         self.campaignView = campaignView
-        self.filterPack = filterPack
-        self.filterDeck = filterDeck
-        self.sortParameter = sortParameter
         self._editCard = editCard
         self._viewCard = viewCard
         self._editBoons = editBoons
-    }
 
-    var body: some View {
-        @Bindable var viewCardModel = viewCardModel
-        
-        CardListView(deck: deck,
-                     campaign: campaign,
-                     campaignView: campaignView,
-                     deckView: deckView,
-                     editCard: $editCard,
-                     editBoons: $editBoons,
-                     filterSphere: viewCardModel.filterSphere,
-                     filterType: viewCardModel.filterType,
-                     filterPack: filterPack,
-                     filterDeck: filterDeck,
-                     sortParameter: sortParameter ?? viewCardModel.sortParameter,
-                     sortOrder: viewCardModel.sortOrder,
-                     searchText: viewCardModel.searchText,
-                     listOffset: viewCardModel.listOffset)
-    }
-}
-
-private struct CardListView: View {
-    @Environment(ViewCardModel.self) private var viewCardModel
-    @Query private var cards: [Card]
-    
-    @Bindable private var deck: Deck
-    @Bindable private var campaign: Campaign
-    
-    @Binding private var editCard: Bool
-    @Binding private var editBoons: Bool
-    
-    private var campaignView: Bool
-    private var deckView: Bool
-    
-    init(deck: Deck,
-         campaign: Campaign,
-         campaignView: Bool,
-         deckView: Bool,
-         editCard: Binding<Bool>,
-         editBoons: Binding<Bool>,
-         filterSphere: FilterSphere,
-         filterType: FilterType,
-         filterPack: [String] = [],
-         filterDeck: [String] = [],
-         sortParameter: SortParameter,
-         sortOrder: SortOrder,
-         searchText: String,
-         listOffset: Int) {
-        self.deck = deck
-        self.campaign = campaign
-        self.campaignView = campaignView
-        self.deckView = deckView
-        self._editCard = editCard
-        self._editBoons = editBoons
-        
         let predicate = Card.predicate(
             searchText: searchText,
             filterSphere: filterSphere.rawValue,
@@ -111,7 +53,6 @@ private struct CardListView: View {
             filterPack: filterPack,
             filterDeck: filterDeck
         )
-        
         var descriptor: FetchDescriptor<Card> {
             let limit = 100
             var sortBy: [SortDescriptor<Card>]
@@ -125,12 +66,11 @@ private struct CardListView: View {
 
             var descriptor = FetchDescriptor<Card>(predicate: predicate, sortBy: sortBy)
             descriptor.fetchLimit = listOffset * limit
-            
             return descriptor
         }
-        
-        self._cards = Query(descriptor)
+        _cards = Query(descriptor)
     }
+
     
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
@@ -154,8 +94,6 @@ private struct CardListView: View {
                     }
                 }
             }
-            .searchable(text: $viewCardModel.searchText)
-            .disableAutocorrection(true)
             .toolbar {
                 if !deckView {
                     ToolbarItemGroup(placement: .topBarTrailing) {

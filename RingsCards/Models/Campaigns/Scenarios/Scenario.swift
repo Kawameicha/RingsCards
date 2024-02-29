@@ -84,8 +84,8 @@ struct Statistics: Hashable, Codable {
 
 extension Scenario {
     static func predicate(
-        filterCampaign: [Int],
-        searchText: String = ""
+        searchText: String,
+        filterCampaign: [Int]
     ) -> Predicate<Scenario> {
         
         return #Predicate<Scenario> { scenario in

@@ -31,6 +31,7 @@ struct ScenarioList: View {
                          filterCampaign: filterCampaign,
                          searchText: viewCampaignModel.searchText)
             .searchable(text: $viewCampaignModel.searchText)
+            .disableAutocorrection(true)
             .navigationTitle("\(campaign.name)")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -61,8 +62,8 @@ private struct ScenarioListView: View {
         self.campaign = campaign
 
         let predicate = Scenario.predicate(
-            filterCampaign: filterCampaign,
-            searchText: searchText
+            searchText: searchText,
+            filterCampaign: filterCampaign
         )
         _scenarios = Query(filter: predicate, sort: \.id)
     }
@@ -82,4 +83,5 @@ private struct ScenarioListView: View {
         ScenarioList(campaign: campaign, filterCampaign: campaign.scenarios)
     }
     .modelContainer(previewModelContainer)
+    .environment(ViewCampaignModel())
 }

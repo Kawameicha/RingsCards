@@ -20,6 +20,7 @@ struct ScenarioVStack: View {
         self.campaign = campaign
 
         let predicate = Scenario.predicate(
+            searchText: "",
             filterCampaign: filterCampaign
         )
         _scenarios = Query(filter: predicate, sort: \.id)

@@ -14,7 +14,6 @@ struct CardHome: View {
     @Query(filter: #Predicate<Pack> { pack in
         pack.isInCollection }) var packs: [Pack]
     @Query var cards: [Card]
-//    @State var cardList = false
 
     init() {
         var descriptor: FetchDescriptor<Card> {
@@ -31,13 +30,20 @@ struct CardHome: View {
         Group {
             if cards.count != 0 {
                 CardList(
+                    filterSphere: viewCardModel.filterSphere,
+                    filterType: viewCardModel.filterType,
                     filterPack: packs.map { $0.packCode },
-                    filterDeck: []
+                    filterDeck: [],
+                    sortParameter: viewCardModel.sortParameter,
+                    sortOrder: viewCardModel.sortOrder,
+                    searchText: viewCardModel.searchText,
+                    listOffset: viewCardModel.listOffset
                 )
                 .refreshable {
                     await CardResponse.refresh(modelContext: modelContext)
                 }
                 .navigationTitle("Player Cards")
+                .searchable(text: $viewCardModel.searchText)
                 .disableAutocorrection(true)
             } else {
                 ScrollView {
@@ -51,11 +57,9 @@ struct CardHome: View {
             }
         }
         .onAppear {
-//            cardList = true
             viewCardModel.listOffset = 1
         }
         .onDisappear {
-//            cardList = false
             viewCardModel.listOffset = 1
         }
     }
@@ -65,5 +69,4 @@ struct CardHome: View {
     CardHome()
         .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
-        .environment(ViewDeckModel())
 }

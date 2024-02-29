@@ -17,7 +17,8 @@ struct RuleList: View {
 
         RuleListView(searchText: viewRuleModel.searchText)
             .navigationTitle("Glossary")
-            .searchable(text: $viewRuleModel.searchText)
+            .searchable(text: $viewRuleModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+            .disableAutocorrection(true)
     }
 }
 
