@@ -720,6 +720,16 @@
         "isCycle": true
     },
     {
+        "id": "the_shire_s_reckoning",
+        "packName": "The Shire’s Reckoning",
+        "packCode": "TSR",
+        "packSort": 1,
+        "cycleCode": "TSR",
+        "cycleName": "Fell Summer",
+        "cycleSort": 10,
+        "isCycle": true
+    },
+    {
         "id": "over_hill_and_under_hill",
         "packName": "Over Hill and Under Hill",
         "packCode": "OHaUH",

@@ -23,6 +23,7 @@ struct PackList: View {
         "Ered Mithrin",
         "Vengeance of Mordor",
         "Oaths of the Rohirrim",
+        "Fell Summer",
         "The Hobbit",
         "The Lord of the Rings",
         "Starter Decks",

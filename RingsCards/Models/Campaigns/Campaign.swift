@@ -47,7 +47,7 @@ extension Campaign {
 }
 
 enum CampaignCode: String, CaseIterable {
-    case Core, SoM, D, AtS, TRM, AA, DC, H, EM, VoM, OotR, Hobbit, LotR, TDoM
+    case Core, SoM, D, AtS, TRM, AA, DC, H, EM, VoM, OotR, FS, Hobbit, LotR, TDoM
     var id: Self { self }
 }
 

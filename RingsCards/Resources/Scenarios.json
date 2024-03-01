@@ -7256,6 +7256,220 @@
         "nightmare_encounter_side_quests": 2
     },
     {
+      "id": 101,
+      "code": "ALeP - Pies for the Party",
+      "name": "ALeP - Pies for the Party",
+      "nameCanonical": "pies-for-the-party",
+      "pack": "ALeP - The Shire's Reckoning",
+      "date_creation": "2024-02-29T16:50:24-03:00",
+      "date_update": "2024-02-29T16:50:24-03:00",
+      "encounters": [
+        {
+          "id": 235,
+          "code": "distractions",
+          "name": "Distractions"
+        },
+        {
+          "id": 239,
+          "code": "ruffians",
+          "name": "Ruffians"
+        },
+        {
+          "id": 240,
+          "code": "pies-for-the-party",
+          "name": "Pies for the Party"
+        }
+      ],
+      "keywords": [
+          {
+              "id": 7,
+              "code": "archery_x",
+              "name": "Archery X"
+          },
+          {
+              "id": 6,
+              "code": "indestructible",
+              "name": "Indestructible"
+          },
+          {
+              "id": 1,
+              "code": "surge",
+              "name": "Surge"
+          }
+      ],
+      "flavorIntro": "Today was not a good day for Lobelia Sackville-Baggins. In fact, if she didn't do something very soon to turn things around, her entire week—or even her whole year—would be ruined. You see, Mayor Pott himself had assigned her the very solemn duty of organizing this year's Overlithe feast in Hobbiton. This was a prestigious honor—much more important than stuck-up Lalia Clayhanger's mid-year feast. After all, Mid-year's Day happens every year, while Overlithe comes around only once every four.\n\nAs such, it was obviously very important that Lobelia's feast be bigger and better than Lalia's in every way—she needed to arrange for fancier decorations and more food than Lalia could possibly hope to pull together. That's why she was all the way out here in Michel Delving with less than a week to go: Old Bolgo baked the best pies in all the Shire, and Lobelia would settle for nothing short of the best.\n\n“The quantity isn't the problem Lobelia,” Bolgo was saying, “The problem is the delivery. My sons are out in the countryside right now, and with my bad back I couldn't possibly make the trip down to Hobbiton. Plus, I hear they caught some Big Folk ruffians snooping about near Waymoot last night; at my age I'd be a target. But you and Otho can come pick them up Lobelia cut him off.—”\n\n“Impossible! I am needed in Hobbiton already, to make the final preparations for the feast.” Bolgo gave a helpless shrug as Lobelia pivoted angrily on her heel, her face red.\n\nNot far away, her eight-year-old son, Lotho, played near the road. “Stop right there!” he shouted, brandishing a stick at several passing strangers. “I'm a Shirriff, and that means whatever I say goes! And I say this road is closed!”\n\nThe strangers looked at each other with bemusement. “Well then,” one of them said, a twinkle in her eye, “How ever are we to get to Bree? You don't know another way around, do you, young Shirriff?” At this, Lobelia's ears perked up and she hurried over.\n\n“Headed towards Bree, are you?” she asked, trying to sound sweet and welcoming, but unable to conceal the request on the tip of her tongue. “You'll have to pass through Hobbiton on your way, then.”\n\n“Yes,” one of the strangers said, “we were headed that way, though this lawman here has informed us that the road is closed.” At this he winked at the small boy.\n\nLobelia paid him no heed and continued. “It just so happens I need someone to help me with a little delivery. A shipment of pies, brought from Old Bolgo's here to the Hobbiton Party Tree in time for Overlithe, five days hence.” She thought for a moment, at war with herself about her next offer. “I suppose it'd only be proper to invite you to the feast as well. It's to be the finest feast the Shire has seen in years!” The strangers looked at one another, weighing their opinions by the looks on their faces. Then one spoke. “I suppose we're in no hurry. And it would be lovely to see the best of The Shire's hospitality before we're on our way.” The others nodded in agreement.\n\n“Perfect,” Lobelia said, rubbing her hands together. “I'll make the arrangements!”",
+      "ruling": "",
+      "doNotRead": "Lobelia was rushing back and forth across the clearing by the Party Tree, barking orders at several weary-looking hobbits as they frantically finished setting up for the Overlithe feast. She didn't even notice the arrival of the heroes until they were nearly upon her.\n\n“Ah! Finally decided to show up. And not a moment too soon, too, I was beginning to worry I'd put my trust in the wrong sorts of folks,” she said, hastily gesturing towards where to put them. “They do smell wonderful, though. Bolgo does some great work—if I didn't know better, I would say they were fresh from the bakery no more than an hour ago!”\n\nThe heroes glanced at one another nervously, nodding in agreement. What Lobelia didn't know wouldn't hurt her! They silently agreed: their trip to the Hobbiton bakery would forever remain a secret.",
+      "has_easy": true,
+      "has_nightmare": false,
+      "easy_cards": 0,
+      "easy_enemies": 0,
+      "easy_locations": 0,
+      "easy_treacheries": 0,
+      "easy_shadows": 0,
+      "easy_objectives": 0,
+      "easy_objective_allies": 0,
+      "easy_objective_locations": 0,
+      "easy_surges": 0,
+      "easy_encounter_side_quests": 0,
+      "normal_cards": 0,
+      "normal_enemies": 0,
+      "normal_locations": 0,
+      "normal_treacheries": 0,
+      "normal_shadows": 0,
+      "normal_objectives": 0,
+      "normal_objective_allies": 0,
+      "normal_objective_locations": 0,
+      "normal_surges": 0,
+      "normal_encounter_side_quests": 0,
+      "nightmare_cards": 0,
+      "nightmare_enemies": 0,
+      "nightmare_locations": 0,
+      "nightmare_treacheries": 0,
+      "nightmare_shadows": 0,
+      "nightmare_objectives": 0,
+      "nightmare_objective_allies": 0,
+      "nightmare_objective_locations": 0,
+      "nightmare_surges": 0,
+      "nightmare_encounter_side_quests": 0
+    },
+    {
+      "id": 102,
+      "code": "ALeP - Sundown on the Shire",
+      "name": "ALeP - Sundown on the Shire",
+      "nameCanonical": "sundown-on-the-shire",
+      "pack": "ALeP - The Shire's Reckoning",
+      "date_creation": "2024-02-29T16:51:55-03:00",
+      "date_update": "2024-02-29T16:51:55-03:00",
+      "encounters": [
+        {
+          "id": 235,
+          "code": "Distractions",
+          "name": "Distractions"
+        },
+        {
+          "id": 236,
+          "code": "Shire's Edge",
+          "name": "Shire's Edge"
+        },
+        {
+          "id": 237,
+          "code": "Wolves",
+          "name": "Wolves"
+        },
+        {
+          "id": 241,
+          "code": "Sundown on the Shire",
+          "name": "Sundown on the Shire"
+        }
+      ],
+      "keywords": [
+          {
+              "id": 1,
+              "code": "surge",
+              "name": "Surge"
+          }
+      ],
+      "flavorIntro": "Lobelia's Overlithe festival went off without a hitch. The heroes, feeling they deserved a reward for their harrowing efforts delivering pies, quickly began the difficult work of enjoying all the party had to offer. They were instant celebrities, with drinks being pushed on them and requests from the young Hobbits in attendance to tell them tales from lands far away. The heroes happily obliged, telling stories of brave men and women in cities of stone, of kingdoms built in great forests and those carved from the bedrock of the earth.\n\n“Can't say that I've ever had a call to go see all that,” one particularly grumpy Hobbit named Farmer Chubb interjected, “Furthest I've gone is to the other end of the Marish for a chicken delivery. Ended up staying for a few days in the town of Bree. Didn't care for what I saw there, and don't care to see much more,” the farmer said, giving a curt nod and returning his pipe to his mouth for a long slow pull.\n\n“Funny you should mention it,” one of the heroes replied, “for we are heading towards Bree next week.” Farmer Chubb leaned in, “Indeed? You wouldn't mind doing this old farmer a favor on your way would ya? Movin' poultry was easier in years gone past, but I'm getting on into my 90's, and the roads are less certain of late. But ya see, I owe young Farmer Maggot some chickens. I don't suppose I could impose on you to bring them to his farmstead in Bamfurlong?” The heroes agreed, and made plans to set out after breakfast the following morning.\n\nThe festival ran late into the night. All the patrons enjoyed bountiful food, song, and drink. Some among the heroes' group, unaccustomed to the generosities of a Hobbiton party, overindulged themselves, realizing it only when the sun rose bright and early the next day, and a rooster's cry urged them from their beds.\n\nShuffling to the gathering room of the local Inn, the heroes ordered a quick breakfast, trying to muster the motivation to stick to their plan to depart early for their two day journey, with a stop in Woodhall. “I don't think it's as far as all that,” one of the heroes says, slowly rubbing their eyes. “We could sneak in a quick nap before we head out, enjoy a nice second breakfast, and then be in Woodhall before Supper.”\n\n“There's no rush. Why not spend the morning here, have a luncheon in town, and then depart?”\n\n“You heard Farmer Chubb,” one of the heroes reminded the group. “The roads are more dangerous these days. We don't want to get caught out after dark.”\n\nThe heroes looked at one another, bewildered. It seemed they had a decision to make.",
+      "ruling": "**The Wolf Deck**\n\nTo create the Wolf deck, remove each non-unique Wolf enemy from the encounter deck and shuffle them together into a separate deck. When a card from the Wolf deck leaves play, it is placed in a separate Wolf deck discard pile. Whenever the Wolf deck is empty, immediately shuffle the Wolf deck discard pile into the Wolf deck.\n\nIf both the Wolf deck and the Wolf deck discard pile are empty and you must reveal a card from the Wolf deck, the players as a group must discard 1 character from play instead.",
+      "doNotRead": "Howls still following them, the heroes made it to Woodhall. The wolves, unwilling to follow them into the town itself, broke off their pursuit. The heroes pounded on the dark door of an inn. “Who's that at this time of night?” A disgruntled voice called, followed by the sound of slow footsteps. A stout middle aged Hobbit answered the door.\n\n“Apologies for the intrusion. May we rent a room for the night? We come on an errand for Bamfurlong, but more urgently we seek the safety of your inn.” Another howl sang out to emphasize the hero's point.\n\n“Best do that,” the innkeeper said grufly, stepping back and beckoning the heroes inside. “Been getting real dangerous at night.”\n\n“That was more than just dangerous,” one of the heroes replied, as they fished in their pack for some bandages. “We found several lumberjacks out of Woodhall dead in Woody End. Then we were ambushed by wolves with a cleverness that felt strategic.”\n\n“Well, you have nothing to fear in my care. Come, let's get you to bed. Things will look better in the morning,” the innkeeper assured the heroes, showing them to a group of entirely too small beds.\n\nThe following morning the heroes rose at first light and made for Bamfurlong without even having first breakfast, let alone second.",
+      "has_easy": true,
+      "has_nightmare": false,
+      "easy_cards": 0,
+      "easy_enemies": 0,
+      "easy_locations": 0,
+      "easy_treacheries": 0,
+      "easy_shadows": 0,
+      "easy_objectives": 0,
+      "easy_objective_allies": 0,
+      "easy_objective_locations": 0,
+      "easy_surges": 0,
+      "easy_encounter_side_quests": 0,
+      "normal_cards": 0,
+      "normal_enemies": 0,
+      "normal_locations": 0,
+      "normal_treacheries": 0,
+      "normal_shadows": 0,
+      "normal_objectives": 0,
+      "normal_objective_allies": 0,
+      "normal_objective_locations": 0,
+      "normal_surges": 0,
+      "normal_encounter_side_quests": 0,
+      "nightmare_cards": 0,
+      "nightmare_enemies": 0,
+      "nightmare_locations": 0,
+      "nightmare_treacheries": 0,
+      "nightmare_shadows": 0,
+      "nightmare_objectives": 0,
+      "nightmare_objective_allies": 0,
+      "nightmare_objective_locations": 0,
+      "nightmare_surges": 0,
+      "nightmare_encounter_side_quests": 0
+    },
+    {
+      "id": 103,
+      "code": "ALeP - Secrets of the Old Forest",
+      "name": "ALeP - Secrets of the Old Forest",
+      "nameCanonical": "secrets-of-the-old-forest",
+      "pack": "ALeP - The Shire's Reckoning",
+      "date_creation": "2024-02-29T16:52:25-03:00",
+      "date_update": "2024-02-29T16:52:25-03:00",
+      "encounters": [
+        {
+          "id": 234,
+          "code": "Drawing Attention",
+          "name": "Drawing Attention"
+        },
+        {
+          "id": 242,
+          "code": "Secrets of the Old Forest",
+          "name": "Secrets of the Old Forest"
+        }
+      ],
+      "keywords": [
+          {
+              "id": 1,
+              "code": "surge",
+              "name": "Surge"
+          }
+      ],
+      "flavorIntro": "The heroes awoke just before dawn, feeling cramped and irritable from a night's rest in Farmer Maggot's farmhouse broken by howls of wolves. They shuffled downstairs to find him already at work preparing breakfast. The young farmer greeted his guests warmly, though they could see from the weary look on his face that he too had endured a sleepless night.\n\n“Thank you again for bringing those chickens to me,” he said as he retrieved several plates from a cupboard, “They'll replace those I lost the past few nights. Though, truth be told, if something isn't done about these wolves I may not be able to keep the farm at all.”\n\nThe heroes exchanged grim looks. “Are wolves not a normal sight in the Shire?” one asked.\n\n“Not in these numbers, no. You'll see them from time to time, though the shirriffs are supposed to be shooting them as they can. But these wolves, why, there's something queer about them.” The farmer leaned over the table, as if to share a secret. “They came from the Old Forest. I saw a whole pack of them not a week ago leaving the treeline and swimming across the Brandywine River, yelping and yowling as if something terrible were after them. What do you suppose could scare a whole pack of wolves right into the river?”\n\nThe heroes exchanged quizzical glances. “Trolls?”\n\n“I don't rightly know,” the young farmer admitted, “but there's definitely something out there. I've seen the way my hounds watch the forest at night, and I've heard the strangest sounds during the day, a creaking and groaning carried on the wind as if the trees were in pain. I plan to head out there today, take a look around. If there's anything that may be solved with a well-aimed bow, I plan to do it. Otherwise...” he trailed off.\n\n“Allow us to accompany you, master Maggot,” one of the heroes spoke. “Our journey takes us in that general direction anyway, and if there are indeed trolls out there, then there is safety in numbers.”\n\nFarmer Maggot nodded appreciatively. “I'd be most grateful. Though perhaps we can split up to cover more ground. If I do run into trouble, I'll double back to find you, and we can face it together.” The heroes all agreed.",
+      "ruling": "",
+      "doNotRead": "The forest itself seemed to have brought the heroes to this clearing to stand torn, bruised, and weary before this ancient poplar tree. The threat of violence loomed all about them, ill-defined but palpable as if brought on by a paranoid fever dream.\n\nOne of the heroes staggered forward, falling to her knees beneath the regal old tree. “What do you want? Why did you bring us here?” She cried out. Then, something caught her gaze: huge gashes across the tree's bark, spilling sap like a fresh wound. “She's injured,” the hero said in a daze. “Someone hurt her; she thinks we mean to finish her off.” Fading fast, the hero collapsed beneath the great tree, a great sleepiness overtaking her. One by one, her companions fell as well, slowly succumbing to an irresistible exhaustion.\n\nSuddenly, a melodic whistle cut through the grim twilight. A man in a bright blue jacket, a feathered hat, and yellow boots came bounding into the clearing. “Grey Lady Poplar,” the man said in an accusatory tone, “these are not your foes! Taking their lives will not heal you. Your enemy has gone from this place. Release these people, and go to sleep!” He gave the great poplar tree a sharp look, one hand on his hip.\n\nA few moments later, the heroes' haze broke. They all sat up at once, gasping for air as if they had unwittingly been holding their breath.\n\n“Good, good! Now, Lady, rest, for you can trust that Tom knows best,” the man's voice was sing-song, and far more cheerful than any of the heroes felt. “You others! Come, get to your feet. My house is near!” Slowly, the heroes stood, dusted themselves off, and followed the strange man further into the woods. It had been their strangest day in the Shire yet, and their adventure was only getting stranger.",
+      "has_easy": true,
+      "has_nightmare": false,
+      "easy_cards": 0,
+      "easy_enemies": 0,
+      "easy_locations": 0,
+      "easy_treacheries": 0,
+      "easy_shadows": 0,
+      "easy_objectives": 0,
+      "easy_objective_allies": 0,
+      "easy_objective_locations": 0,
+      "easy_surges": 0,
+      "easy_encounter_side_quests": 0,
+      "normal_cards": 0,
+      "normal_enemies": 0,
+      "normal_locations": 0,
+      "normal_treacheries": 0,
+      "normal_shadows": 0,
+      "normal_objectives": 0,
+      "normal_objective_allies": 0,
+      "normal_objective_locations": 0,
+      "normal_surges": 0,
+      "normal_encounter_side_quests": 0,
+      "nightmare_cards": 0,
+      "nightmare_enemies": 0,
+      "nightmare_locations": 0,
+      "nightmare_treacheries": 0,
+      "nightmare_shadows": 0,
+      "nightmare_objectives": 0,
+      "nightmare_objective_allies": 0,
+      "nightmare_objective_locations": 0,
+      "nightmare_surges": 0,
+      "nightmare_encounter_side_quests": 0
+    },
+    {
         "id": 1001,
         "code": "We Must Away, Ere Break of Day",
         "name": "We Must Away, Ere Break of Day",

@@ -20,7 +20,7 @@ extension AppScreen {
     var label: some View {
         switch self {
         case .cards:
-            Label("Cards", systemImage: "rectangle.portrait.fill")
+            Label("Cards", systemImage: "rectangle.portrait.inset.filled")
         case .decks:
             Label("Decks", systemImage: "person.3.fill")
         case .campaigns:

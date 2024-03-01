@@ -32,6 +32,7 @@ struct CampaignNew: View {
                     Text("Ered Mithrin").tag(CampaignCode.EM)
                     Text("Vengeance of Mordor").tag(CampaignCode.VoM)
                     Text("Oaths of the Rohirrim").tag(CampaignCode.OotR)
+                    Text("Fell Summer").tag(CampaignCode.FS)
                     Text("The Hobbit").tag(CampaignCode.Hobbit)
                     Text("The Lord of the Rings").tag(CampaignCode.LotR)
                     Text("The Dark of Mirkwood").tag(CampaignCode.TDoM)
@@ -126,6 +127,13 @@ struct CampaignNew: View {
                             modelContext.insert(Campaign(code: selectedCode.rawValue,
                                                          name: campaignName,
                                                          scenarios: Array(91...99),
+                                                         completed: Array(repeating: false, count:9),
+                                                         campaignMode: false,
+                                                         slots: ["": 0]))
+                        } else if selectedCode == .FS {
+                            modelContext.insert(Campaign(code: "TSR",
+                                                         name: campaignName,
+                                                         scenarios: Array(101...109),
                                                          completed: Array(repeating: false, count:9),
                                                          campaignMode: false,
                                                          slots: ["": 0]))
