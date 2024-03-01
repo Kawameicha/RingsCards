@@ -13,7 +13,7 @@ struct CardRow: View {
 
     var body: some View {
         HStack(spacing: 3) {
-            if card.costs.threat != 0 {
+            if card.costs.threat != -1 {
                 Image(systemName: "\(card.costs.threat).square")
                     .foregroundColor(Color(card.sphere_name))
                     .font(.system(size: 42.0))

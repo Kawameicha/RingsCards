@@ -52,9 +52,9 @@ struct CardCost: Hashable, Codable {
     var threat: Int
     var engagement: String
 
-    init(cost: String? = "", threat: Int? = 0, engagement: String? = "") {
+    init(cost: String? = "", threat: Int? = -1, engagement: String? = "") {
         self.cost = cost ?? ""
-        self.threat = threat ?? 0
+        self.threat = threat ?? -1
         self.engagement = engagement ?? ""
     }
 }
