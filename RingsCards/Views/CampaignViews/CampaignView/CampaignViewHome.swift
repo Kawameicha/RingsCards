@@ -27,39 +27,47 @@ struct CampaignViewHome: View {
     var body: some View {
         List {
             Section {
-                Text("Scenarios")
-//                    .listRowSeparator(.hidden)
-                ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
-                    .frame(height: 80)
+                GroupBox(
+                    label: Label(
+                        title: { Text("Scenarios") },
+                        icon: { PackIcon(image: Image(campaign.code), frame: 20) }
+                    )
+                ) {
+                    ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
+                        .frame(height: 100)
+                }
+                .groupBoxStyle(PlainGroupBoxStyle())
             }
 
             Section {
                 Text("Decks")
-//                    .listRowSeparator(.hidden)
                 DeckList(campaign: campaign, campaignView: true, campaignDeck: false)
             }
 
-            Section {
-                Text("Boons & Burdens")
-//                    .listRowSeparator(.hidden)
-                CardList(
-                    deck: Deck.emptyDeck,
-                    deckView: false,
-                    campaign: campaign,
-                    campaignView: true,
-                    editCard: .constant(false),
-                    viewCard: .constant(false),
-                    editBoons: $editBoons,
-                    filterPack: [],
-                    filterDeck: campaign.slots.map { String($0.key) },
-                    sortParameter: SortParameter.code
-                )
+            if campaign.campaignMode == true {
+                Section {
+                    Text("Boons & Burdens")
+                    CardList(
+                        deck: Deck.emptyDeck,
+                        deckView: false,
+                        campaign: campaign,
+                        campaignView: true,
+                        editCard: .constant(false),
+                        viewCard: .constant(false),
+                        editBoons: $editBoons,
+                        filterPack: [],
+                        filterDeck: campaign.slots.map { String($0.key) },
+                        sortParameter: SortParameter.code
+                    )
+                }
             }
         }
         .navigationTitle($campaign.name)
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
-                CampaignBoonButton(editBoons: $editBoons)
+                if campaign.campaignMode == true {
+                    CampaignBoonButton(editBoons: $editBoons)
+                }
                 CampaignNoteButton(editNotes: $editNotes)
             }
         }

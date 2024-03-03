@@ -38,16 +38,8 @@ struct CampaignList: View {
                 }
             } else {
                 ForEach(campaigns) { campaign in
-                    
-                    if campaign.campaignMode == true {
-                        NavigationLink(value: Router.campaignViewHome(campaign: campaign, decks: campaign.decks)) {
-                            CampaignRow(campaign: campaign)
-                        }
-                        
-                    } else {
-                        NavigationLink(value: Router.scenarioList(campaign: campaign, filterCampaign: campaign.scenarios)) {
-                            CampaignRow(campaign: campaign)
-                        }
+                    NavigationLink(value: Router.campaignViewHome(campaign: campaign, decks: campaign.decks)) {
+                        CampaignRow(campaign: campaign)
                     }
                 }
                 .onDelete(perform: deleteItems)

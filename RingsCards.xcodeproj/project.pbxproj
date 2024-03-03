@@ -26,8 +26,6 @@
 		592ACE662B8682F0001612C7 /* PackDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592ACE652B8682F0001612C7 /* PackDecoder.swift */; };
 		592ACE692B87A799001612C7 /* GroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592ACE682B87A799001612C7 /* GroupBoxStyle.swift */; };
 		593216A02B39F8B800124EC6 /* PackIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932169F2B39F8B800124EC6 /* PackIcon.swift */; };
-		5932235D2A9C9D8300AA7751 /* ScenarioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */; };
-		5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932235E2A9C9ED400AA7751 /* ScenarioList.swift */; };
 		593223622A9CA71200AA7751 /* DeckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593223612A9CA71200AA7751 /* DeckRow.swift */; };
 		593223642A9CA7F300AA7751 /* DeckList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593223632A9CA7F300AA7751 /* DeckList.swift */; };
 		593282692B4850D200914E92 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593282682B4850D200914E92 /* Scenario.swift */; };
@@ -124,8 +122,6 @@
 		592ACE652B8682F0001612C7 /* PackDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDecoder.swift; sourceTree = "<group>"; };
 		592ACE682B87A799001612C7 /* GroupBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBoxStyle.swift; sourceTree = "<group>"; };
 		5932169F2B39F8B800124EC6 /* PackIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackIcon.swift; sourceTree = "<group>"; };
-		5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioRow.swift; sourceTree = "<group>"; };
-		5932235E2A9C9ED400AA7751 /* ScenarioList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioList.swift; sourceTree = "<group>"; };
 		593223612A9CA71200AA7751 /* DeckRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRow.swift; sourceTree = "<group>"; };
 		593223632A9CA7F300AA7751 /* DeckList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckList.swift; sourceTree = "<group>"; };
 		593282682B4850D200914E92 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
@@ -464,15 +460,6 @@
 			path = ScenarioViewList;
 			sourceTree = "<group>";
 		};
-		599C55F52B00CB16003D03CB /* LegacyMode */ = {
-			isa = PBXGroup;
-			children = (
-				5932235E2A9C9ED400AA7751 /* ScenarioList.swift */,
-				5932235C2A9C9D8300AA7751 /* ScenarioRow.swift */,
-			);
-			path = LegacyMode;
-			sourceTree = "<group>";
-		};
 		59A5E6562B4334500028A3DE /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,7 +617,6 @@
 				59EDE7142AC86CD4001288AE /* CampaignList */,
 				5922F3DB2B2DB41D0037E4D4 /* CampaignTool */,
 				599C55F02B00C6A0003D03CB /* CampaignView */,
-				599C55F52B00CB16003D03CB /* LegacyMode */,
 			);
 			path = CampaignViews;
 			sourceTree = "<group>";
@@ -736,7 +722,6 @@
 				59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */,
 				59862D772A91FC4300628449 /* CardHome.swift in Sources */,
 				5922F3D32B2D9FA30037E4D4 /* DeckInfo.swift in Sources */,
-				5932235D2A9C9D8300AA7751 /* ScenarioRow.swift in Sources */,
 				59EA4DD42B4010290078F7F8 /* DeckViewHome.swift in Sources */,
 				5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */,
 				59C140462AC1789A00A9F20C /* Deck.swift in Sources */,
@@ -762,7 +747,6 @@
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
 				59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */,
 				59809C6E2B444FDE004BD1F2 /* DeckNewButton.swift in Sources */,
-				5932235F2A9C9ED400AA7751 /* ScenarioList.swift in Sources */,
 				59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */,
 				590E53972B69500E0009E5A3 /* SupportHome.swift in Sources */,
 				593223642A9CA7F300AA7751 /* DeckList.swift in Sources */,
