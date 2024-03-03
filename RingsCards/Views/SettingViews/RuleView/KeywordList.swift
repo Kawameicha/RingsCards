@@ -11,18 +11,6 @@ import SwiftData
 struct KeywordList: View {
     @Environment(ViewRuleModel.self) var viewRuleModel
     @Environment(\.modelContext) var modelContext
-
-    var body: some View {
-        @Bindable var viewRuleModel = viewRuleModel
-
-        KeywordListView(searchText: viewRuleModel.searchText)
-            .navigationTitle("Keywords")
-            .searchable(text: $viewRuleModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-            .disableAutocorrection(true)
-    }
-}
-
-private struct KeywordListView: View {
     @Query var keywords: [Rule]
 
     init(
@@ -33,13 +21,18 @@ private struct KeywordListView: View {
     }
 
     var body: some View {
+        @Bindable var viewRuleModel = viewRuleModel
+
         List {
-            ForEach(keywords) { keyword in
-                NavigationLink(value: Router.ruleView(keyword)) {
-                    Text("\(keyword.name)")
+            ForEach(keywords) { rule in
+                NavigationLink(value: Router.ruleView(rule)) {
+                    Text("\(rule.name)")
                 }
             }
         }
+        .navigationTitle("Keywords")
+        .searchable(text: $viewRuleModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+        .disableAutocorrection(true)
     }
 }
 
