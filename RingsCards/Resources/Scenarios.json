@@ -7344,22 +7344,22 @@
       "encounters": [
         {
           "id": 235,
-          "code": "Distractions",
+          "code": "distractions",
           "name": "Distractions"
         },
         {
           "id": 236,
-          "code": "Shire's Edge",
+          "code": "shire-s-edge",
           "name": "Shire's Edge"
         },
         {
           "id": 237,
-          "code": "Wolves",
+          "code": "wolves",
           "name": "Wolves"
         },
         {
           "id": 241,
-          "code": "Sundown on the Shire",
+          "code": "sundown-on-the-shire",
           "name": "Sundown on the Shire"
         }
       ],
@@ -7417,12 +7417,12 @@
       "encounters": [
         {
           "id": 234,
-          "code": "Drawing Attention",
+          "code": "drawing-attention",
           "name": "Drawing Attention"
         },
         {
           "id": 242,
-          "code": "Secrets of the Old Forest",
+          "code": "secrets-of-the-old-forest",
           "name": "Secrets of the Old Forest"
         }
       ],

@@ -11,6 +11,6 @@ import SwiftData
 @Observable
 class ViewDeckModel {
     var sortDeckParameter: SortDeckParameter = .date_update
-    var sortOrder: SortOrder = .forward
+    var sortOrder: SortOrder = .reverse
     var searchText: String = ""
 }

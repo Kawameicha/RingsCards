@@ -14,23 +14,23 @@ struct SettingHome: View {
         List {
             Section(header: Text("Cards")) {
                 NavigationLink(value: Router.packList) {
-                    Text("Edit Collection")
+                    Label("Edit Collection", systemImage: "plus.rectangle.portrait")
                 }
             }
 
             Section(header: Text("Rules")) {
                 NavigationLink(value: Router.ruleList) {
-                    Text("Glossary")
+                    Label("Glossary", systemImage: "square.fill.text.grid.1x2")
                 }
 
                 NavigationLink(value: Router.keywordList) {
-                    Text("Keywords")
+                    Label("Keywords", systemImage: "text.redaction")
                 }
             }
 
             Section(header: Text("Support")) {
                 NavigationLink(value: Router.supportHome) {
-                    Text("About Rings Cards")
+                    Label("About Rings Cards", systemImage: "info.square")
                 }
             }
         }

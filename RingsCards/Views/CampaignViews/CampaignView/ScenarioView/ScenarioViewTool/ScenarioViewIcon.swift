@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ScenarioViewIcon: View {
     var image: Image
+    var frame = 40.0
 
     var body: some View {
         image
             .resizable()
-            .frame(width: 40, height: 40)
+            .frame(width: frame, height: frame)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .overlay { Circle().stroke(.white, lineWidth: 3) }
             .shadow(radius: 6)

@@ -22,9 +22,9 @@ struct ScenarioViewHome: View {
                         Text(scenario.name)
                             .font(.title)
 
-                        ScenarioViewIcon(image: Image(scenario.code))
+                        ScenarioViewIcon(image: Image(scenario.code), frame: 80)
 
-                        Text(scenario.pack)
+                        Text(campaign.name)
                     }
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
 

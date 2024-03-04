@@ -24,7 +24,7 @@ extension AppScreen {
         case .decks:
             Label("Decks", systemImage: "person.3.fill")
         case .campaigns:
-            Label("Campaigns", systemImage: "book.fill")
+            Label("Campaigns", systemImage: "books.vertical.fill")
         case .settings:
             Label("Settings", systemImage: "slider.horizontal.3")
         }
