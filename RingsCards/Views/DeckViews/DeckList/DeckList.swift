@@ -18,9 +18,9 @@ struct DeckList: View {
     @State private var confirmDelete = false
 
     init(
-        campaign: Campaign,
-        campaignView: Bool,
-        campaignDeck: Bool,
+        campaign: Campaign = Campaign.emptyCampaign,
+        campaignView: Bool = false,
+        campaignDeck: Bool = false,
 
         sortDeckParameter: SortDeckParameter = .name,
         sortOrder: SortOrder = .forward,

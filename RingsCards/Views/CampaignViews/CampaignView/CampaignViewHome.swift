@@ -15,10 +15,11 @@ struct CampaignViewHome: View {
     @Bindable var campaign: Campaign
     var decks: [Deck]
 
-    init(editBoons: Bool = false,
-         editNotes: Bool = false,
-         campaign: Campaign,
-         decks: [Deck]
+    init(
+        editBoons: Bool = false,
+        editNotes: Bool = false,
+        campaign: Campaign,
+        decks: [Deck]
     ) {
         self.campaign = campaign
         self.decks = campaign.decks
@@ -48,12 +49,8 @@ struct CampaignViewHome: View {
                 Section {
                     Text("Boons & Burdens")
                     CardList(
-                        deck: Deck.emptyDeck,
-                        deckView: false,
                         campaign: campaign,
                         campaignView: true,
-                        editCard: .constant(false),
-                        viewCard: .constant(false),
                         editBoons: $editBoons,
                         filterPack: [],
                         filterDeck: campaign.slots.map { String($0.key) },

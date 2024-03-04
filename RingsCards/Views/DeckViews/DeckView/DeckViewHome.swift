@@ -21,26 +21,27 @@ struct DeckViewHome: View {
         @Bindable var viewCardModel = viewCardModel
 
         if viewCard {
-            CardInfo(deck: deck)
+//            CardInfo(deck: deck)
 
             CardList(
                 deck: deck,
                 deckView: true,
-                campaign: Campaign.emptyCampaign,
-                campaignView: false,
                 editCard: .constant(true),
                 viewCard: $viewCard,
-                editBoons: .constant(false),
                 filterSphere: viewCardModel.filterSphere,
                 filterType: viewCardModel.filterType,
                 filterPack: packs.map { $0.packCode },
                 filterDeck: [],
                 sortParameter: viewCardModel.sortParameter,
-                sortOrder: viewCardModel.sortOrder
+                sortOrder: viewCardModel.sortOrder,
+                searchText: viewCardModel.searchText,
+                listOffset: viewCardModel.listOffset
             )
             .navigationTitle($deck.name)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden()
+            .searchable(text: $viewCardModel.searchText)
+            .disableAutocorrection(true)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     DeckViewButton(viewCard: $viewCard)
@@ -57,11 +58,8 @@ struct DeckViewHome: View {
             CardList(
                 deck: deck,
                 deckView: true,
-                campaign: Campaign.emptyCampaign,
-                campaignView: false,
                 editCard: $editCard,
                 viewCard: .constant(false),
-                editBoons: .constant(false),
                 filterPack: [],
                 filterDeck: deck.cardSlots.map { String($0.key) }
             )

@@ -15,9 +15,6 @@ struct DeckHome: View {
         @Bindable var viewDeckModel = viewDeckModel
         
         DeckList(
-            campaign: Campaign.emptyCampaign,
-            campaignView: false,
-            campaignDeck: false,
             sortDeckParameter: viewDeckModel.sortDeckParameter,
             sortOrder: viewDeckModel.sortOrder,
             searchText: viewDeckModel.searchText

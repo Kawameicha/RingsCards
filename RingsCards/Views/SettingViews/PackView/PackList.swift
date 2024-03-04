@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct PackList: View {
+    @Environment(ViewCardModel.self) var viewCardModel
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Pack.packSort) private var packs: [Pack]
 
@@ -31,6 +32,8 @@ struct PackList: View {
     ]
 
     var body: some View {
+        @Bindable var viewCardModel = viewCardModel
+
         List {
             GroupBox(
                 label: Label("Cards shown", systemImage: "info.bubble")
@@ -45,10 +48,22 @@ struct PackList: View {
                     ForEach(packs.filter { pack in
                         pack.cycleName.contains("\(cycle)")
                     }) { pack in
-                        NavigationLink(value: Router.cardList(
-                            filterPack: [pack.packCode],
-                            filterDeck: []
-                        )) {
+                        NavigationLink {
+                            CardList(
+                                deckView: true,
+                                filterSphere: .all,
+                                filterType: .any,
+                                filterPack: [pack.packCode],
+                                filterDeck: [],
+                                sortParameter: SortParameter.code,
+                                sortOrder: SortOrder.forward,
+                                searchText: viewCardModel.searchText,
+                                listOffset: viewCardModel.listOffset
+                            )
+                            .navigationTitle(pack.packName)
+                            .searchable(text: $viewCardModel.searchText)
+                            .disableAutocorrection(true)
+                        } label: {
                             PackRow(pack: pack)
                         }
                     }
@@ -62,4 +77,5 @@ struct PackList: View {
 #Preview {
     PackList()
         .modelContainer(ringsUserData)
+        .environment(ViewCardModel())
 }

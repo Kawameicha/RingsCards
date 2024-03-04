@@ -56,9 +56,9 @@ struct CardHome: View {
                 .navigationTitle("Player Cards")
             }
         }
-        .onAppear {
-            viewCardModel.listOffset = 1
-        }
+//        .onAppear {
+//            viewCardModel.listOffset = 1
+//        }
         .onDisappear {
             viewCardModel.listOffset = 1
         }
