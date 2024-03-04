@@ -61,7 +61,7 @@ struct CardList: View {
             case .code: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.code, order: sortOrder)]
             case .name: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.name, order: sortOrder)]
             case .cost: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.costs.cost, order: sortOrder), SortDescriptor(\.costs.threat, order: sortOrder)]
-            case .sphere: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.sphere_code, order: sortOrder)]
+            case .sphere: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.sphereCode, order: sortOrder)]
             }
 
             var descriptor = FetchDescriptor<Card>(predicate: predicate, sortBy: sortBy)
@@ -80,7 +80,7 @@ struct CardList: View {
                 ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
                     Section(header: Text("\(type)")) {
                         ForEach(cards.filter { card in
-                            card.type_name.contains("\(type)")
+                            card.typeName.contains("\(type)")
                         }) { card in
                             NavigationLink(value: Router.cardView(card)) {
                                 if editCard {

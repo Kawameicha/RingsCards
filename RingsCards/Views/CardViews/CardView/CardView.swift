@@ -31,7 +31,7 @@ struct CardView: View {
                     }
 
                 VStack(alignment: .leading) {
-                    if card.is_unique == true {
+                    if card.isUnique == true {
                         Text("\u{E607} " + card.name)
                             .font(Font.custom("SFUIText-Regular", size: 28))
                     } else {
@@ -42,13 +42,13 @@ struct CardView: View {
                     HStack {
                         Text(card.texts.traits)
                         Spacer()
-                        Text(card.type_name)
+                        Text(card.typeName)
                     }
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     
                     HStack(alignment: .center, spacing: 20) {
-                        if card.type_code == "hero" {
+                        if card.typeCode == "hero" {
                             Text("Threat:" + " \(card.costs.threat)")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
                         }
@@ -93,13 +93,13 @@ struct CardView: View {
                                 Text("Illus. \(card.texts.illustrator)")
                                     .font(.footnote)
                                 Spacer()
-                                Text("\(card.pack_name) # \(card.position)")
+                                Text("\(card.packName) # \(card.position)")
                                     .font(.footnote)
                             }
                         }
                         .frame(maxWidth: .infinity)
                     }
-                    .backgroundStyle(Color(card.sphere_name))
+                    .backgroundStyle(Color(card.sphereName))
 
                     CardErratum(card: card)
                 }

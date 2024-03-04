@@ -21,18 +21,18 @@ let previewModelContainer: ModelContainer = {
             let cards = CardJSONDecoder.decode(from: "Cards")
 
             cards.forEach { card in
-                let card = Card(pack_code: card.pack_code,
-                                pack_name: card.pack_name,
-                                type_code: card.type_code,
-                                type_name: card.type_name,
-                                sphere_code: card.sphere_code,
-                                sphere_name: card.sphere_name,
+                let card = Card(packCode: card.pack_code,
+                                packName: card.pack_name,
+                                typeCode: card.type_code,
+                                typeName: card.type_name,
+                                sphereCode: card.sphere_code,
+                                sphereName: card.sphere_name,
                                 position: card.position,
                                 code: card.code,
                                 name: card.name,
-                                is_unique: card.is_unique,
+                                isUnique: card.is_unique,
                                 quantity: card.quantity,
-                                deck_limit: card.deck_limit,
+                                deckLimit: card.deck_limit,
                                 cardSort: card.cardSort,
                                 costs: CardCost(cost: card.cost,
                                                 threat: card.threat),
@@ -46,7 +46,7 @@ let previewModelContainer: ModelContainer = {
                                                 text: card.text,
                                                 flavor: card.flavor,
                                                 illustrator: card.illustrator,
-                                                has_errata: card.has_errata,
+                                                hasErrata: card.has_errata,
                                                 url: card.url,
                                                 imagesrc: card.imagesrc))
 

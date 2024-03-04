@@ -10,36 +10,36 @@ import SwiftData
 
 @Model
 final class Card: Identifiable {
-    let pack_code: String
-    let pack_name: String
-    let type_code: String
-    let type_name: String
-    let sphere_code: String
-    let sphere_name: String
+    let packCode: String
+    let packName: String
+    let typeCode: String
+    let typeName: String
+    let sphereCode: String
+    let sphereName: String
     let position: Int
     @Attribute(.unique) let code: String
     let name: String
-    let is_unique: Bool
+    let isUnique: Bool
     let quantity: Int
-    let deck_limit: Int
+    let deckLimit: Int
     let cardSort: Int
     let costs: CardCost
     let stats: CardStat
     let texts: CardText
 
-    init(pack_code: String, pack_name: String, type_code: String, type_name: String, sphere_code: String, sphere_name: String, position: Int, code: String, name: String, is_unique: Bool, quantity: Int, deck_limit: Int, cardSort: Int, costs: CardCost, stats: CardStat, texts: CardText) {
-        self.pack_code = pack_code
-        self.pack_name = pack_name
-        self.type_code = type_code
-        self.type_name = type_name
-        self.sphere_code = sphere_code
-        self.sphere_name = sphere_name
+    init(packCode: String, packName: String, typeCode: String, typeName: String, sphereCode: String, sphereName: String, position: Int, code: String, name: String, isUnique: Bool, quantity: Int, deckLimit: Int, cardSort: Int, costs: CardCost, stats: CardStat, texts: CardText) {
+        self.packCode = packCode
+        self.packName = packName
+        self.typeCode = typeCode
+        self.typeName = typeName
+        self.sphereCode = sphereCode
+        self.sphereName = sphereName
         self.position = position
         self.code = code
         self.name = name
-        self.is_unique = is_unique
+        self.isUnique = isUnique
         self.quantity = quantity
-        self.deck_limit = deck_limit
+        self.deckLimit = deckLimit
         self.cardSort = cardSort
         self.costs = costs
         self.stats = stats
@@ -86,18 +86,18 @@ struct CardText: Hashable, Codable {
     var shadow: String
     var encounterSet: String
     var illustrator: String
-    var has_errata: Bool
+    var hasErrata: Bool
     var url: String
     var imagesrc: String
 
-    init(traits: String? = "", text: String? = "", flavor: String? = "", shadow: String? = "", encounterSet: String? = "", illustrator: String? = "", has_errata: Bool? = false, url: String? = "", imagesrc: String? = "") {
+    init(traits: String? = "", text: String? = "", flavor: String? = "", shadow: String? = "", encounterSet: String? = "", illustrator: String? = "", hasErrata: Bool? = false, url: String? = "", imagesrc: String? = "") {
         self.traits = traits ?? ""
         self.text = text ?? ""
         self.flavor = flavor ?? ""
         self.shadow = shadow ?? ""
         self.encounterSet = encounterSet ?? ""
         self.illustrator = illustrator ?? ""
-        self.has_errata = has_errata ?? false
+        self.hasErrata = hasErrata ?? false
         self.url = url ?? ""
         self.imagesrc = imagesrc ?? ""
     }
@@ -120,11 +120,11 @@ extension Card {
 
         return #Predicate<Card> { card in
             if filterDeck.isEmpty {
-                (filterPack.isEmpty || filterPack.contains(card.pack_code))
+                (filterPack.isEmpty || filterPack.contains(card.packCode))
                 &&
-                (filterType == "all types" || card.type_name == filterType)
+                (filterType == "all types" || card.typeName == filterType)
                 &&
-                (filterSphere == "all spheres" || card.sphere_code == filterSphere)
+                (filterSphere == "all spheres" || card.sphereCode == filterSphere)
                 &&
                 (searchText.isEmpty || card.name.localizedStandardContains(searchText))
             } else {

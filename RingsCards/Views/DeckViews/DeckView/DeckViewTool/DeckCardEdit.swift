@@ -16,7 +16,7 @@ struct DeckCardEdit: View {
         HStack(spacing: 9) {
             VStack(spacing: 9) {
                 Button {
-                    if value < card.deck_limit {
+                    if value < card.deckLimit {
                         deck.cardSlots["\(card.code)", default: value] += 1
                         deck.updated = .now
 
