@@ -20,7 +20,7 @@ struct DeckCardEdit: View {
                         deck.cardSlots["\(card.code)", default: value] += 1
                         deck.updated = .now
 
-                        if card.costs.threat != 0 {
+                        if card.costs.threat != -1 {
                             deck.threat += card.costs.threat
                             deck.heroes["\(card.code)", default: value] += 1
                         }
@@ -38,7 +38,7 @@ struct DeckCardEdit: View {
                         deck.cardSlots["\(card.code)"] = nil
                         deck.updated = .now
 
-                        if card.costs.threat != 0 {
+                        if card.costs.threat != -1 {
                             deck.threat -= card.costs.threat
                             deck.heroes["\(card.code)"] = nil
                         }

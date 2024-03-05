@@ -15,36 +15,49 @@ struct CardRow: View {
         HStack(spacing: 3) {
             if card.costs.threat != -1 {
                 Image(systemName: "\(card.costs.threat).square")
-                    .foregroundColor(Color(card.sphere_name))
+                    .foregroundColor(Color(card.sphereName))
                     .font(.system(size: 42.0))
             } else if card.costs.cost == "X" {
                 Image(systemName: "x.circle")
-                    .foregroundColor(Color(card.sphere_name))
+                    .foregroundColor(Color(card.sphereName))
                     .font(.system(size: 42.0))
             } else if card.costs.cost != "" {
                 Image(systemName: "\(Int(card.costs.cost) ?? 0).circle")
-                    .foregroundColor(Color(card.sphere_name))
+                    .foregroundColor(Color(card.sphereName))
                     .font(.system(size: 42.0))
             } else {
                 Image(systemName: "x.circle")
-                    .foregroundColor(Color(card.sphere_name))
+                    .foregroundColor(Color(card.sphereName))
                     .font(.system(size: 42.0))
             }
 
             VStack(alignment: .leading, spacing: 3) {
                 if value != 0 {
                     Text(card.name + " x \(value)")
-                        .foregroundColor(Color(card.sphere_name))
+                        .foregroundColor(Color(card.sphereName))
                         .font(.headline)
                 } else {
                     Text(card.name)
-                        .foregroundColor(Color(card.sphere_name))
+                        .foregroundColor(Color(card.sphereName))
                         .font(.headline)
                 }
 
-                Text(card.texts.traits)
-                    .foregroundColor(.secondary)
-                    .font(.subheadline)
+                if card.stats.health != 0 {
+                    HStack {
+                        Text("\(card.stats.willpower ?? 0)" + " \u{E600}")
+                            .font(Font.custom("SFUIText-Regular", size: 14))
+                        Text("\(card.stats.attack ?? 0)" + " \u{E601}")
+                            .font(Font.custom("SFUIText-Regular", size: 14))
+                        Text("\(card.stats.defense ?? 0)" + " \u{E602}")
+                            .font(Font.custom("SFUIText-Regular", size: 14))
+                        Text("\(card.stats.health ?? 0)" + " \u{E603}")
+                            .font(Font.custom("SFUIText-Regular", size: 14))
+                    }
+                } else {
+                    Text(card.texts.traits)
+                        .foregroundColor(.secondary)
+                        .font(.subheadline)
+                }
             }
         }
     }

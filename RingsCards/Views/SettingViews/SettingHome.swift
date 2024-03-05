@@ -14,7 +14,7 @@ struct SettingHome: View {
         List {
             Section(header: Text("Cards")) {
                 NavigationLink(value: Router.packList) {
-                    Label("Edit Collection", systemImage: "plus.rectangle.portrait")
+                    Label("Edit Collection", systemImage: "plus.square")
                 }
             }
 
