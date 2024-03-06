@@ -12,7 +12,7 @@ struct CampaignRow: View {
 
     var body: some View {
         HStack(spacing: 3) {
-            PackIcon(image: Image(campaign.code), frame: 50)
+            PackIcon(image: Image(campaign.code), frame: 44)
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(campaign.name)

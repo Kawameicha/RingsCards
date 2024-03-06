@@ -16,19 +16,19 @@ struct CardRow: View {
             if card.costs.threat != -1 {
                 Image(systemName: "\(card.costs.threat).square")
                     .foregroundColor(Color(card.sphereName))
-                    .font(.system(size: 42.0))
+                    .font(.system(size: 42))
             } else if card.costs.cost == "X" {
                 Image(systemName: "x.circle")
                     .foregroundColor(Color(card.sphereName))
-                    .font(.system(size: 42.0))
+                    .font(.system(size: 42))
             } else if card.costs.cost != "" {
                 Image(systemName: "\(Int(card.costs.cost) ?? 0).circle")
                     .foregroundColor(Color(card.sphereName))
-                    .font(.system(size: 42.0))
+                    .font(.system(size: 42))
             } else {
                 Image(systemName: "x.circle")
                     .foregroundColor(Color(card.sphereName))
-                    .font(.system(size: 42.0))
+                    .font(.system(size: 42))
             }
 
             VStack(alignment: .leading, spacing: 3) {
