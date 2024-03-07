@@ -67,6 +67,10 @@ struct CampaignViewHome: View {
                 }
                 CampaignNoteButton(editNotes: $editNotes)
             }
+
+            ToolbarItem(placement: .status) {
+                CampaignScenarioInfo(campaign: campaign)
+            }
         }
         .sheet(isPresented: $editNotes) {
             CampaignHost(campaign: campaign)

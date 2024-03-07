@@ -51,7 +51,7 @@ struct CampaignList: View {
                 CampaignNewButton()
             }
 
-            ToolbarItem(placement: .principal) {
+            ToolbarItem(placement: .status) {
                 CampaignInfo(count: campaigns.count)
             }
         }

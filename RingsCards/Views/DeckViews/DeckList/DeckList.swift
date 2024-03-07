@@ -44,9 +44,7 @@ struct DeckList: View {
         @Bindable var viewDeckModel = viewDeckModel
 
         if campaignView {
-            let campaignDecks = campaign.decks
-
-            ForEach(campaignDecks) { deck in
+            ForEach(campaign.decks) { deck in
                 NavigationLink(value: Router.deckViewHome(deck: deck)) {
                     DeckRow(deck: deck)
                 }
@@ -59,7 +57,7 @@ struct DeckList: View {
                     .tint(.red)
                 }
             }
-            if campaignDecks.count <= 4 {
+            if campaign.decks.count <= 4 {
                 NavigationLink(value: Router.deckList(campaign: campaign, campaignView: false, campaignDeck: true)) {
                     Text("Attach a Deck")
                 }
@@ -135,7 +133,7 @@ struct DeckList: View {
                     DeckNewButton()
                 }
 
-                ToolbarItem(placement: .principal) {
+                ToolbarItem(placement: .status) {
                     DeckInfo(count: decks.count)
                 }
             }

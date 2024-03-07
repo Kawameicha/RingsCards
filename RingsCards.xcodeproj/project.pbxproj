@@ -33,6 +33,8 @@
 		59355A062AD2902000C894B3 /* PackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59355A052AD2902000C894B3 /* PackRow.swift */; };
 		59355A082AD2962800C894B3 /* PackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59355A072AD2962800C894B3 /* PackList.swift */; };
 		5939A0412A9B8973008DC370 /* Scenarios.json in Resources */ = {isa = PBXBuildFile; fileRef = 5939A0402A9B8973008DC370 /* Scenarios.json */; };
+		593A3EF42B99B2C80030FDCC /* CampaignScenarioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A3EF32B99B2C80030FDCC /* CampaignScenarioInfo.swift */; };
+		593A3EF62B99EA520030FDCC /* ScenarioCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A3EF52B99EA520030FDCC /* ScenarioCompleted.swift */; };
 		594AB53D2B4352260075D176 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB53C2B4352260075D176 /* AppSidebarList.swift */; };
 		594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB53E2B4352500075D176 /* AppDetailColumn.swift */; };
 		594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B766A2AA7026200ED71AF /* CampaignList.swift */; };
@@ -44,6 +46,7 @@
 		5952A4652B4D63C20051CB55 /* KeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952A4642B4D63C20051CB55 /* KeywordList.swift */; };
 		595A66B32A9DE8930040C952 /* SettingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A66B22A9DE8930040C952 /* SettingHome.swift */; };
 		595C7BE92A93985D0094E64F /* ScenarioViewMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */; };
+		596866572B98D060004442CA /* DeckCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596866562B98D060004442CA /* DeckCardInfo.swift */; };
 		596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DD7EE2A9E161C00556B7B /* ScenarioViewHome.swift */; };
 		5979A1BF2A9E4D6A00E1CAE1 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979A1BE2A9E4D6A00E1CAE1 /* Pack.swift */; };
 		59809C6E2B444FDE004BD1F2 /* DeckNewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59809C6D2B444FDE004BD1F2 /* DeckNewButton.swift */; };
@@ -129,6 +132,8 @@
 		59355A052AD2902000C894B3 /* PackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackRow.swift; sourceTree = "<group>"; };
 		59355A072AD2962800C894B3 /* PackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackList.swift; sourceTree = "<group>"; };
 		5939A0402A9B8973008DC370 /* Scenarios.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Scenarios.json; sourceTree = "<group>"; };
+		593A3EF32B99B2C80030FDCC /* CampaignScenarioInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignScenarioInfo.swift; sourceTree = "<group>"; };
+		593A3EF52B99EA520030FDCC /* ScenarioCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioCompleted.swift; sourceTree = "<group>"; };
 		594AB53C2B4352260075D176 /* AppSidebarList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
 		594AB53E2B4352500075D176 /* AppDetailColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
 		594B766A2AA7026200ED71AF /* CampaignList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignList.swift; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 		5952A4642B4D63C20051CB55 /* KeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordList.swift; sourceTree = "<group>"; };
 		595A66B22A9DE8930040C952 /* SettingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHome.swift; sourceTree = "<group>"; };
 		595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewMark.swift; sourceTree = "<group>"; };
+		596866562B98D060004442CA /* DeckCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardInfo.swift; sourceTree = "<group>"; };
 		596DD7EE2A9E161C00556B7B /* ScenarioViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewHome.swift; sourceTree = "<group>"; };
 		5979A1BE2A9E4D6A00E1CAE1 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
 		59809C6D2B444FDE004BD1F2 /* DeckNewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckNewButton.swift; sourceTree = "<group>"; };
@@ -306,10 +312,11 @@
 		593282652B4849C500914E92 /* ScenarioViewTool */ = {
 			isa = PBXGroup;
 			children = (
-				59862D7A2A9217F600628449 /* ScenarioViewIcon.swift */,
-				59B1A3852AEFE29F00ADB701 /* ScenarioViewEncounter.swift */,
-				595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */,
+				593A3EF52B99EA520030FDCC /* ScenarioCompleted.swift */,
 				5951BA702AB061380047DE1F /* ScenarioViewChart.swift */,
+				59B1A3852AEFE29F00ADB701 /* ScenarioViewEncounter.swift */,
+				59862D7A2A9217F600628449 /* ScenarioViewIcon.swift */,
+				595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */,
 			);
 			path = ScenarioViewTool;
 			sourceTree = "<group>";
@@ -498,8 +505,8 @@
 		59B6E9B32A9A0C2D0056EE8D /* CardTool */ = {
 			isa = PBXGroup;
 			children = (
-				59EA4DD92B4037D00078F7F8 /* CardInfo.swift */,
 				59B943F92AC6BE8D0059C52A /* CardFilterButton.swift */,
+				59EA4DD92B4037D00078F7F8 /* CardInfo.swift */,
 				595078742AC5D8FA007BFAA0 /* CardSortButton.swift */,
 			);
 			path = CardTool;
@@ -549,6 +556,7 @@
 				59CC78D62B46E57E00F29E18 /* CampaignBoonButton.swift */,
 				59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */,
 				59CC78D82B46E58E00F29E18 /* CampaignNoteButton.swift */,
+				593A3EF32B99B2C80030FDCC /* CampaignScenarioInfo.swift */,
 			);
 			path = CampaignViewTool;
 			sourceTree = "<group>";
@@ -556,9 +564,9 @@
 		59E3C47B2B3C8F0300E74D0D /* CardView */ = {
 			isa = PBXGroup;
 			children = (
-				592264F42A90AB09002A7648 /* CardView.swift */,
 				59C7796E2B7E7E18002AFB03 /* CardErratum.swift */,
 				59C357432AAF5374009CA291 /* CardImage.swift */,
+				592264F42A90AB09002A7648 /* CardView.swift */,
 			);
 			path = CardView;
 			sourceTree = "<group>";
@@ -576,6 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				59C1404C2AC1C26500A9F20C /* DeckCardEdit.swift */,
+				596866562B98D060004442CA /* DeckCardInfo.swift */,
 				59809C712B4457F4004BD1F2 /* DeckEditButton.swift */,
 				59809C6F2B44542F004BD1F2 /* DeckViewButton.swift */,
 			);
@@ -722,6 +731,7 @@
 				59C87AF72AA5DB720058CB2A /* CampaignHost.swift in Sources */,
 				59862D772A91FC4300628449 /* CardHome.swift in Sources */,
 				5922F3D32B2D9FA30037E4D4 /* DeckInfo.swift in Sources */,
+				593A3EF62B99EA520030FDCC /* ScenarioCompleted.swift in Sources */,
 				59EA4DD42B4010290078F7F8 /* DeckViewHome.swift in Sources */,
 				5912EE242A93668700B2F8B5 /* CardRow.swift in Sources */,
 				59C140462AC1789A00A9F20C /* Deck.swift in Sources */,
@@ -742,6 +752,7 @@
 				5922F3DA2B2DB3B80037E4D4 /* ViewCampaignModel.swift in Sources */,
 				595078752AC5D8FA007BFAA0 /* CardSortButton.swift in Sources */,
 				59B1A3862AEFE29F00ADB701 /* ScenarioViewEncounter.swift in Sources */,
+				596866572B98D060004442CA /* DeckCardInfo.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
 				59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */,
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
@@ -783,6 +794,7 @@
 				59D835412AFF92A2000C160E /* CampaignViewHome.swift in Sources */,
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
+				593A3EF42B99B2C80030FDCC /* CampaignScenarioInfo.swift in Sources */,
 				59C779692B7BFAFF002AFB03 /* Erratum.swift in Sources */,
 				59C779622B791A0D002AFB03 /* RuleView.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,

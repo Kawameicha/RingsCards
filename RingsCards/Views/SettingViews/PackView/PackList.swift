@@ -76,6 +76,6 @@ struct PackList: View {
 
 #Preview {
     PackList()
-        .modelContainer(ringsUserData)
+        .modelContainer(previewModelContainer)
         .environment(ViewCardModel())
 }

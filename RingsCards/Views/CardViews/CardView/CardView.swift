@@ -105,6 +105,15 @@ struct CardView: View {
                 }
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .status) {
+                HStack {
+                    Text(.init("See on [RingsDB](\(card.texts.url)) "))
+                    Text("\u{E60D}")
+                        .font(Font.custom("SFUIText-Regular", size: 20))
+                }
+            }
+        }
     }
 }
 

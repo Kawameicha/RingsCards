@@ -100,6 +100,14 @@ struct CardList: View {
                         CardFilterButton()
                         CardSortButton()
                     }
+
+                    ToolbarItem(placement: .status) {
+                        CardInfo(count: cards.count)
+                    }
+                } else {
+                    ToolbarItem(placement: .status) {
+                        DeckCardInfo(deck: deck)
+                    }
                 }
             }
         } else if !editBoons {
@@ -118,6 +126,12 @@ struct CardList: View {
                     CampaignCardEdit(campaign: campaign, card: card, value: campaign.slots["\(card.code)", default: 0])
                 }
             }
+//            .onAppear {
+//                viewCardModel.listOffset = 1
+//            }
+//            .onDisappear {
+//                viewCardModel.listOffset = 1
+//            }
         }
     }
 }

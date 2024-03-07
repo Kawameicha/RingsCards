@@ -31,6 +31,7 @@ struct ScenarioViewHome: View {
                 Divider()
 
                 Text(.init(scenario.flavorText.intro))
+                    .foregroundStyle(.secondary)
                     .font(.system(size: 18, weight: .light, design: .serif))
                     .italic()
 
@@ -51,29 +52,23 @@ struct ScenarioViewHome: View {
                         .font(Font.custom("SFUIText-Regular", size: 16))
                 }
 
-                VStack {
-                    Text("Scenario Completed!")
-                        .foregroundColor(campaign.self.completed[scenarioIndex] ? .green : .gray)
-                    Toggle("Completed", isOn: Bindable(campaign.self).completed[scenarioIndex])
-                        .labelsHidden()
-                }
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(lineWidth: 2)
-                        .foregroundColor(campaign.self.completed[scenarioIndex] ? .green : .gray)
-                )
-                
-                if campaign.self.completed[scenarioIndex] {
-                    if scenario.flavorText.outro != "" {
-                        Text(.init(scenario.flavorText.outro))
-                            .font(.system(size: 18, weight: .light, design: .serif))
-                            .italic()
-                    }
+                if campaign.self.completed[scenarioIndex] && scenario.flavorText.outro != "" {
+                    Divider()
+
+                    Text(.init(scenario.flavorText.outro))
+                        .foregroundStyle(.secondary)
+                        .font(.system(size: 18, weight: .light, design: .serif))
+                        .italic()
+
+                    Divider()
                 }
             }
             .padding()
+        }
+        .toolbar {
+            ToolbarItem(placement: .status) {
+                ScenarioCompleted(campaign: campaign, scenario: scenario)
+            }
         }
     }
 }
