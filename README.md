@@ -2,7 +2,7 @@
 Keep your collection organized, create decks for individual scenarios or group them together in the campaign mode, taking notes and tracking boons and burdens along the way.
 
 - Search and organize collection
-- Built with advanced card search
+- Build with advanced card search
 - Edit and upgrade player decks
 - Enjoy flavor texts and resolutions
 - Easy set-up with rules and keywords
