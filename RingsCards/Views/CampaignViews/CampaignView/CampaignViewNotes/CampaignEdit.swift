@@ -17,6 +17,26 @@ struct CampaignEdit: View {
                 Divider()
                 TextField("Name", text: $campaign.name)
             }
+            
+            HStack {
+                Text("Name").bold()
+                Divider()
+                Button {
+                    campaign.threatModifs -= 1
+                    campaign.updated = .now
+                } label: {
+                    Image(systemName: "minus.square")
+                }
+                .buttonStyle(PlainButtonStyle())
+                Text("\(campaign.threatModifs)")
+                Button {
+                    campaign.threatModifs += 1
+                    campaign.updated = .now
+                } label: {
+                    Image(systemName: "plus.square")
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
 
             HStack {
                 Text("Notes").bold()
