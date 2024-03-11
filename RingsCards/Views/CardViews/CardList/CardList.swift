@@ -82,7 +82,9 @@ struct CardList: View {
                         ForEach(cards.filter { card in
                             card.typeName.contains("\(type)")
                         }) { card in
-                            NavigationLink(value: Router.cardView(card)) {
+                            NavigationLink {
+                                CardView(card: card)
+                            } label: {
                                 if editCard {
                                     DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])
                                 } else {

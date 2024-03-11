@@ -19,8 +19,7 @@ struct CampaignEdit: View {
             }
             
             HStack {
-                Text("Name").bold()
-                Divider()
+                Text("Threat Penalty").bold()
                 Button {
                     campaign.threatModifs -= 1
                     campaign.updated = .now
