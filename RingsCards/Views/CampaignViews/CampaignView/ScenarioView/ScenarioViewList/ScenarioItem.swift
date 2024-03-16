@@ -19,6 +19,9 @@ struct ScenarioItem: View {
         ) {
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 ScenarioViewMark(isSet: Bindable(campaign).completed[scenarioIndex])
+                    .onChange(of: campaign.completed[scenarioIndex]) {
+                        campaign.updated = .now
+                    }
                     .buttonStyle(PlainButtonStyle())
                     .font(.system(size: 44.0))
 
