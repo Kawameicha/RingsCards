@@ -44,11 +44,11 @@ struct CampaignCardEdit: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        ModelPreview { card in
-            CampaignCardEdit(campaign: campaign, card: card)
-        }
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        ModelPreview { card in
+//            CampaignCardEdit(campaign: campaign, card: card)
+//        }
+//    }
+//    .modelContainer(previewModelContainer)
+//}

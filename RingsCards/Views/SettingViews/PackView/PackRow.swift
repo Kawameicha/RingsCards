@@ -52,9 +52,9 @@ struct PackRow: View {
     }
 }
 
-#Preview {
-    ModelPreview { pack in
-        PackRow(pack: pack)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { pack in
+//        PackRow(pack: pack)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

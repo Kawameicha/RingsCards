@@ -56,9 +56,9 @@ struct DeckCardInfo: View {
     }
 }
 
-#Preview {
-    ModelPreview { deck in
-        DeckCardInfo(deck: deck)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { deck in
+//        DeckCardInfo(deck: deck)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

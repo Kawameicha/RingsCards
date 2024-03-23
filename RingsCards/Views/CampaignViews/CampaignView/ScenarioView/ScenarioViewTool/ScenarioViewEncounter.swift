@@ -32,9 +32,9 @@ struct ScenarioViewEncounter: View {
     }
 }
 
-#Preview {
-    ModelPreview { scenario in
-        ScenarioViewEncounter(scenario: scenario)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { scenario in
+//        ScenarioViewEncounter(scenario: scenario)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

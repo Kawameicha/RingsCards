@@ -50,9 +50,9 @@ struct DeckRow: View {
     }
 }
 
-#Preview {
-    ModelPreview { deck in
-        DeckRow(deck: deck)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { deck in
+//        DeckRow(deck: deck)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

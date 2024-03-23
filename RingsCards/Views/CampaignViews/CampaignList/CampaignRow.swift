@@ -26,9 +26,9 @@ struct CampaignRow: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        CampaignRow(campaign: campaign)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        CampaignRow(campaign: campaign)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

@@ -25,8 +25,8 @@ struct CampaignHome: View {
     }
 }
 
-#Preview {
-    CampaignHome()
-        .modelContainer(previewModelContainer)
-        .environment(ViewCampaignModel())
-}
+//#Preview {
+//    CampaignHome()
+//        .modelContainer(previewModelContainer)
+//        .environment(ViewCampaignModel())
+//}

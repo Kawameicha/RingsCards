@@ -63,9 +63,9 @@ struct CardRow: View {
     }
 }
 
-#Preview {
-    ModelPreview { card in
-        CardRow(card: card)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { card in
+//        CardRow(card: card)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

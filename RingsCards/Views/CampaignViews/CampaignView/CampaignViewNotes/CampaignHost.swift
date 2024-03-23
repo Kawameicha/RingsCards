@@ -44,9 +44,9 @@ struct CampaignHost: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        CampaignHost(campaign: campaign)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        CampaignHost(campaign: campaign)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

@@ -12,9 +12,7 @@ struct CardInfo: View {
     var count: Int = 0
 
     var body: some View {
-        if count >= 100 {
-            Text("lots of cards")
-        } else if count <= 1 {
+        if count <= 1 {
             Text("\(count) card")
         } else {
             Text("\(count) cards")

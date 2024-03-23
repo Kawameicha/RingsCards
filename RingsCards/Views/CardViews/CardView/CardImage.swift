@@ -29,9 +29,9 @@ struct CardImage: View {
     }
 }
 
-#Preview {
-    ModelPreview { card in
-        CardImage(card: card)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { card in
+//        CardImage(card: card)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

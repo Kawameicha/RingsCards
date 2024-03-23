@@ -53,9 +53,9 @@ struct ScenarioViewChart: View {
     }
 }
 
-#Preview {
-    ModelPreview { scenario in
-        ScenarioViewChart(scenario: scenario)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { scenario in
+//        ScenarioViewChart(scenario: scenario)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

@@ -48,9 +48,9 @@ struct ScenarioVStack: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

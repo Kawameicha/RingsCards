@@ -65,8 +65,8 @@ struct CardHome: View {
     }
 }
 
-#Preview {
-    CardHome()
-        .modelContainer(previewModelContainer)
-        .environment(ViewCardModel())
-}
+//#Preview {
+//    CardHome()
+//        .modelContainer(previewModelContainer)
+//        .environment(ViewCardModel())
+//}

@@ -79,11 +79,11 @@ struct CampaignViewHome: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        CampaignViewHome(campaign: campaign, decks: [Deck.emptyDeck])
-    }
-    .modelContainer(previewModelContainer)
-    .environment(ViewCardModel())
-    .environment(ViewDeckModel())
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        CampaignViewHome(campaign: campaign, decks: [Deck.emptyDeck])
+//    }
+//    .modelContainer(previewModelContainer)
+//    .environment(ViewCardModel())
+//    .environment(ViewDeckModel())
+//}

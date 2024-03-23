@@ -32,9 +32,9 @@ struct CampaignView: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        CampaignView(campaign: campaign)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        CampaignView(campaign: campaign)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

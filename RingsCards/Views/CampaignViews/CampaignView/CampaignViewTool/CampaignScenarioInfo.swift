@@ -26,9 +26,9 @@ struct CampaignScenarioInfo: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        CampaignScenarioInfo(campaign: campaign)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        CampaignScenarioInfo(campaign: campaign)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

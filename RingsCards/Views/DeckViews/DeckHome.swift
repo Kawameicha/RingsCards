@@ -25,9 +25,9 @@ struct DeckHome: View {
     }
 }
 
-#Preview {
-    DeckHome()
-        .modelContainer(previewModelContainer)
-        .environment(ViewCardModel())
-        .environment(ViewDeckModel())
-}
+//#Preview {
+//    DeckHome()
+//        .modelContainer(previewModelContainer)
+//        .environment(ViewCardModel())
+//        .environment(ViewDeckModel())
+//}

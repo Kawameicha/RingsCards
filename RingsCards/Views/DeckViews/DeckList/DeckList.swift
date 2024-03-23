@@ -151,11 +151,11 @@ struct DeckList: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        DeckList(campaign: campaign, campaignView: false, campaignDeck: false)
-    }
-    .modelContainer(previewModelContainer)
-    .environment(ViewDeckModel())
-    .environment(ViewCardModel())
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        DeckList(campaign: campaign, campaignView: false, campaignDeck: false)
+//    }
+//    .modelContainer(previewModelContainer)
+//    .environment(ViewDeckModel())
+//    .environment(ViewCardModel())
+//}

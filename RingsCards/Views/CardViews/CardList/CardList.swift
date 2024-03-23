@@ -11,6 +11,8 @@ import SwiftData
 struct CardList: View {
     @Environment(ViewCardModel.self) var viewCardModel
     @Environment(\.modelContext) var modelContext
+    @Query(filter: #Predicate<Pack> { pack in
+        pack.isInCollection }) var packs: [Pack]
     @Query var cards: [Card]
     @Bindable var deck: Deck
     var deckView: Bool
@@ -74,6 +76,13 @@ struct CardList: View {
     
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
+        let count = (try? modelContext.fetchCount(FetchDescriptor<Card>(predicate: Card.predicate(
+            searchText: viewCardModel.searchText,
+            filterSphere: viewCardModel.filterSphere.rawValue,
+            filterType: viewCardModel.filterType.rawValue,
+            filterPack: packs.map { $0.packCode },
+            filterDeck: viewCardModel.filterDeck
+        )))) ?? 0
 
         if !campaignView {
             List {
@@ -104,7 +113,7 @@ struct CardList: View {
                     }
 
                     ToolbarItem(placement: .status) {
-                        CardInfo(count: cards.count)
+                        CardInfo(count: count)
                     }
                 } else {
                     ToolbarItem(placement: .status) {
@@ -138,12 +147,12 @@ struct CardList: View {
     }
 }
 
-#Preview {
-    ModelPreview { campaign in
-        CardList(
-            campaign: campaign
-        )
-    }
-    .modelContainer(previewModelContainer)
-    .environment(ViewCardModel())
-}
+//#Preview {
+//    ModelPreview { campaign in
+//        CardList(
+//            campaign: campaign
+//        )
+//    }
+//    .modelContainer(previewModelContainer)
+//    .environment(ViewCardModel())
+//}

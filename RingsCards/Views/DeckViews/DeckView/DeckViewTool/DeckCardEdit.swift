@@ -54,11 +54,11 @@ struct DeckCardEdit: View {
     }
 }
 
-#Preview {
-    ModelPreview { deck in
-        ModelPreview { card in
-            DeckCardEdit(deck: deck, card: card)
-        }
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { deck in
+//        ModelPreview { card in
+//            DeckCardEdit(deck: deck, card: card)
+//        }
+//    }
+//    .modelContainer(previewModelContainer)
+//}

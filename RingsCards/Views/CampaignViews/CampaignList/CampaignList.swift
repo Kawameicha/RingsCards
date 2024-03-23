@@ -64,8 +64,8 @@ struct CampaignList: View {
     }
 }
 
-#Preview {
-    CampaignList()
-        .modelContainer(previewModelContainer)
-        .environment(ViewCampaignModel())
-}
+//#Preview {
+//    CampaignList()
+//        .modelContainer(previewModelContainer)
+//        .environment(ViewCampaignModel())
+//}

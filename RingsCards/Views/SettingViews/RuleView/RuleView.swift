@@ -52,9 +52,9 @@ struct RuleView: View {
     }
 }
 
-#Preview {
-    ModelPreview { rule in
-        RuleView(rule: rule)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { rule in
+//        RuleView(rule: rule)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

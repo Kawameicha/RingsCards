@@ -38,6 +38,6 @@ struct RuleList: View {
 
 #Preview {
     RuleList()
-        .modelContainer(previewModelContainer)
+        .modelContainer(ringsUserData)
         .environment(ViewRuleModel())
 }

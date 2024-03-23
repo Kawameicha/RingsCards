@@ -37,9 +37,9 @@ struct ScenarioKeywordList: View {
     }
 }
 
-#Preview {
-    ModelPreview { scenario in
-        ScenarioKeywordList(scenario: scenario)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { scenario in
+//        ScenarioKeywordList(scenario: scenario)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

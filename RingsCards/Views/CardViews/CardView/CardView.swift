@@ -117,9 +117,9 @@ struct CardView: View {
     }
 }
 
-#Preview {
-    ModelPreview { card in
-        CardView(card: card)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { card in
+//        CardView(card: card)
+//    }
+//    .modelContainer(previewModelContainer)
+//}

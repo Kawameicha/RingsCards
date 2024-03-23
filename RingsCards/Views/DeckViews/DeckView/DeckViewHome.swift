@@ -70,11 +70,11 @@ struct DeckViewHome: View {
     }
 }
 
-#Preview {
-    ModelPreview { deck in
-        DeckViewHome(deck: deck)
-    }
-    .modelContainer(previewModelContainer)
-    .environment(ViewCardModel())
-    .environment(ViewDeckModel())
-}
+//#Preview {
+//    ModelPreview { deck in
+//        DeckViewHome(deck: deck)
+//    }
+//    .modelContainer(previewModelContainer)
+//    .environment(ViewCardModel())
+//    .environment(ViewDeckModel())
+//}

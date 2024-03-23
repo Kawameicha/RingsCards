@@ -38,6 +38,6 @@ struct KeywordList: View {
 
 #Preview {
     KeywordList()
-        .modelContainer(previewModelContainer)
+        .modelContainer(ringsUserData)
         .environment(ViewRuleModel())
 }

@@ -39,15 +39,15 @@ struct ScenarioItem: View {
     }
 }
 
-#Preview {
-    ModelPreview { scenario in
-        ScenarioItem(campaign: Campaign(code: "",
-                                        name: "",
-                                        scenarios: Array(1...3),
-                                        completed: Array(repeating: false, count:3),
-                                        campaignMode: true,
-                                        slots: [:]),
-                     scenario: scenario)
-    }
-    .modelContainer(previewModelContainer)
-}
+//#Preview {
+//    ModelPreview { scenario in
+//        ScenarioItem(campaign: Campaign(code: "",
+//                                        name: "",
+//                                        scenarios: Array(1...3),
+//                                        completed: Array(repeating: false, count:3),
+//                                        campaignMode: true,
+//                                        slots: [:]),
+//                     scenario: scenario)
+//    }
+//    .modelContainer(previewModelContainer)
+//}
