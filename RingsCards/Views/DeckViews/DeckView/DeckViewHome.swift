@@ -33,6 +33,7 @@ struct DeckViewHome: View {
                 sortParameter: viewCardModel.sortParameter,
                 sortOrder: viewCardModel.sortOrder,
                 searchText: viewCardModel.searchText,
+                searchBy : viewCardModel.searchBy,
                 listOffset: viewCardModel.listOffset
             )
             .navigationTitle($deck.name)
@@ -46,6 +47,7 @@ struct DeckViewHome: View {
                 }
 
                 ToolbarItemGroup(placement: .secondaryAction) {
+                    CardSearchButton()
                     CardFilterButton()
                     CardSortButton()
                 }

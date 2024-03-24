@@ -17,5 +17,6 @@ class ViewCardModel {
     var sortParameter: SortParameter = .name
     var sortOrder: SortOrder = .forward
     var searchText: String = ""
+    var searchBy: SearchParameter = .name
     var listOffset: Int = 1
 }

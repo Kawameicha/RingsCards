@@ -112,25 +112,76 @@ enum CardType: String, CaseIterable {
 extension Card {
     static func predicate(
         searchText: String,
+        searchBy: SearchParameter,
         filterSphere: FilterSphere.RawValue,
         filterType: FilterType.RawValue,
         filterPack: [String],
         filterDeck: [String]
     ) -> Predicate<Card> {
-
-        return #Predicate<Card> { card in
-            if filterDeck.isEmpty {
-                (filterPack.isEmpty || filterPack.contains(card.packCode))
-                &&
-                (filterType == "all types" || card.typeName == filterType)
-                &&
-                (filterSphere == "all spheres" || card.sphereCode == filterSphere)
-                &&
-                (searchText.isEmpty || card.name.localizedStandardContains(searchText))
-            } else {
-                (filterDeck.contains(card.code))
-                &&
-                (searchText.isEmpty || card.name.localizedStandardContains(searchText))
+        switch searchBy {
+        case .name:
+            return #Predicate<Card> { card in
+                if filterDeck.isEmpty {
+                    (filterPack.isEmpty || filterPack.contains(card.packCode))
+                    &&
+                    (filterType == "all types" || card.typeName == filterType)
+                    &&
+                    (filterSphere == "all spheres" || card.sphereCode == filterSphere)
+                    &&
+                    (searchText.isEmpty || card.name.localizedStandardContains(searchText))
+                } else {
+                    (filterDeck.contains(card.code))
+                    &&
+                    (searchText.isEmpty || card.name.localizedStandardContains(searchText))
+                }
+            }
+        case .trait:
+            return #Predicate<Card> { card in
+                if filterDeck.isEmpty {
+                    (filterPack.isEmpty || filterPack.contains(card.packCode))
+                    &&
+                    (filterType == "all types" || card.typeName == filterType)
+                    &&
+                    (filterSphere == "all spheres" || card.sphereCode == filterSphere)
+                    &&
+                    (searchText.isEmpty || card.texts.traits.localizedStandardContains(searchText))
+                } else {
+                    (filterDeck.contains(card.code))
+                    &&
+                    (searchText.isEmpty || card.texts.traits.localizedStandardContains(searchText))
+                }
+            }
+        case .text:
+            return #Predicate<Card> { card in
+                if filterDeck.isEmpty {
+                    (filterPack.isEmpty || filterPack.contains(card.packCode))
+                    &&
+                    (filterType == "all types" || card.typeName == filterType)
+                    &&
+                    (filterSphere == "all spheres" || card.sphereCode == filterSphere)
+                    &&
+                    (searchText.isEmpty || card.texts.text.localizedStandardContains(searchText))
+                } else {
+                    (filterDeck.contains(card.code))
+                    &&
+                    (searchText.isEmpty || card.texts.text.localizedStandardContains(searchText))
+                }
+            }
+        case .illustrator:
+            return #Predicate<Card> { card in
+                if filterDeck.isEmpty {
+                    (filterPack.isEmpty || filterPack.contains(card.packCode))
+                    &&
+                    (filterType == "all types" || card.typeName == filterType)
+                    &&
+                    (filterSphere == "all spheres" || card.sphereCode == filterSphere)
+                    &&
+                    (searchText.isEmpty || card.texts.illustrator.localizedStandardContains(searchText))
+                } else {
+                    (filterDeck.contains(card.code))
+                    &&
+                    (searchText.isEmpty || card.texts.illustrator.localizedStandardContains(searchText))
+                }
             }
         }
     }

@@ -37,6 +37,7 @@ struct CardHome: View {
                     sortParameter: viewCardModel.sortParameter,
                     sortOrder: viewCardModel.sortOrder,
                     searchText: viewCardModel.searchText,
+                    searchBy : viewCardModel.searchBy,
                     listOffset: viewCardModel.listOffset
                 )
                 .refreshable {

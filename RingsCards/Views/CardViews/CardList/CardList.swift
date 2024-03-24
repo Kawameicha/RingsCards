@@ -38,6 +38,7 @@ struct CardList: View {
         sortParameter: SortParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = "",
+        searchBy: SearchParameter = .name,
         listOffset: Int = 1
     ) {
         self.deck = deck
@@ -50,6 +51,7 @@ struct CardList: View {
 
         let predicate = Card.predicate(
             searchText: searchText,
+            searchBy: searchBy,
             filterSphere: filterSphere.rawValue,
             filterType: filterType.rawValue,
             filterPack: filterPack,
@@ -78,6 +80,7 @@ struct CardList: View {
         @Bindable var viewCardModel = viewCardModel
         let count = (try? modelContext.fetchCount(FetchDescriptor<Card>(predicate: Card.predicate(
             searchText: viewCardModel.searchText,
+            searchBy: viewCardModel.searchBy,
             filterSphere: viewCardModel.filterSphere.rawValue,
             filterType: viewCardModel.filterType.rawValue,
             filterPack: packs.map { $0.packCode },
@@ -108,6 +111,7 @@ struct CardList: View {
             .toolbar {
                 if !deckView {
                     ToolbarItemGroup(placement: .topBarTrailing) {
+                        CardSearchButton()
                         CardFilterButton()
                         CardSortButton()
                     }
