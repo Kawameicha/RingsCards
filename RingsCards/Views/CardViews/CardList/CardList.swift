@@ -65,7 +65,7 @@ struct CardList: View {
             case .code: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.code, order: sortOrder)]
             case .name: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.name, order: sortOrder)]
             case .cost: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.costs.cost, order: sortOrder), SortDescriptor(\.costs.threat, order: sortOrder)]
-            case .sphere: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.sphereCode, order: sortOrder)]
+            case .sphere: sortBy = [SortDescriptor(\Card.cardSort), SortDescriptor(\.sphereCode, order: sortOrder), SortDescriptor(\.name, order: sortOrder)]
             }
 
             var descriptor = FetchDescriptor<Card>(predicate: predicate, sortBy: sortBy)
