@@ -42,7 +42,7 @@ struct CardRow: View {
                         .font(.headline)
                 }
 
-                if card.stats.health != 0 {
+                if card.typeCode == "hero" || card.typeCode == "ally" {
                     HStack {
                         Text("\(card.stats.willpower ?? 0)" + " \u{E600}")
                             .font(Font.custom("SFUIText-Regular", size: 14))

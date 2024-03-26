@@ -56,7 +56,7 @@ struct CardView: View {
                             Text("Cost:" + " \(card.costs.cost)")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
                         }
-                        if card.stats.health != 0 {
+                        if card.typeCode == "hero" || card.typeCode == "ally" {
                             Text("\(card.stats.willpower ?? 0)" + " \u{E600}")
                                 .font(Font.custom("SFUIText-Regular", size: 20))
                             Text("\(card.stats.attack ?? 0)" + " \u{E601}")
