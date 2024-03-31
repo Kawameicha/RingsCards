@@ -33,13 +33,33 @@ struct CardRow: View {
 
             VStack(alignment: .leading, spacing: 3) {
                 if value != 0 {
-                    Text(card.name + " x \(value)")
-                        .foregroundColor(Color(card.sphereName))
-                        .font(.headline)
+                    if card.isUnique == true {
+                        HStack {
+                            Text("\u{E607}")
+                                .font(Font.custom("SFUIText-Regular", size: 14))
+                            Text(card.name + " x \(value)")
+                                .foregroundColor(Color(card.sphereName))
+                                .font(.headline)
+                        }
+                    } else {
+                        Text(card.name)
+                            .foregroundColor(Color(card.sphereName))
+                            .font(.headline)
+                    }
                 } else {
-                    Text(card.name)
-                        .foregroundColor(Color(card.sphereName))
-                        .font(.headline)
+                    if card.isUnique == true {
+                        HStack {
+                            Text("\u{E607}")
+                                .font(Font.custom("SFUIText-Regular", size: 14))
+                            Text(card.name)
+                                .foregroundColor(Color(card.sphereName))
+                                .font(.headline)
+                        }
+                    } else {
+                        Text(card.name)
+                            .foregroundColor(Color(card.sphereName))
+                            .font(.headline)
+                    }
                 }
 
                 if card.typeCode == "hero" || card.typeCode == "ally" {
