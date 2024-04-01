@@ -18,6 +18,7 @@ struct RuleView: View {
         self.rule = rule
 
         let predicate = Rule.predicate(
+            keywordOnly: false,
             searchText: "",
             filterRule: rule.seeAlso.map { $0.id }
         )

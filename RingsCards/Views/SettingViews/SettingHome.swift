@@ -19,11 +19,11 @@ struct SettingHome: View {
             }
 
             Section(header: Text("Rules")) {
-                NavigationLink(value: Router.ruleList) {
+                NavigationLink(value: Router.ruleList(keywordOnly: false)) {
                     Label("Glossary", systemImage: "square.fill.text.grid.1x2")
                 }
 
-                NavigationLink(value: Router.keywordList) {
+                NavigationLink(value: Router.ruleList(keywordOnly: true)) {
                     Label("Keywords", systemImage: "text.redaction")
                 }
             }

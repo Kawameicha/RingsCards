@@ -19,6 +19,7 @@ struct ScenarioKeywordList: View {
         self.scenario = scenario
 
         let predicate = Rule.predicate(
+            keywordOnly: true,
             searchText: "",
             filterRule: scenario.encounterRule.map { $0.code }
         )

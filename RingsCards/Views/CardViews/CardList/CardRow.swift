@@ -42,7 +42,7 @@ struct CardRow: View {
                                 .font(.headline)
                         }
                     } else {
-                        Text(card.name)
+                        Text(card.name + " x \(value)")
                             .foregroundColor(Color(card.sphereName))
                             .font(.headline)
                     }

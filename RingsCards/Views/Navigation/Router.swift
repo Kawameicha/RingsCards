@@ -20,9 +20,8 @@ enum Router: Hashable {
     case scenarioViewHome(campaign: Campaign, scenario: Scenario)
 
     case packList
-    case ruleList
+    case ruleList(keywordOnly: Bool)
     case ruleView(Rule)
-    case keywordList
     case supportHome
 }
 
@@ -52,12 +51,10 @@ extension View {
 
             case .packList:
                 PackList()
-            case .ruleList:
-                RuleList()
+            case .ruleList(keywordOnly: let keywordOnly):
+                RuleList(keywordOnly: keywordOnly)
             case .ruleView(let rule):
                 RuleView(rule: rule)
-            case .keywordList:
-                KeywordList()
             case .supportHome:
                 SupportHome()
             }

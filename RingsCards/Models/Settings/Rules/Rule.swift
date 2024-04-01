@@ -32,14 +32,25 @@ struct SeeAlso: Hashable, Codable, Identifiable {
 
 extension Rule {
     static func predicate(
+        keywordOnly: Bool,
         searchText: String,
         filterRule: [String]
     ) -> Predicate<Rule> {
 
         return #Predicate<Rule> { rule in
-            (filterRule.isEmpty || filterRule.contains(rule.id))
-            &&
-            (searchText.isEmpty || rule.name.localizedStandardContains(searchText))
+            if keywordOnly {
+                (filterRule.isEmpty || filterRule.contains(rule.id))
+                &&
+                (rule.isKeyword)
+                &&
+                (searchText.isEmpty || rule.name.localizedStandardContains(searchText))
+            } else {
+                (filterRule.isEmpty || filterRule.contains(rule.id))
+                &&
+                (!rule.isKeyword)
+                &&
+                (searchText.isEmpty || rule.name.localizedStandardContains(searchText))
+            }
         }
     }
 }
