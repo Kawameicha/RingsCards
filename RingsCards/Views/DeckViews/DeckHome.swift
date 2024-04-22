@@ -13,7 +13,7 @@ struct DeckHome: View {
 
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel
-        
+
         DeckList(
             sortDeckParameter: viewDeckModel.sortDeckParameter,
             sortOrder: viewDeckModel.sortOrder,
