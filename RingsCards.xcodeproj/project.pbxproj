@@ -100,7 +100,7 @@
 		59EA4DDA2B4037D00078F7F8 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA4DD92B4037D00078F7F8 /* CardInfo.swift */; };
 		59EDE7132AC8632F001288AE /* SampleCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EDE7122AC8632F001288AE /* SampleCampaign.swift */; };
 		59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */; };
-		59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */; };
+		59FD61BE2B5C1F2800C7EA67 /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD61BD2B5C1F2800C7EA67 /* CheckBoxStyle.swift */; };
 		729BF2A52A95861800E67871 /* CampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BF2A42A95861800E67871 /* CampaignView.swift */; };
 		F8443BFA2B7E4B630032AA7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8443BF92B7E4B630032AA7F /* Router.swift */; };
 /* End PBXBuildFile section */
@@ -201,7 +201,7 @@
 		59EA4DD92B4037D00078F7F8 /* CardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		59EDE7122AC8632F001288AE /* SampleCampaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCampaign.swift; sourceTree = "<group>"; };
 		59FD325E2AEE62EF00D9597B /* ScenarioKeywordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioKeywordList.swift; sourceTree = "<group>"; };
-		59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		59FD61BD2B5C1F2800C7EA67 /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 		729BF2A42A95861800E67871 /* CampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignView.swift; sourceTree = "<group>"; };
 		F8443BF92B7E4B630032AA7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,7 +292,7 @@
 		592ACE672B86A294001612C7 /* ViewStyling */ = {
 			isa = PBXGroup;
 			children = (
-				59FD61BD2B5C1F2800C7EA67 /* CheckboxStyle.swift */,
+				59FD61BD2B5C1F2800C7EA67 /* CheckBoxStyle.swift */,
 				592ACE682B87A799001612C7 /* GroupBoxStyle.swift */,
 			);
 			path = ViewStyling;
@@ -754,7 +754,7 @@
 				59B1A3862AEFE29F00ADB701 /* ScenarioViewEncounter.swift in Sources */,
 				596866572B98D060004442CA /* DeckCardInfo.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
-				59FD61BE2B5C1F2800C7EA67 /* CheckboxStyle.swift in Sources */,
+				59FD61BE2B5C1F2800C7EA67 /* CheckBoxStyle.swift in Sources */,
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
 				59FD325F2AEE62EF00D9597B /* ScenarioKeywordList.swift in Sources */,
 				59809C6E2B444FDE004BD1F2 /* DeckNewButton.swift in Sources */,

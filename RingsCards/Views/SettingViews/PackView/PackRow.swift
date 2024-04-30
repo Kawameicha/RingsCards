@@ -47,7 +47,7 @@ struct PackRow: View {
                         secondaryButton: .cancel(Text("No"))
                     )
                 }
-                .toggleStyle(CheckboxStyle())
+                .toggleStyle(CheckBoxStyle())
         }
     }
 }

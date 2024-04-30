@@ -1,5 +1,5 @@
 //
-//  CheckboxStyle.swift
+//  CheckBoxStyle.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 20.01.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CheckboxStyle: ToggleStyle {
+struct CheckBoxStyle: ToggleStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         HStack {
             configuration.label

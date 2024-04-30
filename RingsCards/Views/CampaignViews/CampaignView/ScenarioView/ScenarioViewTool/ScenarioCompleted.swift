@@ -18,7 +18,7 @@ struct ScenarioCompleted: View {
     var body: some View {
         HStack {
             Toggle("Completed", isOn: Bindable(campaign).completed[scenarioIndex])
-                .toggleStyle(CheckboxStyle())
+                .toggleStyle(CheckBoxStyle())
                 .onChange(of: campaign.completed[scenarioIndex]) {
                     campaign.updated = .now
                 }
