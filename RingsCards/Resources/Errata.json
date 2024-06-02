@@ -252,6 +252,18 @@
     "text": "Should have the uniqueness symbol before the card name."
   },
   {
+    "id": "radagast",
+    "code": "19145",
+    "isOfficial": false,
+    "text": "Should read: “While playing a Creature ally, Radagast gains the printed [leadership], [spirit], and [tactics] icons.”"
+  },
+  {
+    "id": "reforged",
+    "code": "19153",
+    "isOfficial": false,
+    "text": "Should read: “**Action**: Choose an *Item* attachment with a printed cost of X in any player’s discard pile and play that attachment for no cost. (The chosen attachment can belong to any sphere of influence.)”"
+  },
+  {
     "id": "helm_of_secrecy",
     "code": "22090",
     "isOfficial": false,
