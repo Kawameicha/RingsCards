@@ -7036,6 +7036,11 @@
         "date_update": "2022-02-25T16:42:24-03:00",
         "encounters": [
             {
+                "id": 216,
+                "code": "dunlending-warriors",
+                "name": "Dunlending Warriors"
+            },
+            {
                 "id": 226,
                 "code": "the-glittering-caves",
                 "name": "The Glittering Caves"
