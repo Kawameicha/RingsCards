@@ -28,6 +28,10 @@ struct CampaignViewHome: View {
     var body: some View {
         List {
             Section {
+                Image(campaign.code + "_cover")
+                    .aspectRatio(contentMode: .fill)
+                    .listRowInsets(EdgeInsets())
+
                 GroupBox(
                     label: Label(
                         title: { Text("Scenarios") },

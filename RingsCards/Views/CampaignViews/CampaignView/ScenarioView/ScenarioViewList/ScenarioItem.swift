@@ -16,6 +16,10 @@ struct ScenarioItem: View {
         GroupBox(
             label: Text("Scenario \(scenarioIndex + 1)")
                 .font(.subheadline)
+                .foregroundStyle(.white)
+                .background(Capsule()
+                        .fill(.yellow)
+                        .frame(width: 90, height: 30))
         ) {
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 ScenarioViewMark(isSet: Bindable(campaign).completed[scenarioIndex])
@@ -36,6 +40,16 @@ struct ScenarioItem: View {
             }
         }
         .groupBoxStyle(PlainGroupBoxStyle())
+//        .background(Color.yellow.frame(height: 20), alignment: .top)
+//        .background(Capsule()
+//                .fill(.red)
+//                .frame(width: 250, height: 50))
+        .padding()
+//        .background(
+//            PackIcon(image: Image(campaign.code), frame: 44)
+//                .resizable()
+//        )
+//        .backgroundStyle(.blue.gradient)
     }
 }
 
