@@ -33,10 +33,10 @@ struct CampaignViewHome: View {
                     .listRowInsets(EdgeInsets())
 
                 GroupBox(
-                    label: Label(
-                        title: { Text("Scenarios") },
-                        icon: { PackIcon(image: Image(campaign.code), frame: 20) }
-                    )
+//                    label: Label(
+//                        title: { Text("Scenarios") },
+//                        icon: { PackIcon(image: Image(campaign.code), frame: 20) }
+//                    )
                 ) {
                     ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
                         .frame(height: 100)

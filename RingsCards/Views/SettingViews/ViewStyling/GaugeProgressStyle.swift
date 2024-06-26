@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-struct GaugeProgressStyle: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct GaugeProgressStyle: ProgressViewStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        let fractionCompleted = configuration.fractionCompleted ?? 0
 
-#Preview {
-    GaugeProgressStyle()
+        return ZStack {
+            Circle()
+                .trim(from: 0, to: fractionCompleted)
+                .stroke(Color.white, style: StrokeStyle(lineWidth: 4.4, lineCap: .round))
+                .rotationEffect(.degrees(-90))
+        }
+    }
 }

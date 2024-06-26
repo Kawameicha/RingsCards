@@ -97,6 +97,7 @@ struct DeckChart: View {
             .frame(width: 44, height: 22)
 
             Text("\u{E600} \u{E601} \u{E602} \u{E603}")
+                .foregroundStyle(.white)
                 .font(Font.custom("SFUIText-Regular", size: 9))
         }
     }

@@ -41,10 +41,14 @@ struct CampaignList: View {
                     NavigationLink(value: Router.campaignViewHome(campaign: campaign, decks: campaign.decks)) {
                         CampaignRow(campaign: campaign)
                     }
+                    .listRowBackground(
+                        CampaignImage(campaign: campaign)
+                    )
                 }
                 .onDelete(perform: deleteItems)
             }
         }
+        .listRowSpacing(10.0)
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 CampaignSortButton()

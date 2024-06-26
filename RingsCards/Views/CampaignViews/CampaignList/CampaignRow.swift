@@ -8,20 +8,32 @@
 import SwiftUI
 
 struct CampaignRow: View {
+    @Environment(\.colorScheme) var colorScheme
     var campaign: Campaign
 
     var body: some View {
         HStack(spacing: 3) {
-            PackIcon(image: Image(campaign.code), frame: 44)
+            if colorScheme == .dark {
+                PackIcon(image: Image(campaign.code), frame: 44)
+            } else {
+                PackIcon(image: Image(campaign.code), frame: 44)
+                    .foregroundColor(.white)
+                    .colorInvert()
+            }
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(campaign.name)
+                    .foregroundStyle(.white)
                     .font(.headline)
 
                 Text("\(campaign.created.formatted(date: .abbreviated, time: .shortened))")
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.white)
                     .font(.subheadline)
             }
+
+            Spacer()
+
+            CampaignProgress(campaign: campaign)
         }
     }
 }
