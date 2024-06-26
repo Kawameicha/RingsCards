@@ -95,6 +95,9 @@ struct DeckList: View {
                         NavigationLink(value: Router.deckViewHome(deck: deck)) {
                             DeckRow(deck: deck)
                         }
+                        .listRowBackground(
+                                    DeckHeroImages(heroes: Array(deck.heroes.keys))
+                        )
 //                        .swipeActions(edge: .trailing) {
 //                            Button {
 //                                if deck.campaigns?.count ?? 0 > 0 {
@@ -127,6 +130,7 @@ struct DeckList: View {
                     }
                 }
             }
+            .listRowSpacing(10.0)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     DeckSortButton()

@@ -18,34 +18,40 @@ struct DeckRow: View {
 
         HStack(spacing: 3) {
             Image(systemName: "\(deck.threat).square")
+                .foregroundStyle(.white)
                 .font(.system(size: 42))
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(deck.name)
+                    .foregroundStyle(.white)
                     .font(.headline)
                 
                 if heroes < 2 {
                     if player - heroes < 2 {
                         Text("\(heroes) Hero, \(player - heroes) Card")
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.white)
                             .font(.subheadline)
                     } else {
                         Text("\(heroes) Hero, \(player - heroes) Cards")
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.white)
                             .font(.subheadline)
                     }
                 } else {
                     if player - heroes < 2 {
                         Text("\(heroes) Heroes, \(player - heroes) Card")
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.white)
                             .font(.subheadline)
                     } else {
                         Text("\(heroes) Heroes, \(player - heroes) Cards")
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.white)
                             .font(.subheadline)
                     }
                 }
             }
+
+            Spacer()
+
+            DeckChart(deck: deck)
         }
     }
 }
