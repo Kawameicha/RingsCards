@@ -61,6 +61,9 @@ extension String {
         text = text.replacing("<cite>", with: "*")
         text = text.replacing("</cite>", with: "*")
 
+        // Remove '~' symbols from RingsDB
+        text = text.replacing("~", with: "")
+
         // Replace hyperlinks block
 
         loop = true
