@@ -48,6 +48,9 @@ struct DeckList: View {
                 NavigationLink(value: Router.deckViewHome(deck: deck)) {
                     DeckRow(deck: deck)
                 }
+                .listRowBackground(
+                    DeckHeroImages(heroes: Array(deck.heroes.keys).sorted())
+                )
                 .swipeActions(edge: .trailing) {
                     Button {
                         campaign.decks.remove(at: campaign.decks.lastIndex(of: deck) ?? 0)
@@ -73,6 +76,9 @@ struct DeckList: View {
                         NavigationLink(value: Router.deckViewHome(deck: deck)) {
                             DeckRow(deck: deck)
                         }
+                        .listRowBackground(
+                            DeckHeroImages(heroes: Array(deck.heroes.keys).sorted())
+                        )
                         .swipeActions(edge: .trailing) {
                             Button {
                                 campaign.decks.insert(deck, at: campaign.decks.endIndex)
@@ -84,6 +90,7 @@ struct DeckList: View {
                     }
                 }
             }
+            .listRowSpacing(10.0)
         } else {
             List {
                 if decks.isEmpty {
@@ -96,7 +103,7 @@ struct DeckList: View {
                             DeckRow(deck: deck)
                         }
                         .listRowBackground(
-                                    DeckHeroImages(heroes: Array(deck.heroes.keys))
+                            DeckHeroImages(heroes: Array(deck.heroes.keys).sorted())
                         )
 //                        .swipeActions(edge: .trailing) {
 //                            Button {
