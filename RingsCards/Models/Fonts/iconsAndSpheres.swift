@@ -14,21 +14,21 @@ extension String {
         var text = self
 
         // Text formatting
-        text = text.replacing("[willpower]", with: "\u{E600}")
-        text = text.replacing("[attack]", with: "\u{E601}")
-        text = text.replacing("[defense]", with: "\u{E602}")
-        text = text.replacing("[health]", with: "\u{E603}")
-        text = text.replacing("[threat]", with: "\u{E604}")
-        text = text.replacing("[unique]", with: "\u{E607}")
-        text = text.replacing("[player]", with: "\u{E622}")
+        text = text.replacing(/\[willpower\]/.ignoresCase(), with: "\u{E600}")
+        text = text.replacing(/\[attack\]/.ignoresCase(), with: "\u{E601}")
+        text = text.replacing(/\[defense\]/.ignoresCase(), with: "\u{E602}")
+        text = text.replacing(/\[health\]/.ignoresCase(), with: "\u{E603}")
+        text = text.replacing(/\[threat\]/.ignoresCase(), with: "\u{E604}")
+        text = text.replacing(/\[unique\]/.ignoresCase(), with: "\u{E607}")
+        text = text.replacing(/\[player\]/.ignoresCase(), with: "\u{E622}")
 
-        text = text.replacing("[spirit]", with: "\u{E608}")
-        text = text.replacing("[leadership]", with: "\u{E609}")
-        text = text.replacing("[tactics]", with: "\u{E60A}")
-        text = text.replacing("[lore]", with: "\u{E60B}")
-        text = text.replacing("[baggins]", with: "\u{E60C}")
-        text = text.replacing("[fellowship]", with: "\u{E60D}")
-        text = text.replacing("[neutral]", with: "\u{E60E}")
+        text = text.replacing(/\[spirit\]/.ignoresCase(), with: "\u{E608}")
+        text = text.replacing(/\[leadership\]/.ignoresCase(), with: "\u{E609}")
+        text = text.replacing(/\[tactics\]/.ignoresCase(), with: "\u{E60A}")
+        text = text.replacing(/\[lore\]/.ignoresCase(), with: "\u{E60B}")
+        text = text.replacing(/\[baggins\]/.ignoresCase(), with: "\u{E60C}")
+        text = text.replacing(/\[fellowship\]/.ignoresCase(), with: "\u{E60D}")
+        text = text.replacing(/\[neutral\]/.ignoresCase(), with: "\u{E60E}")
 
         return text
     }
