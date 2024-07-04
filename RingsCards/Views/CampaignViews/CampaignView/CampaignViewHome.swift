@@ -29,6 +29,7 @@ struct CampaignViewHome: View {
         List {
             Section {
                 Image(campaign.code + "_cover")
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
                     .listRowInsets(EdgeInsets())
 
@@ -45,7 +46,12 @@ struct CampaignViewHome: View {
             }
 
             Section {
-                Text("Decks")
+//                Image("emptyDeck")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fill)
+//                    .listRowInsets(EdgeInsets())
+
+//                Text("Decks")
                 DeckList(campaign: campaign, campaignView: true, campaignDeck: false)
             }
 
