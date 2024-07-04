@@ -91,6 +91,18 @@ struct DeckList: View {
                 }
             }
             .listRowSpacing(10.0)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    DeckSortButton()
+                    DeckNewButton()
+                }
+
+                ToolbarItem(placement: .status) {
+                    DeckInfo(count: decks.count)
+                }
+            }
+            .searchable(text: $viewDeckModel.searchText)
+            .disableAutocorrection(true)
         } else {
             List {
                 if decks.isEmpty {
