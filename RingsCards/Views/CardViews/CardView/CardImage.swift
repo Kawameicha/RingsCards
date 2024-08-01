@@ -19,7 +19,13 @@ struct CardImage: View {
             case .success(let image):
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .scaledToFill()
+                    .frame(width: 250, height: 200, alignment: .top)
+                    .clipShape(Circle())
+                    .overlay {
+                        Circle().stroke(.white, lineWidth: 4)
+                    }
+                    .shadow(radius: 7)
             case .failure:
                 Image(systemName: "AppIcon")
             @unknown default:

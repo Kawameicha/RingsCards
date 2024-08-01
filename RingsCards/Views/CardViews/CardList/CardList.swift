@@ -95,7 +95,7 @@ struct CardList: View {
                             card.typeName.contains("\(type)")
                         }) { card in
                             NavigationLink {
-                                CardView(card: card)
+                                CardVStack(cards: cards, card: card)
                             } label: {
                                 if editCard {
                                     DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])
@@ -127,17 +127,21 @@ struct CardList: View {
             }
         } else if !editBoons {
             ForEach(cards.filter { card in
-                campaign.slots.filter { $1 > 0 }.map { $0.key }.contains(card.code)
+                campaign.slots[card.code, default: 0] > 0
             }) { card in
-                NavigationLink(value: Router.cardView(card)) {
+                NavigationLink {
+                    CardVStack(cards: cards.filter { card in
+                        campaign.slots[card.code, default: 0] > 0
+                    }, card: card)
+                } label: {
                     CardRow(card: card, value: campaign.slots["\(card.code)", default: 0])
                 }
             }
         } else {
-            ForEach(cards.filter { card in
-                campaign.slots.map { String($0.key) }.contains(card.code)
-            }) { card in
-                NavigationLink(value: Router.cardView(card)) {
+            ForEach(cards) { card in
+                NavigationLink {
+                    CardVStack(cards: cards, card: card)
+                } label: {
                     CampaignCardEdit(campaign: campaign, card: card, value: campaign.slots["\(card.code)", default: 0])
                 }
             }
