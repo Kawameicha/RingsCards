@@ -28,22 +28,27 @@ struct ScenarioVStack: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            GeometryReader { item in
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top) {
-                        ForEach(scenarios) { scenario in
-                            NavigationLink(value: Router.scenarioViewHome(campaign: campaign, scenario: scenario)) {
-                                ScenarioItem(campaign: campaign, scenario: scenario)
+            ScrollViewReader { value in
+                GeometryReader { item in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(alignment: .top) {
+                            ForEach(scenarios) { scenario in
+                                NavigationLink(value: Router.scenarioViewHome(campaign: campaign, scenario: scenario)) {
+                                    ScenarioItem(campaign: campaign, scenario: scenario)
+                                }
+                                .frame(width: item.size.width, alignment: .center)
                             }
-                            .frame(width: item.size.width, alignment: .center)
+                        }
+                        .onAppear {
+                            value.scrollTo(campaign.scenarios[campaign.completed.firstIndex(of: false) ?? campaign.completed.count - 1])
                         }
                     }
+                    .scrollTargetLayout()
+                    .scrollClipDisabled()
                 }
-                .scrollTargetLayout()
-                .scrollClipDisabled()
+                .scrollTargetBehavior(.viewAligned)
+                .safeAreaPadding(.horizontal)
             }
-            .scrollTargetBehavior(.paging)
-            .safeAreaPadding(.horizontal)
         }
     }
 }
