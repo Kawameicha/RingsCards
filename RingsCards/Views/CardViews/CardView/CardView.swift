@@ -75,26 +75,10 @@ struct CardView: View {
                                     .font(.system(size: 14, weight: .light, design: .serif))
                                     .italic()
                                 }
-
-                                HStack {
-                                    Text("Illus. \(card.texts.illustrator)")
-                                        .font(.footnote)
-                                    Spacer()
-                                    Text("\(card.packName) # \(card.position)")
-                                        .font(.footnote)
-                                }
                             }
                             .frame(maxWidth: .infinity)
                         }
                         .backgroundStyle(Color(card.sphereName))
-
-                        CardErratum(card: card)
-
-                        HStack {
-                            Text(.init("See on [RingsDB](\(card.texts.url)) "))
-                            Text("\u{E60D}")
-                                .font(Font.custom("SFUIText-Regular", size: 20))
-                        }
                     }
                 }
                 .frame(height: item.size.height)

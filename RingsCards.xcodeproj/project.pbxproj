@@ -67,6 +67,7 @@
 		599719692AC300EC0095AAE7 /* PreviewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */; };
 		5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997196A2AC3011D0095AAE7 /* SampleDeck.swift */; };
 		59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59992F562AAB0CE300C6307E /* DeckNew.swift */; };
+		599A61592C5BB17100DA3F74 /* ScenarioViewDonut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599A61582C5BB17100DA3F74 /* ScenarioViewDonut.swift */; };
 		59A4E2C62AFEA71E00CE9BEA /* CampaignCardEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */; };
 		59A5E6582B43345F0028A3DE /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5E6572B43345F0028A3DE /* AppScreen.swift */; };
 		59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5E6592B4335E20028A3DE /* AppTabView.swift */; };
@@ -76,6 +77,8 @@
 		59AFE7F32B29E56D008AF007 /* SFUIText-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE7F22B29E56D008AF007 /* SFUIText-BoldItalic.ttf */; };
 		59B1A3862AEFE29F00ADB701 /* ScenarioViewEncounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B1A3852AEFE29F00ADB701 /* ScenarioViewEncounter.swift */; };
 		59B943FA2AC6BE8D0059C52A /* CardFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B943F92AC6BE8D0059C52A /* CardFilterButton.swift */; };
+		59BD5AAE2C5CDA2F00A84157 /* CardRingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD5AAD2C5CDA2F00A84157 /* CardRingsButton.swift */; };
+		59BD5AB02C5CE00700A84157 /* CardFaqButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD5AAF2C5CE00700A84157 /* CardFaqButton.swift */; };
 		59C140462AC1789A00A9F20C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C140452AC1789A00A9F20C /* Deck.swift */; };
 		59C1404D2AC1C26500A9F20C /* DeckCardEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1404C2AC1C26500A9F20C /* DeckCardEdit.swift */; };
 		59C357442AAF5374009CA291 /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C357432AAF5374009CA291 /* CardImage.swift */; };
@@ -88,7 +91,6 @@
 		59C779662B7BFA05002AFB03 /* Errata.json in Resources */ = {isa = PBXBuildFile; fileRef = 59C779652B7BFA05002AFB03 /* Errata.json */; };
 		59C779692B7BFAFF002AFB03 /* Erratum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C779682B7BFAFF002AFB03 /* Erratum.swift */; };
 		59C7796B2B7BFB42002AFB03 /* ErratumDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7796A2B7BFB42002AFB03 /* ErratumDecoder.swift */; };
-		59C7796F2B7E7E18002AFB03 /* CardErratum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7796E2B7E7E18002AFB03 /* CardErratum.swift */; };
 		59C82C222B13A5840073C4FA /* htmlToMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C82C212B13A5840073C4FA /* htmlToMarkdown.swift */; };
 		59C82C242B13AECD0073C4FA /* iconsAndSpheres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C82C232B13AECD0073C4FA /* iconsAndSpheres.swift */; };
 		59C87AF12AA5CEC80058CB2A /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C87AF02AA5CEC80058CB2A /* Campaign.swift */; };
@@ -172,6 +174,7 @@
 		599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModelContainer.swift; sourceTree = "<group>"; };
 		5997196A2AC3011D0095AAE7 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		59992F562AAB0CE300C6307E /* DeckNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckNew.swift; sourceTree = "<group>"; };
+		599A61582C5BB17100DA3F74 /* ScenarioViewDonut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewDonut.swift; sourceTree = "<group>"; };
 		59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardEdit.swift; sourceTree = "<group>"; };
 		59A5E6572B43345F0028A3DE /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		59A5E6592B4335E20028A3DE /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 		59AFE7F22B29E56D008AF007 /* SFUIText-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-BoldItalic.ttf"; sourceTree = "<group>"; };
 		59B1A3852AEFE29F00ADB701 /* ScenarioViewEncounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewEncounter.swift; sourceTree = "<group>"; };
 		59B943F92AC6BE8D0059C52A /* CardFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFilterButton.swift; sourceTree = "<group>"; };
+		59BD5AAD2C5CDA2F00A84157 /* CardRingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRingsButton.swift; sourceTree = "<group>"; };
+		59BD5AAF2C5CE00700A84157 /* CardFaqButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFaqButton.swift; sourceTree = "<group>"; };
 		59C140452AC1789A00A9F20C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		59C1404C2AC1C26500A9F20C /* DeckCardEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardEdit.swift; sourceTree = "<group>"; };
 		59C357432AAF5374009CA291 /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
@@ -193,7 +198,6 @@
 		59C779652B7BFA05002AFB03 /* Errata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Errata.json; sourceTree = "<group>"; };
 		59C779682B7BFAFF002AFB03 /* Erratum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Erratum.swift; sourceTree = "<group>"; };
 		59C7796A2B7BFB42002AFB03 /* ErratumDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErratumDecoder.swift; sourceTree = "<group>"; };
-		59C7796E2B7E7E18002AFB03 /* CardErratum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardErratum.swift; sourceTree = "<group>"; };
 		59C82C212B13A5840073C4FA /* htmlToMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = htmlToMarkdown.swift; sourceTree = "<group>"; };
 		59C82C232B13AECD0073C4FA /* iconsAndSpheres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconsAndSpheres.swift; sourceTree = "<group>"; };
 		59C851962B277E03009327D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 			children = (
 				593A3EF52B99EA520030FDCC /* ScenarioCompleted.swift */,
 				5951BA702AB061380047DE1F /* ScenarioViewChart.swift */,
+				599A61582C5BB17100DA3F74 /* ScenarioViewDonut.swift */,
 				59B1A3852AEFE29F00ADB701 /* ScenarioViewEncounter.swift */,
 				59862D7A2A9217F600628449 /* ScenarioViewIcon.swift */,
 				595C7BE82A93985D0094E64F /* ScenarioViewMark.swift */,
@@ -407,7 +412,7 @@
 		595078702AC5BC1B007BFAA0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				59C779672B7BFAE9002AFB03 /* Erratas */,
+				59C779672B7BFAE9002AFB03 /* Errata */,
 				594E38E02AD29EA900577EE0 /* Packs */,
 				59C779592B79153A002AFB03 /* Rules */,
 			);
@@ -522,8 +527,10 @@
 		59B6E9B32A9A0C2D0056EE8D /* CardTool */ = {
 			isa = PBXGroup;
 			children = (
+				59BD5AAF2C5CE00700A84157 /* CardFaqButton.swift */,
 				59B943F92AC6BE8D0059C52A /* CardFilterButton.swift */,
 				59EA4DD92B4037D00078F7F8 /* CardInfo.swift */,
+				59BD5AAD2C5CDA2F00A84157 /* CardRingsButton.swift */,
 				592E0D2F2BB0381E000CE62E /* CardSearchButton.swift */,
 				595078742AC5D8FA007BFAA0 /* CardSortButton.swift */,
 			);
@@ -549,13 +556,13 @@
 			path = RuleView;
 			sourceTree = "<group>";
 		};
-		59C779672B7BFAE9002AFB03 /* Erratas */ = {
+		59C779672B7BFAE9002AFB03 /* Errata */ = {
 			isa = PBXGroup;
 			children = (
 				59C779682B7BFAFF002AFB03 /* Erratum.swift */,
 				59C7796A2B7BFB42002AFB03 /* ErratumDecoder.swift */,
 			);
-			path = Erratas;
+			path = Errata;
 			sourceTree = "<group>";
 		};
 		59C9DD222B5AD9EF0094B3FB /* Scenarios */ = {
@@ -581,7 +588,6 @@
 		59E3C47B2B3C8F0300E74D0D /* CardView */ = {
 			isa = PBXGroup;
 			children = (
-				59C7796E2B7E7E18002AFB03 /* CardErratum.swift */,
 				59C357432AAF5374009CA291 /* CardImage.swift */,
 				592264F42A90AB09002A7648 /* CardView.swift */,
 				5933509D2C590C0800CD2F5A /* CardVStack.swift */,
@@ -773,6 +779,7 @@
 				595078752AC5D8FA007BFAA0 /* CardSortButton.swift in Sources */,
 				59B1A3862AEFE29F00ADB701 /* ScenarioViewEncounter.swift in Sources */,
 				596866572B98D060004442CA /* DeckCardInfo.swift in Sources */,
+				599A61592C5BB17100DA3F74 /* ScenarioViewDonut.swift in Sources */,
 				59735A9E2C29D81400F5E0AD /* DeckChart.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
 				59FD61BE2B5C1F2800C7EA67 /* CheckBoxStyle.swift in Sources */,
@@ -814,15 +821,16 @@
 				593223622A9CA71200AA7751 /* DeckRow.swift in Sources */,
 				59C357442AAF5374009CA291 /* CardImage.swift in Sources */,
 				599719692AC300EC0095AAE7 /* PreviewModelContainer.swift in Sources */,
-				59C7796F2B7E7E18002AFB03 /* CardErratum.swift in Sources */,
 				59D835412AFF92A2000C160E /* CampaignViewHome.swift in Sources */,
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
+				59BD5AB02C5CE00700A84157 /* CardFaqButton.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
 				593A3EF42B99B2C80030FDCC /* CampaignScenarioInfo.swift in Sources */,
 				59735AA42C2C7C8C00F5E0AD /* CampaignProgress.swift in Sources */,
 				59C779692B7BFAFF002AFB03 /* Erratum.swift in Sources */,
 				59C779622B791A0D002AFB03 /* RuleView.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
+				59BD5AAE2C5CDA2F00A84157 /* CardRingsButton.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,
 				596DD7EF2A9E161C00556B7B /* ScenarioViewHome.swift in Sources */,
 				59C7795B2B791558002AFB03 /* Rule.swift in Sources */,
