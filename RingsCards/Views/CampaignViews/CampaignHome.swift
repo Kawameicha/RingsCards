@@ -13,7 +13,7 @@ struct CampaignHome: View {
 
     var body: some View {
         @Bindable var viewCampaignModel = viewCampaignModel
-        
+
         CampaignList(
             sortCampaignParameter: viewCampaignModel.sortCampaignParameter,
             sortOrder: viewCampaignModel.sortOrder,

@@ -40,8 +40,9 @@ struct ScenarioViewHome: View {
                 Text("The *\(scenario.name)* encounter deck is built with all the cards from the following encounter sets:")
 
                 ScenarioViewEncounter(scenario: scenario)
-                
-                ScenarioViewChart(scenario: scenario)
+
+                ScenarioViewDonut(scenario: scenario)
+                    .frame(height: 250)
 
                 Text("The rules for each of the keywords present in the *\(scenario.name)* encounter deck are as follows:")
 
