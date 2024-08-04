@@ -95,10 +95,14 @@ struct CardList: View {
                             card.typeName.contains("\(type)")
                         }) { card in
                             NavigationLink {
-                                CardVStack(cards: cards, card: card)
+                                if editCard {
+                                    CardVStack(cards: cards, deck: deck, card: card)
+                                } else {
+                                    CardVStack(cards: cards, card: card)
+                                }
                             } label: {
                                 if editCard {
-                                    DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])
+                                    CardRow(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])
                                 } else {
                                     CardRow(card: card, value: deck.cardSlots["\(card.code)", default: 0])
                                 }
@@ -108,6 +112,7 @@ struct CardList: View {
                     }
                 }
             }
+            .listStyle(.plain)
             .toolbar {
                 if !deckView {
                     ToolbarItemGroup(placement: .topBarTrailing) {
@@ -142,7 +147,7 @@ struct CardList: View {
                 NavigationLink {
                     CardVStack(cards: cards, card: card)
                 } label: {
-                    CampaignCardEdit(campaign: campaign, card: card, value: campaign.slots["\(card.code)", default: 0])
+                    CardRow(campaign: campaign, card: card, value: campaign.slots["\(card.code)", default: 0])
                 }
             }
 //            .onAppear {

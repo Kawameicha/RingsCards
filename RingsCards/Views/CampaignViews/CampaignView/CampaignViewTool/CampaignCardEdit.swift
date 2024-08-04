@@ -13,34 +13,32 @@ struct CampaignCardEdit: View {
     var value = 0
 
     var body: some View {
-        HStack(spacing: 9) {
-            VStack(spacing: 9) {
-                Button {
-                    if value < card.deckLimit {
-                        campaign.slots["\(card.code)", default: value] += 1
-                        campaign.updated = .now
-                    }
-                } label: {
-                    Image(systemName: "plus.square")
+        HStack(alignment: .center, spacing: 3) {
+            Button {
+                if value > 1 {
+                    campaign.slots["\(card.code)", default: value] -= 1
+                    campaign.updated = .now
+                } else if value == 1 {
+                    campaign.slots["\(card.code)"] = 0
+                    campaign.updated = .now
                 }
-                .buttonStyle(PlainButtonStyle())
-
-                Button {
-                    if value > 1 {
-                        campaign.slots["\(card.code)", default: value] -= 1
-                        campaign.updated = .now
-                    } else if value == 1 {
-                        campaign.slots["\(card.code)"] = 0
-                        campaign.updated = .now
-                    }
-                } label: {
-                    Image(systemName: "minus.square")
-                }
-                .buttonStyle(PlainButtonStyle())
+            } label: {
+                Image(systemName: "minus")
             }
 
-            CardRow(card: card, value: value)
+            CardCount(card: card, value: value)
+
+            Button {
+                if value < card.deckLimit {
+                    campaign.slots["\(card.code)", default: value] += 1
+                    campaign.updated = .now
+                }
+            } label: {
+                Image(systemName: "plus")
+            }
         }
+        .buttonStyle(PlainButtonStyle())
+        .font(.system(size: 24))
     }
 }
 

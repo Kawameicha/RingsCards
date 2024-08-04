@@ -18,7 +18,7 @@ struct DeckCardInfo: View {
                 return result + keyValue.value }
 
             VStack {
-                if heroes < 2 {
+                if heroes < 3 {
                     if player - heroes < 2 {
                         Text("\(heroes) Hero, \(player - heroes) Card")
                             .foregroundColor(.secondary)

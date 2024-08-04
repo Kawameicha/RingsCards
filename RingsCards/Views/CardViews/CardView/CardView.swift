@@ -79,10 +79,20 @@ struct CardView: View {
                             .frame(maxWidth: .infinity)
                         }
                         .backgroundStyle(Color(card.sphereName))
+
+                        HStack {
+                            Text("Illus. \(card.texts.illustrator)")
+                                .font(.footnote)
+                            Spacer()
+                            Text("\(card.packName) # \(card.position)")
+                                .font(.footnote)
+                        }
                     }
                 }
                 .frame(height: item.size.height)
             }
         }
+        .offset(y: 100)
+        .padding(.bottom, 100)
     }
 }

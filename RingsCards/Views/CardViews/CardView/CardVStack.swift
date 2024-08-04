@@ -10,6 +10,7 @@ import SwiftUI
 struct CardVStack: View {
     @State var scrollPosition: String?
     var cards: [Card]
+    var deck: Deck?
     var card: Card
 
     var body: some View {
@@ -25,8 +26,7 @@ struct CardVStack: View {
                                     GeometryReader { geometry in
                                         Color.clear
                                             .onAppear {
-                                                if geometry.frame(in: .global).minX >= 0 &&
-                                                    geometry.frame(in: .global).maxX <= UIScreen.main.bounds.width {
+                                                if geometry.frame(in: .global).minX >= 0 && geometry.frame(in: .global).maxX <= UIScreen.main.bounds.width {
                                                     scrollPosition = card.code
                                                 }
                                             }
@@ -38,15 +38,13 @@ struct CardVStack: View {
                                             CardFaqButton(card: card)
                                             CardRingsButton(card: card)
                                         }
+                                    }
 
+                                    if scrollPosition == card.code, let deck = deck {
                                         ToolbarItem(placement: .status) {
                                             HStack {
-                                                Text("Illus. \(card.texts.illustrator)")
-                                                    .font(.footnote)
-                                                Spacer()
-                                                Text("\(card.packName) # \(card.position)")
-                                                    .font(.footnote)
-                                            }
+                                                DeckCardInfo(deck: deck)
+                                                DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])}
                                         }
                                     }
                                 }

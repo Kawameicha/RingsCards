@@ -13,44 +13,42 @@ struct DeckCardEdit: View {
     var value = 0
 
     var body: some View {
-        HStack(spacing: 9) {
-            VStack(spacing: 9) {
-                Button {
-                    if value < card.deckLimit {
-                        deck.cardSlots["\(card.code)", default: value] += 1
-                        deck.updated = .now
+        HStack(alignment: .center, spacing: 3) {
+            Button {
+                if value > 1 {
+                    deck.cardSlots["\(card.code)", default: value] -= 1
+                    deck.updated = .now
+                } else if value == 1 {
+                    deck.cardSlots["\(card.code)"] = nil
+                    deck.updated = .now
 
-                        if card.costs.threat != -1 {
-                            deck.threat += card.costs.threat
-                            deck.heroes["\(card.code)", default: value] += 1
-                        }
+                    if card.costs.threat != -1 {
+                        deck.threat -= card.costs.threat
+                        deck.heroes["\(card.code)"] = nil
                     }
-                } label: {
-                    Image(systemName: "plus.square")
                 }
-                .buttonStyle(PlainButtonStyle())
-
-                Button {
-                    if value > 1 {
-                        deck.cardSlots["\(card.code)", default: value] -= 1
-                        deck.updated = .now
-                    } else if value == 1 {
-                        deck.cardSlots["\(card.code)"] = nil
-                        deck.updated = .now
-
-                        if card.costs.threat != -1 {
-                            deck.threat -= card.costs.threat
-                            deck.heroes["\(card.code)"] = nil
-                        }
-                    }
-                } label: {
-                    Image(systemName: "minus.square")
-                }
-                .buttonStyle(PlainButtonStyle())
+            } label: {
+                Image(systemName: "minus")
             }
 
-            CardRow(card: card, value: value)
+            CardCount(card: card, value: value)
+
+            Button {
+                if value < card.deckLimit {
+                    deck.cardSlots["\(card.code)", default: value] += 1
+                    deck.updated = .now
+
+                    if card.costs.threat != -1 {
+                        deck.threat += card.costs.threat
+                        deck.heroes["\(card.code)", default: value] += 1
+                    }
+                }
+            } label: {
+                Image(systemName: "plus")
+            }
         }
+        .buttonStyle(PlainButtonStyle())
+        .font(.system(size: 24))
     }
 }
 

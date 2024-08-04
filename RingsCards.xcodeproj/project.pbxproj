@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59048F622C5E7CA900718999 /* CardCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59048F612C5E7CA900718999 /* CardCount.swift */; };
 		590874752AC3346C00E768F2 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874742AC3346C00E768F2 /* ModelPreview.swift */; };
 		590874772AC3379A00E768F2 /* RingsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590874762AC3379A00E768F2 /* RingsUserData.swift */; };
 		590E53972B69500E0009E5A3 /* SupportHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590E53962B69500E0009E5A3 /* SupportHome.swift */; };
@@ -113,6 +114,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59048F612C5E7CA900718999 /* CardCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCount.swift; sourceTree = "<group>"; };
 		590874742AC3346C00E768F2 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		590874762AC3379A00E768F2 /* RingsUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsUserData.swift; sourceTree = "<group>"; };
 		590E53962B69500E0009E5A3 /* SupportHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportHome.swift; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 		59B6E9B32A9A0C2D0056EE8D /* CardTool */ = {
 			isa = PBXGroup;
 			children = (
+				59048F612C5E7CA900718999 /* CardCount.swift */,
 				59BD5AAF2C5CE00700A84157 /* CardFaqButton.swift */,
 				59B943F92AC6BE8D0059C52A /* CardFilterButton.swift */,
 				59EA4DD92B4037D00078F7F8 /* CardInfo.swift */,
@@ -799,6 +802,7 @@
 				729BF2A52A95861800E67871 /* CampaignView.swift in Sources */,
 				592E0D302BB0381E000CE62E /* CardSearchButton.swift in Sources */,
 				F8443BFA2B7E4B630032AA7F /* Router.swift in Sources */,
+				59048F622C5E7CA900718999 /* CardCount.swift in Sources */,
 				595A66B32A9DE8930040C952 /* SettingHome.swift in Sources */,
 				59735AA22C2C7C5C00F5E0AD /* CampaignImage.swift in Sources */,
 				59735AA02C2B0CAD00F5E0AD /* DeckHeroImages.swift in Sources */,
