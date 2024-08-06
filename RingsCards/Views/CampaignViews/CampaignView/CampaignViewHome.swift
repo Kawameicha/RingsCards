@@ -10,14 +10,14 @@ import SwiftUI
 struct CampaignViewHome: View {
     @Environment(ViewDeckModel.self) var viewDeckModel
     @Environment(\.modelContext) var modelContext
-    @State var editBoons = false
+    @State var editBoon = false
     @State var editNotes = false
     @Bindable var campaign: Campaign
     var decks: [Deck]
 
     init(
-        editBoons: Bool = false,
-        editNotes: Bool = false,
+//        editBoons: Bool = false,
+//        editNotes: Bool = false,
         campaign: Campaign,
         decks: [Deck]
     ) {
@@ -60,8 +60,7 @@ struct CampaignViewHome: View {
                     Text("Boons & Burdens")
                     CardList(
                         campaign: campaign,
-                        campaignView: true,
-                        editBoons: $editBoons,
+                        editBoon: $editBoon,
                         filterPack: [],
                         filterDeck: campaign.slots.map { String($0.key) },
                         sortParameter: SortParameter.code
@@ -73,7 +72,7 @@ struct CampaignViewHome: View {
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 if campaign.campaignMode == true {
-                    CampaignBoonButton(editBoons: $editBoons)
+                    CampaignBoonButton(editBoons: $editBoon)
                 }
                 CampaignNoteButton(editNotes: $editNotes)
             }

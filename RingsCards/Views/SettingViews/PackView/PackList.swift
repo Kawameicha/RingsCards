@@ -50,7 +50,6 @@ struct PackList: View {
                     }) { pack in
                         NavigationLink {
                             CardList(
-                                deckView: true,
                                 filterSphere: .all,
                                 filterType: .any,
                                 filterPack: [pack.packCode],

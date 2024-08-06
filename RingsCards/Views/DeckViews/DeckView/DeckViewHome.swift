@@ -23,9 +23,7 @@ struct DeckViewHome: View {
         if viewCard {
             CardList(
                 deck: deck,
-                deckView: true,
                 editCard: .constant(true),
-                viewCard: $viewCard,
                 filterSphere: viewCardModel.filterSphere,
                 filterType: viewCardModel.filterType,
                 filterPack: packs.map { $0.packCode },
@@ -55,9 +53,7 @@ struct DeckViewHome: View {
         } else {
             CardList(
                 deck: deck,
-                deckView: true,
                 editCard: $editCard,
-                viewCard: .constant(false),
                 filterPack: [],
                 filterDeck: deck.cardSlots.map { String($0.key) }
             )

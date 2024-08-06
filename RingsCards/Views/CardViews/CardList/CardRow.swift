@@ -76,6 +76,7 @@ struct CardRow: View {
                 CardCount(card: card, value: value)
             }
         }
+        .lineLimit(1)
     }
 }
 

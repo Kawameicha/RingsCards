@@ -42,7 +42,7 @@ final class Deck: Identifiable {
 
 extension Deck {
     static var emptyDeck: Deck {
-        Deck(name: "")
+        Deck(code: -1, name: "")
     }
 }
 
