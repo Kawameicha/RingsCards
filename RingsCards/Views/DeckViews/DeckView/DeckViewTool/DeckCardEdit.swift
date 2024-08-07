@@ -28,7 +28,13 @@ struct DeckCardEdit: View {
                     }
                 }
             } label: {
-                Image(systemName: "minus")
+                if value > 0 {
+                    Image(systemName: "minus.square")
+                        .foregroundStyle(.accent)
+                } else {
+                    Image(systemName: "minus.square")
+                        .opacity(0.1)
+                }
             }
 
             CardCount(card: card, value: value)
@@ -44,7 +50,13 @@ struct DeckCardEdit: View {
                     }
                 }
             } label: {
-                Image(systemName: "plus")
+                if value < card.deckLimit {
+                    Image(systemName: "plus.square")
+                        .foregroundStyle(.accent)
+                } else {
+                    Image(systemName: "plus.square")
+                        .opacity(0.1)
+                }
             }
         }
         .buttonStyle(PlainButtonStyle())

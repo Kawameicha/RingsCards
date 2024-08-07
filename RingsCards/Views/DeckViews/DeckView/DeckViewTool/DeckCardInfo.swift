@@ -19,14 +19,14 @@ struct DeckCardInfo: View {
 
             VStack {
                 if heroes < 3 {
-                    if player - heroes < 2 {
+                    if heroes < 2 {
                         Text("\(heroes) Hero, \(player - heroes) Card")
                             .foregroundColor(.secondary)
                             .font(.subheadline)
                         Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")
                             .foregroundStyle(.red)
                     } else {
-                        Text("\(heroes) Hero, \(player - heroes) Cards")
+                        Text("\(heroes) Heroes, \(player - heroes) Cards")
                             .foregroundColor(.secondary)
                             .font(.subheadline)
                         Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")

@@ -16,10 +16,10 @@ struct CardCount: View {
             .foregroundColor(Color(card.sphereName))
             .overlay(alignment: .center) {
                 Text("x\(value)")
-                    .font(.system(size: 10))
+                    .font(.system(size: 14))
                     .colorInvert()
             }
-            .font(.system(size: 24))
+            .font(.system(size: 33))
     }
 }
 
