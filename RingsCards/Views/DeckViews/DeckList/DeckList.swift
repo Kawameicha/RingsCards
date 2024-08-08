@@ -60,6 +60,8 @@ struct DeckList: View {
             if campaign.decks.count <= 4 {
                 NavigationLink {
                     DeckList(
+                        campaign: campaign,
+                        editDeck: true,
                         sortDeckParameter: viewDeckModel.sortDeckParameter,
                         sortOrder: viewDeckModel.sortOrder,
                         searchText: viewDeckModel.searchText
