@@ -13,22 +13,19 @@ struct DeckList: View {
     @Environment(\.modelContext) var modelContext
     @Query var decks: [Deck]
     @Bindable var campaign: Campaign
-    var campaignView = false
-    var campaignDeck = false
-    @State private var confirmDelete = false
+    @State private var cannotDelete = false
+    var editDeck: Bool
 
     init(
         campaign: Campaign = Campaign.emptyCampaign,
-        campaignView: Bool = false,
-        campaignDeck: Bool = false,
+        editDeck: Bool = false,
 
         sortDeckParameter: SortDeckParameter = .name,
         sortOrder: SortOrder = .forward,
         searchText: String = ""
     ) {
         self.campaign = campaign
-        self.campaignView = campaignView
-        self.campaignDeck = campaignDeck
+        self.editDeck = editDeck
 
         let predicate = Deck.predicate(
             searchText: searchText
@@ -43,7 +40,7 @@ struct DeckList: View {
     var body: some View {
         @Bindable var viewDeckModel = viewDeckModel
 
-        if campaignView {
+        if campaign.code != "" && !editDeck {
             ForEach(campaign.decks) { deck in
                 NavigationLink(value: Router.deckViewHome(deck: deck)) {
                     DeckRow(deck: deck)
@@ -61,48 +58,18 @@ struct DeckList: View {
                 }
             }
             if campaign.decks.count <= 4 {
-                NavigationLink(value: Router.deckList(campaign: campaign, campaignView: false, campaignDeck: true)) {
+                NavigationLink {
+                    DeckList(
+                        sortDeckParameter: viewDeckModel.sortDeckParameter,
+                        sortOrder: viewDeckModel.sortOrder,
+                        searchText: viewDeckModel.searchText
+                    )
+                    .searchable(text: $viewDeckModel.searchText)
+                    .disableAutocorrection(true)
+                } label: {
                     Text("Attach a Deck")
                 }
             }
-        } else if campaignDeck {
-            List {
-                if decks.isEmpty {
-                    NavigationLink(value: Router.deckNew) {
-                        Text("Create a Deck")
-                    }
-                } else {
-                    ForEach(decks) { deck in
-                        NavigationLink(value: Router.deckViewHome(deck: deck)) {
-                            DeckRow(deck: deck)
-                        }
-                        .listRowBackground(
-                            DeckHeroImages(heroes: Array(deck.heroes.keys).sorted())
-                        )
-                        .swipeActions(edge: .trailing) {
-                            Button {
-                                campaign.decks.insert(deck, at: campaign.decks.endIndex)
-                            } label: {
-                                Label("Attach Deck", systemImage: "plus.circle")
-                            }
-                            .tint(.green)
-                        }
-                    }
-                }
-            }
-            .listRowSpacing(10.0)
-            .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    DeckSortButton()
-                    DeckNewButton()
-                }
-
-                ToolbarItem(placement: .status) {
-                    DeckInfo(count: decks.count)
-                }
-            }
-            .searchable(text: $viewDeckModel.searchText)
-            .disableAutocorrection(true)
         } else {
             List {
                 if decks.isEmpty {
@@ -117,31 +84,19 @@ struct DeckList: View {
                         .listRowBackground(
                             DeckHeroImages(heroes: Array(deck.heroes.keys).sorted())
                         )
-//                        .swipeActions(edge: .trailing) {
-//                            Button {
-//                                if deck.campaigns?.count ?? 0 > 0 {
-//                                    confirmDelete = true
-//                                } else {
-//                                    modelContext.delete(deck)
-//                                }
-//                            } label: {
-//                                Label("Delete Deck", systemImage: "trash")
-//                            }
-//                            .tint(.red)
-//                        }
-//                        .alert(isPresented:$confirmDelete) {
-//                            Alert(
-//                                title: Text("Are you sure you want to delete this deck?"),
-//                                message: Text("This deck is used in one or more campaigns."),
-//                                primaryButton: .destructive(Text("Delete")) {
-//                                    modelContext.delete(deck)
-//                                },
-//                                secondaryButton: .cancel()
-//                            )
-//                        }
+                        .swipeActions(edge: .trailing) {
+                            if editDeck {
+                                Button {
+                                    campaign.decks.insert(deck, at: campaign.decks.endIndex)
+                                } label: {
+                                    Label("Attach Deck", systemImage: "plus.circle")
+                                }
+                                .tint(.green)
+                            }
+                        }
                     }
                     .onDelete(perform: deleteItems)
-                    .alert(isPresented:$confirmDelete) {
+                    .alert(isPresented:$cannotDelete) {
                         Alert(
                             title: Text("This deck is used in one or more campaigns."),
                             message: Text("It cannot be deleted for the moment.")
@@ -160,13 +115,15 @@ struct DeckList: View {
                     DeckInfo(count: decks.count)
                 }
             }
+            .searchable(text: $viewDeckModel.searchText)
+            .disableAutocorrection(true)
         }
     }
 
     func deleteItems(offsets: IndexSet) {
         for index in offsets {
             if decks[index].campaigns?.count ?? 0 > 0 {
-                confirmDelete = true
+                cannotDelete = true
             } else {
                 modelContext.delete(decks[index])
             }

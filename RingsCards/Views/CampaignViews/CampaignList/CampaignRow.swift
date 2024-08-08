@@ -35,6 +35,7 @@ struct CampaignRow: View {
 
             CampaignProgress(campaign: campaign)
         }
+        .lineLimit(1)
     }
 }
 

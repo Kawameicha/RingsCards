@@ -11,7 +11,7 @@ enum Router: Hashable {
     case cardList(filterPack: [String], filterDeck: [String])
     case cardView(Card)
 
-    case deckList(campaign: Campaign, campaignView: Bool, campaignDeck: Bool)
+    case deckList(campaign: Campaign, editDeck: Bool)
     case deckNew
     case deckViewHome(deck: Deck)
 
@@ -35,8 +35,8 @@ extension View {
             case .cardView(let card):
                 CardView(card: card)
 
-            case .deckList(campaign: let campaign, campaignView: let campaignView, campaignDeck: let campaignDeck):
-                DeckList(campaign: campaign, campaignView: campaignView, campaignDeck: campaignDeck)
+            case .deckList(campaign: let campaign, editDeck: let editDeck):
+                DeckList(campaign: campaign, editDeck: editDeck)
             case .deckViewHome(deck: let deck):
                 DeckViewHome(deck: deck)
             case .deckNew:

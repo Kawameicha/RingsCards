@@ -25,34 +25,25 @@ struct DeckRow: View {
                 Text(deck.name)
                     .foregroundStyle(.white)
                     .font(.headline)
-                
-                if heroes < 2 {
-                    if player - heroes < 2 {
-                        Text("\(heroes) Hero, \(player - heroes) Card")
-                            .foregroundStyle(.white)
-                            .font(.subheadline)
-                    } else {
-                        Text("\(heroes) Hero, \(player - heroes) Cards")
-                            .foregroundStyle(.white)
-                            .font(.subheadline)
-                    }
-                } else {
-                    if player - heroes < 2 {
-                        Text("\(heroes) Heroes, \(player - heroes) Card")
-                            .foregroundStyle(.white)
-                            .font(.subheadline)
-                    } else {
-                        Text("\(heroes) Heroes, \(player - heroes) Cards")
-                            .foregroundStyle(.white)
-                            .font(.subheadline)
-                    }
+
+                HStack(alignment: .bottom, spacing: 3) {
+                    Image(systemName: "person.3.fill")
+                        .font(.system(size: 14))
+                    Text("x\(heroes)     ")
+                        .font(.subheadline)
+                    Image(systemName: "rectangle.portrait.inset.filled")
+                        .font(.system(size: 14))
+                    Text("x\(player - heroes)")
+                        .font(.subheadline)
                 }
+                .foregroundStyle(.white)
             }
 
             Spacer()
 
             DeckChart(deck: deck)
         }
+        .lineLimit(1)
     }
 }
 

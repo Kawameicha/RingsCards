@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DeckInfo: View {
-
     var count: Int = 0
 
     var body: some View {

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CampaignNoteButton: View {
-    @Binding var editNotes: Bool
+    @Binding var editNote: Bool
 
     var body: some View {
         Button {
-            editNotes.toggle()
+            editNote.toggle()
         } label: {
             Label("Edit Notes", systemImage: "list.bullet.clipboard")
         }
@@ -21,5 +21,5 @@ struct CampaignNoteButton: View {
 
 
 #Preview {
-    CampaignNoteButton(editNotes: .constant(true))
+    CampaignNoteButton(editNote: .constant(true))
 }

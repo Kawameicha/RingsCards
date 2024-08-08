@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct CampaignBoonButton: View {
-    @Binding var editBoons: Bool
+    @Binding var editBoon: Bool
 
     var body: some View {
         Button {
-            editBoons.toggle()
+            editBoon.toggle()
         } label: {
-            Label("Edit Boons", systemImage: editBoons ? "rectangle.portrait.slash" : "rectangle.portrait.on.rectangle.portrait")
+            Label("Edit Boons", systemImage: editBoon ? "rectangle.portrait.slash" : "rectangle.portrait.on.rectangle.portrait")
         }
     }
 }
 
 #Preview {
-    CampaignBoonButton(editBoons: .constant(true))
+    CampaignBoonButton(editBoon: .constant(true))
 }

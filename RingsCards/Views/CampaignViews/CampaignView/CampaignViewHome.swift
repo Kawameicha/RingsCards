@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct CampaignViewHome: View {
-    @Environment(ViewDeckModel.self) var viewDeckModel
-    @Environment(\.modelContext) var modelContext
-    @State var editBoon = false
-    @State var editNotes = false
     @Bindable var campaign: Campaign
+    @State var editBoon = false
+    @State var editNote = false
     var decks: [Deck]
 
     init(
-//        editBoons: Bool = false,
-//        editNotes: Bool = false,
         campaign: Campaign,
         decks: [Deck]
     ) {
@@ -33,12 +29,7 @@ struct CampaignViewHome: View {
                     .aspectRatio(contentMode: .fill)
                     .listRowInsets(EdgeInsets())
 
-                GroupBox(
-//                    label: Label(
-//                        title: { Text("Scenarios") },
-//                        icon: { PackIcon(image: Image(campaign.code), frame: 20) }
-//                    )
-                ) {
+                GroupBox {
                     ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
                         .frame(height: 100)
                 }
@@ -46,13 +37,7 @@ struct CampaignViewHome: View {
             }
 
             Section {
-//                Image("emptyDeck")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fill)
-//                    .listRowInsets(EdgeInsets())
-
-//                Text("Decks")
-                DeckList(campaign: campaign, campaignView: true, campaignDeck: false)
+                DeckList(campaign: campaign)
             }
 
             if campaign.campaignMode == true {
@@ -72,16 +57,16 @@ struct CampaignViewHome: View {
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 if campaign.campaignMode == true {
-                    CampaignBoonButton(editBoons: $editBoon)
+                    CampaignBoonButton(editBoon: $editBoon)
                 }
-                CampaignNoteButton(editNotes: $editNotes)
+                CampaignNoteButton(editNote: $editNote)
             }
 
             ToolbarItem(placement: .status) {
                 CampaignScenarioInfo(campaign: campaign)
             }
         }
-        .sheet(isPresented: $editNotes) {
+        .sheet(isPresented: $editNote) {
             CampaignHost(campaign: campaign)
                 .presentationDetents([.medium, .large])
         }
