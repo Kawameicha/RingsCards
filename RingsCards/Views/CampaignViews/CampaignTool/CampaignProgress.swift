@@ -14,11 +14,6 @@ struct CampaignProgress: View {
         ProgressView(value: Double(campaign.completed.filter{$0}.count), total: Double(campaign.completed.count))
             .progressViewStyle(GaugeProgressStyle())
             .frame(width: 44, height: 44)
-            .background(alignment: .center) {
-                Circle()
-                    .stroke(Color.gray, lineWidth: 5)
-                    .frame(width: 44, height: 44)
-            }
             .overlay(alignment: .center) {
                 Text(String(100*campaign.completed.filter{$0}.count/campaign.completed.count) + "%")
                     .foregroundStyle(.white)

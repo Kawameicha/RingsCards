@@ -13,6 +13,11 @@ struct GaugeProgressStyle: ProgressViewStyle {
 
         return ZStack {
             Circle()
+                .trim(from: 0, to: 1)
+                .stroke(Color.gray, style: StrokeStyle(lineWidth: 4.4, lineCap: .round))
+                .rotationEffect(.degrees(-90))
+
+            Circle()
                 .trim(from: 0, to: fractionCompleted)
                 .stroke(Color.white, style: StrokeStyle(lineWidth: 4.4, lineCap: .round))
                 .rotationEffect(.degrees(-90))
