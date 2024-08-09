@@ -48,6 +48,7 @@ struct CardVStack: View {
                                         }
                                     }
                                 }
+                                .transitionStyle()
                         }
                     }
                     .onAppear {

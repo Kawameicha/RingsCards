@@ -75,6 +75,7 @@ struct ScenarioViewDonut: View {
                                     "Treacheries": .mint
                                 ])
                                 .chartLegend(position: .bottom, alignment: .center, spacing: 36)
+                                .transitionStyle()
                             }
                         }
                         .onAppear {

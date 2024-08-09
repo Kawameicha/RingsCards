@@ -17,6 +17,14 @@ struct GaugeProgressStyle: ProgressViewStyle {
                 .stroke(Color.gray, style: StrokeStyle(lineWidth: 4.4, lineCap: .round))
                 .rotationEffect(.degrees(-90))
 
+            if fractionCompleted > 0 && fractionCompleted < 1 {
+                Circle()
+                    .trim(from: 0, to: (fractionCompleted + 0.01))
+                    .stroke(Color.black, style: StrokeStyle(lineWidth: 4.4, lineCap: .round))
+                    .opacity(0.3)
+                    .rotationEffect(.degrees(-90))
+            }
+
             Circle()
                 .trim(from: 0, to: fractionCompleted)
                 .stroke(Color.white, style: StrokeStyle(lineWidth: 4.4, lineCap: .round))
