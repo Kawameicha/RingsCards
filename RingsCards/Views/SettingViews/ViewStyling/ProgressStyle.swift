@@ -1,5 +1,5 @@
 //
-//  GaugeProgressStyle.swift
+//  ProgressStyle.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 24.06.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GaugeProgressStyle: ProgressViewStyle {
+struct ProgressStyle: ProgressViewStyle {
     func makeBody(configuration: Configuration) -> some View {
         let fractionCompleted = configuration.fractionCompleted ?? 0
 

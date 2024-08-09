@@ -12,7 +12,7 @@ struct CampaignProgress: View {
 
     var body: some View {
         ProgressView(value: Double(campaign.completed.filter{$0}.count), total: Double(campaign.completed.count))
-            .progressViewStyle(GaugeProgressStyle())
+            .progressViewStyle(ProgressStyle())
             .frame(width: 44, height: 44)
             .overlay(alignment: .center) {
                 Text(String(100*campaign.completed.filter{$0}.count/campaign.completed.count) + "%")
