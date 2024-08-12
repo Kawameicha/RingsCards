@@ -15,6 +15,7 @@ struct DeckViewHome: View {
         pack.isInCollection }) var packs: [Pack]
     @State var editCard = false
     @State var viewCard = false
+    @State var showStat = false
     @Bindable var deck: Deck
 
     var body: some View {
@@ -60,9 +61,14 @@ struct DeckViewHome: View {
             .navigationTitle($deck.name)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
+                    DeckStatButton(showStat: $showStat)
                     DeckViewButton(viewCard: $viewCard)
                     DeckEditButton(editCard: $editCard)
                 }
+            }
+            .sheet(isPresented: $showStat) {
+                DeckChartVStack(deck: deck)
+                    .presentationDetents([.medium])
             }
         }
     }

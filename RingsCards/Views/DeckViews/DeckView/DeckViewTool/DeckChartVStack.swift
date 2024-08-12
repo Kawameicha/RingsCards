@@ -6,13 +6,75 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DeckChartVStack: View {
+    @Environment(ViewCardModel.self) var viewCardModel
+    @Environment(\.modelContext) var modelContext
+    @Query var cards: [Card]
+    var deck: Deck
+
+    init(
+        deck: Deck = Deck.emptyDeck,
+
+        filterSphere: FilterSphere = .all,
+        filterType: FilterType = .any,
+        filterPack: [String] = [],
+        filterDeck: [String] = [],
+        sortParameter: SortParameter = .name,
+        sortOrder: SortOrder = .forward,
+        searchText: String = "",
+        searchBy: SearchParameter = .name
+    ) {
+        self.deck = deck
+
+        let predicate = Card.predicate(
+            searchText: searchText,
+            searchBy: searchBy,
+            filterSphere: filterSphere.rawValue,
+            filterType: filterType.rawValue,
+            filterPack: filterPack,
+            filterDeck: deck.cardSlots.map { String($0.key) }
+        )
+        _cards = Query(filter: predicate)
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let charts: [AnyView] = [
+            AnyView(DeckSphereChart(cards: cards, deck: deck)),
+            AnyView(DeckTypeChart(cards: cards, deck: deck)),
+            AnyView(DeckCostChart(cards: cards, deck: deck)),
+            AnyView(DeckCostLineChart(cards: cards, deck: deck)),
+            AnyView(DeckStatChart(cards: cards, deck: deck))
+        ]
+
+        VStack(alignment: .leading) {
+            ScrollViewReader { value in
+                GeometryReader { item in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(alignment: .top) {
+                            ForEach(charts.indices, id: \.self) { index in
+                                charts[index]
+                                    .frame(width: item.size.width, height: item.size.height, alignment: .center)
+                                    .transitionStyle()
+                            }
+                        }
+                    }
+                    .scrollTargetLayout()
+                    .scrollClipDisabled()
+                }
+                .scrollTargetBehavior(.viewAligned)
+                .safeAreaPadding(.horizontal)
+            }
+        }
     }
 }
 
-#Preview {
-    DeckChartVStack()
-}
+//#Preview {
+//    ModelPreview { deck in
+//        DeckChartVStack(deck: deck)
+//    }
+//    .modelContainer(previewModelContainer)
+//    .environment(ViewCardModel())
+//    .environment(ViewDeckModel())
+//}

@@ -1,5 +1,5 @@
 //
-//  DeckChartButton.swift
+//  DeckStatButton.swift
 //  RingsCards
 //
 //  Created by Christoph Freier on 08.08.24.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct DeckChartButton: View {
-    @Binding var showstat: Bool
+struct DeckStatButton: View {
+    @Binding var showStat: Bool
 
     var body: some View {
         Button {
-            showstat.toggle()
+            showStat.toggle()
         } label: {
             Label("Show Chart", systemImage: "chart.bar.xaxis")
         }
@@ -21,5 +21,5 @@ struct DeckChartButton: View {
 
 
 #Preview {
-    DeckChartButton(showstat: .constant(true))
+    DeckStatButton(showStat: .constant(true))
 }
