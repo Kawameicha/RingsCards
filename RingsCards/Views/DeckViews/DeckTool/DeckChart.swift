@@ -43,53 +43,37 @@ struct DeckChart: View {
     var body: some View {
         let cardDictionary = Dictionary(uniqueKeysWithValues: cards.map { ($0.code, $0) })
 
-        let willpower = deck.heroes.reduce(0) { result, element in
-            let (key, multiplier) = element
-            if let card = cardDictionary[key], let stat = card.stats.willpower {
-                return result + (stat * multiplier)
+        let stats = ["willpower", "attack", "defense", "health"]
+            let statTotals = stats.map { statType -> (String, Int) in
+                let total = deck.heroes.reduce(0) { result, element in
+                    let (key, multiplier) = element
+                    if let card = cardDictionary[key] {
+                        let stat: Int?
+                        switch statType {
+                        case "willpower": stat = card.stats.willpower
+                        case "attack": stat = card.stats.attack
+                        case "defense": stat = card.stats.defense
+                        case "health": stat = card.stats.health
+                        default: stat = nil
+                        }
+                        if let stat = stat {
+                            return result + (stat * multiplier)
+                        }
+                    }
+                    return result
+                }
+                return (statType.capitalized, total)
             }
-            return result
-        }
-        let attack = deck.heroes.reduce(0) { result, element in
-            let (key, multiplier) = element
-            if let card = cardDictionary[key], let stat = card.stats.attack {
-                return result + (stat * multiplier)
-            }
-            return result
-        }
-        let defense = deck.heroes.reduce(0) { result, element in
-            let (key, multiplier) = element
-            if let card = cardDictionary[key], let stat = card.stats.defense {
-                return result + (stat * multiplier)
-            }
-            return result
-        }
-        let health = deck.heroes.reduce(0) { result, element in
-            let (key, multiplier) = element
-            if let card = cardDictionary[key], let stat = card.stats.health {
-                return result + (stat * multiplier)
-            }
-            return result
-        }
 
         VStack {
             Chart {
-                BarMark(
-                    x: .value("Shape Type", "W"),
-                    y: .value("Total Count", willpower)
-                )
-                BarMark(
-                    x: .value("Shape Type", "A"),
-                    y: .value("Total Count", attack)
-                )
-                BarMark(
-                    x: .value("Shape Type", "D"),
-                    y: .value("Total Count", defense)
-                )
-                BarMark(
-                    x: .value("Shape Type", "H"),
-                    y: .value("Total Count", health)
-                )
+                ForEach(statTotals, id: \.0) { item in
+                    let (stat, count) = item
+                    BarMark(
+                        x: .value("Stat Type", stat),
+                        y: .value("Total Count", count)
+                    )
+                }
             }
             .chartXAxis(.hidden)
             .chartYAxis(.hidden)
