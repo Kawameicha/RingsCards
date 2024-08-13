@@ -89,10 +89,13 @@ struct CardList: View {
             }
         } else {
             List {
-                ForEach(CardType.allCases.map { $0.rawValue.capitalized }, id:\.self) { type in
-                    Section(header: Text("\(type)")) {
+                ForEach(CardType.allCases.filter { type in
+                    cards.contains(where: { card in card.typeName.contains(type.rawValue.capitalized) })
+                }, id: \.self) { type in
+                    let typeName = type.rawValue.capitalized
+                    Section(header: Text("\(typeName)")) {
                         ForEach(cards.filter { card in
-                            card.typeName.contains("\(type)")
+                            card.typeName.contains("\(typeName)")
                         }) { card in
                             if editCard {
                                 NavigationLink {
