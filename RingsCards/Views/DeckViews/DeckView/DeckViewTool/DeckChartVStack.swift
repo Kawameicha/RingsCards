@@ -49,6 +49,13 @@ struct DeckChartVStack: View {
         ]
 
         VStack(alignment: .leading) {
+            Text("Deck Statistics")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 10)
+                        .padding(.leading)
+                        .foregroundColor(.primary)
+
             ScrollViewReader { value in
                 GeometryReader { item in
                     ScrollView(.horizontal, showsIndicators: false) {
