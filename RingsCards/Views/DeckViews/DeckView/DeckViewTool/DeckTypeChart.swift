@@ -71,7 +71,15 @@ struct DeckTypeChart: View {
                 }
             }
 
-            return data.sorted { $0.cardSort < $1.cardSort }
+            let sphereOrder = ["Leadership", "Tactics", "Spirit", "Lore", "Neutral"]
+
+            return data.sorted {
+                guard let firstIndex = sphereOrder.firstIndex(of: $0.sphere),
+                      let secondIndex = sphereOrder.firstIndex(of: $1.sphere) else {
+                    return $0.sphere < $1.sphere
+                }
+                return firstIndex < secondIndex
+            }
         }()
 
         GroupBox(
