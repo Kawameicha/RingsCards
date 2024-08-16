@@ -20,8 +20,8 @@ struct DeckList: View {
         campaign: Campaign = Campaign.emptyCampaign,
         editDeck: Bool = false,
 
-        sortDeckParameter: SortDeckParameter = .name,
-        sortOrder: SortOrder = .forward,
+        sortDeckParameter: SortDeckParameter = .date_update,
+        sortOrder: SortOrder = .reverse,
         searchText: String = ""
     ) {
         self.campaign = campaign
@@ -58,17 +58,7 @@ struct DeckList: View {
                 }
             }
             if campaign.decks.count <= 4 {
-                NavigationLink {
-                    DeckList(
-                        campaign: campaign,
-                        editDeck: true,
-                        sortDeckParameter: viewDeckModel.sortDeckParameter,
-                        sortOrder: viewDeckModel.sortOrder,
-                        searchText: viewDeckModel.searchText
-                    )
-                    .searchable(text: $viewDeckModel.searchText)
-                    .disableAutocorrection(true)
-                } label: {
+                NavigationLink(value: Router.deckList(campaign: campaign, editDeck: true)) {
                     Text("Attach a Deck")
                 }
             }
@@ -109,7 +99,9 @@ struct DeckList: View {
             .listRowSpacing(10.0)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
-                    DeckSortButton()
+                    if !editDeck {
+                        DeckSortButton()
+                    }
                     DeckNewButton()
                 }
 
@@ -117,8 +109,6 @@ struct DeckList: View {
                     DeckInfo(count: decks.count)
                 }
             }
-            .searchable(text: $viewDeckModel.searchText)
-            .disableAutocorrection(true)
         }
     }
 
