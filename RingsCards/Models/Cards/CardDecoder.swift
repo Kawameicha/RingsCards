@@ -36,7 +36,7 @@ struct CardResponse: Decodable {
     var octgnid: String? = nil
     var has_errata: Bool
     var url: String
-    var imagesrc: String
+    var imagesrc: String? = nil
 }
 
 extension CardResponse {

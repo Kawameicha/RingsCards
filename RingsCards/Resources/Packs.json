@@ -440,6 +440,16 @@
         "isCycle": true
     },
     {
+        "id": "DC_campaig_cards",
+        "packName": "Campaign Cards",
+        "packCode": "DCCE",
+        "packSort": 7,
+        "cycleCode": "DCCE",
+        "cycleName": "Dream-chaser",
+        "cycleSort": 5,
+        "isCycle": true
+    },
+    {
         "id": "the_sands_of_harad",
         "packName": "The Sands of Harad",
         "packCode": "TSoH",
@@ -575,6 +585,16 @@
         "packCode": "TFoW",
         "packSort": 7,
         "cycleCode": "EM",
+        "cycleName": "Ered Mithrin",
+        "cycleSort": 7,
+        "isCycle": true
+    },
+    {
+        "id": "EM_campaig_cards",
+        "packName": "Campaign Cards",
+        "packCode": "EMCE",
+        "packSort": 8,
+        "cycleCode": "EMCE",
         "cycleName": "Ered Mithrin",
         "cycleSort": 7,
         "isCycle": true
