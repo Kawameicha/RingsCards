@@ -23,9 +23,9 @@ struct CardImage: View {
                     .frame(width: 250, height: 200, alignment: .top)
                     .clipShape(Circle())
                     .overlay {
-                        Circle().stroke(.white, lineWidth: 4)
+                        Circle().stroke(.white, lineWidth: 3)
                     }
-                    .shadow(radius: 7)
+                    .shadow(radius: 8)
             case .failure:
                 Image(systemName: "AppIcon")
             @unknown default:

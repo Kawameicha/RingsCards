@@ -33,18 +33,16 @@ struct CardVStack: View {
                                     }
                                 )
                                 .toolbar {
-                                    if scrollPosition == card.code {
+                                    if scrollPosition == card.code, let deck = deck {
+                                        ToolbarItem(placement: .status) {
+                                            HStack(alignment: .center, spacing: 3) {
+                                                DeckCardInfo(deck: deck)
+                                                DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])}
+                                        }
+                                    } else if scrollPosition == card.code {
                                         ToolbarItemGroup(placement: .topBarTrailing) {
                                             CardFaqButton(card: card)
                                             CardRingsButton(card: card)
-                                        }
-                                    }
-
-                                    if scrollPosition == card.code, let deck = deck {
-                                        ToolbarItem(placement: .status) {
-                                            HStack {
-                                                DeckCardInfo(deck: deck)
-                                                DeckCardEdit(deck: deck, card: card, value: deck.cardSlots["\(card.code)", default: 0])}
                                         }
                                     }
                                 }

@@ -28,7 +28,7 @@ struct CardHome: View {
         @Bindable var viewCardModel = viewCardModel
 
         Group {
-            if cards.count != 0 {
+            if !cards.isEmpty {
                 CardList(
                     filterSphere: viewCardModel.filterSphere,
                     filterType: viewCardModel.filterType,
@@ -37,13 +37,9 @@ struct CardHome: View {
                     sortParameter: viewCardModel.sortParameter,
                     sortOrder: viewCardModel.sortOrder,
                     searchText: viewCardModel.searchText,
-                    searchBy : viewCardModel.searchBy,
+                    searchBy: viewCardModel.searchBy,
                     listOffset: viewCardModel.listOffset
                 )
-                .refreshable {
-                    await CardResponse.refresh(modelContext: modelContext)
-                }
-                .navigationTitle("Player Cards")
                 .searchable(text: $viewCardModel.searchText)
                 .disableAutocorrection(true)
             } else {
@@ -51,18 +47,12 @@ struct CardHome: View {
                     Spacer(minLength: 200)
                     ContentUnavailableView("Refresh to load some cards", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
                 }
-                .refreshable {
-                    await CardResponse.refresh(modelContext: modelContext)
-                }
-                .navigationTitle("Player Cards")
             }
         }
-//        .onAppear {
-//            viewCardModel.listOffset = 1
-//        }
-//        .onDisappear {
-//            viewCardModel.listOffset = 1
-//        }
+        .navigationTitle("Player Cards")
+        .refreshable {
+            await CardResponse.refresh(modelContext: modelContext)
+        }
     }
 }
 
