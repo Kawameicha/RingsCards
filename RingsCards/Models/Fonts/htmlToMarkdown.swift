@@ -41,7 +41,7 @@ extension String {
         }
 
         // Replace line feeds with nothing, which is how HTML notation is read in the browsers
-        text = self.replacing("\n", with: "\n")
+        text = self.replacing("\r\n", with: "\n")
 
         // Line breaks
         text = text.replacing("<div>", with: "\n")
@@ -58,14 +58,10 @@ extension String {
         text = text.replacing("</em>", with: "*")
         text = text.replacing("<i>", with: "*")
         text = text.replacing("</i>", with: "*")
-        text = text.replacing("<cite>", with: "*")
+        text = text.replacing(/[ \n]?<cite>[ ]?/, with: "\n—*")
         text = text.replacing("</cite>", with: "*")
 
-        // Remove '~' symbols from RingsDB
-        text = text.replacing("~", with: "")
-
         // Replace hyperlinks block
-
         loop = true
 
         // Stop looking for hyperlinks when none is found
