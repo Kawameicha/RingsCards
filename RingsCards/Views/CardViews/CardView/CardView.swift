@@ -9,76 +9,28 @@ import SwiftUI
 
 struct CardView: View {
     var card: Card
-    let packIconMappings: [String: String] = [
-        "HfG": "SoM",
-        "CatC": "SoM",
-        "JtR": "SoM",
-        "HoEM": "SoM",
-        "TDM": "SoM",
-        "RtM": "SoM",
-        "RevCore": "Core",
-        "TRG": "D",
-        "RtR": "D",
-        "WitW": "D",
-        "TLD": "D",
-        "FoS": "D",
-        "SaF": "D",
-        "TSF": "AtS",
-        "TDF": "AtS",
-        "EaAD": "AtS",
-        "AoO": "AtS",
-        "BoG": "AtS",
-        "TMV": "AtS",
-        "TDT": "TRM",
-        "TTT": "TRM",
-        "TiT": "TRM",
-        "NiE": "TRM",
-        "CS": "TRM",
-        "TAC": "TRM",
-        "WoE": "AA",
-        "EfMG": "AA",
-        "AtE": "AA",
-        "ToR": "AA",
-        "BoCD": "AA",
-        "TDR": "AA",
-        "FotS": "DC",
-        "TitD": "DC",
-        "TotD": "DC",
-        "DR": "DC",
-        "SoCH": "DC",
-        "CoC": "DC",
-        "M": "H",
-        "RAH": "H",
-        "BtS": "H",
-        "TBS": "H",
-        "DoCG": "H",
-        "CoP": "H",
-        "TWH": "EM",
-        "RAR": "EM",
-        "FitN": "EM",
-        "TGoF": "EM",
-        "MG": "EM",
-        "TFoW": "EM",
-        "WaR": "VoM",
-        "TCoU": "VoM",
-        "CotW": "VoM",
-        "UtAM": "VoM",
-        "TLoS": "VoM",
-        "TFoN": "VoM",
-        "TAP": "OotR",
-        "FotE": "OotR",
-        "TGoR": "OotR",
-        "TGC": "OotR",
-        "MotR": "OotR",
-        "BitI": "OotR",
+    let packIconMappings: [[String]: String] = [
+        ["HfG", "CatC", "JtR", "HoEM", "TDM", "RtM"]: "SoM",
+        ["TRG", "RtR", "WitW", "TLD", "FoS", "SaF"]: "D",
+        ["TSF", "TDF", "EaAD", "AoO", "BoG", "TMV"]: "AtS",
+        ["TDT", "TTT", "TiT", "NiE", "CS", "TAC"]: "TRM",
+        ["WoE", "EfMG", "AtE", "ToR", "BoCD", "TDR"]: "AA",
+        ["FotS", "TitD", "TotD", "DR", "SoCH", "CoC"]: "DC",
+        ["M", "RAH", "BtS", "TBS", "DoCG", "CoP"]: "H",
+        ["TWH", "RAR", "FitN", "TGoF", "MG", "TFoW"]: "EM",
+        ["WaR", "TCoU", "CotW", "UtAM", "TLoS", "TFoN"]: "VoM",
+        ["TAP", "FotE", "TGoR", "TGC", "MotR", "BitI"]: "OotR",
+        ["MotKA", "ALePMotKA"]: "VoM",
+        ["RevCore"]: "Core",
     ]
 
     func getPackIcon(for packName: String) -> Image {
-        if let imageName = packIconMappings[packName] {
-            return Image(imageName)
-        } else {
-            return Image(packName)
+        for (packNames, iconName) in packIconMappings {
+            if packNames.contains(packName) {
+                return Image(iconName)
+            }
         }
+        return Image("Core")
     }
 
     var body: some View {
