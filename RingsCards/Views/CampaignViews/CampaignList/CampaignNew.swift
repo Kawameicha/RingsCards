@@ -38,8 +38,21 @@ struct CampaignNew: View {
                     Text("The Dark of Mirkwood").tag(CampaignCode.TDoM)
                 }
 
-                Toggle("Campaign Mode", isOn: $campaignMode)
-                    .toggleStyle(CheckBoxStyle())
+                switch selectedCode {
+                case .Core, .AA, .DC, .EM, .Hobbit, .LotR, .TDoM:
+                    GroupBox(
+                        label: Label("Campaign mode", systemImage: "info.bubble")
+                            .foregroundColor(.yellow)
+                    ) {
+                        Text("Check the box below to create an empty campaign pool to which campaign cards can be attached.")
+                    }
+                    .groupBoxStyle(PlainGroupBoxStyle())
+
+                    Toggle("Campaign Mode", isOn: $campaignMode)
+                        .toggleStyle(CheckBoxStyle())
+                default:
+                    EmptyView()
+                }
             }
 
             Section {
