@@ -12,8 +12,10 @@ struct DeckList: View {
     @Environment(ViewDeckModel.self) var viewDeckModel
     @Environment(\.modelContext) var modelContext
     @Query var decks: [Deck]
+    @Query var campaigns: [Campaign]
     @Bindable var campaign: Campaign
-    @State private var cannotDelete = false
+    @State private var showConfirmDelete = false
+    @State private var deckToDelete: Deck?
     var editDeck: Bool
 
     init(
@@ -88,10 +90,16 @@ struct DeckList: View {
                         }
                     }
                     .onDelete(perform: deleteItems)
-                    .alert(isPresented:$cannotDelete) {
+                    .alert(isPresented: $showConfirmDelete) {
                         Alert(
-                            title: Text("This deck is used in one or more campaigns."),
-                            message: Text("It cannot be deleted for the moment.")
+                            title: Text("Confirm Delete"),
+                            message: Text("This deck is associated with one or more campaigns. Do you want to proceed with deletion?"),
+                            primaryButton: .destructive(Text("Delete")) {
+                                if let deckToDelete = deckToDelete {
+                                    deleteDeck(deckToDelete)
+                                }
+                            },
+                            secondaryButton: .cancel()
                         )
                     }
                 }
@@ -114,12 +122,22 @@ struct DeckList: View {
 
     func deleteItems(offsets: IndexSet) {
         for index in offsets {
-            if decks[index].campaigns?.count ?? 0 > 0 {
-                cannotDelete = true
+            let deck = decks[index]
+
+            if let associatedCampaigns = deck.campaigns, !associatedCampaigns.isEmpty {
+                deckToDelete = deck
+                showConfirmDelete = true
             } else {
-                modelContext.delete(decks[index])
+                deleteDeck(deck)
             }
         }
+    }
+
+    func deleteDeck(_ deck: Deck) {
+        for campaign in campaigns {
+            campaign.decks.removeAll(where: { $0 == deck })
+        }
+        modelContext.delete(deck)
     }
 }
 
