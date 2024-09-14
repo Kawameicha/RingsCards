@@ -68,15 +68,18 @@
 		59862D732A91F46000628449 /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 59862D722A91F46000628449 /* Cards.json */; };
 		59862D772A91FC4300628449 /* CardHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D762A91FC4300628449 /* CardHome.swift */; };
 		59862D7B2A9217F600628449 /* ScenarioViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59862D7A2A9217F600628449 /* ScenarioViewIcon.swift */; };
+		5987EC402C95819100F4B708 /* MotKCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987EC3F2C95819100F4B708 /* MotKCapsule.swift */; };
 		598F51E52AA8747E00A1C06B /* CampaignNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F51E42AA8747E00A1C06B /* CampaignNew.swift */; };
 		5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995963D2B46AE31009D294C /* CampaignHome.swift */; };
 		599719692AC300EC0095AAE7 /* PreviewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */; };
 		5997196B2AC3011D0095AAE7 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997196A2AC3011D0095AAE7 /* SampleDeck.swift */; };
+		5998F7E22C8898A70005CDA1 /* DeckCampaignList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5998F7E12C8898A70005CDA1 /* DeckCampaignList.swift */; };
 		59992F572AAB0CE300C6307E /* DeckNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59992F562AAB0CE300C6307E /* DeckNew.swift */; };
 		599A61592C5BB17100DA3F74 /* ScenarioViewDonut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599A61582C5BB17100DA3F74 /* ScenarioViewDonut.swift */; };
 		59A4E2C62AFEA71E00CE9BEA /* CampaignCardEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */; };
 		59A5E6582B43345F0028A3DE /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5E6572B43345F0028A3DE /* AppScreen.swift */; };
 		59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5E6592B4335E20028A3DE /* AppTabView.swift */; };
+		59AD9C3E2C87487B00CF978B /* DeckCampaignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AD9C3D2C87487B00CF978B /* DeckCampaignButton.swift */; };
 		59AFE7E72B29E396008AF007 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE7E62B29E396008AF007 /* SFUIText-Regular.ttf */; };
 		59AFE7F02B29E4FA008AF007 /* SFUIText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE7EE2B29E4FA008AF007 /* SFUIText-Italic.ttf */; };
 		59AFE7F12B29E4FA008AF007 /* SFUIText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE7EF2B29E4FA008AF007 /* SFUIText-Bold.ttf */; };
@@ -183,15 +186,18 @@
 		59862D722A91F46000628449 /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		59862D762A91FC4300628449 /* CardHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHome.swift; sourceTree = "<group>"; };
 		59862D7A2A9217F600628449 /* ScenarioViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewIcon.swift; sourceTree = "<group>"; };
+		5987EC3F2C95819100F4B708 /* MotKCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotKCapsule.swift; sourceTree = "<group>"; };
 		598F51E42AA8747E00A1C06B /* CampaignNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignNew.swift; sourceTree = "<group>"; };
 		5995963D2B46AE31009D294C /* CampaignHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignHome.swift; sourceTree = "<group>"; };
 		599719682AC300EC0095AAE7 /* PreviewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModelContainer.swift; sourceTree = "<group>"; };
 		5997196A2AC3011D0095AAE7 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
+		5998F7E12C8898A70005CDA1 /* DeckCampaignList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCampaignList.swift; sourceTree = "<group>"; };
 		59992F562AAB0CE300C6307E /* DeckNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckNew.swift; sourceTree = "<group>"; };
 		599A61582C5BB17100DA3F74 /* ScenarioViewDonut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewDonut.swift; sourceTree = "<group>"; };
 		59A4E2C52AFEA71E00CE9BEA /* CampaignCardEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardEdit.swift; sourceTree = "<group>"; };
 		59A5E6572B43345F0028A3DE /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		59A5E6592B4335E20028A3DE /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		59AD9C3D2C87487B00CF978B /* DeckCampaignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCampaignButton.swift; sourceTree = "<group>"; };
 		59AFE7E62B29E396008AF007 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.ttf"; sourceTree = "<group>"; };
 		59AFE7EE2B29E4FA008AF007 /* SFUIText-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Italic.ttf"; sourceTree = "<group>"; };
 		59AFE7EF2B29E4FA008AF007 /* SFUIText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Bold.ttf"; sourceTree = "<group>"; };
@@ -330,6 +336,7 @@
 			children = (
 				59FD61BD2B5C1F2800C7EA67 /* CheckBoxStyle.swift */,
 				592ACE682B87A799001612C7 /* GroupBoxStyle.swift */,
+				5987EC3F2C95819100F4B708 /* MotKCapsule.swift */,
 				59735A9B2C29749000F5E0AD /* ProgressStyle.swift */,
 				591DEF262C660F7E008279E9 /* TransitionStyle.swift */,
 			);
@@ -624,6 +631,8 @@
 		59EA4DDE2B41725C0078F7F8 /* DeckViewTool */ = {
 			isa = PBXGroup;
 			children = (
+				59AD9C3D2C87487B00CF978B /* DeckCampaignButton.swift */,
+				5998F7E12C8898A70005CDA1 /* DeckCampaignList.swift */,
 				59C1404C2AC1C26500A9F20C /* DeckCardEdit.swift */,
 				596866562B98D060004442CA /* DeckCardInfo.swift */,
 				591DEF2E2C663AFB008279E9 /* DeckChartVStack.swift */,
@@ -856,10 +865,13 @@
 				5995963E2B46AE31009D294C /* CampaignHome.swift in Sources */,
 				59BD5AB02C5CE00700A84157 /* CardFaqButton.swift in Sources */,
 				5932826B2B4858FF00914E92 /* ScenarioDecoder.swift in Sources */,
+				5987EC402C95819100F4B708 /* MotKCapsule.swift in Sources */,
+				59AD9C3E2C87487B00CF978B /* DeckCampaignButton.swift in Sources */,
 				593A3EF42B99B2C80030FDCC /* CampaignScenarioInfo.swift in Sources */,
 				59735AA42C2C7C8C00F5E0AD /* CampaignProgress.swift in Sources */,
 				59C779692B7BFAFF002AFB03 /* Erratum.swift in Sources */,
 				59C779622B791A0D002AFB03 /* RuleView.swift in Sources */,
+				5998F7E22C8898A70005CDA1 /* DeckCampaignList.swift in Sources */,
 				594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */,
 				59BD5AAE2C5CDA2F00A84157 /* CardRingsButton.swift in Sources */,
 				59A5E65A2B4335E20028A3DE /* AppTabView.swift in Sources */,

@@ -46,7 +46,7 @@ struct DeckCardEdit: View {
                     }
                     deck.updated = .now
                 } label: {
-                    Image(systemName: "k.circle")
+                    MotKCapsule()
                         .foregroundStyle(deck.cardSlots[key, default: value] == 1 ? .accent : .primary)
                         .opacity(deck.cardSlots[key, default: value] == 1 ? 1 : 0.1)
                 }
