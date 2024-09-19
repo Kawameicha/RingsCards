@@ -16,6 +16,7 @@ struct DeckViewHome: View {
     @State var editCard = false
     @State var viewCard = false
     @State var showStat = false
+    @State var campaign = false
     @Bindable var deck: Deck
 
     var body: some View {
@@ -61,13 +62,21 @@ struct DeckViewHome: View {
             .navigationTitle($deck.name)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
-                    DeckStatButton(showStat: $showStat)
                     DeckViewButton(viewCard: $viewCard)
                     DeckEditButton(editCard: $editCard)
+                }
+
+                ToolbarItemGroup(placement: .secondaryAction) {
+                    DeckCampaignButton(campaign: $campaign)
+                    DeckStatButton(showStat: $showStat)
                 }
             }
             .sheet(isPresented: $showStat) {
                 DeckChartVStack(deck: deck)
+                    .presentationDetents([.medium])
+            }
+            .sheet(isPresented: $campaign) {
+                DeckCampaignList(deck: deck)
                     .presentationDetents([.medium])
             }
         }

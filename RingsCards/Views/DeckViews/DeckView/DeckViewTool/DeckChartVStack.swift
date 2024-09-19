@@ -48,13 +48,12 @@ struct DeckChartVStack: View {
             AnyView(DeckStatChart(cards: cards, deck: deck))
         ]
 
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             Text("Deck Statistics")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(.bottom, 10)
-                        .padding(.leading)
-                        .foregroundColor(.primary)
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
 
             ScrollViewReader { value in
                 GeometryReader { item in

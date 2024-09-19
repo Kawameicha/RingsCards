@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct DeckCampaignButton: View {
+    @Binding var campaign: Bool
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            campaign.toggle()
+        } label: {
+            Label("Show Campaign", systemImage: "books.vertical.fill")
+        }
     }
 }
 
 #Preview {
-    DeckCampaignButton()
+    DeckCampaignButton(campaign: .constant(true))
 }
