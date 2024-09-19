@@ -10,10 +10,10 @@ import SwiftData
 
 @Model
 final class Deck: Identifiable {
-    @Attribute(.unique) let uuid = UUID()
+    @Attribute(.unique) var uuid = UUID()
     var code: Int
     var name: String
-    let created: Date
+    var created: Date
     var updated: Date
     var version: String
     var deckNote: String

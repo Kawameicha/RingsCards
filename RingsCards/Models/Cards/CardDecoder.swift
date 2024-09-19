@@ -18,25 +18,25 @@ struct CardResponse: Decodable {
     var position: Int
     var code: String
     var name: String
-    var traits: String? = nil
-    var text: String? = nil
-    var flavor: String? = nil
+    var traits: String? = ""
+    var text: String? = ""
+    var flavor: String? = ""
     var is_unique: Bool
-    var threat: Int? = nil
-    var cost: String? = nil
-    var victory: Int? = nil
-    var quest: Int? = nil
-    var willpower: Int? = nil
-    var attack: Int? = nil
-    var defense: Int? = nil
-    var health: Int? = nil
+    var threat: Int? = -1
+    var cost: String? = ""
+    var victory: Int? = 0
+    var quest: Int? = 0
+    var willpower: Int? = 0
+    var attack: Int? = 0
+    var defense: Int? = 0
+    var health: Int? = 0
     var quantity: Int
     var deck_limit: Int
-    var illustrator: String? = nil
-    var octgnid: String? = nil
-    var has_errata: Bool
-    var url: String
-    var imagesrc: String? = nil
+    var illustrator: String? = ""
+    var octgnid: String? = ""
+    var has_errata: Bool? = false
+    var url: String? = ""
+    var imagesrc: String? = ""
 }
 
 extension CardResponse {
@@ -136,7 +136,10 @@ extension CardResponse {
                                                 url: card.url,
                                                 imagesrc: card.imagesrc))
 
-                modelContext.insert(card)
+                DispatchQueue.main.async {
+                    modelContext.insert(card)
+                    try? modelContext.save()
+                }
             }
         } catch {
             print("Failed to fetch cards")

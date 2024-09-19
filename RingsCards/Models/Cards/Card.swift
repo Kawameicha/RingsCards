@@ -10,22 +10,22 @@ import SwiftData
 
 @Model
 final class Card: Identifiable {
-    let packCode: String
-    let packName: String
-    let typeCode: String
-    let typeName: String
-    let sphereCode: String
-    let sphereName: String
-    let position: Int
-    @Attribute(.unique) let code: String
-    let name: String
-    let isUnique: Bool
-    let quantity: Int
-    let deckLimit: Int
-    let cardSort: Int
-    let costs: CardCost
-    let stats: CardStat
-    let texts: CardText
+    var packCode: String
+    var packName: String
+    var typeCode: String
+    var typeName: String
+    var sphereCode: String
+    var sphereName: String
+    var position: Int
+    @Attribute(.unique) var code: String
+    var name: String
+    var isUnique: Bool
+    var quantity: Int
+    var deckLimit: Int
+    var cardSort: Int
+    var costs: CardCost
+    var stats: CardStat
+    var texts: CardText
 
     init(packCode: String, packName: String, typeCode: String, typeName: String, sphereCode: String, sphereName: String, position: Int, code: String, name: String, isUnique: Bool, quantity: Int, deckLimit: Int, cardSort: Int, costs: CardCost, stats: CardStat, texts: CardText) {
         self.packCode = packCode
@@ -60,15 +60,15 @@ struct CardCost: Hashable, Codable {
 }
 
 struct CardStat: Hashable, Codable {
-    var willpower: Int? = nil
-    var attack: Int? = nil
-    var defense: Int? = nil
-    var health: Int? = nil
-    var threat: Int? = nil
-    var quest: Int? = nil
-    var victory: Int? = nil
+    var willpower: Int? = 0
+    var attack: Int? = 0
+    var defense: Int? = 0
+    var health: Int? = 0
+    var threat: Int? = 0
+    var quest: Int? = 0
+    var victory: Int? = 0
 
-    init(willpower: Int? = nil, attack: Int? = nil, defense: Int? = nil, health: Int? = nil, threat: Int? = nil, quest: Int? = nil, victory: Int? = nil) {
+    init(willpower: Int? = 0, attack: Int? = 0, defense: Int? = 0, health: Int? = 0, threat: Int? = 0, quest: Int? = 0, victory: Int? = 0) {
         self.willpower = willpower
         self.attack = attack
         self.defense = defense

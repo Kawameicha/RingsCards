@@ -43,6 +43,7 @@
 		59355A082AD2962800C894B3 /* PackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59355A072AD2962800C894B3 /* PackList.swift */; };
 		593A3EF42B99B2C80030FDCC /* CampaignScenarioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A3EF32B99B2C80030FDCC /* CampaignScenarioInfo.swift */; };
 		593A3EF62B99EA520030FDCC /* ScenarioCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A3EF52B99EA520030FDCC /* ScenarioCompleted.swift */; };
+		593FEFCA2C9B1B3100D55BB9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FEFC92C9B1B3100D55BB9 /* OnboardingView.swift */; };
 		594AB53D2B4352260075D176 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB53C2B4352260075D176 /* AppSidebarList.swift */; };
 		594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB53E2B4352500075D176 /* AppDetailColumn.swift */; };
 		594B766B2AA7026200ED71AF /* CampaignList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B766A2AA7026200ED71AF /* CampaignList.swift */; };
@@ -161,6 +162,7 @@
 		59355A072AD2962800C894B3 /* PackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackList.swift; sourceTree = "<group>"; };
 		593A3EF32B99B2C80030FDCC /* CampaignScenarioInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignScenarioInfo.swift; sourceTree = "<group>"; };
 		593A3EF52B99EA520030FDCC /* ScenarioCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioCompleted.swift; sourceTree = "<group>"; };
+		593FEFC92C9B1B3100D55BB9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		594AB53C2B4352260075D176 /* AppSidebarList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
 		594AB53E2B4352500075D176 /* AppDetailColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
 		594B766A2AA7026200ED71AF /* CampaignList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignList.swift; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				592264CC2A90A993002A7648 /* ContentView.swift */,
+				593FEFC92C9B1B3100D55BB9 /* OnboardingView.swift */,
 				5912EE212A93662800B2F8B5 /* CardViews */,
 				729BF2982A95812900E67871 /* DeckViews */,
 				729BF2972A95810800E67871 /* CampaignViews */,
@@ -816,6 +819,7 @@
 				599A61592C5BB17100DA3F74 /* ScenarioViewDonut.swift in Sources */,
 				59735A9E2C29D81400F5E0AD /* DeckChart.swift in Sources */,
 				591DEF312C6663C4008279E9 /* DeckTypeChart.swift in Sources */,
+				593FEFCA2C9B1B3100D55BB9 /* OnboardingView.swift in Sources */,
 				59CC78D92B46E58E00F29E18 /* CampaignNoteButton.swift in Sources */,
 				59FD61BE2B5C1F2800C7EA67 /* CheckBoxStyle.swift in Sources */,
 				594AB53F2B4352500075D176 /* AppDetailColumn.swift in Sources */,
@@ -1029,7 +1033,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1066,7 +1070,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = LotR.RingsCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

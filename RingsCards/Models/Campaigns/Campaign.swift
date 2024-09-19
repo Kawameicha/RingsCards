@@ -10,12 +10,12 @@ import SwiftData
 
 @Model
 class Campaign: Identifiable {
-    @Attribute(.unique) let uuid = UUID()
-    let code: String
+    @Attribute(.unique) var uuid = UUID()
+    var code: String
     var name: String
-    let created: Date
+    var created: Date
     var updated: Date
-    let scenarios: [Int]
+    var scenarios: [Int]
     var completed: [Bool]
     var campaignMode: Bool
     var campaignNote: String

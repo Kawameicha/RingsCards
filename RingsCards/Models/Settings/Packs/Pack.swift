@@ -10,14 +10,14 @@ import SwiftData
 
 @Model
 class Pack: Identifiable {
-    @Attribute(.unique) let id: String
-    let packName: String
-    let packCode: String
-    let packSort: Int
-    let cycleName: String
-    let cycleCode: String
-    let cycleSort: Int
-    let isCycle: Bool
+    @Attribute(.unique) var id: String
+    var packName: String
+    var packCode: String
+    var packSort: Int
+    var cycleName: String
+    var cycleCode: String
+    var cycleSort: Int
+    var isCycle: Bool
     var isInCollection = false
 
     init(id: String, packName: String, packCode: String, packSort: Int, cycleName: String, cycleCode: String, cycleSort: Int, isCycle: Bool, isInCollection: Bool = false) {

@@ -10,14 +10,14 @@ import SwiftData
 
 @Model
 final class Scenario: Identifiable {
-    @Attribute(.unique) let id: Int
-    let code: String
-    let name: String
-    let pack: String
-    let encounterSets: [EncounterSets]
-    let encounterRule: [EncounterRule]
-    let flavorText: FlavorText
-    let statistics: Statistics
+    @Attribute(.unique) var id: Int
+    var code: String
+    var name: String
+    var pack: String
+    var encounterSets: [EncounterSets]
+    var encounterRule: [EncounterRule]
+    var flavorText: FlavorText
+    var statistics: Statistics
 
     init(id: Int, code: String, name: String, pack: String, encounterSets: [EncounterSets], encounterRule: [EncounterRule], flavorText: FlavorText, statistics: Statistics) {
         self.id = id

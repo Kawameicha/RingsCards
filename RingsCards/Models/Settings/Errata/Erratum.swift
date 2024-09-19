@@ -10,10 +10,10 @@ import SwiftData
 
 @Model
 class Erratum: Identifiable {
-    @Attribute(.unique) let id: String
-    let code: String
-    let isOfficial: Bool
-    let text: String
+    @Attribute(.unique) var id: String
+    var code: String
+    var isOfficial: Bool
+    var text: String
 
     init(id: String, code: String, isOfficial: Bool, text: String) {
         self.id = id

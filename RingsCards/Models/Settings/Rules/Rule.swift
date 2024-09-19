@@ -10,11 +10,11 @@ import SwiftData
 
 @Model
 class Rule: Identifiable {
-    @Attribute(.unique) let id: String
-    let name: String
-    let isKeyword: Bool
-    let text: String
-    let seeAlso: [SeeAlso]
+    @Attribute(.unique) var id: String
+    var name: String
+    var isKeyword: Bool
+    var text: String
+    var seeAlso: [SeeAlso]
 
     init(id: String, name: String, isKeyword: Bool, text: String, seeAlso: [SeeAlso]) {
         self.id = id
