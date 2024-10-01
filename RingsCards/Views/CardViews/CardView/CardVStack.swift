@@ -17,7 +17,7 @@ struct CardVStack: View {
         ScrollViewReader { value in
             GeometryReader { item in
                 ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(alignment: .top) {
+                    LazyHStack(spacing: 0) {
                         ForEach(cards) { card in
                             CardView(card: card)
                                 .id(card.code)
@@ -50,18 +50,15 @@ struct CardVStack: View {
                                 .transitionStyle()
                         }
                     }
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .onAppear {
-                        value.scrollTo(card.id)
-                        scrollPosition = card.code
-                    }
+                    .scrollTargetLayout()
+                }
+                .onAppear {
+                    value.scrollTo(card.id)
+                    scrollPosition = card.code
                 }
                 .scrollPosition(id: $scrollPosition)
-                .scrollTargetLayout()
-                .scrollClipDisabled()
+                .scrollTargetBehavior(.paging)
             }
-            .scrollTargetBehavior(.viewAligned)
-            .safeAreaPadding(.horizontal)
         }
     }
 }
