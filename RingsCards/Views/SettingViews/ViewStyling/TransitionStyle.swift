@@ -12,9 +12,9 @@ struct TransitionStyle: ViewModifier {
         content
             .scrollTransition { content, phase in
                 content
-                    .opacity(phase.isIdentity ? 1 : 0)
-                    .scaleEffect(phase.isIdentity ? 1 : 0.75)
-                    .blur(radius: phase.isIdentity ? 0 : 10)
+                    .opacity(phase.isIdentity ? 1 : 0.7)
+                    .scaleEffect(phase.isIdentity ? 1 : 0.7)
+                    .blur(radius: phase.isIdentity ? 0 : 3)
             }
     }
 }

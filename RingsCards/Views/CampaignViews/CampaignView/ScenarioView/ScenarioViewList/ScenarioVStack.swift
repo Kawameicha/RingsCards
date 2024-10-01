@@ -10,11 +10,11 @@ import SwiftData
 
 struct ScenarioVStack: View {
     @Query var scenarios: [Scenario]
+    @State var scrollID: Int? = 0
     var campaign: Campaign
 
     init(
         campaign: Campaign,
-
         filterCampaign: [Int] = []
     ) {
         self.campaign = campaign
@@ -27,30 +27,41 @@ struct ScenarioVStack: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
+//        VStack {
             ScrollViewReader { value in
-                GeometryReader { item in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHStack(alignment: .top) {
-                            ForEach(scenarios) { scenario in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: 0) {
+                        ForEach(0..<scenarios.count, id: \.self) { index in
+                            let scenario = scenarios[index]
+
+                            VStack {
                                 NavigationLink(value: Router.scenarioViewHome(campaign: campaign, scenario: scenario)) {
                                     ScenarioItem(campaign: campaign, scenario: scenario)
                                 }
-                                .frame(width: item.size.width, alignment: .center)
-                                .transitionStyle()
                             }
-                        }
-                        .onAppear {
-                            value.scrollTo(campaign.scenarios[campaign.completed.firstIndex(of: false) ?? campaign.completed.count - 1])
+                            .containerRelativeFrame(.horizontal)
+                            .transitionStyle()
                         }
                     }
                     .scrollTargetLayout()
-                    .scrollClipDisabled()
                 }
-                .scrollTargetBehavior(.viewAligned)
-                .safeAreaPadding(.horizontal)
+                .onAppear {
+                    if campaign.completed.allSatisfy({ $0 }) {
+                        scrollID = campaign.scenarios.count - 1
+                    } else if campaign.completed.allSatisfy({ !$0 }) {
+                        scrollID = 0
+                    } else {
+                        scrollID = campaign.completed.firstIndex(of: false)!
+                    }
+
+                    value.scrollTo(scrollID)
+                }
+                .scrollPosition(id: $scrollID)
+                .scrollTargetBehavior(.paging)
+
+                IndicatorView(scenarioCount: scenarios.count, scrollID: $scrollID)
             }
-        }
+//        }
     }
 }
 

@@ -31,7 +31,7 @@ struct CampaignViewHome: View {
 
                 GroupBox {
                     ScenarioVStack(campaign: campaign, filterCampaign: campaign.scenarios)
-                        .frame(height: 100)
+                        .frame(height: 120)
                 }
                 .groupBoxStyle(PlainGroupBoxStyle())
             }
