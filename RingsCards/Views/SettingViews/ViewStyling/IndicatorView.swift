@@ -26,8 +26,6 @@ struct IndicatorView: View {
                 }
             }
         }
-        .padding(8)
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.lightGray)).opacity(0.3))
     }
 }
 
