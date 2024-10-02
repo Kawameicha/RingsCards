@@ -264,7 +264,7 @@
     "text": "Should read: “**Action**: Choose an *Item* attachment with a printed cost of X in any player’s discard pile and play that attachment for no cost. (The chosen attachment can belong to any sphere of influence.)”"
   },
   {
-    "id": "helm_of_secrecy",
+    "id": "helm_of_secrecy_rev",
     "code": "22090",
     "isOfficial": false,
     "text": "Should read: “**Action**: Choose a hero you control and discard all tokens from it. Select a different non-[fellowship], non-[baggins] hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments to the hero from your collection.”"
