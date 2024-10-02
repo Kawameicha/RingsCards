@@ -30,7 +30,7 @@ struct CardView: View {
                 return Image(iconName)
             }
         }
-        return Image("Core")
+        return Image(packName)
     }
 
     var body: some View {
