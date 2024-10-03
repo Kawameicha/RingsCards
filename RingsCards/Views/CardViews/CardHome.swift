@@ -13,43 +13,24 @@ struct CardHome: View {
     @Environment(\.modelContext) var modelContext
     @Query(filter: #Predicate<Pack> { pack in
         pack.isInCollection }) var packs: [Pack]
-    @Query var cards: [Card]
 
-    init() {
-        var descriptor: FetchDescriptor<Card> {
-            var descriptor = FetchDescriptor<Card>()
-            descriptor.fetchLimit = 1
-            return descriptor
-        }
-        _cards = Query(descriptor)
-    }
-    
     var body: some View {
         @Bindable var viewCardModel = viewCardModel
 
-        Group {
-            if !cards.isEmpty {
-                CardList(
-                    filterSphere: viewCardModel.filterSphere,
-                    filterType: viewCardModel.filterType,
-                    filterPack: packs.map { $0.packCode },
-                    filterDeck: [],
-                    sortParameter: viewCardModel.sortParameter,
-                    sortOrder: viewCardModel.sortOrder,
-                    searchText: viewCardModel.searchText,
-                    searchBy: viewCardModel.searchBy,
-                    listOffset: viewCardModel.listOffset
-                )
-                .searchable(text: $viewCardModel.searchText)
-                .disableAutocorrection(true)
-            } else {
-                ScrollView {
-                    Spacer(minLength: 200)
-                    ContentUnavailableView("Refresh to load some cards", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
-                }
-            }
-        }
+        CardList(
+            filterSphere: viewCardModel.filterSphere,
+            filterType: viewCardModel.filterType,
+            filterPack: packs.map { $0.packCode },
+            filterDeck: [],
+            sortParameter: viewCardModel.sortParameter,
+            sortOrder: viewCardModel.sortOrder,
+            searchText: viewCardModel.searchText,
+            searchBy: viewCardModel.searchBy,
+            listOffset: viewCardModel.listOffset
+        )
         .navigationTitle("Player Cards")
+        .searchable(text: $viewCardModel.searchText)
+        .disableAutocorrection(true)
         .refreshable {
             await CardResponse.refresh(modelContext: modelContext)
         }

@@ -87,6 +87,8 @@ struct CardList: View {
                     }
                 }
             }
+        } else if cards.isEmpty {
+            ContentUnavailableView("No cards found", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
         } else {
             List {
                 ForEach(CardType.allCases.filter { type in
