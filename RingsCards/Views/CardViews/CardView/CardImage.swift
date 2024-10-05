@@ -27,7 +27,15 @@ struct CardImage: View {
                     }
                     .shadow(radius: 8)
             case .failure:
-                Image(systemName: "AppIcon")
+                ContentUnavailableView("No image found", systemImage: "photo")
+                    .scaledToFill()
+                    .frame(width: 250, height: 200)
+                    .clipShape(Circle())
+                    .background() {
+                        Circle()
+                            .fill(.white)
+                    }
+                    .shadow(radius: 8)
             @unknown default:
                 EmptyView()
             }
