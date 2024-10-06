@@ -24,11 +24,7 @@ struct CardInfo: View {
             filterDeck: viewCardModel.filterDeck
         )))) ?? 0
 
-        if count <= 1 {
-            Text("\(count) card")
-        } else {
-            Text("\(count) cards")
-        }
+        Text("^[\(count) card](inflect: true)")
     }
 }
 

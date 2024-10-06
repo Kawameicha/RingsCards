@@ -11,11 +11,7 @@ struct CampaignInfo: View {
     var count: Int = 0
 
     var body: some View {
-        if count <= 1 {
-            Text("\(count) campaign")
-        } else {
-            Text("\(count) campaigns")
-        }
+        Text("^[\(count) campaign](inflect: true)")
     }
 }
 

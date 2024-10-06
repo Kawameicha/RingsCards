@@ -18,38 +18,14 @@ struct DeckCardInfo: View {
                 return result + keyValue.value }
 
             VStack {
+                Text("^[\(heroes) Hero](inflect: true), ^[\(player - heroes) Card](inflect: true)")
+
                 if heroes < 3 {
-                    if heroes < 2 {
-                        Text("\(heroes) Hero, \(player - heroes) Card")
-                            .foregroundColor(.secondary)
-                            .font(.subheadline)
-                        Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")
-                            .foregroundStyle(.red)
-                    } else {
-                        Text("\(heroes) Heroes, \(player - heroes) Cards")
-                            .foregroundColor(.secondary)
-                            .font(.subheadline)
-                        Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")
-                            .foregroundStyle(.red)
-                    }
-                } else {
-                    if player - heroes < 2 {
-                        Text("\(heroes) Heroes, \(player - heroes) Card")
-                            .foregroundColor(.secondary)
-                            .font(.subheadline)
-                        Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few cards")
-                            .foregroundStyle(.red)
-                    } else if player - heroes < 50 {
-                        Text("\(heroes) Heroes, \(player - heroes) Cards")
-                            .foregroundColor(.secondary)
-                            .font(.subheadline)
-                        Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few cards")
-                            .foregroundStyle(.red)
-                    } else {
-                        Text("\(heroes) Heroes, \(player - heroes) Cards")
-                            .foregroundColor(.secondary)
-                            .font(.subheadline)
-                    }
+                    Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few heroes")
+                        .foregroundStyle(.red)
+                } else if player - heroes < 50 {
+                    Text("\(Image(systemName: "exclamationmark.triangle.fill")) Contains too few cards")
+                        .foregroundStyle(.red)
                 }
             }
         }

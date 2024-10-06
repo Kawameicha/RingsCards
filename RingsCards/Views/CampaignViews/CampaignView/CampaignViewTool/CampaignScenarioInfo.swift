@@ -18,10 +18,8 @@ struct CampaignScenarioInfo: View {
             Text("No scenario completed")
         } else if completed == nScenario {
             Text("All scenarios completed")
-        } else if completed < 2 {
-            Text("\(completed) scenario completed")
         } else {
-            Text("\(completed) scenarios completed")
+            Text("^[\(completed) scenario](inflect: true) completed")
         }
     }
 }

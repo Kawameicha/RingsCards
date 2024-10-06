@@ -33,7 +33,7 @@ struct CardImage: View {
                     .clipShape(Circle())
                     .background() {
                         Circle()
-                            .fill(.white)
+                            .fill(.gray)
                     }
                     .shadow(radius: 8)
             @unknown default:

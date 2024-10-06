@@ -11,11 +11,7 @@ struct DeckInfo: View {
     var count: Int = 0
 
     var body: some View {
-        if count <= 1 {
-            Text("\(count) deck")
-        } else {
-            Text("\(count) decks")
-        }
+        Text("^[\(count) deck](inflect: true)")
     }
 }
 
