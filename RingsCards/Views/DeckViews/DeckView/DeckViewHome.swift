@@ -63,10 +63,16 @@ struct DeckViewHome: View {
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     DeckViewButton(viewCard: $viewCard)
-                    DeckEditButton(editCard: $editCard)
+                    if editCard {
+                        DeckEditButton(editCard: $editCard)
+                    }
                 }
 
                 ToolbarItemGroup(placement: .secondaryAction) {
+                    DeckViewButton(viewCard: $viewCard)
+                    if deck.cardSlots.count > 1 {
+                        DeckEditButton(editCard: $editCard)
+                    }
                     DeckCampaignButton(campaign: $campaign)
                     DeckStatButton(showStat: $showStat)
                 }

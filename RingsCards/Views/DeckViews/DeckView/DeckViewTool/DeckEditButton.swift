@@ -14,7 +14,7 @@ struct DeckEditButton: View {
         Button {
             editCard.toggle()
         } label: {
-            Label("Edit Cards", systemImage: editCard ? "checkmark" : "plusminus")
+            Label("Edit Cards", systemImage: editCard ? "pencil.slash" : "pencil.line")
         }
     }
 }

@@ -14,11 +14,11 @@ struct DeckViewButton: View {
         Button {
             viewCard.toggle()
         } label: {
-            Label("Add Cards", systemImage: viewCard ? "pencil.slash" : "pencil.line")
+            Label("Add Cards", systemImage: viewCard ? "checkmark.rectangle.portrait" : "plus.rectangle.portrait")
         }
     }
 }
 
 #Preview {
-    DeckViewButton(viewCard: .constant(true))
+    DeckViewButton(viewCard: .constant(false))
 }
