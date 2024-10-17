@@ -9,15 +9,36 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var showOnboarding: Bool
+    @State var scrollID: Int? = 0
 
     var body: some View {
+        let onboardingViews = [
+            OnboardingDetailView(title: "Refined Card View", image: "rectangle.portrait.inset.filled", description: "Enjoy a beautiful and intuitive card experience and add cards to your deck directly from the detail view."),
+            OnboardingDetailView(title: "Messenger of the King", image: "person.2.fill", description: "Maximize use of this contract by seamlessly adding the hero version of any eligible ally to your deck."),
+            OnboardingDetailView(title: "Official Campaign Mode", image: "book.pages.fill", description: "Benefit from all the official boon and burden cards when choosing to play in campaign mode.")
+        ]
+
         VStack {
-            TabView {
-                OnboardingDetailView(title: "Refined Card View", image: "rectangle.portrait.inset.filled", description: "Enjoy a beautiful and intuitive card experience and add cards to your deck directly from the detail view.")
-                OnboardingDetailView(title: "Messenger of the King", image: "person.2.fill", description: "Maximize use of this contract by seamlessly adding the hero version of any eligible ally to your deck.")
-                OnboardingDetailView(title: "Official Campaign Mode", image: "book.pages.fill", description: "Benefit from all the official boon and burden cards when choosing to play in campaign mode.")
+            ScrollViewReader { value in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: 0) {
+                        ForEach(0..<onboardingViews.count, id: \.self) { index in
+                            let onboardingView = onboardingViews[index]
+
+                            VStack {
+                                onboardingView
+                            }
+                            .containerRelativeFrame(.horizontal)
+                            .transitionStyle()
+                        }
+                    }
+                    .scrollTargetLayout()
+                }
+                .scrollPosition(id: $scrollID)
+                .scrollTargetBehavior(.paging)
+
+                IndicatorView(itemCount: onboardingViews.count, scrollID: $scrollID)
             }
-            .tabViewStyle(.page)
 
             Spacer()
 
