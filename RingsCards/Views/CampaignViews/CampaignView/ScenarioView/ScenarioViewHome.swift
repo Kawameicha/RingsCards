@@ -42,7 +42,7 @@ struct ScenarioViewHome: View {
                 ScenarioViewEncounter(scenario: scenario)
 
                 ScenarioViewDonut(scenario: scenario)
-                    .frame(height: 250)
+                    .frame(height: 300)
 
                 Text("The rules for each of the keywords present in the *\(scenario.name)* encounter deck are as follows:")
 
