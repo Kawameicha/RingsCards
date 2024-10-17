@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct IndicatorView: View {
-    let scenarioCount: Int
+    let itemCount: Int
     @Binding var scrollID: Int?
 
     var body: some View {
         HStack {
-            ForEach(0..<scenarioCount, id: \.self) { indicator in
+            ForEach(0..<itemCount, id: \.self) { indicator in
             let index = scrollID ?? 0
                 Button {
                     withAnimation {
@@ -30,5 +30,5 @@ struct IndicatorView: View {
 }
 
 #Preview {
-    IndicatorView(scenarioCount: 9, scrollID: .constant(0))
+    IndicatorView(itemCount: 9, scrollID: .constant(0))
 }

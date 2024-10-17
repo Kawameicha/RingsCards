@@ -58,7 +58,7 @@ struct ScenarioVStack: View {
             .scrollPosition(id: $scrollID)
             .scrollTargetBehavior(.paging)
 
-            IndicatorView(scenarioCount: scenarios.count, scrollID: $scrollID)
+            IndicatorView(itemCount: scenarios.count, scrollID: $scrollID)
         }
     }
 }
