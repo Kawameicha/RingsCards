@@ -18,8 +18,8 @@ struct ScenarioItem: View {
                 .font(.subheadline)
                 .foregroundStyle(.white)
                 .background(Capsule()
-                        .fill(.yellow)
-                        .frame(width: 90, height: 30))
+                    .fill(.accent)
+                    .frame(width: 90, height: 30))
         ) {
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 ScenarioViewMark(isSet: Bindable(campaign).completed[scenarioIndex])

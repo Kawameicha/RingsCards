@@ -42,7 +42,7 @@ struct CampaignNew: View {
                 case .Core, .AA, .DC, .EM, .Hobbit, .LotR, .TDoM:
                     GroupBox(
                         label: Label("Campaign mode", systemImage: "info.bubble")
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.accent)
                     ) {
                         Text("Check the box below to create an empty campaign pool to which campaign cards can be attached.")
                     }

@@ -22,7 +22,7 @@ struct IndicatorView: View {
                 } label: {
                     Image(systemName: "circle.fill")
                         .font(.system(size: 8))
-                        .foregroundStyle(indicator == index ? Color.yellow : Color(.lightGray))
+                        .foregroundStyle(indicator == index ? Color.accent : Color(.lightGray))
                 }
             }
         }

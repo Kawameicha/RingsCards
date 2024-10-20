@@ -15,7 +15,7 @@ struct CheckBoxStyle: ToggleStyle {
             Spacer()
 
             Image(systemName: configuration.isOn ? "checkmark.circle" : "circle")
-                .foregroundColor(configuration.isOn ? .yellow : .gray)
+                .foregroundColor(configuration.isOn ? .accent : .gray)
                 .font(.system(size: 20, weight: .bold, design: .default))
                 .onTapGesture {
                     withAnimation( .snappy, {

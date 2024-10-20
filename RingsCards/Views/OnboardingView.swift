@@ -41,13 +41,13 @@ struct OnboardingView: View {
             }
 
             Spacer()
-
+            
             Button("Get Started") {
                 showOnboarding = false
             }
             .padding()
             .font(.title3)
-            .background(Color.yellow)
+            .background(Color.accent)
             .foregroundColor(.white)
             .cornerRadius(8)
             .padding(.bottom)

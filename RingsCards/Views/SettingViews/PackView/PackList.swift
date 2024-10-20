@@ -37,7 +37,7 @@ struct PackList: View {
         List {
             GroupBox(
                 label: Label("Cards shown", systemImage: "info.bubble")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.accent)
             ) {
                 Text("Use these controls to limit which cards are visible throughout the app to those in your collection.")
             }
