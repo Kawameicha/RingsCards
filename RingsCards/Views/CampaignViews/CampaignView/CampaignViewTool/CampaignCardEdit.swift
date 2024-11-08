@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CampaignCardEdit: View {
+    @State private var hasChanged = false
     var campaign: Campaign
     var card: Card
     var value = 0
@@ -16,11 +17,11 @@ struct CampaignCardEdit: View {
         HStack(alignment: .center, spacing: 3) {
             Button {
                 if value > 1 {
-                    campaign.slots["\(card.code)", default: value] -= 1
-                    campaign.updated = .now
+                    campaign.slots["\(card.code)", default: 0] -= 1
+                    hasChanged = true
                 } else if value == 1 {
                     campaign.slots["\(card.code)"] = 0
-                    campaign.updated = .now
+                    hasChanged = true
                 }
             } label: {
                 if value > 0 {
@@ -36,8 +37,8 @@ struct CampaignCardEdit: View {
 
             Button {
                 if value < card.deckLimit {
-                    campaign.slots["\(card.code)", default: value] += 1
-                    campaign.updated = .now
+                    campaign.slots["\(card.code)", default: 0] += 1
+                    hasChanged = true
                 }
             } label: {
                 if value < card.deckLimit {
@@ -51,6 +52,11 @@ struct CampaignCardEdit: View {
         }
         .buttonStyle(PlainButtonStyle())
         .font(.system(size: 24))
+        .onDisappear {
+            if hasChanged {
+                campaign.updated = .now
+            }
+        }
     }
 }
 

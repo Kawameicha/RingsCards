@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ScenarioItem: View {
+    @State private var hasChanged = false
     var campaign: Campaign
     var scenario: Scenario
     var scenarioIndex: Int { campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0 }
@@ -21,10 +22,10 @@ struct ScenarioItem: View {
                     .fill(.accent)
                     .frame(width: 90, height: 30))
         ) {
-            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+            HStack(alignment: .center) {
                 ScenarioViewMark(isSet: Bindable(campaign).completed[scenarioIndex])
                     .onChange(of: campaign.completed[scenarioIndex]) {
-                        campaign.updated = .now
+                        hasChanged = true
                     }
                     .buttonStyle(PlainButtonStyle())
                     .font(.system(size: 44.0))
@@ -40,16 +41,12 @@ struct ScenarioItem: View {
             }
         }
         .groupBoxStyle(PlainGroupBoxStyle())
-//        .background(Color.yellow.frame(height: 20), alignment: .top)
-//        .background(Capsule()
-//                .fill(.red)
-//                .frame(width: 250, height: 50))
         .padding()
-//        .background(
-//            PackIcon(image: Image(campaign.code), frame: 44)
-//                .resizable()
-//        )
-//        .backgroundStyle(.blue.gradient)
+        .onDisappear {
+            if hasChanged {
+                campaign.updated = .now
+            }
+        }
     }
 }
 

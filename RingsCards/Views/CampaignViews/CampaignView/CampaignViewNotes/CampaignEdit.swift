@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CampaignEdit: View {
     @Binding var campaign: Campaign
+    @State private var hasChanged = false
 
     var body: some View {
         List {
@@ -17,26 +18,28 @@ struct CampaignEdit: View {
                 Divider()
                 TextField("Name", text: $campaign.name)
                     .onChange(of: campaign.name) {
-                        campaign.updated = .now
+                        hasChanged = true
                     }
             }
-            
+
             HStack {
                 Text("Threat Penalty").bold()
                 Button {
                     campaign.threatModifs -= 1
-                    campaign.updated = .now
+                    hasChanged = true
                 } label: {
                     Image(systemName: "minus.square")
                 }
                 .buttonStyle(PlainButtonStyle())
+
                 Text("\(campaign.threatModifs)")
                     .onChange(of: campaign.threatModifs) {
-                        campaign.updated = .now
+                        hasChanged = true
                     }
+
                 Button {
                     campaign.threatModifs += 1
-                    campaign.updated = .now
+                    hasChanged = true
                 } label: {
                     Image(systemName: "plus.square")
                 }
@@ -48,8 +51,13 @@ struct CampaignEdit: View {
                 Divider()
                 TextEditor(text: $campaign.campaignNote)
                     .onChange(of: campaign.campaignNote) {
-                        campaign.updated = .now
+                        hasChanged = true
                     }
+            }
+        }
+        .onDisappear {
+            if hasChanged {
+                campaign.updated = Date()
             }
         }
     }

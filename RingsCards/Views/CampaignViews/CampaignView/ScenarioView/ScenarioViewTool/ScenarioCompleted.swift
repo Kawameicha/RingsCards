@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ScenarioCompleted: View {
+    @State private var hasChanged = false
     var campaign: Campaign
     var scenario: Scenario
-    
+
     var scenarioIndex: Int {
         campaign.scenarios.firstIndex(where: { $0 == scenario.id }) ?? 0
     }
@@ -20,8 +21,13 @@ struct ScenarioCompleted: View {
             Toggle("Completed", isOn: Bindable(campaign).completed[scenarioIndex])
                 .toggleStyle(CheckBoxStyle())
                 .onChange(of: campaign.completed[scenarioIndex]) {
-                    campaign.updated = .now
+                    hasChanged = true
                 }
+        }
+        .onDisappear {
+            if hasChanged {
+                campaign.updated = .now
+            }
         }
     }
 }

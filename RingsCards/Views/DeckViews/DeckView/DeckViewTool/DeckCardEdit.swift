@@ -35,10 +35,10 @@ struct DeckCardEdit: View {
                 let threat = (card.stats.willpower ?? 0) + (card.stats.attack ?? 0) + (card.stats.defense ?? 0) + (card.stats.health ?? 0)
 
                 Button {
-                    if deck.cardSlots[key, default: value] == 0 {
+                    if deck.cardSlots[key, default: 0] == 0 {
                         deck.threat += threat
-                        deck.heroes[key, default: value] = 1
-                        deck.cardSlots[key, default: value] = 1
+                        deck.heroes[key, default: 0] = 1
+                        deck.cardSlots[key, default: 0] = 1
                     } else {
                         deck.threat -= threat
                         deck.heroes[key] = nil
@@ -47,14 +47,14 @@ struct DeckCardEdit: View {
                     deck.updated = .now
                 } label: {
                     MotKCapsule()
-                        .foregroundStyle(deck.cardSlots[key, default: value] == 1 ? .accent : .primary)
-                        .opacity(deck.cardSlots[key, default: value] == 1 ? 1 : 0.1)
+                        .foregroundStyle(deck.cardSlots[key, default: 0] == 1 ? .accent : .primary)
+                        .opacity(deck.cardSlots[key, default: 0] == 1 ? 1 : 0.1)
                 }
             }
 
             Button {
                 if value > 1 {
-                    deck.cardSlots["\(card.code)", default: value] -= 1
+                    deck.cardSlots["\(card.code)", default: 0] -= 1
                 } else if value == 1 {
                     deck.cardSlots["\(card.code)"] = nil
 
@@ -74,11 +74,11 @@ struct DeckCardEdit: View {
 
             Button {
                 if value < card.deckLimit {
-                    deck.cardSlots["\(card.code)", default: value] += 1
+                    deck.cardSlots["\(card.code)", default: 0] += 1
 
                     if card.costs.threat != -1 {
                         deck.threat += card.costs.threat
-                        deck.heroes["\(card.code)", default: value] += 1
+                        deck.heroes["\(card.code)", default: 0] += 1
                     }
                     deck.updated = .now
                 }
