@@ -908,5 +908,15 @@
         "cycleName": "Scenario Packs",
         "cycleSort": 103,
         "isCycle": false
+    },
+    {
+        "id": "the_hobbit",
+        "packName": "The Hobbit",
+        "packCode": "THo",
+        "packSort": 104,
+        "cycleCode": "THo",
+        "cycleName": "Scenario Packs",
+        "cycleSort": 104,
+        "isCycle": false
     }
 ]
