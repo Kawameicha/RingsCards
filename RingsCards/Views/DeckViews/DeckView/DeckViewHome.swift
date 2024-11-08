@@ -42,11 +42,11 @@ struct DeckViewHome: View {
             .searchable(text: $viewCardModel.searchText)
             .disableAutocorrection(true)
             .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
+                ToolbarItemGroup(placement: .confirmationAction) {
                     DeckViewButton(viewCard: $viewCard)
                 }
 
-                ToolbarItemGroup(placement: .secondaryAction) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
                     CardSearchButton()
                     CardFilterButton()
                     CardSortButton()
@@ -61,9 +61,10 @@ struct DeckViewHome: View {
             )
             .navigationTitle($deck.name)
             .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    DeckViewButton(viewCard: $viewCard)
-                    if editCard {
+                ToolbarItemGroup(placement: .confirmationAction) {
+                    if !editCard {
+                        DeckViewButton(viewCard: $viewCard)
+                    } else {
                         DeckEditButton(editCard: $editCard)
                     }
                 }
