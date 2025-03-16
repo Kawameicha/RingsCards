@@ -750,6 +750,16 @@
         "isCycle": true
     },
     {
+        "id": "strange_news_in_Bree",
+        "packName": "Strange News in Bree",
+        "packCode": "SNiB",
+        "packSort": 1,
+        "cycleCode": "FS",
+        "cycleName": "Fell Summer",
+        "cycleSort": 10,
+        "isCycle": true
+    },
+    {
         "id": "over_hill_and_under_hill",
         "packName": "Over Hill and Under Hill",
         "packCode": "OHaUH",
