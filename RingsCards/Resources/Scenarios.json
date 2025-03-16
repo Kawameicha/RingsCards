@@ -7475,6 +7475,79 @@
       "nightmare_encounter_side_quests": 2
     },
     {
+      "id": 104,
+      "code": "ALeP - Strange News in Bree",
+      "name": "ALeP - Strange News in Bree",
+      "nameCanonical": "strange-news-in-bree",
+      "pack": "ALeP - Strange News in Bree",
+      "date_creation": "2025-01-30T13:18:43-02:00",
+      "date_update": "2025-02-19T10:48:40-03:00",
+      "encounters": [
+        {
+          "id": 238,
+          "code": "wolf-cult",
+          "name": "Wolf-cult"
+        },
+        {
+          "id": 234,
+          "code": "drawing-attention",
+          "name": "Drawing Attention"
+        },
+        {
+          "id": 244,
+          "code": "strange-news-in-bree",
+          "name": "Strange News in Bree"
+        }
+      ],
+      "keywords": [
+          {
+              "id": 1,
+              "code": "surge",
+              "name": "Surge"
+          },
+          {
+              "id": 44,
+              "code": "turncoat",
+              "name": "Turncoat"
+          }
+      ],
+      "flavorIntro": "Farmer Maggot and the heroes spent a lovely night at the house of Tom Bombadil and his wife Goldberry. They warmed their bones with delicious soup and cheered their spirits by singing songs together, until the strange horrors of their day wandering through the Old Forest seemed like distant memories.\n\nEarly the next morning, they arose and planned their next move. Goldberry drew the young farmer a map of a safe route back to his farm, while the rest of the heroes decided that-having traversed so deep into the Old Forest the previous day-the closest inn was actually straight through the other side of the forest in the small town of Bree. They thanked Tom and Goldberry for their hospitality, and set off.\n\nIt was almost dark when they arrived at the sign of the Prancing Pony, the finest inn Bree had to offer. They chose a table near the front, and caught the innkeeper's eye as they arranged their travel gear. He was a kindly looking fellow, round in both the belly and the face, with a thick blonde-grey beard. “Good evening gentlefolk, Wheaton Butterbur very much at your service. More and more of you arriving every day. I should say. Not that I mind of course,” and at this the heroes realized that the man seemed nervous as he continued, “Those who follow Gaur are certainly welcome at the Prancing Pony! Most welcome, of course.”\n\nThe heroes exchanged quizzical looks, but before they could say anything, the look on his face changed from veiled concern to relieved embarrassment. “Or, perhaps I have misjudged! Never mind me, running my mouth when I'd better keep it shut. You know, my ole father always used to tell me that running the Pony was enough to drive a man mad and so it is. Will you folk be needing a room? Perhaps a spot of ale and something to eat?”\n\nThe heroes replied in affirmation and Wheaton scurried off to the kitchen. As they waited, the heroes set to talking. “Something odd is going on here,” one said. “Perhaps once we have finished our meal we can have a look around town and find out more about this Gaur.” The others nodded in agreement.",
+      "ruling": "**Last Gasp**\n\n**Last Gasp** is a new timing trigger that functions as a **Forced** ability and appears on some enemies who are dangerous even in death. When an enemy with the **Last Gasp** trigger is destroyed, the engaged player (or the first player, if that enemy was not engaged with any player) must trigger that enemy's **Last Gasp** effect.",
+      "doNotRead": "As Orc-eyes and his purple-garbed cultists fled into the night, a cheer went up from the crowd. “We have won!” cried one of the heroes. “Let us return to the Prancing Pony and celebrate this victory!”\n\n“How I wish we had time for that,” groaned the man they had freed from the cultists. He rubbed a sore shoulder as he held out a grimy hand to each of the heroes in turn. “Many thanks for saving me back there. The name's Jack; folks around here call me 'Wolfsbane Jack' on account of my trade. Used to be 'twas only animals that I hunted, but of late it's not just the wild wolves that threaten Bree.” At this he gestured towards one of the slain men in a purple cloak. “We may have driven them out of town, but their defeat tonight will only force them to move swifter towards their goal.”\n\n“And what goal is that?” asked one of the heroes, her voice heavy with concern.\n\n“T'l tell you all I know on the road,” said the man. “Gather your things and meet me outside the West Gate.”",
+      "has_easy": true,
+      "has_nightmare": false,
+      "easy_cards": 46,
+      "easy_enemies": 15,
+      "easy_locations": 13,
+      "easy_treacheries": 8,
+      "easy_shadows": 22,
+      "easy_objectives": 0,
+      "easy_objective_allies": 1,
+      "easy_objective_locations": 0,
+      "easy_surges": 6,
+      "easy_encounter_side_quests": 9,
+      "normal_cards": 52,
+      "normal_enemies": 17,
+      "normal_locations": 13,
+      "normal_treacheries": 12,
+      "normal_shadows": 26,
+      "normal_objectives": 0,
+      "normal_objective_allies": 1,
+      "normal_objective_locations": 0,
+      "normal_surges": 6,
+      "normal_encounter_side_quests": 9,
+      "nightmare_cards": 52,
+      "nightmare_enemies": 17,
+      "nightmare_locations": 13,
+      "nightmare_treacheries": 12,
+      "nightmare_shadows": 26,
+      "nightmare_objectives": 0,
+      "nightmare_objective_allies": 1,
+      "nightmare_objective_locations": 0,
+      "nightmare_surges": 6,
+      "nightmare_encounter_side_quests": 9
+    },
+    {
         "id": 1001,
         "code": "We Must Away, Ere Break of Day",
         "name": "We Must Away, Ere Break of Day",
